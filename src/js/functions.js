@@ -40,12 +40,12 @@ export const openVideoOverlay = (ob) => {
     }else{
         window.open(
           'https://video.oracle.com/detail/video/'+videoID // <- This is what makes it open in a new window.
-        );        
+        );
     }
 }
 
 export const iterateObjSet = (obj, callback) =>{
-    
+
     const array = Array.prototype.slice.call(obj);
     array.forEach( function(element, index) {
         callback(element, index);
@@ -53,7 +53,7 @@ export const iterateObjSet = (obj, callback) =>{
 };
 
 export const covertObjtoArr = (obj) =>{
-    
+
     const array = Array.prototype.slice.call(obj);
 
     return array;
@@ -62,3 +62,86 @@ export const covertObjtoArr = (obj) =>{
 export const returnNumOnly = (str, n) =>{
     return Number(str.slice(0, `-${n}`));
 };
+
+export const validateFields = (ob) => {
+    test = document.forms[0];
+    incomplete = false;
+
+    if ($('select[name=stateOrProvince]').val() == "State" || $('select[name=stateOrProvince]').val() == "") {
+        $('#field15').addClass("error");
+        incomplete = true;
+    }
+
+    if ($('select[name=country]').val() == "Country" || $('select[name=country]').val() == "" || $('select[name=country]').val() == "None Selected") {
+        $('#field17').addClass("error");
+        incomplete = true;
+    }
+
+    if ($('input[name=firstName]').val() == "First Name" || $('input[name=firstName]').val() == "") {
+        $('input[name=firstName]').addClass("error");
+        incomplete = true;
+    }
+    if ($('input[name=lastName]').val() == "Last Name" || $('input[name=lastName]').val() == "") {
+        $('input[name=lastName]').addClass("error");
+        incomplete = true;
+    }
+    if ($('input[name=emailAddress]').val() == "E-mail Address" || $('input[name=emailAddress]').val() == "") {
+        $('input[name=emailAddress]').addClass("error");
+        incomplete = true;
+    }
+    if ($('input[name=phoneNumber]').val() == "Phone Number" || $('input[name=phoneNumber]').val() == "") {
+        $('input[name=phoneNumber]').addClass("error");
+        incomplete = true;
+    }
+    if ($('input[name=company]').val() == "Company" || $('input[name=company]').val() == "") {
+        $('input[name=company]').addClass("error");
+        incomplete = true;
+    }
+    if ($('input[name=address]').val() == "Address Line 1" || $('input[name=address]').val() == "") {
+        $('input[name=address]').addClass("error");
+        incomplete = true;
+    }
+    if ($('input[name=city]').val() == "City" || $('input[name=city]').val() == "") {
+        $('input[name=city]').addClass("error");
+        incomplete = true;
+    }
+
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($('input[name=emailAddress]').val())) {
+    }
+
+    else {
+        $('input[name=emailAddress]').addClass("error");
+        incomplete = true;
+    }
+
+    var selectedCountryIndex = document.getElementById('field17').selectedIndex;
+    switch (selectedCountryIndex) {
+        case 122:
+            if ($('.korea:checked').length < $('.korea').length) {
+                $('.korea').addClass('error');
+                $('.korea:checked').removeClass('error');
+                incomplete = true;
+            }
+            break;
+        case 186:
+            if ($('.russia:checked').length < $('.russia').length) {
+                $('.russia').addClass('error');
+                $('.russia:checked').removeClass('error');
+                incomplete = true;
+            }
+            break;
+        default:
+        //everyone else
+    }
+    if (incomplete == true) {
+        $("#end_alert").css("display", "block");
+        return;
+    }
+    else {
+        var first = $('input[name=firstName]').val();
+        $(".scrollable").animate({scrollTop: 0}, "fast");
+        $('.results-bttn-holder').addClass('after');
+        //$('#sign_in_popup').bPopup().close();
+        eloquaInfo();
+    }
+}

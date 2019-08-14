@@ -46,8 +46,8 @@ $(document).ready(function(){
  	const state = {};
 
 /**************** DETAILED PAGE CONTROLLER ********************/
-	
-	if(sessionStorage.dial2){	
+
+	if(sessionStorage.dial2){
 		const results = new CompareResults();
 		let detailFirst='';
 		let detailSecond='';
@@ -61,7 +61,7 @@ $(document).ready(function(){
 
 
 		// DIALS
-			detailFirst = retrieveLottieDialAnimation(results.val['1']);		
+			detailFirst = retrieveLottieDialAnimation(results.val['1']);
 			detailSecond = retrieveLottieDialAnimation(results.val['2']);
 			detailForth = retrieveLottieDialAnimation(results.val['4']);
 
@@ -69,7 +69,7 @@ $(document).ready(function(){
 			const dialsUserElements = [$('#dial__text--users-1'),$('#dial__text--users-2'),$('#dial__text--users-3')];
 			const dialUserResults = [results.val['1'],results.val['2'],results.val['4']];
 
-			(function(arr){				
+			(function(arr){
 
 				dialUserResults.forEach( function(element, index) {
 					if(element > 10){
@@ -80,12 +80,12 @@ $(document).ready(function(){
 						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>' );
 						dialsUserElements[index].addClass('dial__text--users-equal');
 						$(`#main__direction--user-${index}`).text( 'You and your peers are equal in cloud journey.' );
-					}else{						
+					}else{
 						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>' );
 						dialsUserElements[index].addClass('dial__text--users-less');
 						$(`#main__direction--user-${index}`).text( 'You are behind of your peers and the global average on your cloud journey.' );
 					}
-				});				
+				});
 
 			})([dialUserResults, dialsUserElements]);
 
@@ -119,7 +119,7 @@ $(document).ready(function(){
 				$(`#select-${element}`).addClass('activate');
 			});
 
-		//SLIDER		
+		//SLIDER
 			const detscroll1Values = results.val[5].split(',');
 			const detscroll2Values = results.val[6].split(',');
 
@@ -128,11 +128,11 @@ $(document).ready(function(){
 
 			detscroll1Values.forEach( function(element, index) {
 				$(`#detscroll1-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
-				
+
 				if(Number(element) < peersDetScroll1[index]){
-					$(`#detscroll1__txt-${index}`).text('Your peers are slightly more confident with data sources.');										
-				}else if(Number(element) > peersDetScroll1[index]){					
-					$(`#detscroll1__txt-${index}`).text('You are slightly more confident with data sources than your peers. Congratulations!');									
+					$(`#detscroll1__txt-${index}`).text('Your peers are slightly more confident with data sources.');
+				}else if(Number(element) > peersDetScroll1[index]){
+					$(`#detscroll1__txt-${index}`).text('You are slightly more confident with data sources than your peers. Congratulations!');
 				}else{
 					$(`#detscroll1__txt-${index}`).text('You and your peers are equally as confident in data sources. Congratulations!');
 				}
@@ -141,13 +141,13 @@ $(document).ready(function(){
 				$(`#detscroll2-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
 
 				if(Number(element) < peersDetScroll2[index]){
-					$(`#detscroll2__txt-${index}`).text('Your peers are slightly more confident with data sources.');								
-				
-				}else if(Number(element) > peersDetScroll2[index]){					
-					$(`#detscroll2__txt-${index}`).text('You are slightly more confident with data sources than your peers. Congratulations!');														
+					$(`#detscroll2__txt-${index}`).text('Your peers are slightly more confident with data sources.');
+
+				}else if(Number(element) > peersDetScroll2[index]){
+					$(`#detscroll2__txt-${index}`).text('You are slightly more confident with data sources than your peers. Congratulations!');
 				}else{
 					$(`#detscroll2__txt-${index}`).text('You and your peers are equally as confident in data sources. Congratulations!');
-				}				
+				}
 			});
 
 
@@ -159,10 +159,10 @@ $(document).ready(function(){
 	// 	const val = self.data('val');
 	// 	const context = $(`.page--${val}`);
 	// 	const nextTop = Number(context.css('top').slice(0,-2))*-1;
-	// 	const nextLeft = Number(context.css('left').slice(0,-2))*-1;		
+	// 	const nextLeft = Number(context.css('left').slice(0,-2))*-1;
 
 	// 	context.addClass('activate');
-		
+
 	// 	$('.detailed__map--container').addClass('activate');
 	// 	$('.detailed__results--title').addClass('deactivate');
 	// 	// $('.detailed__map > *').addClass('deactivate');
@@ -187,31 +187,31 @@ $(document).ready(function(){
 	// 			$('.detailed__map').css('transform', 'scale(7.34) translate(23.48%,-43.2%)');
 	// 		}
 
-			
 
-	// 		setTimeout(function(){						
+
+	// 		setTimeout(function(){
 	// 			$('.page--x').addClass('deactivate');
 	// 			$('.main-container').addClass('activate');
 	// 			$('.header__nav').addClass('activate');
 	// 		}, 800)
-			
+
 	// 	}, 800);
-			
+
 	// 	$('.pathfinder').css("transform", `translate(${nextLeft}px,${nextTop}px)`);
 
 	// 	// Changing header nav value's to corresponding square
 
 	// 	$('.header__nav--btn--2').attr('context',`${Number(val)+1}`);
 	// 	$('.header__nav--btn--1').attr('context',`${Number(val)-1}`);
-	
+
 	// 	const paginationDetGroup = pagination.retrieveDetailPagination();
 
-	// 	pagination.deactivateDetailPagination();		
+	// 	pagination.deactivateDetailPagination();
 
 	// 	for(let i = 0; i <= (val -2); i++){
 	// 		$(paginationDetGroup[i]).addClass('activate');
 	// 	}
-		
+
 	// });
 
 	$('.page__overlay').on('click', function(){
@@ -221,15 +221,15 @@ $(document).ready(function(){
 
 		$('.pathfinder--x').addClass(`zoom-in--${val}`);
 		$('.page').toggleClass('zoomed');
-		setTimeout(function(){			
+		setTimeout(function(){
 			$('.pathfinder--x').addClass(`zoom-in--${val}-x`);
 			$('.header__nav').toggleClass('activate');
 		}, 1500);
-		
+
 		$('.page__overlay').toggle();
 	});
 
-	$('.icon__zoomout').on('click',function(){		
+	$('.icon__zoomout').on('click',function(){
 		$('.header__nav').toggleClass('activate');
 		$('.page').toggleClass('zoomed');
 
@@ -245,7 +245,7 @@ $(document).ready(function(){
 		$('.pathfinder--x').removeClass('zoom-in--8 zoom-in--8-x');
 	});
 
-/****** HEADER NAV BTN CONTROLLER ******/ 
+/****** HEADER NAV BTN CONTROLLER ******/
 	$('.header__nav--btn').on('click',function(){
 		const self = $(this);
 		dp.movePathfinderX(self);
@@ -254,7 +254,7 @@ $(document).ready(function(){
 
 
 	});
-	
+
 /****************  CLOUD/ LOTTIE INIT  ********************/
 
 	if(document.getElementById('scroll_down')){
@@ -264,10 +264,10 @@ $(document).ready(function(){
 		  autoplay: true,
 		  animationData: scrollJson,
 		  loop: true,
-		});	
+		});
 	};
 
-/****** CTA POPUPS ******/ 
+/****** CTA POPUPS ******/
 	$('.cta__btn').on('click',function(){
 		const val = $(this).attr('val')
 		if(val === '1'){
@@ -276,17 +276,17 @@ $(document).ready(function(){
 	});
 
 /****** PAGE/LINE CONTROLLER ******/
-	state.width = $('body').width();	
+	state.width = $('body').width();
 	state.height = e.page.height();
 
 	page.reformWandH(state.width, state.height);
 
-	
+
 	line.resizeLines();
 
 	$(window).on('resize',function(){
 		state.width = $('body').width();
-		state.height = $('body').height();		
+		state.height = $('body').height();
 		// state.height = $(window).height();
 		page.reformWandH();
 
@@ -296,10 +296,10 @@ $(document).ready(function(){
 	$('.page--8').on('scroll',function(){
 		const pos = $(this).scrollTop();
 		$('.page--8').addClass('activate');
-		
+
 		if(pos > 0 ){
 			$('.line--13').addClass('deactivate');
-			scrollTip.isPaused = true;		
+			scrollTip.isPaused = true;
 		}else{
 			$('.line--13').removeClass('deactivate');
 			scrollTip.isPaused = false;
@@ -307,7 +307,7 @@ $(document).ready(function(){
 	});
 
 /****** CPRSCROLLPATH/MOVEMENT CONTROLLER ******/
- 
+
 	state.userAggregateValue = 0;
 
 	// PROGRESS
@@ -359,12 +359,12 @@ $(document).ready(function(){
 		// Change button item color
 		$('.header__rectangle--1 > img').attr('src',$('.header__rectangle--1 > img').attr( "alt"));
 		$('.header__rectangle--3 > img').attr('src',$('.header__rectangle--3 > img').attr( "alt"));
-		$('.grow--text').css('color', '#00758f'); 
-		$('.header__rectangle--grow').css('background-color', 'white'); 
+		$('.grow--text').css('color', '#00758f');
+		$('.header__rectangle--grow').css('background-color', 'white');
 	});
 
 
-	$('.btn__progress--1').click(); 
+	$('.btn__progress--1').click();
 
 	e.btnBackX.on('click',function(){
 		const contextValue = e.btnBackX.attr('context');
@@ -377,7 +377,7 @@ $(document).ready(function(){
 		$('.pathfinder').css('transform',`translate(${Number(prevLeft)*-1}px,${Number(prevTop)*-1}px)`);
 
 		$(this).attr('context', `${Number(contextValue)-1}`);
-		e.hdrProgress.attr('context', contextValue);		
+		e.hdrProgress.attr('context', contextValue);
 	});
 
 	// REGRESS
@@ -414,16 +414,16 @@ $(document).ready(function(){
 
       const self = $(this);
 	 		dial.dialRotator(self,v);
-			dial.dialContextualize(self,v);			
+			dial.dialContextualize(self,v);
 			this.context = (self[0].$div.prevObject.data('context'));
-			
+
     },
     'release': function (v){;
       const self = $(this);
 	 		this.selfID = self[0].$div.prevObject.data('id');
 	 		this.dial = assignDial(this.selfID);
 	 		this.dial.changeValue(v);
-  		
+
 	 		if(this.context=== false){
 	  		dial.progressBtn(self);
     	}
@@ -445,18 +445,18 @@ $(document).ready(function(){
 
   	const yAxis = func.returnNumOnly($('.dial-group').css('height'),2)+func.returnNumOnly($('.dial-group').css('margin-top'),2)+func.returnNumOnly($('.page__content').css('padding-top'),2);
   	const xAxis = func.returnNumOnly($('.page__content').css('margin-left'),2)+func.returnNumOnly($('.dial-group').css('height'),2);
-  	
+
 	  const dy = yAxis - event.pageY;
 		const dx = xAxis - event.pageX;
 		let theta = Math.atan2(dy, dx); // range (-PI, PI]
 		theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
 
-		const dial = $(this).find('.dial-tracker'); 
+		const dial = $(this).find('.dial-tracker');
 
 		dial.data('context', true);
 
 		dial.val(theta).trigger('change');
-	
+
 	});
 
 	$('.dial-tracker__wrapper').mouseup(function(){
@@ -464,13 +464,13 @@ $(document).ready(function(){
 	  const dy = 819 - event.pageY;
 		const dx = 633.5 - event.pageX;
 		let theta = Math.atan2(dy, dx); // range (-PI, PI]
-		theta *= 180 / Math.PI; // rads to degs, range (-180, 180]	
-	
-		const dtracker = $(this).find('.dial-tracker'); 
+		theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
+
+		const dtracker = $(this).find('.dial-tracker');
 
 		dtracker.data('context', false);
 		dtracker.val(theta).trigger('change');
-	
+
 		dial.progressBtn(dtracker);
 	});
 
@@ -541,7 +541,7 @@ $(document).ready(function(){
     		sliderGroup.calculateVal();
     	}else{
     		sliderGroup.calculateVal();
-	    	sl.progressBtn(slider);	    	
+	    	sl.progressBtn(slider);
     	};
     }
 	});
@@ -599,7 +599,7 @@ function loadCloudAnimation(user,peer){
 }
 
 function retrieveLottieDialAnimation(result){
-		let  variable;		
+		let  variable;
 		if(result > 10){
 			variable = largeDetailHigh;
 		}else if(result <= 10 &&  result >= -10){
