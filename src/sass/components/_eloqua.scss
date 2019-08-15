@@ -1,7 +1,221 @@
-.results__eloqua{
-	width: 382px;
-	height: 685px;
-	border-radius: 4px;
-	box-shadow: 0 2px 32px 0 rgba(0, 0, 0, 0.4);
-	background-color: var(--dark-slate);
+.results__eloqua {
+	font-family: UniversB, Arial, Helvetica, sans-serif;
+	position: absolute;
+	width: 19.1rem;
+	height: 34.25rem;
+	margin: 0 auto;
+	left: 0;
+	z-index: 10;
+	right: 0;
+	display: none;
+	-webkit-backdrop-filter: blur(19px);
+	backdrop-filter: blur(19px);
+	background-color: rgba(255, 255, 255, 0);
+	padding: 1rem;
+	overflow: hidden;
 }
+
+
+
+.results__eloqua {
+	&.activate {
+		display: block;
+	}
+	h2 {
+		font-size: 0.95rem;
+		font-weight: bold;
+		line-height: 1.5rem;
+		color:#ffffff;
+		margin-bottom:3rem;
+	}
+	form{
+		padding: 0rem 1rem 0rem 1rem;
+	}
+	input {
+		padding-left: .5rem;
+		width: 15rem;
+		height: 1.7rem;
+		border: 1px solid #00758f;
+		background-color: transparent;
+		color:#ffffff;
+		display: block;
+		margin-bottom:1.25rem;
+		font-size: 0.95rem;
+	}
+	label{
+		color:#cad9de;
+		line-height: 1.05rem;
+		display: block;
+		font-size: 0.8rem;
+		margin-bottom: .3rem;
+
+	}
+	select{
+		padding-left: .5rem;
+		width: 15rem;
+		height: 1.7rem;
+		border: 1px solid #00758f;
+		background-color: transparent;
+		color:#ffffff;
+		display: block;
+		margin-bottom:1.25rem;
+	}
+	.close-hoder{
+		width: 100%;
+		height:  1.2rem;
+		position: relative;
+	}
+	.styledCheckbox input {
+		position: relative;
+		z-index: -9999;
+		color: #ffffff;
+	}
+
+	.styledCheckbox span {
+		font-size:  0.8rem;
+		display: block;
+	}
+	.styledCheckbox span.bullsseye{
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+	}
+
+	.styledinput:checked + span {
+		background: url("link_to_another_image");
+	}
+	.terms{
+		color:#ffffff;
+		font-size: 0.95rem;
+		line-height: 1.3rem;
+
+	}
+	.terms a{
+		font-size: 0.95rem;
+		color: #cad9de;
+	}
+	/* Customize the label (the styledCheckbox) */
+	.styledCheckbox {
+		display: block;
+		position: relative;
+		padding-left: 35px;
+		margin-bottom: 12px;
+		cursor: pointer;
+		font-size: 22px;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	/* Hide the browser's default checkbox */
+	.styledCheckbox input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+
+	/* Create a custom checkbox */
+	.checkmark {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 1.2rem;
+		width: 1.2rem;
+		border: 2px solid #cad9de;
+	}
+
+	/* Create the checkmark/indicator (hidden when not checked) */
+	.checkmark:after {
+		content: "";
+		position: absolute;
+		display: none;
+	}
+
+	/* Show the checkmark when checked */
+	.styledCheckbox input:checked ~ .checkmark:after {
+		display: block;
+	}
+
+		/* Customize the label (the styledCheckbox) */
+	.styledCheckbox {
+		display: block;
+		position: relative;
+		padding-left: 35px;
+		margin-bottom: 12px;
+		cursor: pointer;
+		font-size: 22px;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	/* Hide the browser's default radio button */
+	.styledCheckbox input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+
+	/* Create a custom radio button */
+	.checkmark {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 25px;
+		width: 25px;
+		background-color: #eee;
+		border-radius: 50%;
+	}
+
+
+	/* Create the indicator (the dot/circle - hidden when not checked) */
+	.checkmark:after {
+		content: "•";
+		position: absolute;
+		top:50%;
+		left:50%;
+		transform: translate(-50%,-50%);
+		font-size: 3.5rem;
+	}
+
+	/* Show the indicator (dot/circle) when checked */
+	.styledCheckbox input:checked ~ .checkmark:after {
+		display: block;
+	}
+
+
+}
+
+.eloqua__btn {
+	width: 7.00rem;
+	height: 1.90rem;
+	border: solid 0.1rem #fff;
+	margin-top: 1.25rem;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 0.30rem;
+	padding-right: 0.45rem;
+}
+.eloqua-close{
+	content: 'x';
+	position: absolute;
+	right:0;
+	top:0;
+	width:1.2rem;
+	height:1.2rem;
+}
+.eloqua-close:before {
+	content: 'x'; // here is your X(cross) sign.
+	color: #fff;
+	font-weight: 300;
+	font-family: Arial, sans-serif;
+}
+

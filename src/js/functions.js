@@ -67,10 +67,6 @@ export const validateFields = (ob) => {
     test = document.forms[0];
     incomplete = false;
 
-    if ($('select[name=stateOrProvince]').val() == "State" || $('select[name=stateOrProvince]').val() == "") {
-        $('#field15').addClass("error");
-        incomplete = true;
-    }
 
     if ($('select[name=country]').val() == "Country" || $('select[name=country]').val() == "" || $('select[name=country]').val() == "None Selected") {
         $('#field17').addClass("error");
@@ -87,22 +83,6 @@ export const validateFields = (ob) => {
     }
     if ($('input[name=emailAddress]').val() == "E-mail Address" || $('input[name=emailAddress]').val() == "") {
         $('input[name=emailAddress]').addClass("error");
-        incomplete = true;
-    }
-    if ($('input[name=phoneNumber]').val() == "Phone Number" || $('input[name=phoneNumber]').val() == "") {
-        $('input[name=phoneNumber]').addClass("error");
-        incomplete = true;
-    }
-    if ($('input[name=company]').val() == "Company" || $('input[name=company]').val() == "") {
-        $('input[name=company]').addClass("error");
-        incomplete = true;
-    }
-    if ($('input[name=address]').val() == "Address Line 1" || $('input[name=address]').val() == "") {
-        $('input[name=address]').addClass("error");
-        incomplete = true;
-    }
-    if ($('input[name=city]').val() == "City" || $('input[name=city]').val() == "") {
-        $('input[name=city]').addClass("error");
         incomplete = true;
     }
 
@@ -139,9 +119,6 @@ export const validateFields = (ob) => {
     }
     else {
         var first = $('input[name=firstName]').val();
-        $(".scrollable").animate({scrollTop: 0}, "fast");
-        $('.results-bttn-holder').addClass('after');
-        //$('#sign_in_popup').bPopup().close();
         eloquaInfo();
     }
 }

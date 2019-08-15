@@ -169,31 +169,4 @@
   position: relative;
 }
 
-.results__eloqua{
-	position: absolute;
-  width: 25.00rem;
-  height: 40.00rem;
-  background-color: red;  
-  margin: 0 auto;
-  left: 0;
-  z-index: 10;
-  right: 0;
-  display: none;
 
-  &.activate{
-  	display: flex;
-  }
-}
-
-.eloqua__btn{
-  width: 7.00rem;
-  height: 1.90rem;
-  border: solid 0.1rem #fff;
-  margin-top: 1.25rem;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 0.30rem;
-  padding-right: 0.45rem;	
-}

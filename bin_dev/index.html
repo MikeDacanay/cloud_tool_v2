@@ -4,8 +4,13 @@
 	  <meta charset="utf-8">
 	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<title>Cloud Tool</title>
+		<!--prod
 		<link rel="stylesheet" type="text/css" href="css/style.min.css" />
-	  <script async="async" type="text/javascript" src='//consent.truste.com/notice?domain=oracle.com&c=teconsent&js=bb&noticeType=bb&text=true' crossorigin></script>
+			  <script async="async" type="text/javascript" src='//consent.truste.com/notice?domain=oracle.com&c=teconsent&js=bb&noticeType=bb&text=true' crossorigin></script>
+			  	  <script language="JavaScript" src="https://www.oracleimg.com/us/assets/metrics/ora_ocom.js"></script>
+-->
+		<link rel="stylesheet" type="text/css" href="../src/sass/main.css" />
+
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -15,7 +20,7 @@
 	      var s_html5videocta = "true";
 	  </script>
 
-	  <script language="JavaScript" src="https://www.oracleimg.com/us/assets/metrics/ora_ocom.js"></script>
+
 	  <!-- End SiteCatalyst codes -->
 		<!-- Hotjar Tracking Code for https://demo.ineedcpr.com/cloud_confidence_assessment/main.html -->
 		<script>
@@ -492,7 +497,11 @@
 							<div id="scroll_down"></div>
 							<div class="results__main">
 								<div class="results__eloqua">
-									<h2>Fill in a few details to get your scores.</h2>
+									<div class="close-hoder">
+										<div class="eloqua-close"></div>
+									</div>
+									<h2>Please fill in a few details to get your detailed score report.</h2>
+									<div class="scroll-wrap">
 									<form  method="post" name="SystemAgencyAssetDownloaded_HVC" action="https://s1973398186.t.eloqua.com/e/f2" onsubmit="setTimeout(function(){if(document.querySelector){var s=document.querySelector('form#form1048 input[type=submit]');if(s){s.disabled=true;}}},100);return true;" id="form1048" class="elq-form">
 										<input value="SystemAgencyAssetDownloaded_HVC" type="hidden" name="elqFormName"  />
 										<input value="1973398186" type="hidden" name="elqSiteId" />
@@ -520,31 +529,31 @@
 										<input id="field25" name="salesperson" type="hidden" value="Unknown"/>
 										<input id="field27" name="createdByProcess" type="hidden" value="System - Agency High Value Asset Downloaded"/>
 										<input id="field28" name="lastSubmittedFormName1" type="hidden" value="System - Agency High Value Asset Downloaded"/>
-										<div class="form-field">
-											<input type="text" name="firstName" value="First Name" placeholder="First Name" id="field4"
+
+											<label for="field4">First Name</label>
+											<input type="text" name="firstName"  id="field4"
 												   onclick="if (this.defaultValue==this.value) this.value='';  $('input[name=firstName]').removeClass('error'); $('#end_alert').hide()">
-
-										</div>
-										<div class="form-field">
-											<input type="text" name="lastName" placeholder="Last Name" value="Last Name" id="field5"
+										<label for="field5">Last Name</label>
+											<input type="text" name="lastName"  id="field5"
 												   onclick="if (this.defaultValue==this.value) this.value=''; $('input[name=lastName]').removeClass('error');$('#end_alert').hide()">
-
-										</div>
-										<div class="form-field">
-											<input type="text" class="email" id="field9" name="emailAddress" value="E-mail Address"
+										<label for="field9">Email</label>
+											<input type="text" class="email" id="field9" name="emailAddress"
 												   onclick="if (this.defaultValue==this.value) this.value=''; $('input[name=emailAddress]').removeClass('error');$('#end_alert').hide()">
-										</div>
-
+											<label for="field17">Country</label>
 										<div class="form-field">
 											<select id="field17" name="country" value="-1"
 													onfocus="$('select[name=country]').removeClass('error');$('#end_alert').hide()"> </select>
 										</div>
-
-										<div class="pull-left two-col-lg one-col-md cheat-up">
-											<input id="field26" name="marketingOptIn" type="checkbox" value="on"/><span class="opt-in"> Send me useful tips on products, services, and events from Oracle</span>
-										</div>
+										<label class="styledCheckbox">
+										<input id="field26" name="marketingOptIn" type="checkbox" value="on"/>
+											<span class="checkmark"></span>
+											<span class="opt-in"> Send me useful tips on products, services, and events from Oracle</span>
+										</label>
 									</form>
-
+										<div class="detailed-score__btn" onclick="scrollToTerms()">
+											<div class="btn__txt">Continue</div>
+											<div class="btn__arrow"></div>
+										</div>
 									<div id="terms_main" class="terms"><p>By completing and submitting this form, you understand and agree that use of Oracle's web site is subject to the Oracle.com <a href="https://www.oracle.com/legal/terms.html" target="_blank">Terms of Use</a> and <a href="https://www.oracle.com/legal/privacy/index.html" target="_blank">Oracle's Privacy Policy</a>, including the fact that Oracle may transfer your personal information collected in connection with your registration on this website to its affiliates globally and to third party entities that provide services to Oracle.</p></div>
 									<div id="terms_russia" class="terms" style="display: none">
 										<table cellpadding="0" cellspacing="0" class="terms_table">
@@ -592,12 +601,13 @@
 									</div>
 
 									<div class="detailed-score__btn" onclick="validateFields()">
-										<div class="bttn-txt">Submit</div>
+										<div class="btn__txt">Get Report</div>
 										<div class="btn__arrow"></div>
 									</div>
 									<div class="alert shadowed" id="end_alert" style="display: none">
 										<div onclick="hideAlerts()"></div>
 										<p>Please complete all required fields.</p>
+									</div>
 									</div>
 								</div>
 								<div class="results__body">
