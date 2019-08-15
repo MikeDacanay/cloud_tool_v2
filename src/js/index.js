@@ -29,6 +29,7 @@ import * as selector from './views/selectorView';
 import * as sl from './views/sliderView';
 
 import * as func from './functions';
+import * as countries from './countries';
 
 import peersJson from './peerCloud.json';
 import userJson from './userCloud.json';
@@ -575,6 +576,8 @@ $(document).ready(function(){
 	$('.header__rectangle--1').on('click', function(){
 		sessionStorage.clear();
 	})
+/***countries.js**/
+  countries.populateCountries("field17");
 
 });
 
