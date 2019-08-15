@@ -55,8 +55,7 @@ export const resizeLines = () => {
 		y1_start = 154+circleSize;
 	} else if(height >= 1080){
 		y1_start = 10.1*20 + circleSize;
-	}; 
-	console.log(screenWidth);
+	}; 	
 
 	// if(height <= 650){
 	// 	y1_start = 14.35*20 + .4083*height;

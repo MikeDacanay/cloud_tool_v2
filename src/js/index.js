@@ -52,17 +52,14 @@ $(document).ready(function(){
 	
 	if(sessionStorage.dial2){	
 		const results = new CompareResults();
-		results.allocateValues(sessionStorage,PeersData.retrievePeerScore)
-		let detailFirst='';
-		let detailSecond='';
-		let detailForth='';
+		results.allocateValues(sessionStorage,PeersData.retrievePeerScore);
+
 
 		drv.displayResults(results);
+		
+
 
 		// DIALS
-			detailFirst = retrieveLottieDialAnimation(results.val['1']);		
-			detailSecond = retrieveLottieDialAnimation(results.val['2']);
-			detailForth = retrieveLottieDialAnimation(results.val['4']);
 
 			// Contextualize where user is in the dial(NEED TO make this into a function)
 			const dialsUserElements = [$('#dial__text--users-1'),$('#dial__text--users-2'),$('#dial__text--users-3')];
@@ -88,29 +85,7 @@ $(document).ready(function(){
 
 			})([dialUserResults, dialsUserElements]);
 
-			var detailedResults1 = lottie.loadAnimation({
-			  container: document.getElementById('detail-1'),
-			  renderer: 'svg',
-			  autoplay: true,
-			  animationData: detailFirst,
-			  loop: false,
-			});
 
-			var detailedResults2 = lottie.loadAnimation({
-			  container: document.getElementById('detail-2'),
-			  renderer: 'svg',
-			  autoplay: true,
-			  animationData: detailSecond,
-			  loop: false,
-			});
-
-			var detailedResults3 = lottie.loadAnimation({
-			  container: document.getElementById('detail-3'),
-			  renderer: 'svg',
-			  autoplay: true,
-			  animationData: detailForth,
-			  loop: false,
-			});
 
 		//SELECTORS
 			const selectorValues = results.val['3'].split(',');
