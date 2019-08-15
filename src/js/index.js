@@ -577,7 +577,7 @@ $(document).ready(function(){
 		sessionStorage.clear();
 	})
 /***countries.js**/
-  countries.populateCountries("field17");
+  populateCountries("field17");
 
 });
 
