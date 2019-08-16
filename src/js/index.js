@@ -575,6 +575,7 @@ $(document).ready(function() {
 	});
 	/****Eloqua Gate**/
 	$('.elq-sumbit__btn').on('click', function () {
+		console.log('click');
 		func.validateFields();
 
 	});

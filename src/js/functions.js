@@ -64,6 +64,7 @@ export const returnNumOnly = (str, n) =>{
 };
 
 export const validateFields = (ob) => {
+    console.log('validate');
     test = document.forms[0];
     incomplete = false;
 
