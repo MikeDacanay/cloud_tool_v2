@@ -17,7 +17,7 @@ export const progressScrollerContent = slider => {
 	if(pageHeight <= 1015){
 		const previousSiblingToActive = e.thisNextScrollElement(slider).prevAll();
 		const nextSiblingToActive = e.thisNextScrollElement(slider).nextAll();
-		console.log(nextSiblingToActive);
+		
 		applySliderGroupShrink(previousSiblingToActive);
 		applySliderGroupShrink(nextSiblingToActive);
 
@@ -33,8 +33,7 @@ export const setSliderGroupSize = () =>{
 
 	if(pageHeight <= 1015){
 		const nextSiblingToActive1 = $('.scroller__wrapper--1 > .scroller__content--active').nextAll();
-		const nextSiblingToActive2 = $('.scroller__wrapper--2 > .scroller__content--active').nextAll();
-		console.log(nextSiblingToActive1, nextSiblingToActive2);
+		const nextSiblingToActive2 = $('.scroller__wrapper--2 > .scroller__content--active').nextAll();		
 		applySliderGroupShrink(nextSiblingToActive1);
 		applySliderGroupShrink(nextSiblingToActive2);
 	} 
