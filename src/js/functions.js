@@ -62,3 +62,12 @@ export const covertObjtoArr = (obj) =>{
 export const returnNumOnly = (str, n) =>{
     return Number(str.slice(0, `-${n}`));
 };
+
+export const isTouchDevice = () =>{  
+  try {  
+    document.createEvent("TouchEvent");  
+    return true;  
+  } catch (e) {  
+    return false;  
+  }  
+}

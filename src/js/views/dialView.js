@@ -1,3 +1,6 @@
+import * as func from '.././functions';
+
+
 const retrieveGroupText = (dialGroup) => {
 	const textGroup = {};
 
@@ -99,10 +102,16 @@ export const changeDialText = () => {
 
 export const progressBtn = (dial) => {  
   
-  if($('body').width() < 1040){
+  const detectPlatform = func.isTouchDevice();  
+
+  console.log(detectPlatform);
+
+  if(detectPlatform === true){
     dial = dial[0].$;
   };
+
   const pageBtnProgress = dial.closest('.page__content').find( ".btn__progress");
+
   pageBtnProgress.click();
 }
 
@@ -117,4 +126,3 @@ export const lineResize = () => {
   
   $('.dial__line').css('height', `${baseWidth*0.03}px`)
 }
-
