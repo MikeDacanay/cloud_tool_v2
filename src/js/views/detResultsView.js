@@ -77,18 +77,22 @@ function displayDialText (res) {
 				$('#dial__text--users-2').text('Less Impact');
 				$('#dial__text--users-2').addClass('dial__text--users-less');				
 			}
-		};
+		}else{
+			if(element > 10){
+				$('#main__direction--user-2').text('You are ahead of your peers and the global average in cloud data impact.');
+				$('#dial__text--users-3').text('Improve data use');
+				$('#dial__text--users-3').addClass('dial__text--users-more');				
+			}else if(element <= 10 &&  element >= -10){
+				$('#main__direction--user-2').text('You are on par with your peers and the global average in cloud data impact.');
+				$('#dial__text--users-3').text('No impact');
+				$('#dial__text--users-3').addClass('dial__text--users-equal');				
+			}else{
+				$('#main__direction--user-2').text('You are behind your peers and the global average in cloud data impact.');
+				$('#dial__text--users-3').text('Impede the current process');
+				$('#dial__text--users-3').addClass('dial__text--users-less');				
+			}
+		}
 
-
-		// if(index === 2){
-		// 	if(result > 10){
-		// 		variable = largeDetailHigh;
-		// 	}else if(result <= 10 &&  result >= -10){
-		// 		variable = largeDetailMid;
-		// 	}else{
-		// 		variable = largeDetailLow;
-		// 	}
-		// };
 
 
 	});
