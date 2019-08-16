@@ -241,6 +241,7 @@
         if (options.iframe !== false && (options.iframe || shouldUseFrame)) {
             // hack to fix Safari hang (thanks to Tim Molendijk for this)
             // see:  http://groups.google.com/group/jquery-dev/browse_thread/thread/36395b7ab510dd5d
+            console.log("USE IFRAME");
             if (options.closeKeepAlive) {
                 $.get(options.closeKeepAlive, function() {
                     jqxhr = fileUploadIframe(a);

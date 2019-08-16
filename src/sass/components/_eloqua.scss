@@ -2,7 +2,7 @@
 	font-family: UniversB, Arial, Helvetica, sans-serif;
 	position: absolute;
 	width: 42.65rem;
-	height: 33.2rem;
+	height: 41rem;
 	margin: 0 auto;
 	left: 0;
 	z-index: 10;
@@ -116,7 +116,7 @@
 		}
 
 	}
-	.detailed-score__btn {
+	.elq-sumbit__btn{
 		width: 7rem;
 		height: 1.9rem;
 		border: solid 0.1rem #fff;
@@ -157,6 +157,9 @@
 	.section-2{
 		background-color: #324b5c;
 		padding: 1rem;
+		padding: 1rem;
+		overflow: scroll;
+		height: 9.1rem;
 	}
 
 	.styledCheckbox span {
@@ -173,6 +176,9 @@
 		color:#ffffff;
 		font-size: 0.8rem;
 		line-height: 1.05rem;
+		.results__eloqua input{
+			width: 1.5rem;
+		}
 
 	}
 	.terms a{
