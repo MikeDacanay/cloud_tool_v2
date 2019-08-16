@@ -30,6 +30,7 @@ import * as path from './views/pathView';
 import * as result from './views/resultsView';
 import * as selector from './views/selectorView';
 import * as sl from './views/sliderView';
+import * as footer from './views/footerView';
 
 import * as func from './functions';
 
@@ -52,42 +53,102 @@ $(document).ready(function(){
 	
 	if(sessionStorage.dial2){	
 		const results = new CompareResults();
-		results.allocateValues(sessionStorage,PeersData.retrievePeerScore);
-
+		results.allocateValues(sessionStorage,PeersData.retrievePeerScore)
+		let detailFirst='';
+		let detailSecond='';
+		let detailForth='';
 
 		drv.displayResults(results);
-		
 
-		// //SLIDER		
-		// 	const detscroll1Values = results.val[5].split(',');
-		// 	const detscroll2Values = results.val[6].split(',');
+		// DIALS
+			detailFirst = retrieveLottieDialAnimation(results.val['1']);		
+			detailSecond = retrieveLottieDialAnimation(results.val['2']);
+			detailForth = retrieveLottieDialAnimation(results.val['4']);
 
-		// 	const peersDetScroll1 = [71,73,71,69];
-		// 	const peersDetScroll2 = [74,74,70,71,71,71];
+			// Contextualize where user is in the dial(NEED TO make this into a function)
+			const dialsUserElements = [$('#dial__text--users-1'),$('#dial__text--users-2'),$('#dial__text--users-3')];
+			const dialUserResults = [results.val['1'],results.val['2'],results.val['4']];
 
-		// 	detscroll1Values.forEach( function(element, index) {
-		// 		$(`#detscroll1-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
+			(function(arr){				
+
+				dialUserResults.forEach( function(element, index) {
+					if(element > 10){
+						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>' );
+						dialsUserElements[index].addClass('dial__text--users-more');
+						$(`#main__direction--user-${index}`).text('You are ahead of your peers and the global average on your cloud journey.');
+					}else if(element <= 10 &&  element >= -10){
+						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>');
+						dialsUserElements[index].addClass('dial__text--users-equal');
+						$(`#main__direction--user-${index}`).text('You and your peers are equal in cloud journey.');
+					}else{						
+						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>');
+						dialsUserElements[index].addClass('dial__text--users-less');
+						$(`#main__direction--user-${index}`).text('You are behind of your peers and the global average on your cloud journey.');
+					}
+				});				
+
+			})([dialUserResults, dialsUserElements]);
+
+			var detailedResults1 = lottie.loadAnimation({
+			  container: document.getElementById('detail-1'),
+			  renderer: 'svg',
+			  autoplay: true,
+			  animationData: detailFirst,
+			  loop: false,
+			});
+
+			var detailedResults2 = lottie.loadAnimation({
+			  container: document.getElementById('detail-2'),
+			  renderer: 'svg',
+			  autoplay: true,
+			  animationData: detailSecond,
+			  loop: false,
+			});
+
+			var detailedResults3 = lottie.loadAnimation({
+			  container: document.getElementById('detail-3'),
+			  renderer: 'svg',
+			  autoplay: true,
+			  animationData: detailForth,
+			  loop: false,
+			});
+
+		//SELECTORS
+			const selectorValues = results.val['3'].split(',');
+			selectorValues.forEach( function(element, index) {
+				$(`#select-${element}`).addClass('activate');
+			});
+
+		//SLIDER		
+			const detscroll1Values = results.val[5].split(',');
+			const detscroll2Values = results.val[6].split(',');
+
+			const peersDetScroll1 = [71,73,71,69];
+			const peersDetScroll2 = [74,74,70,71,71,71];
+
+			detscroll1Values.forEach( function(element, index) {
+				$(`#detscroll1-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
 				
-		// 		if(Number(element) < peersDetScroll1[index]){
-		// 			$(`#detscroll1__txt-${index}`).text('Your peers are slightly more confident with data sources.');										
-		// 		}else if(Number(element) > peersDetScroll1[index]){					
-		// 			$(`#detscroll1__txt-${index}`).text('You are slightly more confident with data sources than your peers. Congratulations!');									
-		// 		}else{
-		// 			$(`#detscroll1__txt-${index}`).text('You and your peers are equally as confident in data sources. Congratulations!');
-		// 		}
-		// 	});
-		// 	detscroll2Values.forEach( function(element, index) {
-		// 		$(`#detscroll2-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
+				if(Number(element) < peersDetScroll1[index]){
+					$(`#detscroll1__txt-${index}`).text('Your peers are slightly more confident with data sources.');										
+				}else if(Number(element) > peersDetScroll1[index]){					
+					$(`#detscroll1__txt-${index}`).text('You are slightly more confident with data sources than your peers. Congratulations!');									
+				}else{
+					$(`#detscroll1__txt-${index}`).text('You and your peers are equally as confident in data sources. Congratulations!');
+				}
+			});
+			detscroll2Values.forEach( function(element, index) {
+				$(`#detscroll2-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
 
-		// 		if(Number(element) < peersDetScroll2[index]){
-		// 			$(`#detscroll2__txt-${index}`).text('Your peers are slightly more confident with data sources.');								
+				if(Number(element) < peersDetScroll2[index]){
+					$(`#detscroll2__txt-${index}`).text('Your peers are slightly more confident with data sources.');								
 				
-		// 		}else if(Number(element) > peersDetScroll2[index]){					
-		// 			$(`#detscroll2__txt-${index}`).text('You are slightly more confident with data sources than your peers. Congratulations!');														
-		// 		}else{
-		// 			$(`#detscroll2__txt-${index}`).text('You and your peers are equally as confident in data sources. Congratulations!');
-		// 		}				
-		// 	});
+				}else if(Number(element) > peersDetScroll2[index]){					
+					$(`#detscroll2__txt-${index}`).text('You are slightly more confident with data sources than your peers. Congratulations!');														
+				}else{
+					$(`#detscroll2__txt-${index}`).text('You and your peers are equally as confident in data sources. Congratulations!');
+				}				
+			});
 
 
 	};
@@ -183,6 +244,7 @@ $(document).ready(function(){
 
 	
 	line.resizeLines();
+	footer.hidePageNumber();
 
 	$(window).on('resize',function(){
 		state.width = $('body').width();
@@ -220,7 +282,6 @@ $(document).ready(function(){
 		state.pageNum.incrementPageNum();
 		bP.animateFwd(value);
 		header.toggleRestartBtn(state.pageNum.pageNumber);
-		// header.hideHeader(state.pageNum.pageNumber);
 		css.changeBodyColor('black');
 	});
 
@@ -509,3 +570,9 @@ function retrieveLottieDialAnimation(result){
 		}
 		return variable;
 }
+
+/****************  MOBILE NAVIGATION  ********************/
+
+
+
+

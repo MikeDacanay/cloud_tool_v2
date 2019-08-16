@@ -24,8 +24,7 @@
 			@include bph_min(1200){
 				max-width: 50rem;
 				max-height: calc(50rem / 2);
-				margin-top: 4.2rem;
-				transform: translateY(0);
+				margin-top: 16.7rem;
 			}
 
 			@include bph(825){
@@ -46,20 +45,25 @@
 		}
 
 		@include bp(1440){
-			
 			@include bph_min(1000){
 				max-width: $dial-width-max2;
 				max-height: calc(#{$dial-width-max2} / 2);		
 				margin-top: calc((100vh - 30rem) / 2);
 
-				@include bp_min(1200){
-					margin-top: calc((100vh - 30.5rem) / 2);
+				@include bph_min(1200){
+					@include bp_min(1025){
+						margin-top: 4.2rem;
+						transform: translateY(0%);
+					}
 				}
-			}
-
-			@include bph_min(1200){
-				margin-top: 4.2rem;
-				transform: translateY(0);	
+				@include bp(1200){
+					@include bph_min(1100){
+						@include bp_min(1025){
+							margin-top: 4.2rem;
+							transform: translateY(0%);
+						}
+					}
+				}
 			}
 
 			@include bph(725){
@@ -75,15 +79,6 @@
 				height: calc(#{$dial-small} / 2);		
 			}
 		}
-
-		@include bp(1200){
-			@include bp_min(1025){
-				@include bph_min(1100){
-					margin-top: 4.2rem;
-					transform: translateY(0);	
-				}
-			}
-		}
 		
 		@include bp(1024){
 			width: $dial-mediumS;
@@ -95,6 +90,12 @@
 				max-height: calc(#{$dial-width-max2} / 2);		
 				margin-top: calc((100vh - 27rem) / 2);
 			}
+			@include bph_min(970){
+				@include bp_min(911){
+					margin-top: 4.2rem;
+					transform: translateY(0%);
+				}
+			}
 		}
 		
 		@include bp(910){
@@ -104,7 +105,13 @@
 			@include bph_min(750){
 				max-width: $dial-width-max2;
 				max-height: calc(#{$dial-width-max2} / 2);		
-				margin-top: calc((100vh - 27rem) / 2);
+				margin-top: calc((100vh - 25.5rem) / 2);
+			}
+			@include bph_min(930){
+				@include bp_min(768){
+					margin-top: 4.2rem;
+					transform: translateY(0%);
+				}
 			}
 		}
 		@include bp(767){
@@ -113,17 +120,28 @@
 					position: absolute;
 					top: 4rem;
 					right: 1.5rem;
-					transform: translateY(0);
 					margin-top: 0;
 				}		
 			}
 			@include bph_min(715){
 				margin-top: calc((100vh - 24rem) / 2);
 			}
+			@include bph_min(850){
+				@include bp_min(667){
+					margin-top: 4.2rem;
+					transform: translateY(0%);
+				}
+			}
 		}
+
 		@include bp(666){
-			margin-top: calc((100vh - 15rem) / 2);			
+			margin-top: calc((100vh - 15rem) / 2);
+			@include bph_min(630){
+				margin-top: 4.2rem;
+				transform: translateY(0%);
+			}
 		}
+
 		@include bp(450){
 			margin-left: auto;
 			margin-right: auto;
@@ -141,8 +159,7 @@
 				@include bph_min(1200){
 					max-width: 50rem;
 					max-height: calc(50rem / 2);
-					margin-top: 4.2rem;
-					transform: translateY(0);
+					margin-top: 14.7rem;
 				}
 			}
 			@include bp(1440){
@@ -150,18 +167,41 @@
 				@include bph_min(1000){
 					margin-top: calc((100vh - 30rem) / 2);
 	
-					@include bp_min(1200){
-						margin-top: 4.2rem;
-						transform: translateY(0);
+					@include bph_min(1200){
+						@include bp_min(1025){
+							margin-top: 4.2rem;
+							transform: translateY(0%);
+						}
+					}
+					@include bp(1200){
+						@include bph_min(1100){
+							@include bp_min(1025){
+								margin-top: 4.2rem;
+								transform: translateY(0%);
+							}
+						}
 					}
 				}	
 			}
 			@include bp(1024){ margin-top: calc((100vh - 16rem) / 2); 
 				@include bph_min(810){ margin-top: calc((100vh - 27rem) / 2); }
+				@include bph_min(970){
+					@include bp_min(911){
+						margin-top: 4.2rem;
+						transform: translateY(0%);
+					}
+				}
+	
 			}
 	
 			@include bp(910){ 
-				@include bph_min(750){ margin-top: calc((100vh - 27rem) / 2); }
+				@include bph_min(750){ margin-top: calc((100vh - 25.5rem) / 2); }
+				@include bph_min(930){
+					@include bp_min(768){
+						margin-top: 4.2rem;
+						transform: translateY(0%);
+					}
+				}	
 			}
 			@include bp(767){
 				@include bp_min(666){
@@ -169,15 +209,25 @@
 						position: absolute;
 						top: 4rem;
 						right: 1.5rem;
-						transform: translateY(0);
 						margin-top: 0;
 					}		
 				}
 				@include bph_min(715){ margin-top: calc((100vh - 24rem) / 2); }
 				@include bph_min(750){ margin-top: calc((100vh - 26rem) / 2); }
+				@include bph_min(850){
+					@include bp_min(667){
+						margin-top: 4.2rem;
+						transform: translateY(0%);
+					}
+				}
+	
 			}
 			@include bp(666){
-				margin-top: calc((100vh - 15rem) / 2);			
+				margin-top: calc((100vh - 15rem) / 2);
+				@include bph_min(630){
+					margin-top: 4.2rem;
+					transform: translateY(0%);
+				}				
 			}
 			@include bp(450){
 				margin-left: auto;

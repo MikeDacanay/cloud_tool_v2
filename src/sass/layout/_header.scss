@@ -13,10 +13,6 @@
 		padding-top: 0.95rem;
 		transition-property: opacity;
 		transition-duration: .1s;
-
-		&--x{
-			// background-color: $color-white-1
-		}
 		
 		&.deactivate{
 			opacity: 0;
@@ -47,6 +43,10 @@
 		@include bp(767){ 
 			width: 100%;
 			padding: 0.95rem .8rem 0 .8rem;
+		}
+		&.bg-white{    
+			background-color: $color-white-1;
+			animation: bgWhite 2s linear;
 		}
 
 	}

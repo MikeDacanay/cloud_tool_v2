@@ -250,7 +250,7 @@ b {
 				font-size: 1.25rem;
 			}
 		}
-		@include bp(767){
+		@include bp(830){
 			font-size: $font-size-4;
 			line-height: 1.2;
 			height: auto;
@@ -281,7 +281,7 @@ b {
 					width: 22.5rem;
 				}
 			}
-			@include bp(767){
+			@include bp(830){
 				width: 24.3rem;
 				@include bph(515){
 					width: 15.3rem;
@@ -305,9 +305,9 @@ b {
 			}
 			@include bp(910){
 				width: 34rem;
-				font-size: 1.25rem
+				// font-size: 1.25rem
 			}
-			@include bp(767){
+			@include bp(830){
 				width: 24.3rem;
 				@include bph(515){
 					width: 16.3rem;
@@ -422,6 +422,7 @@ b {
 			width: 34.90rem;
 			margin-top: .5rem;
 		}
+		@include bp(830){ width: 24.3rem; }
 		@include bp(767){
 			width: auto;
 			@include bp_min(667){
@@ -452,7 +453,7 @@ b {
 			@include bph(530){
 				margin-top: 0;
 			}
-			@include bp(767){
+			@include bp(830){
 				@include bp_min(667){
 					@include bph(514){
 						width: 36%;
@@ -467,9 +468,6 @@ b {
 			}
 		}
 
-		&--2{
-			width: 37%;
-		}
 		&--5,
 		&--6{
 			@include bp(1440){
@@ -486,6 +484,8 @@ b {
 
 		}
 
+	}	@include bp(666){
+		width: auto;
 	}
 }
 
@@ -846,6 +846,11 @@ b {
 				}
 			}
 
+			@include bp(910){
+				@include bph_min(750){
+					width: 20rem;
+				}
+			}
 			@include bp(767){
 				width: 10rem;
 				@include bph_min(715){
@@ -936,7 +941,7 @@ b {
 	  line-height: 1.58;
 	  letter-spacing: normal;
 	  color: $color-blue-2;
-	  display: flex;
+	  display: none;
 	  align-items: center;
 	  margin-right: auto;	  
 	  transform: translateY(5%);
@@ -946,6 +951,7 @@ b {
 		  line-height: 1.67;	  	
 	  }
 		.scroller__content--active &{
+			display: block;
 		  height: 3.55rem;
 		  font-size: $font-size-7;
 		  line-height: 1.67;
@@ -1190,7 +1196,9 @@ b {
 		top: -1.10rem;
 	  text-align: center;
 	  position: absolute;
-	  transform: translateX(25%)
+	  transform: translateX(25%);
+	  display: block;
+	  transition: all 2s;
 	}
 }
 
@@ -1275,7 +1283,7 @@ b {
 	&--text{
 		font-size: 0.80rem;
 		font-family: $font-reg;
-    color: $color-blue-4;
+		color: $color-white-1;
 		transition: opacity 0s;
 		opacity: 0;
 
@@ -1286,7 +1294,8 @@ b {
 
     & > b{
     	display: block;
-    	opacity: 0;
+		opacity: 0;
+		margin-bottom: .4rem;
     	
     	.header__rectangle:hover &{
 	    	transition: opacity .3s;
@@ -1311,7 +1320,7 @@ b {
 	  color: $color-blue-2;
 	}
 	&__txt{
-		width: 90%;
+		width: 85%;
 	  height: 2.10rem;
 	  font-family: $font-reg;
 	  font-size: $font-size-5;

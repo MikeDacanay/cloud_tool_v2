@@ -25,9 +25,12 @@
 				@include bph(515){
 					position: absolute;
 					margin: 0;
-					top: 1.2rem;
+					top: 4rem;
 					right: 2.9rem;
 					width: 45%;
+				}
+				@include bph(400){
+					top: 1.2rem;
 				}
 			}
 		}
@@ -35,7 +38,28 @@
 		@include bp(665){ width: 100%; }
 
 		&--1{
-	    height: 23.15rem;
+		height: 23.15rem;
+		
+		margin-top: 4.0rem;
+		@include bph(675){ margin-top: 3.0rem; }
+
+		
+		@include bp(1024){ 
+			margin-top: 2.6rem; 
+			@include bph_min(801){ margin-top: 3.0rem; }
+		}
+		@include bp(767){
+			margin-top: .5rem;
+			@include bp_min(666){
+				@include bph(515){
+					position: absolute;
+					margin: 0;
+				}
+			}
+		}
+
+
+
 		}
 		&--2{
 	    height: 30.15rem;
@@ -249,7 +273,8 @@
 	&__down{
 	  width: 1.20rem;
 	  height: 1.20rem;
-    background-image: url(../assets/graphics/down-blue.svg);
+	background-image: url(../assets/graphics/down-blue.svg);
+	display: none;
 		// background-color: green;
 		.scroller__content--active &{
 			display: none;
