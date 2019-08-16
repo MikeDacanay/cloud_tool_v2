@@ -2,22 +2,15 @@ import largeDetailHigh from '.././large_high-score.json';
 import largeDetailMid from '.././large_mid-score.json';
 import largeDetailLow from '.././large_low-score.json';
 
-const retrieveLottieDialAnimation = result =>{
-		let  variable;		
-		if(result > 10){
-			variable = largeDetailHigh;
-		}else if(result <= 10 &&  result >= -10){
-			variable = largeDetailMid;
-		}else{
-			variable = largeDetailLow;
-		}
-		return variable;
-}
+export const displayResults = (res) => {
 
+	// DIALS
+	displayDialLottie(res);
+	displayDialText(res);
 
-const displayDialLottie= res => {
+};
 
-	console.log(res);
+function displayDialLottie (res) {
 	
 	let 	detailFirst = retrieveLottieDialAnimation(res.val['1']);		
 	let 	detailSecond = retrieveLottieDialAnimation(res.val['2']);
@@ -48,71 +41,68 @@ const displayDialLottie= res => {
 	});
 }
 
-export const displayResults = (res) => {
+function displayDialText (res) {
+	const dialsUserElements = [$('#dial__text--users-1'),$('#dial__text--users-2'),$('#dial__text--users-3')];
+	const dialUserResults = [res.val['1'],res.val['2'],res.val['4']];
+	
 
-	displayDialLottie(res);
 
-	// // dials
+	dialUserResults.forEach( function(element, index) {		
+
+		if(index === 0){
+			if(element > 10){
+				$('#main__direction--user-0').text('You are ahead of your peers and the global average in cloud utilization.');
+				$('#dial__text--users-1').text('Using cloud services');
+				$('#dial__text--users-1').addClass('dial__text--users-more');				
+			}else if(element <= 10 &&  element >= -10){
+				$('#main__direction--user-0').text('You are on par with your peers and the global average in cloud utilization.');
+				$('#dial__text--users-1').text('Planning for the cloud');
+				$('#dial__text--users-1').addClass('dial__text--users-equal');				
+			}else{
+				$('#main__direction--user-0').text('You are behind your peers and the global average in cloud utilization.');
+				$('#dial__text--users-1').text('Not using the cloud');
+				$('#dial__text--users-1').addClass('dial__text--users-less');				
+			}
+		}else if(index === 1){
+			if(element > 10){
+				$('#main__direction--user-1').text('You are ahead of your peers and the global average in cloud migration impact.');
+				$('#dial__text--users-2').text('More impact');
+				$('#dial__text--users-2').addClass('dial__text--users-more');				
+			}else if(element <= 10 &&  element >= -10){
+				$('#main__direction--user-1').text('You are on par with your peers and the global average in cloud migration impact.');
+				$('#dial__text--users-2').text('Some impact');
+				$('#dial__text--users-2').addClass('dial__text--users-equal');				
+			}else{
+				$('#main__direction--user-1').text('You are behind your peers and the global average in cloud migration impact.');
+				$('#dial__text--users-2').text('Less Impact');
+				$('#dial__text--users-2').addClass('dial__text--users-less');				
+			}
+		};
 
 
-	// 	let detailFirst='';
-	// let detailSecond='';
-	// let detailForth='';
+		// if(index === 2){
+		// 	if(result > 10){
+		// 		variable = largeDetailHigh;
+		// 	}else if(result <= 10 &&  result >= -10){
+		// 		variable = largeDetailMid;
+		// 	}else{
+		// 		variable = largeDetailLow;
+		// 	}
+		// };
 
-	// drv.displayResults(results);
 
-	// // DIALS
-	// 	detailFirst = retrieveLottieDialAnimation(results.val['1']);		
-	// 	detailSecond = retrieveLottieDialAnimation(results.val['2']);
-	// 	detailForth = retrieveLottieDialAnimation(results.val['4']);
+	});
 
-	// 	// Contextualize where user is in the dial(NEED TO make this into a function)
-	// 	const dialsUserElements = [$('#dial__text--users-1'),$('#dial__text--users-2'),$('#dial__text--users-3')];
-	// 	const dialUserResults = [results.val['1'],results.val['2'],results.val['4']];
+}
 
-	// 	(function(arr){				
-
-	// 		dialUserResults.forEach( function(element, index) {
-	// 			if(element > 10){
-	// 				dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>' );
-	// 				dialsUserElements[index].addClass('dial__text--users-more');
-	// 				$(`#main__direction--user-${index}`).text('You are ahead of your peers and the global average on your cloud journey.');
-	// 			}else if(element <= 10 &&  element >= -10){
-	// 				dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>');
-	// 				dialsUserElements[index].addClass('dial__text--users-equal');
-	// 				$(`#main__direction--user-${index}`).text('You and your peers are equal in cloud journey.');
-	// 			}else{						
-	// 				dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>');
-	// 				dialsUserElements[index].addClass('dial__text--users-less');
-	// 				$(`#main__direction--user-${index}`).text('You are behind of your peers and the global average on your cloud journey.');
-	// 			}
-	// 		});				
-
-	// 	})([dialUserResults, dialsUserElements]);
-
-	// 	var detailedResults1 = lottie.loadAnimation({
-	// 	  container: document.getElementById('detail-1'),
-	// 	  renderer: 'svg',
-	// 	  autoplay: true,
-	// 	  animationData: detailFirst,
-	// 	  loop: false,
-	// 	});
-
-	// 	var detailedResults2 = lottie.loadAnimation({
-	// 	  container: document.getElementById('detail-2'),
-	// 	  renderer: 'svg',
-	// 	  autoplay: true,
-	// 	  animationData: detailSecond,
-	// 	  loop: false,
-	// 	});
-
-	// 	var detailedResults3 = lottie.loadAnimation({
-	// 	  container: document.getElementById('detail-3'),
-	// 	  renderer: 'svg',
-	// 	  autoplay: true,
-	// 	  animationData: detailForth,
-	// 	  loop: false,
-	// 	});
-
-};
-
+function retrieveLottieDialAnimation(result){
+		let  variable;		
+		if(result > 10){
+			variable = largeDetailHigh;
+		}else if(result <= 10 &&  result >= -10){
+			variable = largeDetailMid;
+		}else{
+			variable = largeDetailLow;
+		}
+		return variable;
+}

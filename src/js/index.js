@@ -65,25 +65,25 @@ $(document).ready(function(){
 			const dialsUserElements = [$('#dial__text--users-1'),$('#dial__text--users-2'),$('#dial__text--users-3')];
 			const dialUserResults = [results.val['1'],results.val['2'],results.val['4']];
 
-			(function(arr){				
+			// (function(arr){				
 
-				dialUserResults.forEach( function(element, index) {
-					if(element > 10){
-						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>' );
-						dialsUserElements[index].addClass('dial__text--users-more');
-						$(`#main__direction--user-${index}`).text('You are ahead of your peers and the global average on your cloud journey.');
-					}else if(element <= 10 &&  element >= -10){
-						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>');
-						dialsUserElements[index].addClass('dial__text--users-equal');
-						$(`#main__direction--user-${index}`).text('You and your peers are equal in cloud journey.');
-					}else{						
-						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>');
-						dialsUserElements[index].addClass('dial__text--users-less');
-						$(`#main__direction--user-${index}`).text('You are behind of your peers and the global average on your cloud journey.');
-					}
-				});				
+			// 	// dialUserResults.forEach( function(element, index) {
+			// 	// 	if(element > 10){
+			// 	// 		dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>' );
+			// 	// 		dialsUserElements[index].addClass('dial__text--users-more');
+			// 	// 		$(`#main__direction--user-${index}`).text('You are ahead of your peers and the global average on your cloud journey.');
+			// 	// 	}else if(element <= 10 &&  element >= -10){
+			// 	// 		dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>');
+			// 	// 		dialsUserElements[index].addClass('dial__text--users-equal');
+			// 	// 		$(`#main__direction--user-${index}`).text('You and your peers are equal in cloud journey.');
+			// 	// 	}else{						
+			// 	// 		dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>');
+			// 	// 		dialsUserElements[index].addClass('dial__text--users-less');
+			// 	// 		$(`#main__direction--user-${index}`).text('You are behind of your peers and the global average on your cloud journey.');
+			// 	// 	}
+			// 	// });				
 
-			})([dialUserResults, dialsUserElements]);
+			// })([dialUserResults, dialsUserElements]);
 
 
 
