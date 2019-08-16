@@ -57,42 +57,37 @@ $(document).ready(function(){
 
 		drv.displayResults(results);
 		
-		//SELECTORS
-			const selectorValues = results.val['3'].split(',');
-			selectorValues.forEach( function(element, index) {
-				$(`#select-${element}`).addClass('activate');
-			});
 
-		//SLIDER		
-			const detscroll1Values = results.val[5].split(',');
-			const detscroll2Values = results.val[6].split(',');
+		// //SLIDER		
+		// 	const detscroll1Values = results.val[5].split(',');
+		// 	const detscroll2Values = results.val[6].split(',');
 
-			const peersDetScroll1 = [71,73,71,69];
-			const peersDetScroll2 = [74,74,70,71,71,71];
+		// 	const peersDetScroll1 = [71,73,71,69];
+		// 	const peersDetScroll2 = [74,74,70,71,71,71];
 
-			detscroll1Values.forEach( function(element, index) {
-				$(`#detscroll1-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
+		// 	detscroll1Values.forEach( function(element, index) {
+		// 		$(`#detscroll1-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
 				
-				if(Number(element) < peersDetScroll1[index]){
-					$(`#detscroll1__txt-${index}`).text('Your peers are slightly more confident with data sources.');										
-				}else if(Number(element) > peersDetScroll1[index]){					
-					$(`#detscroll1__txt-${index}`).text('You are slightly more confident with data sources than your peers. Congratulations!');									
-				}else{
-					$(`#detscroll1__txt-${index}`).text('You and your peers are equally as confident in data sources. Congratulations!');
-				}
-			});
-			detscroll2Values.forEach( function(element, index) {
-				$(`#detscroll2-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
+		// 		if(Number(element) < peersDetScroll1[index]){
+		// 			$(`#detscroll1__txt-${index}`).text('Your peers are slightly more confident with data sources.');										
+		// 		}else if(Number(element) > peersDetScroll1[index]){					
+		// 			$(`#detscroll1__txt-${index}`).text('You are slightly more confident with data sources than your peers. Congratulations!');									
+		// 		}else{
+		// 			$(`#detscroll1__txt-${index}`).text('You and your peers are equally as confident in data sources. Congratulations!');
+		// 		}
+		// 	});
+		// 	detscroll2Values.forEach( function(element, index) {
+		// 		$(`#detscroll2-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
 
-				if(Number(element) < peersDetScroll2[index]){
-					$(`#detscroll2__txt-${index}`).text('Your peers are slightly more confident with data sources.');								
+		// 		if(Number(element) < peersDetScroll2[index]){
+		// 			$(`#detscroll2__txt-${index}`).text('Your peers are slightly more confident with data sources.');								
 				
-				}else if(Number(element) > peersDetScroll2[index]){					
-					$(`#detscroll2__txt-${index}`).text('You are slightly more confident with data sources than your peers. Congratulations!');														
-				}else{
-					$(`#detscroll2__txt-${index}`).text('You and your peers are equally as confident in data sources. Congratulations!');
-				}				
-			});
+		// 		}else if(Number(element) > peersDetScroll2[index]){					
+		// 			$(`#detscroll2__txt-${index}`).text('You are slightly more confident with data sources than your peers. Congratulations!');														
+		// 		}else{
+		// 			$(`#detscroll2__txt-${index}`).text('You and your peers are equally as confident in data sources. Congratulations!');
+		// 		}				
+		// 	});
 
 
 	};

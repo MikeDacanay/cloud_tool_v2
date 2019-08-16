@@ -8,6 +8,12 @@ export const displayResults = (res) => {
 	displayDialLottie(res);
 	displayDialText(res);
 
+	// SELECTORS
+	displaySelector(res);
+
+	// SLIDER
+	displaySliderDirectionText(res);
+	displaySliderContainerTextAndFill(res);
 };
 
 function displayDialLottie (res) {
@@ -99,7 +105,7 @@ function displayDialText (res) {
 
 }
 
-function retrieveLottieDialAnimation(result){
+function retrieveLottieDialAnimation(result) {
 		let  variable;		
 		if(result > 10){
 			variable = largeDetailHigh;
@@ -109,4 +115,187 @@ function retrieveLottieDialAnimation(result){
 			variable = largeDetailLow;
 		}
 		return variable;
+}
+
+function displaySelector (res) {
+	const selectorValues = res.val['3'].split(',');
+	selectorValues.forEach( function(element, index) {
+		$(`#select-${element}`).addClass('activate');
+	});
+}
+
+function displaySliderDirectionText (res) {
+	const detscroll1Values = res.val[5].split(',');
+	const detscroll2Values = res.val[6].split(',');
+
+	const peersDetScroll1 = [71,73,71,69];
+	const peersDetScroll2 = [74,74,70,71,71,71];
+
+	let sliderMeanResult0;
+	let sliderMeanResult1;
+
+	// Text for #sliderMean elements
+
+	(function(user,peer){
+		user.forEach( function(element, index) {			
+			let userSum = 0;
+			let peerSum = 0;
+
+			let userAve = 0;
+			let peerAve = 0;
+
+			element.forEach( function(element, index) {
+				userSum = userSum + Number(element);
+			});
+			peer[index].forEach(function(element,index){
+				peerSum = peerSum + Number(element);
+			});				
+
+			userAve = userSum/element.length;
+			peerAve = peerSum/element.length;
+
+			if(index === 0){
+				sliderMeanResult0 = userAve - peerAve; 
+			}else{
+				sliderMeanResult1 = userAve - peerAve;
+			}
+		});
+	})([detscroll1Values,detscroll2Values],[peersDetScroll1,peersDetScroll2]);
+
+	if(sliderMeanResult0 > 10){
+		$('#sliderMean-0').text('You are ahead of your peers and the global average for security and management practices.');
+							
+	}else if(sliderMeanResult0 <= 10 &&  sliderMeanResult0 >= -10){
+		$('#sliderMean-0').text('You are on par with your peers and the global average for security and management practices.');							
+	}else{
+		$('#sliderMean-0').text('You are behind your peers and the global average for security and management practices.');
+	}	
+
+
+	if(sliderMeanResult1 > 10){
+		$('#sliderMean-1').text('You are ahead of your peers and the global average for data and analytics practices.');
+							
+	}else if(sliderMeanResult1 <= 10 &&  sliderMeanResult1 >= -10){
+		$('#sliderMean-1').text(' You are on par with your peers and the global average for data and analytics practices.');							
+	}else{
+		$('#sliderMean-1').text('You are behind your peers and the global average for data and analytics practices.');
+	}
+}
+
+function displaySliderContainerTextAndFill(res){
+	const detscroll1Values = res.val[5].split(',');
+	const detscroll2Values = res.val[6].split(',');
+
+	const peersDetScroll1 = [71,73,71,69];
+	const peersDetScroll2 = [74,74,70,71,71,71];
+
+	detscroll1Values.forEach( function(element, index) {
+		// Your peers are slightly more confident with
+		// You are on par with your peers and the global average in 
+		// You are slightly more confident with xxx than your peers. Congratulations!
+		const val = Number(element) - Number(peersDetScroll1[index]);
+		
+		$(`#detscroll1-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
+
+		if(index === 0){
+			if(val > 10){
+				$(`#detscroll1__txt-${index}`).text('You are slightly more confident with cyber security prevention than your peers. Congratulations!');
+			}else if(val <= 10 &&  val >= -10){
+				$(`#detscroll1__txt-${index}`).text('You are on par with your peers and the global average in cyber security prevention.');
+			}else{
+				$(`#detscroll1__txt-${index}`).text('Your peers are slightly more confident with cyber security prevention.');
+			}
+		}
+		if(index === 1){
+			if(val > 10){
+				$(`#detscroll1__txt-${index}`).text('You are slightly more confident with cyber threat detection than your peers. Congratulations!');
+			}else if(val <= 10 &&  val >= -10){
+				$(`#detscroll1__txt-${index}`).text('You are on par with your peers and the global average in cyber threat detection.');
+			}else{
+				$(`#detscroll1__txt-${index}`).text('Your peers are slightly more confident with cyber threat detection.');
+			}			
+		}
+		if(index === 2){
+			if(val > 10){
+				$(`#detscroll1__txt-${index}`).text('You are slightly more confident with capacity planning than your peers. Congratulations!');
+			}else if(val <= 10 &&  val >= -10){
+				$(`#detscroll1__txt-${index}`).text('You are on par with your peers and the global average in capacity planning.');
+			}else{
+				$(`#detscroll1__txt-${index}`).text('Your peers are slightly more confident with capacity planning.');
+			}			
+		}
+		if(index === 3){
+			if(val > 10){
+				$(`#detscroll1__txt-${index}`).text('You are slightly more confident with outage prevention than your peers. Congratulations!');
+			}else if(val <= 10 &&  val >= -10){
+				$(`#detscroll1__txt-${index}`).text('You are on par with your peers and the global average in outage prevention.');
+			}else{
+				$(`#detscroll1__txt-${index}`).text('Your peers are slightly more confident with outage prevention.');
+			}			
+		}
+	});
+
+	detscroll2Values.forEach( function(element, index) {
+		// Your peers are slightly more confident with
+		// You are on par with your peers and the global average in 
+		// You are slightly more confident with xxx than your peers. Congratulations!
+		const val = Number(element) - Number(peersDetScroll2[index]);
+
+		$(`#detscroll2-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
+
+		if(index === 0){
+			if(val > 10){
+				$(`#detscroll2__txt-${index}`).text('You are slightly more confident with data sophistication than your peers. Congratulations!');
+			}else if(val <= 10 &&  val >= -10){
+				$(`#detscroll2__txt-${index}`).text('You are on par with your peers and the global average in data sophistication.');
+			}else{
+				$(`#detscroll2__txt-${index}`).text('Your peers are slightly more confident with data sophistication.');
+			}
+		}
+		if(index === 1){
+			if(val > 10){
+				$(`#detscroll2__txt-${index}`).text('You are slightly more confident with data sources than your peers. Congratulations!');
+			}else if(val <= 10 &&  val >= -10){
+				$(`#detscroll2__txt-${index}`).text('You are on par with your peers and the global average in data sources.');
+			}else{
+				$(`#detscroll2__txt-${index}`).text('Your peers are slightly more confident with data sources.');
+			}			
+		}
+		if(index === 2){
+			if(val > 10){
+				$(`#detscroll2__txt-${index}`).text('You are slightly more confident with big data skill sets than your peers. Congratulations!');
+			}else if(val <= 10 &&  val >= -10){
+				$(`#detscroll2__txt-${index}`).text('You are on par with your peers and the global average in big data skill sets.');
+			}else{
+				$(`#detscroll2__txt-${index}`).text('Your peers are slightly more confident with big data skill sets.');
+			}			
+		}
+		if(index === 3){
+			if(val > 10){
+				$(`#detscroll2__txt-${index}`).text('You are slightly more confident with machine learning than your peers. Congratulations!');
+			}else if(val <= 10 &&  val >= -10){
+				$(`#detscroll2__txt-${index}`).text('You are on par with your peers and the global average in machine learning.');
+			}else{
+				$(`#detscroll2__txt-${index}`).text('Your peers are slightly more confident with machine learning.');
+			}			
+		}
+		if(index === 5){
+			if(val > 10){
+				$(`#detscroll2__txt-${index}`).text('You are slightly more confident with visualization than your peers. Congratulations!');
+			}else if(val <= 10 &&  val >= -10){
+				$(`#detscroll2__txt-${index}`).text('You are on par with your peers and the global average in visualization.');
+			}else{
+				$(`#detscroll2__txt-${index}`).text('Your peers are slightly more confident with visualization.');
+			}			
+		}
+		if(index === 6){
+			if(val > 10){
+				$(`#detscroll2__txt-${index}`).text('You are slightly more confident with distribution than your peers. Congratulations!');
+			}else if(val <= 10 &&  val >= -10){
+				$(`#detscroll2__txt-${index}`).text('You are on par with your peers and the global average in distribution.');
+			}else{
+				$(`#detscroll2__txt-${index}`).text('Your peers are slightly more confident with distribution.');
+			}			
+		}				
+	});	
 }
