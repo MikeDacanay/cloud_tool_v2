@@ -273,10 +273,13 @@
 	&__down{
 	  width: 1.20rem;
 	  height: 1.20rem;
-	background-image: url(../assets/graphics/down-blue.svg);
-	display: none;
+		background-image: url(../assets/graphics/down-blue.svg);	
 		// background-color: green;
 		.scroller__content--active &{
+			display: none;
+		}
+
+		@include bph(1015){
 			display: none;
 		}
 	}

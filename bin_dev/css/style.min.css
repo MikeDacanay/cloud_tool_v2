@@ -832,12 +832,12 @@ b {
   line-height: 1.58;
   letter-spacing: normal;
   color: #324b5c;
-  display: none;
   align-items: center;
   margin-right: auto;
   transform: translateY(5%); }
   @media only screen and (max-height: 1000px) {
     .scroller__title {
+      display: none;
       height: 3.55rem;
       font-size: 1.8rem;
       line-height: 1.67; } }
@@ -2855,10 +2855,12 @@ b {
 .scroller__down {
   width: 1.20rem;
   height: 1.20rem;
-  background-image: url(../assets/graphics/down-blue.svg);
-  display: none; }
+  background-image: url(../assets/graphics/down-blue.svg); }
   .scroller__content--active .scroller__down {
     display: none; }
+  @media only screen and (max-height: 1015px) {
+    .scroller__down {
+      display: none; } }
 
 .rangeslider,
 .rangeslider__fill {
