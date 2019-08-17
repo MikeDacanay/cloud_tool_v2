@@ -114,6 +114,7 @@ export const animateFwd = (btnVal) => {
 			$('.header__container').removeClass('deactivate');
 		}, 3500);		
 	};
+
 };
 
 export const animateBack = (btnVal) => {
@@ -171,6 +172,8 @@ export const animateBack = (btnVal) => {
 			$('.page--6').addClass('activate');
 			$('.footer').addClass('activate');
 			$('.footer-text').text('5/6');
-		},2700);
+		},3000);
 	}
+
+	console.log(btnVal);
 };
