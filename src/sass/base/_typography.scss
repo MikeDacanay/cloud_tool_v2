@@ -951,10 +951,12 @@ b {
 		  line-height: 1.67;	  	
 	  }
 		.scroller__content--active &{
-			display: block;
+			display: flex;
 		  height: 3.55rem;
 		  font-size: $font-size-7;
 		  line-height: 1.67;
+			
+			
 
 		  @include bp(1300){
 		  	font-size: $font-size-8;		 

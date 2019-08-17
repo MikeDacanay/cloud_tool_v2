@@ -842,7 +842,7 @@ b {
       font-size: 1.8rem;
       line-height: 1.67; } }
   .scroller__content--active .scroller__title {
-    display: block;
+    display: flex;
     height: 3.55rem;
     font-size: 1.75rem;
     line-height: 1.67; }
