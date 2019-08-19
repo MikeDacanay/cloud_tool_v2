@@ -325,7 +325,7 @@ $(document).ready(function(){
 	});
 
 
-	$('.btn__progress--5').click(); 
+	// $('.btn__progress--5').click(); 
 
 	e.btnBackX.on('click',function(){
 		const contextValue = e.btnBackX.attr('context');
@@ -370,6 +370,7 @@ $(document).ready(function(){
 		'displayInput': false,
 		'bgColor': '#fff',
 		'fgColor': '#00758f',
+		// "readOnly": true,
 
     'change' : function (v,context) {
 
@@ -385,8 +386,12 @@ $(document).ready(function(){
 	 		this.dial = assignDial(this.selfID);
 	 		this.dial.changeValue(v);
   		
+
+	 		// console.log(self.);
+
 	 		if(this.context=== false){
 	  		dial.progressBtn(self);
+	  		console.log('testasdfasdfasfasdfasdfasdfasd');	  		
     	}
     },
 	});

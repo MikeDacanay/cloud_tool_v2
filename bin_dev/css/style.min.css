@@ -2208,11 +2208,14 @@ b {
   display: flex;
   flex-direction: column;
   align-items: center;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all .5s; }
   .landing__container--fadeout {
     transition-property: border-color;
     transition-duration: 0.5s;
     border-color: transparent; }
+  .page.activate .page__content > .landing__container--fadeaway {
+    opacity: 0; }
   @media only screen and (max-width: 910px) {
     .landing__container {
       max-width: 83.33vw;

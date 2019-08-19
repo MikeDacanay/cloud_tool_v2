@@ -1,9 +1,9 @@
 export const animateFwd = (btnVal) => {
 
 	if(btnVal === 1){
-		$('.landing__container').addClass('landing__container--fadeout');
-		$('.landing__title').addClass('landing__title--fadeout');
-		$('.landing__subtitle').addClass('landing__subtitle--fadeout');
+		$('.landing__container').toggleClass('landing__container--fadeout');
+		$('.landing__title').toggleClass('landing__title--fadeout');
+		$('.landing__subtitle').toggleClass('landing__subtitle--fadeout');
 
 		$('.btn__regress').attr('context', '0')
 		// setTimeout(function(){
@@ -15,6 +15,12 @@ export const animateFwd = (btnVal) => {
 			$('.page--2').addClass('activate');
 			$('.line--1, .line--2').addClass('activate');
 			$('.footer').addClass('activate');
+
+			$('.landing__container').toggleClass('landing__container--fadeout');
+			$('.landing__title').toggleClass('landing__title--fadeout');
+			$('.landing__subtitle').toggleClass('landing__subtitle--fadeout');
+
+			$('.landing__container').toggleClass('landing__container--fadeaway');
 		},3000);
 	}
 		else if(btnVal === 2){
@@ -124,10 +130,12 @@ export const animateBack = (btnVal) => {
 		$('.page--2').removeClass('activate');
 		$('.footer').removeClass('activate');
 		setTimeout(function(){
-			$('.landing__container').removeClass('landing__container--fadeout');
-			$('.landing__title').removeClass('landing__title--fadeout');
-			$('.landing__subtitle').removeClass('landing__subtitle--fadeout');
-		},3000);
+			// $('.landing__container').removeClass('landing__container--fadeout');
+			// $('.landing__title').removeClass('landing__title--fadeout');
+			// $('.landing__subtitle').removeClass('landing__subtitle--fadeout');
+
+			$('.landing__container').toggleClass('landing__container--fadeaway');
+		},3200);
 	}else if(btnVal === 2){ //to Q2
 		$('.page--3').removeClass('activate');
 		$('.footer').removeClass('activate');
