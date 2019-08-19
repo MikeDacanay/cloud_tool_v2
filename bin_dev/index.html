@@ -3,16 +3,18 @@
 	<head>
 	  <meta charset="utf-8">
 	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<title>Cloud Tool</title>
-		<!--production  <link rel="stylesheet" type="text/css" href="css/style.min.css" />
-	  <script async="async" type="text/javascript" src='//consent.truste.com/notice?domain=oracle.com&c=teconsent&js=bb&noticeType=bb&text=true' crossorigin></script>
-	  <script language="JavaScript" src="https://www.oracleimg.com/us/assets/metrics/ora_ocom.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-		-->
-		<link rel="stylesheet" type="text/css" href="../src/sass/main.css" />
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<title>Cloud Tool</title>
+		<link rel="stylesheet" type="text/css" href="css/style.min.css" />
+
+
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+		<script async="async" type="text/javascript" src='//consent.truste.com/notice?domain=oracle.com&c=teconsent&js=bb&noticeType=bb&text=true' crossorigin></script>
+		<script language="JavaScript" src="https://www.oracleimg.com/us/assets/metrics/ora_ocom.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-3.2.1.min.js" type="text/javascript" ><\/script>');</script>
 	  <!-- Start SiteCatalyst codess -->
 	  <script language="JavaScript" type="text/javascript">
@@ -500,7 +502,7 @@
 									<div class="blur-image"><img src="assets/images/desktop/background-texture.svg" width="100%"> </div>
 									<div class="blur">
 									<div class="close-holder">
-										<div class="eloqua-close"></div>
+										<div class="eloqua-close"><img src="assets/graphics/close.svg" ></div>
 									</div>
 										<div class="title-holder">
 											<div class="title-img"><img src="assets/graphics/illustration/illustration-visualization.svg"></div>
@@ -545,9 +547,10 @@
 											<input type="text" class="email" id="field9" name="emailAddress"
 												   onclick="if (this.defaultValue==this.value) this.value=''; $('input[name=emailAddress]').removeClass('error');$('#end_alert').hide()">
 											<label for="field17">Country</label>
-											<div class="form-field">
+											<div class="form-field" id="select-field">
 												<select id="field17" name="country" value="-1"
 														onfocus="$('select[name=country]').removeClass('error');$('#end_alert').hide()"> </select>
+												<img src="assets/graphics/down.svg" class="select-down">
 											</div>
 											<label class="styledCheckbox">
 												<input id="field26" name="marketingOptIn" type="checkbox" value="on"/>
@@ -555,18 +558,18 @@
 												<span class="opt-in"> Send me useful tips on products, services, and events from Oracle</span>
 											</label>
 										</form>
-										<div class="detailed-score__btn desktop-hide" onclick="">
+										<div class="alert" id="end_alert" style="display: none">
+											<p>*Please complete all required fields.</p>
+										</div>
+										<div class="continue__btn desktop-hide" onclick="$('.blur').addClass('second-pos')">
 											<div class="btn__txt">Continue</div>
 											<div class="btn__arrow"></div>
 										</div>
-										<div class="elq-sumbit__btn phone-hide" ">
+										<div class="elq-sumbit__btn phone-hide" >
 											<div class="btn__txt">Get Report</div>
 											<div class="btn__arrow"></div>
 										</div>
-										<div class="alert shadowed" id="end_alert" style="display: none">
-											<div onclick="hideAlerts()"></div>
-											<p>Please complete all required fields.</p>
-										</div>
+
 										</div>
 										<div class="section-2">
 										<div id="terms_main" class="terms"><p>By completing and submitting this form, you understand and agree that use of Oracle's web site is subject to the Oracle.com <a href="https://www.oracle.com/legal/terms.html" target="_blank">Terms of Use</a> and <a href="https://www.oracle.com/legal/privacy/index.html" target="_blank">Oracle's Privacy Policy</a>, including the fact that Oracle may transfer your personal information collected in connection with your registration on this website to its affiliates globally and to third party entities that provide services to Oracle.</p></div>

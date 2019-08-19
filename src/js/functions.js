@@ -64,12 +64,11 @@ export const returnNumOnly = (str, n) =>{
 };
 
 export const validateFields = (ob) => {
-    console.log('validate');
-    test = document.forms[0];
-    incomplete = false;
+    var test = document.forms[0];
+    var incomplete = false;
 
 
-    if ($('select[name=country]').val() == "Country" || $('select[name=country]').val() == "" || $('select[name=country]').val() == "None Selected") {
+    if ($('select[name=country]').val() == "Select Country" || $('select[name=country]').val() == "" || $('select[name=country]').val() == "None Selected") {
         $('#field17').addClass("error");
         incomplete = true;
     }
@@ -120,7 +119,31 @@ export const validateFields = (ob) => {
     }
     else {
         var first = $('input[name=firstName]').val();
-        eloquaInfo();
+        var sPageURL = window.location.search.substring(1);
+        var sURLVariables = sPageURL.split('&');
+        var src="";
+        for (var i = 0; i < sURLVariables.length; i++) {
+            var sParameterName = sURLVariables[i].split('=');
+            if (sParameterName[0] == 'source') {
+                src= sParameterName[1];
+            }
+        }
+        var d = new Date();
+        var timestamp = (d.getMonth() + 1) + "/" + d.getDate() + "/" + d.getFullYear() + " " + d.getHours() + ":" + d.getMinutes();
+        $("#src1").val(src);
+        $("#field3").val(timestamp);
+        var e = document.getElementById("field17");
+        if (e.options[e.selectedIndex]) {
+            var cc = e.options[e.selectedIndex].value;
+        }
+        console.log($('#form1048').serialize());
+        $('#form1048').submit();
+        $('.results__eloqua').removeClass('activate');
+        setTimeout(function () {
+            window.location.href = "results.html";
+        },200)
+
+
     }
 }
 

@@ -574,11 +574,22 @@ $(document).ready(function() {
 		sessionStorage.slider2 = state.slider2.arrayVal;
 	});
 	/****Eloqua Gate**/
-	$('.elq-sumbit__btn').on('click', function () {
-		console.log('click');
-		func.validateFields();
+	/***popuplate countries dropdown**/
+	func.populateCountries("field17");
 
+	$('.elq-sumbit__btn').on('click', function () {
+		func.validateFields();
 	});
+	$('.eloqua-close').on('click', function () {
+		$('.results__eloqua').removeClass('activate');
+	});
+	var options = {
+		iframe: true,
+		target:'#output1'
+	}
+
+	$('#form1048').ajaxForm(options);
+
 	/**************** SESSION STORAGE CONTROLLER ********************/
 
 	$('.header__rectangle--1').on('click', function () {
