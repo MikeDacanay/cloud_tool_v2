@@ -68,6 +68,9 @@
 	}
 	&__content{
 		width: 97%;
+		transition: height .5s;
+		
+
 		@include bph(1015){
 			height: .4rem;
 			transition: width $transition-1 linear, opacity $transition-1 linear;
@@ -210,7 +213,30 @@
     justify-content: space-between;		
 		height: 3.55rem;
 		padding-top: 1.15rem;
+		
+		.scroller__content > &{
+			display: flex;
+			opacity: 0;
+			height: 0;
+			transition: .2s all;
+			@include bph(1015){
+				// display: none;
+				// height: 3.55rem;
+				// opacity: 1;
+				transition: .5s all;	
+				opacity: 0;
+				height: 0;
+			}
+		}
 
+		.scroller__content--active > &{
+			height: 3.55rem;
+			opacity: 1;
+			@include bph(1015){
+				display: flex;
+			}
+		}
+	
 		@include bp_min(1025){
 			@include bph(650){
 				height: 2.5rem;;
