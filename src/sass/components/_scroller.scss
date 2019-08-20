@@ -69,11 +69,11 @@
 	&__content{
 		width: 97%;
 		transition: height .5s;
-		
+		overflow: hidden;
 
 		@include bph(1015){
 			height: .4rem;
-			transition: width $transition-1 linear, opacity $transition-1 linear;
+			transition: width $transition-1 linear, opacity $transition-1 linear, height $transition-1 linear;
 		}
 		height: 2.70rem;
 		border-radius: 0.20rem;
@@ -168,6 +168,7 @@
 		}
 		&:not(:last-of-type){
 			margin-bottom: 0.80rem;
+			overflow: hidden;			
 			@include bph(1015){
 				margin-bottom: .4rem;
 			}
@@ -349,7 +350,7 @@
 
 	  .scroller__content--active &{
 		  height: 2.20rem;
-		  border: solid 2px $color-blue-4;	  	
+		  border: solid 0.10rem $color-blue-4;	  	
 		  margin-top: 0.65rem;
 
 		  @include bph(1015){ transition: all $transition-1 linear $transition-4; }
@@ -386,8 +387,10 @@
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
 		.rangeslider--horizontal & {
-		  top: 0;
-		  height: 100%;			
+		  top: -.1rem;
+		  // height: 100%;		
+		  left: -.1rem;
+		  height: calc(#{100%} + #{.2rem});	
 		}
   }
 

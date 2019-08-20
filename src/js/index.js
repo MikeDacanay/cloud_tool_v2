@@ -487,6 +487,18 @@ $(document).ready(function(){
 		});	
   }
 
+	function assignDial(dataId){
+		let x;
+		if(dataId === 1){
+			x = state.dial1;
+		}else if(dataId === 2){
+			x = state.dial2;
+		}else{
+			x = state.dial3;
+		}
+		return x;
+	}  
+
 /****** SELECTOR CONTROLLER ******/
 	state.selected = new Selector();
 
@@ -558,17 +570,14 @@ $(document).ready(function(){
     }
 	});
 
-	function assignDial(dataId){
-		let x;
-		if(dataId === 1){
-			x = state.dial1;
-		}else if(dataId === 2){
-			x = state.dial2;
-		}else{
-			x = state.dial3;
-		}
-		return x;
-	}
+	$('.scroller__wrapper').on('mouseup','.scroller__content--deactive',function() {
+
+		const self = $(this); 
+
+		sl.setSlideActive(self)
+	});
+
+
 /****************  LINE CONTROLLER  ********************/
 
 
