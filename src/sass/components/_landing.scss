@@ -2,6 +2,8 @@
 	&__container{
 		margin: 0 auto;
 		margin-top: 5.70rem;
+		height: 68.33vh;
+		width: 68.33vh;
 		max-width: 36.90rem;
 		max-height: 36.90rem;
 		border: solid 2px $color-blue-3;
@@ -10,10 +12,8 @@
 		flex-direction: column;
 		align-items: center;
 		cursor: pointer;
-		transition: all .5s;
-		height: 68.33vh;
-		width: 68.33vh;		 
-			
+		transition: all .5s; 
+	
 
 		&--fadeout{
 			transition-property: border-color;
@@ -26,10 +26,25 @@
 				opacity: 0;
 			}
 		}
+
+
+		@include bp(910){
+			max-width: 83.33vw;
+			max-height: 83.33vw;
+		}
+	
 		@include bph(810){
 			margin-top: 3.5rem;
 		}
-
+    
+		@include bp(600){
+			height: 40.83vh;
+			width: 40.83vh;
+				max-width: 15.00rem;
+				max-height: 15.00rem;
+				justify-content: center;    	
+				margin-top: 2.7rem;	
+		}
 		@include bph(650){
 			height: 40.83vh;
 			width: 40.83vh;
@@ -53,33 +68,6 @@
 			right: 2.2rem;
 		}
 
-		@include bp(1440){
-			width: 44.68vw;
-			height: 44.68vw;
-			@include bph(800){
-				width: 75vh;
-				height: 75vh;
-			}
-		}
-
-		@include bp(910){
-			width: 68.66vw;
-			height: 68.66vw;
-			// max-width: 83.33vw;
-			// max-height: 83.33vw;
-		}
-	
-
-    
-		@include bp(600){
-			height: 40.83vh;
-			width: 40.83vh;
-				max-width: 15.00rem;
-				max-height: 15.00rem;
-				justify-content: center;    	
-				margin-top: 2.7rem;	
-		}
-
 
 	}
 	&__img{
@@ -92,13 +80,9 @@
 			background-image: url('../assets/graphics/down.svg');
 	    transform: translateY(-0.75rem);
 	    transition: 300ms;
-			@include bph(700){
-				transform: translateY(0.25rem);
-			}
-			@include bp(1440){
-				@include bph(850){
-					transform: translateY(0.25rem);
-				}
+			@include bph(650){
+				position: absolute;
+				margin-top: 2.85rem;
 			}
 
 

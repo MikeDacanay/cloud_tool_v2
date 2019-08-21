@@ -58,9 +58,9 @@
 	  align-items: center;
 	  cursor: pointer;		
 		
-		// @include bp(767){
-		// 	border: none;
-		// }
+		@include bp(767){
+			border: none;
+		}
 
 
 
@@ -82,7 +82,9 @@
 			}		
 		}		
 	
-
+		&--2{
+			margin-left: auto;
+		}
 
 		& > img{
 			flex: 0 0 1.20rem;
@@ -93,18 +95,13 @@
 		&--1,
 		&--2,
 		&--3 {
-			@include bp(910){
+			@include bp(767){
 				display: none;
 
 				&.toggle {
 					display: none;
 				}
 			}
-		}
-
-		&--2{
-			display: flex;
-			margin-left: auto;
 		}
 
 		&--grow{						
@@ -148,9 +145,9 @@
 				width: 5.2rem;		   		    
 			}
 
-			// @include bp(767){
-			// 	border: none;
-			// }
+			@include bp(767){
+				border: none;
+			}
 		}
 	}
 
