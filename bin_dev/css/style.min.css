@@ -153,24 +153,19 @@ b {
   transition-duration: 0.5s;
   margin-top: 42%;
   padding: 0 2%; }
+  .landing__title--x {
+    display: none; }
   @media only screen and (max-width: 1440px) {
     .landing__title {
       font-size: 1.25rem; } }
-  .landing__title--x {
-    display: none; }
+  @media only screen and (max-width: 1440px) and (max-height: 850px) {
+    .landing__title {
+      margin-top: 38.5%; } }
   @media only screen and (max-width: 767px) {
     .landing__title {
       width: 90%;
       margin-top: 35%;
       font-size: 1.25rem; } }
-  @media only screen and (max-height: 920px) {
-    .landing__title {
-      width: 90%;
-      margin-top: 31.5%; } }
-  @media only screen and (max-height: 775px) {
-    .landing__title {
-      width: 95%;
-      margin-top: 26%; } }
   @media only screen and (max-width: 600px) {
     .landing__title {
       margin-top: 1.00rem;
