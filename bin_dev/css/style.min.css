@@ -2614,17 +2614,40 @@ b {
   position: relative; }
 
 .results__eloqua {
+  font-family: OracleSans;
   position: absolute;
   width: 25.00rem;
   height: 40.00rem;
-  background-color: red;
   margin: 0 auto;
   left: 0;
   z-index: 10;
   right: 0;
-  display: none; }
+  display: none;
+  -webkit-backdrop-filter: blur(19px);
+  backdrop-filter: blur(19px);
+  background-color: rgba(255, 255, 255, 0);
+
+}
+.form-field input{
+  width: 118px;
+  height: 27px;
+  font-family: OracleSans;
+  font-size: 16px;
+
+}
   .results__eloqua.activate {
-    display: flex; }
+    display: block; }
+
+  .results__eloqua h2{
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 1.58;
+    font-family: OracleSans;
+  }
+
+  .terms{
+    
+  }
 
 .eloqua__btn {
   width: 7.00rem;

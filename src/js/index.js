@@ -7,8 +7,13 @@ import 'jquery-knob';
 import 'cpr_scrollpath';
 import 'cpr_bopup';
 import 'lottie-web';
+import './form.js';
+
+
 
 import {e} from './views/base';
+
+
 
 import Dial from './models/Dial';
 import Selector from './models/Selector';
@@ -33,7 +38,6 @@ import * as sl from './views/sliderView';
 import * as footer from './views/footerView';
 
 import * as func from './functions';
-
 import peersJson from './peerCloud.json';
 import userJson from './userCloud.json';
 import scrollJson from './scrollDown.json';
@@ -41,6 +45,7 @@ import scrollJson from './scrollDown.json';
 import largeDetailHigh from './large_high-score.json';
 import largeDetailMid from './large_mid-score.json';
 import largeDetailLow from './large_low-score.json';
+
 
 
 
@@ -61,101 +66,101 @@ $(document).ready(function(){
 		drv.displayResults(results);
 
 		// DIALS
-			detailFirst = retrieveLottieDialAnimation(results.val['1']);		
-			detailSecond = retrieveLottieDialAnimation(results.val['2']);
-			detailForth = retrieveLottieDialAnimation(results.val['4']);
 
-			// Contextualize where user is in the dial(NEED TO make this into a function)
-			const dialsUserElements = [$('#dial__text--users-1'),$('#dial__text--users-2'),$('#dial__text--users-3')];
-			const dialUserResults = [results.val['1'],results.val['2'],results.val['4']];
+		detailFirst = retrieveLottieDialAnimation(results.val['1']);		
+		detailSecond = retrieveLottieDialAnimation(results.val['2']);
+		detailForth = retrieveLottieDialAnimation(results.val['4']);
 
-			(function(arr){				
+		// Contextualize where user is in the dial(NEED TO make this into a function)
+		const dialsUserElements = [$('#dial__text--users-1'),$('#dial__text--users-2'),$('#dial__text--users-3')];
+		const dialUserResults = [results.val['1'],results.val['2'],results.val['4']];
 
-				dialUserResults.forEach( function(element, index) {
-					if(element > 10){
-						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>' );
-						dialsUserElements[index].addClass('dial__text--users-more');
-						$(`#main__direction--user-${index}`).text('You are ahead of your peers and the global average on your cloud journey.');
-					}else if(element <= 10 &&  element >= -10){
-						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>');
-						dialsUserElements[index].addClass('dial__text--users-equal');
-						$(`#main__direction--user-${index}`).text('You and your peers are equal in cloud journey.');
-					}else{						
-						dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>');
-						dialsUserElements[index].addClass('dial__text--users-less');
-						$(`#main__direction--user-${index}`).text('You are behind of your peers and the global average on your cloud journey.');
-					}
-				});				
+		(function(arr){				
 
-			})([dialUserResults, dialsUserElements]);
+			dialUserResults.forEach( function(element, index) {
+				if(element > 10){
+					dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>' );
+					dialsUserElements[index].addClass('dial__text--users-more');
+					$(`#main__direction--user-${index}`).text('You are ahead of your peers and the global average on your cloud journey.');
+				}else if(element <= 10 &&  element >= -10){
+					dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>');
+					dialsUserElements[index].addClass('dial__text--users-equal');
+					$(`#main__direction--user-${index}`).text('You and your peers are equal in cloud journey.');
+				}else{						
+					dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>');
+					dialsUserElements[index].addClass('dial__text--users-less');
+					$(`#main__direction--user-${index}`).text('You are behind of your peers and the global average on your cloud journey.');
+				}
+			});				
 
-			var detailedResults1 = lottie.loadAnimation({
-			  container: document.getElementById('detail-1'),
-			  renderer: 'svg',
-			  autoplay: true,
-			  animationData: detailFirst,
-			  loop: false,
-			});
+		})([dialUserResults, dialsUserElements]);
 
-			var detailedResults2 = lottie.loadAnimation({
-			  container: document.getElementById('detail-2'),
-			  renderer: 'svg',
-			  autoplay: true,
-			  animationData: detailSecond,
-			  loop: false,
-			});
+		var detailedResults1 = lottie.loadAnimation({
+		  container: document.getElementById('detail-1'),
+		  renderer: 'svg',
+		  autoplay: true,
+		  animationData: detailFirst,
+		  loop: false,
+		});
 
-			var detailedResults3 = lottie.loadAnimation({
-			  container: document.getElementById('detail-3'),
-			  renderer: 'svg',
-			  autoplay: true,
-			  animationData: detailForth,
-			  loop: false,
-			});
+		var detailedResults2 = lottie.loadAnimation({
+		  container: document.getElementById('detail-2'),
+		  renderer: 'svg',
+		  autoplay: true,
+		  animationData: detailSecond,
+		  loop: false,
+		});
+
+		var detailedResults3 = lottie.loadAnimation({
+		  container: document.getElementById('detail-3'),
+		  renderer: 'svg',
+		  autoplay: true,
+		  animationData: detailForth,
+		  loop: false,
+		});
 
 		//SELECTORS
-			const selectorValues = results.val['3'].split(',');
-			selectorValues.forEach( function(element, index) {
-				$(`#select-${element}`).addClass('activate');
-			});
+		const selectorValues = results.val['3'].split(',');
+		selectorValues.forEach(function (element, index) {
+			$(`#select-${element}`).addClass('activate');
+		});
 
-		//SLIDER		
-			const detscroll1Values = results.val[5].split(',');
-			const detscroll2Values = results.val[6].split(',');
+		//SLIDER
+		const detscroll1Values = results.val[5].split(',');
+		const detscroll2Values = results.val[6].split(',');
 
-			const peersDetScroll1 = [71,73,71,69];
-			const peersDetScroll2 = [74,74,70,71,71,71];
+		const peersDetScroll1 = [71, 73, 71, 69];
+		const peersDetScroll2 = [74, 74, 70, 71, 71, 71];
 
-			detscroll1Values.forEach( function(element, index) {
-				$(`#detscroll1-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
-				
-				if(Number(element) < peersDetScroll1[index]){
-					$(`#detscroll1__txt-${index}`).text('Your peers are slightly more confident with data sources.');										
-				}else if(Number(element) > peersDetScroll1[index]){					
-					$(`#detscroll1__txt-${index}`).text('You are slightly more confident with data sources than your peers. Congratulations!');									
-				}else{
-					$(`#detscroll1__txt-${index}`).text('You and your peers are equally as confident in data sources. Congratulations!');
-				}
-			});
-			detscroll2Values.forEach( function(element, index) {
-				$(`#detscroll2-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
+		detscroll1Values.forEach(function (element, index) {
+			$(`#detscroll1-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
 
-				if(Number(element) < peersDetScroll2[index]){
-					$(`#detscroll2__txt-${index}`).text('Your peers are slightly more confident with data sources.');								
-				
-				}else if(Number(element) > peersDetScroll2[index]){					
-					$(`#detscroll2__txt-${index}`).text('You are slightly more confident with data sources than your peers. Congratulations!');														
-				}else{
-					$(`#detscroll2__txt-${index}`).text('You and your peers are equally as confident in data sources. Congratulations!');
-				}				
-			});
+			if (Number(element) < peersDetScroll1[index]) {
+				$(`#detscroll1__txt-${index}`).text('Your peers are slightly more confident with data sources.');
+			} else if (Number(element) > peersDetScroll1[index]) {
+				$(`#detscroll1__txt-${index}`).text('You are slightly more confident with data sources than your peers. Congratulations!');
+			} else {
+				$(`#detscroll1__txt-${index}`).text('You and your peers are equally as confident in data sources. Congratulations!');
+			}
+		});
+		detscroll2Values.forEach(function (element, index) {
+			$(`#detscroll2-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
 
+			if (Number(element) < peersDetScroll2[index]) {
+				$(`#detscroll2__txt-${index}`).text('Your peers are slightly more confident with data sources.');
 
+			} else if (Number(element) > peersDetScroll2[index]) {
+				$(`#detscroll2__txt-${index}`).text('You are slightly more confident with data sources than your peers. Congratulations!');
+			} else {
+				$(`#detscroll2__txt-${index}`).text('You and your peers are equally as confident in data sources. Congratulations!');
+			}
+		});
 	};
 
 /****** DETAILED MAP CONTROLLER ******/
 
-	$('.page__overlay').on('click', function(){
+
+	$('.page__overlay').on('click', function () {
 		const self = $(this);
 		const val = self.data('val');
 		
@@ -181,7 +186,7 @@ $(document).ready(function(){
     pagination.retrievePagination(self);
 	});
 
-	$('.icon__zoomout').on('click',function(){		
+	$('.icon__zoomout').on('click', function () {
 		$('.header__nav').toggleClass('activate');
 		$('.page').toggleClass('zoomed');
 		$('.page').removeClass('deactivate--z activate--z');
@@ -198,8 +203,8 @@ $(document).ready(function(){
 		$('.pathfinder--x').removeClass('zoom-in--8 zoom-in--8-x');
 	});
 
-/****** HEADER NAV BTN CONTROLLER ******/ 
-	$('.header__nav--btn').on('click',function(){
+	/****** HEADER NAV BTN CONTROLLER ******/
+	$('.header__nav--btn').on('click', function () {
 		const self = $(this);
 		let val = Number(self.attr('context'));
 
@@ -215,61 +220,62 @@ $(document).ready(function(){
 
 		dp.movePathfinderX(self);
 	});
-	
-/****************  CLOUD/ LOTTIE INIT  ********************/
 
-	if(document.getElementById('scroll_down')){
+	/****************  CLOUD/ LOTTIE INIT  ********************/
+
+	if (document.getElementById('scroll_down')) {
 		var scrollTip = lottie.loadAnimation({
-		  container: document.getElementById('scroll_down'),
-		  renderer: 'svg',
-		  autoplay: true,
-		  animationData: scrollJson,
-		  loop: true,
-		});	
-	};
+			container: document.getElementById('scroll_down'),
+			renderer: 'svg',
+			autoplay: true,
+			animationData: scrollJson,
+			loop: true,
+		});
+	}
+	;
 
-/****** CTA POPUPS ******/ 
-	$('.cta__btn').on('click',function(){
+	/****** CTA POPUPS ******/
+	$('.cta__btn').on('click', function () {
 		const val = $(this).attr('val')
-		if(val === '1'){
+		if (val === '1') {
 			func.openVideoOverlay('5703531352001');
 		}
 	});
 
-/****** PAGE/LINE CONTROLLER ******/
-	state.width = $('body').width();	
+	/****** PAGE/LINE CONTROLLER ******/
+	state.width = $('body').width();
 	state.height = e.page.height();
 
 	page.reformWandH(state.width, state.height);
 
-	
+
 	line.resizeLines();
 	footer.hidePageNumber();
 
-	$(window).on('resize',function(){
+	$(window).on('resize', function () {
 		state.width = $('body').width();
-		state.height = $('body').height();		
+		state.height = $('body').height();
 		// state.height = $(window).height();
 		page.reformWandH();
 
 		line.resizeLines();
 	});
 
-	$('.page--8').on('scroll',function(){
+	$('.page--8').on('scroll', function () {
 		const pos = $(this).scrollTop();
 		$('.page--8').addClass('activate');
-		
-		if(pos > 0 ){
+
+		if (pos > 0) {
 			$('.line--13').addClass('deactivate');
-			scrollTip.isPaused = true;		
-		}else{
+			scrollTip.isPaused = true;
+		} else {
 			$('.line--13').removeClass('deactivate');
 			scrollTip.isPaused = false;
 		}
 	});
 
-/****** CPRSCROLLPATH/MOVEMENT CONTROLLER ******/
- 
+	/****** CPRSCROLLPATH/MOVEMENT CONTROLLER ******/
+
 	state.userAggregateValue = 0;
 
 	// PROGRESS
@@ -277,7 +283,7 @@ $(document).ready(function(){
 
 	state.pageNum = new Page();
 
-	e.btnProgress.on('click',function(){
+	e.btnProgress.on('click', function () {
 		const value = $(this).data('val');
 		state.pageNum.incrementPageNum();
 		bP.animateFwd(value);
@@ -285,11 +291,11 @@ $(document).ready(function(){
 		css.changeBodyColor('black');
 	});
 
-	e.btnProgress1.on('click',function(){
+	e.btnProgress1.on('click', function () {
 		e.headerWrapper.addClass('activate');
 	});
 
-	e.btnProgress7.on('click',function(){
+	e.btnProgress7.on('click', function () {
 
 		// Change color after click
 		css.changeBodyColor('white');
@@ -313,11 +319,12 @@ $(document).ready(function(){
 
 		result.displayResultsCopy(state.userAggregateValue, PeersData.peerScore);
 
-		setTimeout(function(){
+		setTimeout(function () {
 			loadCloudAnimation(cloudUser, cloudPeer);
-		},3000);
+		}, 3000);
 
 		// Change button item color
+
 		$('.header__rectangle--1 > img').attr('src',$('.header__rectangle--1 > img').attr( "alt"));
 		$('.header__rectangle--3 > img').attr('src',$('.header__rectangle--3 > img').attr( "alt"));
 		$('.grow--text').css('color', '#00758f'); 
@@ -326,7 +333,7 @@ $(document).ready(function(){
 	});	 
 
 
-	e.btnBackX.on('click',function(){
+	e.btnBackX.on('click', function () {
 		const contextValue = e.btnBackX.attr('context');
 		const hdrValue = e.hdrProgress.attr('context');
 		const prevSection = $(`.page--${contextValue}`);
@@ -334,72 +341,68 @@ $(document).ready(function(){
 		const prevLeft = prevSection.css('left').slice(0, -2);
 		const prevTop = prevSection.css('top').slice(0, -2);
 
-		$('.pathfinder').css('transform',`translate(${Number(prevLeft)*-1}px,${Number(prevTop)*-1}px)`);
+		$('.pathfinder').css('transform', `translate(${Number(prevLeft) * -1}px,${Number(prevTop) * -1}px)`);
 
-		$(this).attr('context', `${Number(contextValue)-1}`);
-		e.hdrProgress.attr('context', contextValue);		
+		$(this).attr('context', `${Number(contextValue) - 1}`);
+		e.hdrProgress.attr('context', contextValue);
 	});
 
 	// REGRESS
 
-	e.btnBack.dp(path.movement2,path.easing2,path.pageList);
+	e.btnBack.dp(path.movement2, path.easing2, path.pageList);
 
-	e.btnBack.on('click', function(){
+	e.btnBack.on('click', function () {
 		const contextVal = $(this).attr('context');
 		const hdrVal = e.hdrProgress.data('val');
 		bP.animateBack(contextVal);
 
-		e.hdrProgress.data('val', `${Number(hdrVal)-1}`);
+		e.hdrProgress.data('val', `${Number(hdrVal) - 1}`);
 
-		$(this).attr('context',`${Number(contextVal)-1}`)
+		$(this).attr('context', `${Number(contextVal) - 1}`)
 	});
 
-/****** DIAL CONTROLLER ******/
+	/****** DIAL CONTROLLER ******/
 	state.dial1 = new Dial(); // do state.dial1.val to retrieve user's answer
 	state.dial2 = new Dial(); // do state.dial2.val to retrieve user's answer
 	state.dial3 = new Dial(); // do state.dial3.val to retrieve user's answer
 
 	e.dialTracker.knob({
-    'min':0,
-    'max':180,
-    'angleArc':180,
-    'angleOffset': -90,
-    'thickness': .12,
+		'min': 0,
+		'max': 180,
+		'angleArc': 180,
+		'angleOffset': -90,
+		'thickness': .12,
 		'height': '200%',
 		'displayInput': false,
 		'bgColor': '#fff',
 		'fgColor': '#00758f',
 		// "readOnly": true,
 
-    'change' : function (v,context) {
+		'change': function (v, context) {
 
-      const self = $(this);
-	 		dial.dialRotator(self,v);
-			dial.dialContextualize(self,v);			
+			const self = $(this);
+			dial.dialRotator(self, v);
+			dial.dialContextualize(self, v);
 			this.context = (self[0].$div.prevObject.data('context'));
-			
-    },
-    'release': function (v){;
-      const self = $(this);
-	 		this.selfID = self[0].$div.prevObject.data('id');
-	 		this.dial = assignDial(this.selfID);
-	 		this.dial.changeValue(v);
-  		
+		},
+		'release': function (v) {
+			;
+			const self = $(this);
+			this.selfID = self[0].$div.prevObject.data('id');
+			this.dial = assignDial(this.selfID);
+			this.dial.changeValue(v);
 
-	 		// console.log(self.);
-
-	 		if(this.context=== false){
-	  		dial.progressBtn(self);
-	  		console.log('testasdfasdfasfasdfasdfasdfasd');	  		
-    	}
-    },
+			if (this.context === false) {
+				dial.progressBtn(self);
+			}
+		},
 	});
 
 	dial.handResize();
 	dial.changeDialText();
 	dial.lineResize();
 
-	$(window).on('resize',function(){
+	$(window).on('resize', function () {
 		dial.changeDialText();
 		dial.handResize();
 		dial.lineResize();
@@ -407,19 +410,20 @@ $(document).ready(function(){
 
 	// let currentState = 0;
 
+
 	dialWrapperMove();
 
 	$('.dial-tracker__wrapper').mouseup(function(){
 	  const dy = 819 - event.pageY;
 		const dx = 633.5 - event.pageX;
 		let theta = Math.atan2(dy, dx); // range (-PI, PI]
-		theta *= 180 / Math.PI; // rads to degs, range (-180, 180]	
-	
-		const dtracker = $(this).find('.dial-tracker'); 
+		theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
+
+		const dtracker = $(this).find('.dial-tracker');
 
 		dtracker.data('context', false);
 		dtracker.val(theta).trigger('change');
-		
+
 		dial.progressBtn(dtracker);
 
 		$( ".dial-tracker__wrapper" ).unbind( "mousemove mouseleave");
@@ -498,19 +502,19 @@ $(document).ready(function(){
 		return x;
 	}  
 
-/****** SELECTOR CONTROLLER ******/
+	/****** SELECTOR CONTROLLER ******/
 	state.selected = new Selector();
 
-	e.selection.on('click',function(){
-		const self =  $(this);
+	e.selection.on('click', function () {
+		const self = $(this);
 		const select = self.data('val');
 		const pageContentElement = self.closest('.page__content');
 		let stateChoicesLength;
 
-		if(!state.selected.choices.includes(select)){
+		if (!state.selected.choices.includes(select)) {
 			selector.highlightSelected(self);
 			state.selected.selectOption(select);
-		}else{
+		} else {
 			selector.deHighlightSelected(self);
 			state.selected.removeOption(select);
 		}
@@ -519,54 +523,55 @@ $(document).ready(function(){
 
 		pagination.highlightPagination(pageContentElement, stateChoicesLength);
 
-		if(state.selected.choices.length === 3){
-    	selector.progressBtn(self);
+		if (state.selected.choices.length === 3) {
+			selector.progressBtn(self);
 		}
 	});
 
-/****** SLIDER CONTROLLER ******/
+	/****** SLIDER CONTROLLER ******/
 	state.slider1 = new SliderGroup($('.scroller__wrapper--1'));
 	state.slider2 = new SliderGroup($('.scroller__wrapper--2'));
 
 	sl.setSliderGroupSize();
 
-	$(window).on('resize',function(){
+	$(window).on('resize', function () {
 		sl.setSliderGroupSize();
 	});
 
 	$('input[type="range"]').rangeslider({
-	  polyfill: false,
+		polyfill: false,
 
-    // Callback function on slide
-    onSlide: function(position, value) {
-    },
+		// Callback function on slide
+		onSlide: function (position, value) {
+		},
 
-    // Callback function on end
-    onSlideEnd: function(position, value) {
-    	const slider = this.identifier;
-    	const pageContentElement = $(`#${slider}`).closest('.page__content');
-    	let sliderGroup;
+		// Callback function on end
+		onSlideEnd: function (position, value) {
+			const slider = this.identifier;
+			const pageContentElement = $(`#${slider}`).closest('.page__content');
+			let sliderGroup;
 
-    	if(pageContentElement.find('.scroller__wrapper').hasClass('scroller__wrapper--1')){
-    		sliderGroup = state.slider1;
-    	}else if(pageContentElement.find('.scroller__wrapper').hasClass('scroller__wrapper--2')){
-    		sliderGroup = state.slider2;
-    	}
-    	sliderGroup.progression++;
-    	pagination.highlightPagination(pageContentElement, sliderGroup.progression);
+			if (pageContentElement.find('.scroller__wrapper').hasClass('scroller__wrapper--1')) {
+				sliderGroup = state.slider1;
+			} else if (pageContentElement.find('.scroller__wrapper').hasClass('scroller__wrapper--2')) {
+				sliderGroup = state.slider2;
+			}
+			sliderGroup.progression++;
+			pagination.highlightPagination(pageContentElement, sliderGroup.progression);
 
-    	sliderGroup.pushToVal(value);
+			sliderGroup.pushToVal(value);
 
-    	if(sl.nextScrollerExist(slider)){
+			if (sl.nextScrollerExist(slider)) {
 
-    		// console.log(slider);
-    		sl.progressScrollerContent(slider);
-    		sliderGroup.calculateVal();
-    	}else{
-    		sliderGroup.calculateVal();
-	    	sl.progressBtn(slider);	    	
-    	};
-    }
+				// console.log(slider);
+				sl.progressScrollerContent(slider);
+				sliderGroup.calculateVal();
+			} else {
+				sliderGroup.calculateVal();
+				sl.progressBtn(slider);
+			}
+			;
+		}
 	});
 
 	$('.scroller__wrapper').on('mouseup','.scroller__content--deactive',function() {
@@ -576,62 +581,76 @@ $(document).ready(function(){
 		sl.setSlideActive(self)
 	});
 
+	/****************  LINE CONTROLLER  ********************/
 
-/****************  LINE CONTROLLER  ********************/
 
-
-/****************  ELOQUA CONTROLLER  ********************/
-	$('.detailed-score__btn').on('click',function(){
+	/****************  ELOQUA CONTROLLER  ********************/
+	$('.detailed-score__btn').on('click', function () {
 		css.displayEloqua();
-		sessionStorage.dial1=state.dial1.val;
-		sessionStorage.dial2=state.dial2.val;
-		sessionStorage.dial3=state.dial3.val;
-		sessionStorage.selector1=state.selected.choices;
-		sessionStorage.slider1=state.slider1.arrayVal;
-		sessionStorage.slider2=state.slider2.arrayVal;
+		sessionStorage.dial1 = state.dial1.val;
+		sessionStorage.dial2 = state.dial2.val;
+		sessionStorage.dial3 = state.dial3.val;
+		sessionStorage.selector1 = state.selected.choices;
+		sessionStorage.slider1 = state.slider1.arrayVal;
+		sessionStorage.slider2 = state.slider2.arrayVal;
 	});
-/**************** SESSION STORAGE CONTROLLER ********************/
+	/****Eloqua Gate**/
+	/***popuplate countries dropdown**/
+	func.populateCountries("field17");
 
-	$('.header__rectangle--1').on('click', function(){
+	$('.elq-sumbit__btn').on('click', function () {
+		func.validateFields();
+	});
+	$('.eloqua-close').on('click', function () {
+		$('.results__eloqua').removeClass('activate');
+	});
+	var options = {
+		iframe: true,
+		target:'#output1'
+	}
+
+	$('#form1048').ajaxForm(options);
+
+	/**************** SESSION STORAGE CONTROLLER ********************/
+
+	$('.header__rectangle--1').on('click', function () {
 		sessionStorage.clear();
 	})
+	/***popuplate countries dropdown**/
+	func.populateCountries("field17");
 
-});
 
-/****************  CLOUD LOTTIE  ********************/
+	/****************  CLOUD LOTTIE  ********************/
 
-function loadCloudAnimation(user,peer){
-	$('#cloud__wrapper').css('opacity', 1);
+	function loadCloudAnimation(user, peer) {
+		$('#cloud__wrapper').css('opacity', 1);
 
-	lottie.loadAnimation({
-	  container: document.getElementById('cloud__wrapper'),
-	  renderer: 'svg',
-	  autoplay: true,
-	  animationData: user,
-	});
+		lottie.loadAnimation({
+			container: document.getElementById('cloud__wrapper'),
+			renderer: 'svg',
+			autoplay: true,
+			animationData: user,
+		});
 
-	lottie.loadAnimation({
-	  container: document.getElementById('cloud__wrapper'),
-	  renderer: 'svg',
-	  autoplay: true,
-	  animationData: peer,
-	});
-}
+		lottie.loadAnimation({
+			container: document.getElementById('cloud__wrapper'),
+			renderer: 'svg',
+			autoplay: true,
+			animationData: peer,
+		});
+	};
 
-function retrieveLottieDialAnimation(result){
-		let  variable;		
-		if(result > 10){
+	function retrieveLottieDialAnimation(result) {
+		let variable;
+		if (result > 10) {
 			variable = largeDetailHigh;
-		}else if(result <= 10 &&  result >= -10){
+		} else if (result <= 10 && result >= -10) {
 			variable = largeDetailMid;
-		}else{
+		} else {
 			variable = largeDetailLow;
 		}
 		return variable;
-}
 
-/****************  MOBILE NAVIGATION  ********************/
-
-
-
+	}
+});
 

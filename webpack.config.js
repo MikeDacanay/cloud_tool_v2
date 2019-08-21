@@ -21,6 +21,7 @@ module.exports = {
 			sp: 'cpr_scrollpath',
 			bPopup: 'cpr_bopup',
 			lottie: 'lottie-web',
+			form:'form'
 
 		}),
 		new HtmlWebpackPlugin({
@@ -30,12 +31,19 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			filename: 'results.html',
 			template: './src/results.html',
-		}),				
+		}),
     // new CopyWebpackPlugin([
-    //   {from:'src/js/datax',to:'js'} 
-    // ]), 		
+    //   {from:'src/js/datax',to:'js'}
+    // ]),
 	],
+	resolve: {
+		alias: {
+			form: './src/js/form.js',
+		}
+	},
+
 	module: {
+
 		rules: [
 			{
 				test: /\.js$/,
