@@ -322,7 +322,9 @@ $(document).ready(function(){
 		$('.header__rectangle--3 > img').attr('src',$('.header__rectangle--3 > img').attr( "alt"));
 		$('.grow--text').css('color', '#00758f'); 
 		$('.header__rectangle--grow').css('background-color', 'white'); 
+
 	});	 
+
 
 	e.btnBackX.on('click',function(){
 		const contextValue = e.btnBackX.attr('context');
