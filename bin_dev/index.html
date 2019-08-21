@@ -3,25 +3,23 @@
 	<head>
 	  <meta charset="utf-8">
 	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
-		<title>Cloud Tool</title>
+		<title>Cloud Tool</title>		
 		<link rel="stylesheet" type="text/css" href="css/style.min.css" />
 
+		<!-- <link rel="stylesheet" type="text/css" href="../src/sass/main.css" /> -->
 
 
+	  <script async="async" type="text/javascript" src='//consent.truste.com/notice?domain=oracle.com&c=teconsent&js=bb&noticeType=bb&text=true' crossorigin></script>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-
-		<script async="async" type="text/javascript" src='//consent.truste.com/notice?domain=oracle.com&c=teconsent&js=bb&noticeType=bb&text=true' crossorigin></script>
-		<script language="JavaScript" src="https://www.oracleimg.com/us/assets/metrics/ora_ocom.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-3.2.1.min.js" type="text/javascript" ><\/script>');</script>
 	  <!-- Start SiteCatalyst codess -->
 	  <script language="JavaScript" type="text/javascript">
 	      var s_html5videocta = "true";
 	  </script>
 
-
+	  <script language="JavaScript" src="https://www.oracleimg.com/us/assets/metrics/ora_ocom.js"></script>
 	  <!-- End SiteCatalyst codes -->
 		<!-- Hotjar Tracking Code for https://demo.ineedcpr.com/cloud_confidence_assessment/main.html -->
 		<script>
@@ -51,8 +49,9 @@
 				</a>
 				<div class="header__rectangle header__rectangle--2">
 					<div class="header__rectangle--grow header__rectangle--grow-2">
-							<span class='grow--text'><b>Tips</b>Helpful tips and tricks here. this box should provide more clear instructions on how to complete this assessment.</span>
-					</div>
+
+							<span class='grow--text'><b>Tips:</b>Helpful tips and tricks here. this box should provide more clear instructions on how to complete this assessment.</span>
+					</div>					
 					<img src="assets/graphics/info.svg" alt="info.svg">
 				</div>
 				<div class="header__rectangle header__rectangle--3">
@@ -321,7 +320,7 @@
 							<span class="pagination__num pagination__num--3">4</span>
 						</div>
 						<div class="scroller__wrapper scroller__wrapper--1">
-							<div class="scroller__content scroller__content--1 scroller__content--active">
+							<div val='0' class="scroller__content scroller__content--1 scroller__content--active">
 								<div class="scroller__header">
 									<div class="scroller__icon scroller__icon--1"><img src="assets/graphics/illustration/illustration-no-padding-cyber-security-prevention.svg" alt="cyber-security.svg" class="icon__scroller"></div>
 									<div class="scroller__title">Cyber Security Prevention</div>
@@ -334,7 +333,7 @@
 								</div>
 								<input type="range" min="1" max="100" value="5" role="input-range">
 							</div>
-							<div class="scroller__content scroller__content--2">
+							<div val='1' class="scroller__content scroller__content--2">								
 								<div class="scroller__header">
 									<div class="scroller__icon scroller__icon--2"><img src="assets/graphics/illustration/illustration-no-padding-cyber-security-threat-detection.svg" alt="threat-detection.svg" class="icon__scroller"></div>
 									<div class="scroller__title">Cyber Security Threat&nbsp;Detection</div>
@@ -347,7 +346,7 @@
 								</div>
 								<input type="range" min="1" max="100" value="5" role="input-range">
 							</div>
-							<div class="scroller__content scroller__content--3">
+							<div val='2' class="scroller__content scroller__content--3">
 								<div class="scroller__header">
 									<div class="scroller__icon scroller__icon--3"><img src="assets/graphics/illustration/illustration-no-padding-capacity-planning.svg" alt="capacity-planning.svg" class="icon__scroller"></div>
 									<div class="scroller__title">Capacity Planning</div>
@@ -360,7 +359,7 @@
 								</div>
 								<input type="range" min="1" max="100" value="5" role="input-range">
 							</div>
-							<div class="scroller__content scroller__content--4">
+							<div val='3' class="scroller__content scroller__content--4">
 								<div class="scroller__header">
 									<div class="scroller__icon scroller__icon--4"><img src="assets/graphics/illustration/illustration-no-padding-outage-prevention.svg" alt="outage-prevention.svg" class="icon__scroller"></div>
 									<div class="scroller__title">Outage Prevention</div>
@@ -499,23 +498,14 @@
 							<div id="scroll_down"></div>
 							<div class="results__main">
 								<div class="results__eloqua">
-									<div class="blur-image"><img src="assets/images/desktop/background-texture.svg" width="100%"> </div>
-									<div class="blur">
-									<div class="close-holder">
-										<div class="eloqua-close"><img src="assets/graphics/close.svg" ></div>
-									</div>
-										<div class="title-holder">
-											<div class="title-img"><img src="assets/graphics/illustration/illustration-visualization.svg"></div>
-									<h2>Please fill in a few details to get your detailed score report.</h2>
-											</div>
-									<div class="section-1">
+									<h2>THIS IS THE SRC</h2>
 										<form  method="post" name="SystemAgencyAssetDownloaded_HVC" action="https://s1973398186.t.eloqua.com/e/f2" onsubmit="setTimeout(function(){if(document.querySelector){var s=document.querySelector('form#form1048 input[type=submit]');if(s){s.disabled=true;}}},100);return true;" id="form1048" class="elq-form">
 											<input value="SystemAgencyAssetDownloaded_HVC" type="hidden" name="elqFormName"  />
 											<input value="1973398186" type="hidden" name="elqSiteId" />
 											<input name="elqCampaignId" type="hidden"/>
 											<input name="src1" id="src1" type="hidden"/>
 											<input id="field0" type="hidden" name="Source_FaName" value="CPR Interactive">
-											<input id="field1" type="hidden" name="cmid"  value="">
+											<input id="field1" type="hidden" name="cmid"  value="BUMK170629P00048">
 											<input id="field2"  type="hidden" name="RESPONSE_TYPE" value="Agency High Value Asset Downloaded">
 											<input  id="field3" type="hidden" name="RESPONSE_DATE">
 											<input id="field6"  name="jobTitle"  type="hidden" value="Unknown"/>
@@ -536,42 +526,31 @@
 											<input id="field25" name="salesperson" type="hidden" value="Unknown"/>
 											<input id="field27" name="createdByProcess" type="hidden" value="System - Agency High Value Asset Downloaded"/>
 											<input id="field28" name="lastSubmittedFormName1" type="hidden" value="System - Agency High Value Asset Downloaded"/>
+											<div class="form-field">
+												<input type="text" name="firstName" value="First Name" placeholder="First Name" id="field4"
+													   onclick="if (this.defaultValue==this.value) this.value='';  $('input[name=firstName]').removeClass('error'); $('#end_alert').hide()">
 
-											<label for="field4">First Name</label>
-											<input type="text" name="firstName"  id="field4"
-												   onclick="if (this.defaultValue==this.value) this.value='';  $('input[name=firstName]').removeClass('error'); $('#end_alert').hide()">
-											<label for="field5">Last Name</label>
-											<input type="text" name="lastName"  id="field5"
-												   onclick="if (this.defaultValue==this.value) this.value=''; $('input[name=lastName]').removeClass('error');$('#end_alert').hide()">
-											<label for="field9">Email</label>
-											<input type="text" class="email" id="field9" name="emailAddress"
-												   onclick="if (this.defaultValue==this.value) this.value=''; $('input[name=emailAddress]').removeClass('error');$('#end_alert').hide()">
-											<label for="field17">Country</label>
-											<div class="form-field" id="select-field">
+											</div>
+											<div class="form-field">
+												<input type="text" name="lastName" placeholder="Last Name" value="Last Name" id="field5"
+													   onclick="if (this.defaultValue==this.value) this.value=''; $('input[name=lastName]').removeClass('error');$('#end_alert').hide()">
+
+											</div>
+											<div class="form-field">
+												<input type="text" class="email" id="field9" name="emailAddress" value="E-mail Address"
+													   onclick="if (this.defaultValue==this.value) this.value=''; $('input[name=emailAddress]').removeClass('error');$('#end_alert').hide()">
+											</div>
+
+											<div class="form-field">
 												<select id="field17" name="country" value="-1"
 														onfocus="$('select[name=country]').removeClass('error');$('#end_alert').hide()"> </select>
-												<img src="assets/graphics/down.svg" class="select-down">
 											</div>
-											<label class="styledCheckbox">
-												<input id="field26" name="marketingOptIn" type="checkbox" value="on"/>
-												<span class="checkmark"></span>
-												<span class="opt-in"> Send me useful tips on products, services, and events from Oracle</span>
-											</label>
-										</form>
-										<div class="alert" id="end_alert" style="display: none">
-											<p>*Please complete all required fields.</p>
-										</div>
-										<div class="continue__btn desktop-hide" onclick="$('.blur').addClass('second-pos')">
-											<div class="btn__txt">Continue</div>
-											<div class="btn__arrow"></div>
-										</div>
-										<div class="elq-sumbit__btn phone-hide" >
-											<div class="btn__txt">Get Report</div>
-											<div class="btn__arrow"></div>
-										</div>
 
-										</div>
-										<div class="section-2">
+											<div class="pull-left two-col-lg one-col-md cheat-up">
+												<input id="field26" name="marketingOptIn" type="checkbox" value="on"/><span class="opt-in"> Send me useful tips on products, services, and events from Oracle</span>
+											</div>
+										</form>
+
 										<div id="terms_main" class="terms"><p>By completing and submitting this form, you understand and agree that use of Oracle's web site is subject to the Oracle.com <a href="https://www.oracle.com/legal/terms.html" target="_blank">Terms of Use</a> and <a href="https://www.oracle.com/legal/privacy/index.html" target="_blank">Oracle's Privacy Policy</a>, including the fact that Oracle may transfer your personal information collected in connection with your registration on this website to its affiliates globally and to third party entities that provide services to Oracle.</p></div>
 										<div id="terms_russia" class="terms" style="display: none">
 											<table cellpadding="0" cellspacing="0" class="terms_table">
@@ -618,13 +597,14 @@
 
 										</div>
 
-										<div class="elq-sumbit__btn desktop-hide" >
-											<div class="btn__txt">Get Report</div>
+										<div class="detailed-score__btn" onclick="validateFields()">
+											<div class="bttn-txt">Submit</div>
 											<div class="btn__arrow"></div>
 										</div>
-									</div>
-									</div>
-								</div>
+										<div class="alert shadowed" id="end_alert" style="display: none">
+											<div onclick="hideAlerts()"></div>
+											<p>Please complete all required fields.</p>
+										</div>
 								</div>
 								<div class="results__body">
 									<div class="detailed-score__wrapper">
@@ -728,7 +708,36 @@
 		<div class="footer">
 			<button class="btn__regress" context='-1'>
 				<img src="assets/graphics/back.svg" class="arrow" alt="back.svg">
-				<img src="assets/graphics/icon-close.svg" class="hamburguer" alt="hamburguer.svg">
+			</button>
+			<button class="btn__navi" context='-1'>
+				<input type="checkbox" class="btn__navi__checkbox" id="navi-toggle">
+				<label for="navi-toggle" class="btn__navi__button">
+					<img src="assets/graphics/icon-close.svg" class="hamburguer" alt="navi.svg">
+					<img src="assets/graphics/close.svg" class="close" alt="navi.svg">
+				</label>
+				<div class="btn__navi__background"></div>
+				<div class="btn__navi__navigation">
+					<ul class="btn__navi__list">
+						<li class="btn__navi__item"><a href="#" class="btn__navi__link">
+							<div class="btn__navi__icon">
+								<img src="assets/graphics/share.svg" alt="assets/graphics/share-blue.svg">
+							</div>
+							<span class="btn__navi__text">Share</span>
+						</a></li>
+						<li class="btn__navi__item"><a href="#" class="btn__navi__link">
+							<div class="btn__navi__icon">
+								<img src="assets/graphics/info.svg" alt="info.svg">
+							</div>
+							<span class="btn__navi__text">Go Back</span>
+						</a></li>
+						<li class="btn__navi__item"><a href="." class="btn__navi__link">
+							<div class="btn__navi__icon">
+								<img src="assets/graphics/restart.svg" alt="assets/graphics/restart-blue.svg">
+							</div>	
+							<div class="btn__navi__text" >Restart</div>
+						</a></li>
+					</ul>
+				</div>
 			</button>
 			<div class="footer-text">1/6</div>
 		</div>
