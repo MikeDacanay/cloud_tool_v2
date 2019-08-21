@@ -12,11 +12,19 @@
 		flex-direction: column;
 		align-items: center;
 		cursor: pointer;
+		transition: all .5s; 
 	
+
 		&--fadeout{
 			transition-property: border-color;
-		transition-duration: 0.5s;			
-		border-color: transparent;			
+			transition-duration: 0.5s;			
+			border-color: transparent;							
+		}
+
+		&--fadeaway{
+			.page.activate .page__content > &{						
+				opacity: 0;
+			}
 		}
 
 

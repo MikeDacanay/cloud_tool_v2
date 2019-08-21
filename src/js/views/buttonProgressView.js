@@ -1,9 +1,9 @@
 export const animateFwd = (btnVal) => {
 
 	if(btnVal === 1){
-		$('.landing__container').addClass('landing__container--fadeout');
-		$('.landing__title').addClass('landing__title--fadeout');
-		$('.landing__subtitle').addClass('landing__subtitle--fadeout');
+		$('.landing__container').toggleClass('landing__container--fadeout');
+		$('.landing__title').toggleClass('landing__title--fadeout');
+		$('.landing__subtitle').toggleClass('landing__subtitle--fadeout');
 
 		$('.btn__regress').attr('context', '0')
 		// setTimeout(function(){
@@ -15,6 +15,12 @@ export const animateFwd = (btnVal) => {
 			$('.page--2').addClass('activate');
 			$('.line--1, .line--2').addClass('activate');
 			$('.footer').addClass('activate');
+
+			$('.landing__container').toggleClass('landing__container--fadeout');
+			$('.landing__title').toggleClass('landing__title--fadeout');
+			$('.landing__subtitle').toggleClass('landing__subtitle--fadeout');
+
+			$('.landing__container').toggleClass('landing__container--fadeaway');
 		},3000);
 	}
 		else if(btnVal === 2){
@@ -114,6 +120,7 @@ export const animateFwd = (btnVal) => {
 			$('.header__container').removeClass('deactivate');
 		}, 3500);		
 	};
+
 };
 
 export const animateBack = (btnVal) => {
@@ -123,10 +130,12 @@ export const animateBack = (btnVal) => {
 		$('.page--2').removeClass('activate');
 		$('.footer').removeClass('activate');
 		setTimeout(function(){
-			$('.landing__container').removeClass('landing__container--fadeout');
-			$('.landing__title').removeClass('landing__title--fadeout');
-			$('.landing__subtitle').removeClass('landing__subtitle--fadeout');
-		},2700);
+			// $('.landing__container').removeClass('landing__container--fadeout');
+			// $('.landing__title').removeClass('landing__title--fadeout');
+			// $('.landing__subtitle').removeClass('landing__subtitle--fadeout');
+
+			$('.landing__container').toggleClass('landing__container--fadeaway');
+		},3200);
 	}else if(btnVal === 2){ //to Q2
 		$('.page--3').removeClass('activate');
 		$('.footer').removeClass('activate');
@@ -135,7 +144,7 @@ export const animateBack = (btnVal) => {
 			// $('.line--1, .line--2').addClass('activate');
 			$('.footer').addClass('activate');
 			$('.footer-text').text('1/6');
-		},2700);
+		},3000);
 	}else if(btnVal === 3){ //to Q3
 
 		$('.page--4').removeClass('activate');
@@ -146,7 +155,7 @@ export const animateBack = (btnVal) => {
 			$('.page--3').addClass('activate');
 			$('.footer').addClass('activate');
 			$('.footer-text').text('2/6');
-		},3500);
+		},3800);
 	}else if(btnVal === 4){ //to Q4
 		$('.page--5').removeClass('activate')
 		$('.footer').removeClass('activate');
@@ -154,7 +163,7 @@ export const animateBack = (btnVal) => {
 			$('.page--4').addClass('activate');
 			$('.footer').addClass('activate');
 			$('.footer-text').text('3/6');
-		},1900);
+		},2500);
 	}else if(btnVal === 5){ //to Q5
 		$('.page--6').removeClass('activate')
 		$('.footer').removeClass('activate');
@@ -162,7 +171,7 @@ export const animateBack = (btnVal) => {
 			$('.page--5').addClass('activate');
 			$('.footer').addClass('activate');
 			$('.footer-text').text('4/6');
-		},1900);
+		},2500);
 	}else if(btnVal === 6){ //to Q6
 		$('.page--7').removeClass('activate')
 		$('.footer').removeClass('activate');
@@ -171,6 +180,8 @@ export const animateBack = (btnVal) => {
 			$('.page--6').addClass('activate');
 			$('.footer').addClass('activate');
 			$('.footer-text').text('5/6');
-		},2700);
+		},3000);
 	}
+
+	console.log(btnVal);
 };

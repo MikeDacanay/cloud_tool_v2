@@ -104,8 +104,6 @@ export const progressBtn = (dial) => {
   
   const detectPlatform = func.isTouchDevice();  
 
-  console.log(detectPlatform);
-
   if(detectPlatform === true){
     dial = dial[0].$;
   };

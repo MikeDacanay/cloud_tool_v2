@@ -940,21 +940,23 @@ b {
 	  font-stretch: normal;
 	  line-height: 1.58;
 	  letter-spacing: normal;
-	  color: $color-blue-2;
-	  display: none;
+	  color: $color-blue-2;	  
 	  align-items: center;
 	  margin-right: auto;	  
 	  transform: translateY(5%);
 	  @include bph(1000){
+	  	display: none;
 		  height: 3.55rem;
 		  font-size: $font-size-6;
 		  line-height: 1.67;	  	
 	  }
 		.scroller__content--active &{
-			display: block;
+			display: flex;
 		  height: 3.55rem;
 		  font-size: $font-size-7;
 		  line-height: 1.67;
+			
+			
 
 		  @include bp(1300){
 		  	font-size: $font-size-8;		 

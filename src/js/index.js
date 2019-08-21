@@ -322,10 +322,9 @@ $(document).ready(function(){
 		$('.header__rectangle--3 > img').attr('src',$('.header__rectangle--3 > img').attr( "alt"));
 		$('.grow--text').css('color', '#00758f'); 
 		$('.header__rectangle--grow').css('background-color', 'white'); 
-	});
 
+	});	 
 
-	$('.btn__progress--5').click(); 
 
 	e.btnBackX.on('click',function(){
 		const contextValue = e.btnBackX.attr('context');
@@ -370,6 +369,7 @@ $(document).ready(function(){
 		'displayInput': false,
 		'bgColor': '#fff',
 		'fgColor': '#00758f',
+		// "readOnly": true,
 
     'change' : function (v,context) {
 
@@ -385,8 +385,12 @@ $(document).ready(function(){
 	 		this.dial = assignDial(this.selfID);
 	 		this.dial.changeValue(v);
   		
+
+	 		// console.log(self.);
+
 	 		if(this.context=== false){
 	  		dial.progressBtn(self);
+	  		console.log('testasdfasdfasfasdfasdfasdfasd');	  		
     	}
     },
 	});
@@ -401,27 +405,11 @@ $(document).ready(function(){
 		dial.lineResize();
 	});
 
+	// let currentState = 0;
 
-  $( ".dial-tracker__wrapper" ).mousemove(function( event ) {
-
-  	const yAxis = func.returnNumOnly($('.dial-group').css('height'),2)+func.returnNumOnly($('.dial-group').css('margin-top'),2)+func.returnNumOnly($('.page__content').css('padding-top'),2);
-  	const xAxis = func.returnNumOnly($('.page__content').css('margin-left'),2)+func.returnNumOnly($('.dial-group').css('height'),2);
-  	
-	  const dy = yAxis - event.pageY;
-		const dx = xAxis - event.pageX;
-		let theta = Math.atan2(dy, dx); // range (-PI, PI]
-		theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
-
-		const dial = $(this).find('.dial-tracker'); 
-
-		dial.data('context', true);
-
-		dial.val(theta).trigger('change');
-	
-	});
+	dialWrapperMove();
 
 	$('.dial-tracker__wrapper').mouseup(function(){
-		// console.log('hello');
 	  const dy = 819 - event.pageY;
 		const dx = 633.5 - event.pageX;
 		let theta = Math.atan2(dy, dx); // range (-PI, PI]
@@ -431,10 +419,84 @@ $(document).ready(function(){
 
 		dtracker.data('context', false);
 		dtracker.val(theta).trigger('change');
-	
+		
 		dial.progressBtn(dtracker);
-	});
 
+		$( ".dial-tracker__wrapper" ).unbind( "mousemove mouseleave");
+
+		setTimeout(function(){
+			dialWrapperMove()
+		}, 2500);
+	});	
+
+	function dialWrapperMove(){		
+	  $( ".dial-tracker__wrapper" )
+	  .mousemove(function( event ) {
+
+	  	const yAxis = func.returnNumOnly($('.dial-group').css('height'),2)+func.returnNumOnly($('.dial-group').css('margin-top'),2)+func.returnNumOnly($('.page__content').css('padding-top'),2);
+	  	const xAxis = func.returnNumOnly($('.page__content').css('margin-left'),2)+func.returnNumOnly($('.dial-group').css('height'),2);
+	  	
+		  const dy = yAxis - event.pageY;
+			const dx = xAxis - event.pageX;
+			let theta = Math.atan2(dy, dx); // range (-PI, PI]
+			theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
+
+			const dial = $(this).find('.dial-tracker'); 
+
+			dial.data('context', true);
+
+			dial.val(theta).trigger('change');
+
+		  // $({
+    //     value:0
+    //   }).animate({
+    //     value: theta
+    //   },{
+    //     duration: 2000,
+    //     easing: 'swing',
+    //     step: function(){
+    //       dial.val(this.value).trigger('change');       
+    //     	// currentState = theta;
+    //     }
+    //   });
+
+
+		
+		})
+		.mouseleave(function(){
+			const dial = $(this).find('.dial-tracker');
+
+			// dial.val(0).trigger('change');
+
+			// console.log(dial.val());
+
+		 $({
+        value: dial.val()
+      }).animate({
+        value: 0
+      },{
+        duration: 500,
+        easing: 'swing',
+        step: function(){
+          dial.val(this.value).trigger('change');       
+        	// currentState = theta;
+        }
+      });
+
+		});	
+  }
+
+	function assignDial(dataId){
+		let x;
+		if(dataId === 1){
+			x = state.dial1;
+		}else if(dataId === 2){
+			x = state.dial2;
+		}else{
+			x = state.dial3;
+		}
+		return x;
+	}  
 
 /****** SELECTOR CONTROLLER ******/
 	state.selected = new Selector();
@@ -507,17 +569,14 @@ $(document).ready(function(){
     }
 	});
 
-	function assignDial(dataId){
-		let x;
-		if(dataId === 1){
-			x = state.dial1;
-		}else if(dataId === 2){
-			x = state.dial2;
-		}else{
-			x = state.dial3;
-		}
-		return x;
-	}
+	$('.scroller__wrapper').on('mouseup','.scroller__content--deactive',function() {
+
+		const self = $(this); 
+
+		sl.setSlideActive(self)
+	});
+
+
 /****************  LINE CONTROLLER  ********************/
 
 
