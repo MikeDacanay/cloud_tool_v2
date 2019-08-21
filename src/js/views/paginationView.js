@@ -40,3 +40,15 @@ export const changePagination = (headerbtn) => {
 	
 }
 
+export const retrievePagination = (pgOverlay) => {	
+	
+	const val = Number(pgOverlay.data('val'))-2;
+	const paginationCircGroup = func.covertObjtoArr($('.pagination__wrapper').children());
+	$('.pagination__wrapper').children().removeClass('activate');
+	
+	for(let i = 0; i <= val; i++){
+		$(paginationCircGroup[i]).addClass('activate');
+		// console.log(paginationCircGroup[i]);
+	};
+}
+

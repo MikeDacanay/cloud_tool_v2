@@ -1,3 +1,5 @@
+// v1.1
+
 import 'bodymovin';
 import 'jquery';
 import 'rangeslider.js';
@@ -24,6 +26,7 @@ import * as bP from './views/buttonProgressView';
 import * as css from './views/cssView';
 import * as dial from './views/dialView';
 import * as dp from './views/detailedProgress';
+import * as drv from './views/detResultsView';
 import * as header from './views/headerView';
 import * as line from './views/lineView';
 import * as pagination from './views/paginationView';
@@ -32,6 +35,7 @@ import * as path from './views/pathView';
 import * as result from './views/resultsView';
 import * as selector from './views/selectorView';
 import * as sl from './views/sliderView';
+import * as footer from './views/footerView';
 
 import * as func from './functions';
 import peersJson from './peerCloud.json';
@@ -46,70 +50,73 @@ import largeDetailLow from './large_low-score.json';
 
 
 
-$(document).ready(function() {
-	const state = {};
 
-	/**************** DETAILED PAGE CONTROLLER ********************/
+$(document).ready(function(){
+ 	const state = {};
 
-	if (sessionStorage.dial2) {
+/**************** DETAILED PAGE CONTROLLER ********************/
+	
+	if(sessionStorage.dial2){	
 		const results = new CompareResults();
-		let detailFirst = '';
-		let detailSecond = '';
-		let detailForth = '';
-		results.allocateValues(sessionStorage, PeersData.retrievePeerScore)
+		results.allocateValues(sessionStorage,PeersData.retrievePeerScore)
+		let detailFirst='';
+		let detailSecond='';
+		let detailForth='';
 
+		drv.displayResults(results);
 
 		// DIALS
-		detailFirst = retrieveLottieDialAnimation(results.val['1']);
+
+		detailFirst = retrieveLottieDialAnimation(results.val['1']);		
 		detailSecond = retrieveLottieDialAnimation(results.val['2']);
 		detailForth = retrieveLottieDialAnimation(results.val['4']);
 
 		// Contextualize where user is in the dial(NEED TO make this into a function)
-		const dialsUserElements = [$('#dial__text--users-1'), $('#dial__text--users-2'), $('#dial__text--users-3')];
-		const dialUserResults = [results.val['1'], results.val['2'], results.val['4']];
+		const dialsUserElements = [$('#dial__text--users-1'),$('#dial__text--users-2'),$('#dial__text--users-3')];
+		const dialUserResults = [results.val['1'],results.val['2'],results.val['4']];
 
-		(function (arr) {
+		(function(arr){				
 
-			dialUserResults.forEach(function (element, index) {
-				if (element > 10) {
-					dialsUserElements[index].prepend('<b>You are:</b><span>Starting to use the cloud</span>');
+			dialUserResults.forEach( function(element, index) {
+				if(element > 10){
+					dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>' );
 					dialsUserElements[index].addClass('dial__text--users-more');
 					$(`#main__direction--user-${index}`).text('You are ahead of your peers and the global average on your cloud journey.');
-				} else if (element <= 10 && element >= -10) {
-					dialsUserElements[index].prepend('<b>You are:</b><span>Starting to use the cloud</span>');
+				}else if(element <= 10 &&  element >= -10){
+					dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>');
 					dialsUserElements[index].addClass('dial__text--users-equal');
 					$(`#main__direction--user-${index}`).text('You and your peers are equal in cloud journey.');
-				} else {
-					dialsUserElements[index].prepend('<b>You are:</b><span>Starting to use the cloud</span>');
+				}else{						
+					dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>');
 					dialsUserElements[index].addClass('dial__text--users-less');
 					$(`#main__direction--user-${index}`).text('You are behind of your peers and the global average on your cloud journey.');
 				}
-			});
+			});				
 
 		})([dialUserResults, dialsUserElements]);
 
 		var detailedResults1 = lottie.loadAnimation({
-			container: document.getElementById('detail-1'),
-			renderer: 'svg',
-			autoplay: true,
-			animationData: detailFirst,
-			loop: false,
+		  container: document.getElementById('detail-1'),
+		  renderer: 'svg',
+		  autoplay: true,
+		  animationData: detailFirst,
+		  loop: false,
 		});
 
 		var detailedResults2 = lottie.loadAnimation({
-			container: document.getElementById('detail-2'),
-			renderer: 'svg',
-			autoplay: true,
-			animationData: detailSecond,
-			loop: false,
+		  container: document.getElementById('detail-2'),
+		  renderer: 'svg',
+		  autoplay: true,
+		  animationData: detailSecond,
+		  loop: false,
 		});
 
 		var detailedResults3 = lottie.loadAnimation({
-			container: document.getElementById('detail-3'),
-			renderer: 'svg',
-			autoplay: true,
-			animationData: detailForth,
-			loop: false,
+		  container: document.getElementById('detail-3'),
+		  renderer: 'svg',
+		  autoplay: true,
+		  animationData: detailForth,
+		  loop: false,
 		});
 
 		//SELECTORS
@@ -148,92 +155,44 @@ $(document).ready(function() {
 				$(`#detscroll2__txt-${index}`).text('You and your peers are equally as confident in data sources. Congratulations!');
 			}
 		});
+	};
 
+/****** DETAILED MAP CONTROLLER ******/
 
-	}
-	;
-
-	/****** DETAILED MAP CONTROLLER ******/
-	// $('.detailed__square').on('click',function(){
-	// 	const self = $(this);
-	// 	const val = self.data('val');
-	// 	const context = $(`.page--${val}`);
-	// 	const nextTop = Number(context.css('top').slice(0,-2))*-1;
-	// 	const nextLeft = Number(context.css('left').slice(0,-2))*-1;
-
-	// 	context.addClass('activate');
-
-	// 	$('.detailed__map--container').addClass('activate');
-	// 	$('.detailed__results--title').addClass('deactivate');
-	// 	// $('.detailed__map > *').addClass('deactivate');
-	// 	$('.detailed__map').children().not(this).addClass('deactivate');
-	// 	$('.line__wrapper').addClass('deactivate');
-	// 	$('.detailed__map--center').addClass('deactivate');
-
-
-	// 	setTimeout(function(){
-	// 		self.addClass('activate');
-	// 		if(val === 2){
-	// 			$('.detailed__map').css('transform','scale(7.34) translate(-15.45%,-24.05%)');
-	// 		}else if(val === 3){
-	// 			$('.detailed__map').css('transform','scale(7.34) translate(-40%,-43.1%)');
-	// 		}else if(val === 4){
-	// 			$('.detailed__map').css('transform', 'scale(7.34) translate(-40%,43.1%)');
-	// 		}else if(val === 5){
-	// 			$('.detailed__map').css('transform', 'scale(7.34) translateY(43.1%)');
-	// 		}else if(val === 6){
-	// 			$('.detailed__map').css('transform', 'scale(7.34) translate(43.16%,43.1%)');
-	// 		}else if(val === 7){
-	// 			$('.detailed__map').css('transform', 'scale(7.34) translate(23.48%,-43.2%)');
-	// 		}
-
-
-	// 		setTimeout(function(){
-	// 			$('.page--x').addClass('deactivate');
-	// 			$('.main-container').addClass('activate');
-	// 			$('.header__nav').addClass('activate');
-	// 		}, 800)
-
-	// 	}, 800);
-
-	// 	$('.pathfinder').css("transform", `translate(${nextLeft}px,${nextTop}px)`);
-
-	// 	// Changing header nav value's to corresponding square
-
-	// 	$('.header__nav--btn--2').attr('context',`${Number(val)+1}`);
-	// 	$('.header__nav--btn--1').attr('context',`${Number(val)-1}`);
-
-	// 	const paginationDetGroup = pagination.retrieveDetailPagination();
-
-	// 	pagination.deactivateDetailPagination();
-
-	// 	for(let i = 0; i <= (val -2); i++){
-	// 		$(paginationDetGroup[i]).addClass('activate');
-	// 	}
-
-	// });
 
 	$('.page__overlay').on('click', function () {
 		const self = $(this);
 		const val = self.data('val');
-
+		
 
 		$('.pathfinder--x').addClass(`zoom-in--${val}`);
-		$('.page').toggleClass('zoomed');
-		setTimeout(function () {
+		// $('.page').toggleClass('zoomed');
+		$('.page').toggleClass('zoomed deactivate--z');
+		$(`.page--${val}`).addClass('activate--z');
+		$(`.page--${val}`).removeClass('deactivate--z');
+		setTimeout(function(){			
 			$('.pathfinder--x').addClass(`zoom-in--${val}-x`);
 			$('.header__nav').toggleClass('activate');
 		}, 1500);
-
+		
+		setTimeout(function(){
+			$('.pathfinder--x').toggleClass('zoom-in');
+		}, 2000);
 		$('.page__overlay').toggle();
+
+		$('.header__nav--btn--2').attr('context',`${val}`);
+    $('.header__nav--btn--1').attr('context',`${val-1}`);
+
+    pagination.retrievePagination(self);
 	});
 
 	$('.icon__zoomout').on('click', function () {
 		$('.header__nav').toggleClass('activate');
 		$('.page').toggleClass('zoomed');
-
-		setTimeout(function () {
-			$('.page__overlay').toggle();
+		$('.page').removeClass('deactivate--z activate--z');
+		$('.pathfinder--x').toggleClass('zoom-in');
+		setTimeout(function(){
+			$('.page__overlay').toggle();			
 		}, 1500);
 		$('.pathfinder--x').removeClass('zoom-in--2 zoom-in--2-x');
 		$('.pathfinder--x').removeClass('zoom-in--3 zoom-in--3-x');
@@ -247,11 +206,19 @@ $(document).ready(function() {
 	/****** HEADER NAV BTN CONTROLLER ******/
 	$('.header__nav--btn').on('click', function () {
 		const self = $(this);
+		let val = Number(self.attr('context'));
+
+		if(self.attr('direction') === 'up'){
+			val = val + 1;
+		}
+		
+		pagination.changePagination(self);		
+
+		$('.activate--z').toggleClass('deactivate--z activate--z');
+		
+		$(`.page--${val}`).toggleClass('deactivate--z activate--z');
+
 		dp.movePathfinderX(self);
-
-		pagination.changePagination(self);
-
-
 	});
 
 	/****************  CLOUD/ LOTTIE INIT  ********************/
@@ -283,6 +250,7 @@ $(document).ready(function() {
 
 
 	line.resizeLines();
+	footer.hidePageNumber();
 
 	$(window).on('resize', function () {
 		state.width = $('body').width();
@@ -320,7 +288,6 @@ $(document).ready(function() {
 		state.pageNum.incrementPageNum();
 		bP.animateFwd(value);
 		header.toggleRestartBtn(state.pageNum.pageNumber);
-		// header.hideHeader(state.pageNum.pageNumber);
 		css.changeBodyColor('black');
 	});
 
@@ -357,14 +324,14 @@ $(document).ready(function() {
 		}, 3000);
 
 		// Change button item color
-		$('.header__rectangle--1 > img').attr('src', $('.header__rectangle--1 > img').attr("alt"));
-		$('.header__rectangle--3 > img').attr('src', $('.header__rectangle--3 > img').attr("alt"));
-		$('.grow--text').css('color', '#00758f');
-		$('.header__rectangle--grow').css('background-color', 'white');
-	});
 
+		$('.header__rectangle--1 > img').attr('src',$('.header__rectangle--1 > img').attr( "alt"));
+		$('.header__rectangle--3 > img').attr('src',$('.header__rectangle--3 > img').attr( "alt"));
+		$('.grow--text').css('color', '#00758f'); 
+		$('.header__rectangle--grow').css('background-color', 'white'); 
 
-	$('.btn__progress--1').click();
+	});	 
+
 
 	e.btnBackX.on('click', function () {
 		const contextValue = e.btnBackX.attr('context');
@@ -409,6 +376,7 @@ $(document).ready(function() {
 		'displayInput': false,
 		'bgColor': '#fff',
 		'fgColor': '#00758f',
+		// "readOnly": true,
 
 		'change': function (v, context) {
 
@@ -416,7 +384,6 @@ $(document).ready(function() {
 			dial.dialRotator(self, v);
 			dial.dialContextualize(self, v);
 			this.context = (self[0].$div.prevObject.data('context'));
-
 		},
 		'release': function (v) {
 			;
@@ -441,28 +408,13 @@ $(document).ready(function() {
 		dial.lineResize();
 	});
 
+	// let currentState = 0;
 
-	$(".dial-tracker__wrapper").mousemove(function (event) {
 
-		const yAxis = func.returnNumOnly($('.dial-group').css('height'), 2) + func.returnNumOnly($('.dial-group').css('margin-top'), 2) + func.returnNumOnly($('.page__content').css('padding-top'), 2);
-		const xAxis = func.returnNumOnly($('.page__content').css('margin-left'), 2) + func.returnNumOnly($('.dial-group').css('height'), 2);
+	dialWrapperMove();
 
-		const dy = yAxis - event.pageY;
-		const dx = xAxis - event.pageX;
-		let theta = Math.atan2(dy, dx); // range (-PI, PI]
-		theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
-
-		const dial = $(this).find('.dial-tracker');
-
-		dial.data('context', true);
-
-		dial.val(theta).trigger('change');
-
-	});
-
-	$('.dial-tracker__wrapper').mouseup(function () {
-		// console.log('hello');
-		const dy = 819 - event.pageY;
+	$('.dial-tracker__wrapper').mouseup(function(){
+	  const dy = 819 - event.pageY;
 		const dx = 633.5 - event.pageX;
 		let theta = Math.atan2(dy, dx); // range (-PI, PI]
 		theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
@@ -473,8 +425,82 @@ $(document).ready(function() {
 		dtracker.val(theta).trigger('change');
 
 		dial.progressBtn(dtracker);
-	});
 
+		$( ".dial-tracker__wrapper" ).unbind( "mousemove mouseleave");
+
+		setTimeout(function(){
+			dialWrapperMove()
+		}, 2500);
+	});	
+
+	function dialWrapperMove(){		
+	  $( ".dial-tracker__wrapper" )
+	  .mousemove(function( event ) {
+
+	  	const yAxis = func.returnNumOnly($('.dial-group').css('height'),2)+func.returnNumOnly($('.dial-group').css('margin-top'),2)+func.returnNumOnly($('.page__content').css('padding-top'),2);
+	  	const xAxis = func.returnNumOnly($('.page__content').css('margin-left'),2)+func.returnNumOnly($('.dial-group').css('height'),2);
+	  	
+		  const dy = yAxis - event.pageY;
+			const dx = xAxis - event.pageX;
+			let theta = Math.atan2(dy, dx); // range (-PI, PI]
+			theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
+
+			const dial = $(this).find('.dial-tracker'); 
+
+			dial.data('context', true);
+
+			dial.val(theta).trigger('change');
+
+		  // $({
+    //     value:0
+    //   }).animate({
+    //     value: theta
+    //   },{
+    //     duration: 2000,
+    //     easing: 'swing',
+    //     step: function(){
+    //       dial.val(this.value).trigger('change');       
+    //     	// currentState = theta;
+    //     }
+    //   });
+
+
+		
+		})
+		.mouseleave(function(){
+			const dial = $(this).find('.dial-tracker');
+
+			// dial.val(0).trigger('change');
+
+			// console.log(dial.val());
+
+		 $({
+        value: dial.val()
+      }).animate({
+        value: 0
+      },{
+        duration: 500,
+        easing: 'swing',
+        step: function(){
+          dial.val(this.value).trigger('change');       
+        	// currentState = theta;
+        }
+      });
+
+		});	
+  }
+
+	function assignDial(dataId){
+		let x;
+		if(dataId === 1){
+			x = state.dial1;
+		}else if(dataId === 2){
+			x = state.dial2;
+		}else{
+			x = state.dial3;
+		}
+		return x;
+	}  
 
 	/****** SELECTOR CONTROLLER ******/
 	state.selected = new Selector();
@@ -548,17 +574,12 @@ $(document).ready(function() {
 		}
 	});
 
-	function assignDial(dataId) {
-		let x;
-		if (dataId === 1) {
-			x = state.dial1;
-		} else if (dataId === 2) {
-			x = state.dial2;
-		} else {
-			x = state.dial3;
-		}
-		return x;
-	}
+	$('.scroller__wrapper').on('mouseup','.scroller__content--deactive',function() {
+
+		const self = $(this); 
+
+		sl.setSlideActive(self)
+	});
 
 	/****************  LINE CONTROLLER  ********************/
 
@@ -629,5 +650,7 @@ $(document).ready(function() {
 			variable = largeDetailLow;
 		}
 		return variable;
+
 	}
 });
+

@@ -4,7 +4,7 @@
  //  position: absolute;
  //  border: solid 0.25rem black;
  //  left: 50%;
- //  transform: translateX(-50%);
+ //  transform: translateX(-50%); 
 	opacity: 1;
 	&--x{
 		z-index: 	4;
@@ -34,7 +34,9 @@
 	&--x{
 		transform: scale(0.1) translate(-33.25rem, 138rem);
 
+
 		&.zoom-in{
+			transition: none;
 			&--2{
 				&-x{
 					transform: scale(1) translate(-92.70rem, -50rem);								

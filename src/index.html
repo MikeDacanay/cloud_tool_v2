@@ -50,8 +50,9 @@
 				</a>
 				<div class="header__rectangle header__rectangle--2">
 					<div class="header__rectangle--grow header__rectangle--grow-2">
-							<span class='grow--text'><b>Tips</b>Helpful tips and tricks here. this box should provide more clear instructions on how to complete this assessment.</span>
-					</div>
+
+							<span class='grow--text'><b>Tips:</b>Helpful tips and tricks here. this box should provide more clear instructions on how to complete this assessment.</span>
+					</div>					
 					<img src="assets/graphics/info.svg" alt="info.svg">
 				</div>
 				<div class="header__rectangle header__rectangle--3">
@@ -320,7 +321,7 @@
 							<span class="pagination__num pagination__num--3">4</span>
 						</div>
 						<div class="scroller__wrapper scroller__wrapper--1">
-							<div class="scroller__content scroller__content--1 scroller__content--active">
+							<div val='0' class="scroller__content scroller__content--1 scroller__content--active">
 								<div class="scroller__header">
 									<div class="scroller__icon scroller__icon--1"><img src="assets/graphics/illustration/illustration-no-padding-cyber-security-prevention.svg" alt="cyber-security.svg" class="icon__scroller"></div>
 									<div class="scroller__title">Cyber Security Prevention</div>
@@ -333,7 +334,7 @@
 								</div>
 								<input type="range" min="1" max="100" value="5" role="input-range">
 							</div>
-							<div class="scroller__content scroller__content--2">
+							<div val='1' class="scroller__content scroller__content--2">								
 								<div class="scroller__header">
 									<div class="scroller__icon scroller__icon--2"><img src="assets/graphics/illustration/illustration-no-padding-cyber-security-threat-detection.svg" alt="threat-detection.svg" class="icon__scroller"></div>
 									<div class="scroller__title">Cyber Security Threat&nbsp;Detection</div>
@@ -346,7 +347,7 @@
 								</div>
 								<input type="range" min="1" max="100" value="5" role="input-range">
 							</div>
-							<div class="scroller__content scroller__content--3">
+							<div val='2' class="scroller__content scroller__content--3">
 								<div class="scroller__header">
 									<div class="scroller__icon scroller__icon--3"><img src="assets/graphics/illustration/illustration-no-padding-capacity-planning.svg" alt="capacity-planning.svg" class="icon__scroller"></div>
 									<div class="scroller__title">Capacity Planning</div>
@@ -359,7 +360,7 @@
 								</div>
 								<input type="range" min="1" max="100" value="5" role="input-range">
 							</div>
-							<div class="scroller__content scroller__content--4">
+							<div val='3' class="scroller__content scroller__content--4">
 								<div class="scroller__header">
 									<div class="scroller__icon scroller__icon--4"><img src="assets/graphics/illustration/illustration-no-padding-outage-prevention.svg" alt="outage-prevention.svg" class="icon__scroller"></div>
 									<div class="scroller__title">Outage Prevention</div>
@@ -708,7 +709,36 @@
 		<div class="footer">
 			<button class="btn__regress" context='-1'>
 				<img src="assets/graphics/back.svg" class="arrow" alt="back.svg">
-				<img src="assets/graphics/icon-close.svg" class="hamburguer" alt="hamburguer.svg">
+			</button>
+			<button class="btn__navi" context='-1'>
+				<input type="checkbox" class="btn__navi__checkbox" id="navi-toggle">
+				<label for="navi-toggle" class="btn__navi__button">
+					<img src="assets/graphics/icon-close.svg" class="hamburguer" alt="navi.svg">
+					<img src="assets/graphics/close.svg" class="close" alt="navi.svg">
+				</label>
+				<div class="btn__navi__background"></div>
+				<div class="btn__navi__navigation">
+					<ul class="btn__navi__list">
+						<li class="btn__navi__item"><a href="#" class="btn__navi__link">
+							<div class="btn__navi__icon">
+								<img src="assets/graphics/share.svg" alt="assets/graphics/share-blue.svg">
+							</div>
+							<span class="btn__navi__text">Share</span>
+						</a></li>
+						<li class="btn__navi__item"><a href="#" class="btn__navi__link">
+							<div class="btn__navi__icon">
+								<img src="assets/graphics/info.svg" alt="info.svg">
+							</div>
+							<span class="btn__navi__text">Go Back</span>
+						</a></li>
+						<li class="btn__navi__item"><a href="." class="btn__navi__link">
+							<div class="btn__navi__icon">
+								<img src="assets/graphics/restart.svg" alt="assets/graphics/restart-blue.svg">
+							</div>	
+							<div class="btn__navi__text" >Restart</div>
+						</a></li>
+					</ul>
+				</div>
 			</button>
 			<div class="footer-text">1/6</div>
 		</div>

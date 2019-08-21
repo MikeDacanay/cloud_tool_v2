@@ -62,6 +62,14 @@
     .main-container--x &{
       padding-top: 0rem;
     }
+    transition: all 1100ms;
+
+    &.activate--z{
+      opacity: 1;
+    }
+    &.deactivate--z{
+      opacity: 0;
+    }
   }
 
   &__overlay{

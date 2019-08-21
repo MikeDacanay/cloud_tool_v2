@@ -11,68 +11,140 @@
 	}
 
 	&__regress{
-    width: 2.00rem;
-    height: 2rem;
-    border-radius: 1rem;
-    border: solid 0.1rem $color-blue-1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $color-blue-2;
-	cursor: pointer;
-	transition: all .1s;
+		width: 2.00rem;
+		height: 2rem;
+		border-radius: 1rem;
+		border: solid 0.1rem $color-blue-1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $color-blue-2;
+		cursor: pointer;
+		transition: all .1s;
 
-	&:hover{
-		border: solid 0.1rem $color-white-1;
-	}
+		&:hover{
+			border: solid 0.1rem $color-white-1;
+		}
 
-    &.rotate{
-    	transform: rotate(180deg);
-	}
+		&.rotate{
+			transform: rotate(180deg);
+		}
 
-	.hamburguer{
-		display: none;
-	}
-	@include bp(767){
-		.arrow{
+		.hamburguer{
 			display: none;
 		}
-		.hamburguer{
+		@include bp(767){
+			.arrow{
+				display: none;
+			}
+			// .hamburguer{
+			// 	display: block;
+			// }
+			display: none;
+		}
+	}
+	&__navi{
+		width: 2.00rem;
+		height: 2rem;
+		border-radius: 1rem;
+		border: solid 0.1rem $color-blue-1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $color-blue-2;
+		cursor: pointer;
+		transition: all .1s;
+		display: none;
+		@include bp(767){
 			display: block;
 		}
-
-	}
-	
-		&--2,
-		&--5,{
-			margin-top: 4.80rem;
+		&__checkbox{
+			display: none;
 		}
-		&--3,
-		&--6{
-			margin-top: 6.10rem;
-		}    
+		&__button{
+			z-index: 2000;
+			height: 2rem;
+			width: 2rem;
+			border-radius: 50%;
+			position: fixed;
+			bottom: 0rem;
+			left: .80rem;
+			& img {
+				padding-top: .4rem;
+			}
+			& .hamburguer{
+				display: inline;
+			}
+			& .close{
+				display: none;
+			}
+			}
+		&__background{
 
+			background-color: rgba($color-blue-2, $alpha: .95);
+			position: fixed;
+			height: 1.5rem;
+			width: 1.5rem;
+			bottom: 0.25rem;
+			left: 1.05rem;
+			border-radius: 50%;
+			z-index: -1;
+			transition: all .8s;
+		}
+		&__navigation{
+			// display: none;
+			position: fixed;
+			bottom: 55px;
+			left: .80rem;
 
-		&--4{
-			margin-top: 7.90rem;
-			margin-left: auto;
+			opacity: 0;
+			width: 0;
+			transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);	
 		}
-		&--5,
-		&--6{
-			margin-left: auto;
+		&__list{
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			z-index: 1500;
 		}
-		// &--6{
-	 //    margin-top: -0.85rem;
-		// }
-		&--7{
-	    margin-top: -0.85rem;
+		&__item{
+			display: flex;
+			justify-content: center;
+			margin-bottom: .5rem;
+		}
+		&__icon{
+			display: inline-block;
+			height: 2rem;
+			width: 2rem;
+			border-radius: 50%;
+			border: solid 0.1rem #00758f;
+			padding-top: .3rem;
+		}
+		&__link{
+			text-decoration: none;
+			font-size: 0.80rem;
+			font-family: Univers, Arial, Helvetica, sans-serif;
+			color: #fff;
+			display: flex;
+			align-items: center;
+		}
+		&__text{
+			margin-left: .6rem;
+		}
+
+		&__checkbox:checked ~ &__background {
+			transform: scale(120);
+			z-index: -1;
+		}
+		&__checkbox:checked ~ &__navigation {
+			opacity:1;
+			width: 100%;
+		}
+		&__checkbox:checked ~ &__button .hamburguer {
+			display: none;
+		}
+		&__checkbox:checked ~ &__button .close {
+			display: inline;
 		}
 	}
 }
-
-// .hamburguer{
-// 	display: none;		
-// 	@include bp(767){
-// 		display: block;
-// 	}
-// }

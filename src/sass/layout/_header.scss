@@ -13,10 +13,6 @@
 		padding-top: 0.95rem;
 		transition-property: opacity;
 		transition-duration: .1s;
-
-		&--x{
-			// background-color: $color-white-1
-		}
 		
 		&.deactivate{
 			opacity: 0;
@@ -48,6 +44,10 @@
 			width: 100%;
 			padding: 0.95rem .8rem 0 .8rem;
 		}
+		&.bg-white{    
+			background-color: $color-white-1;
+			animation: bgWhite 2s linear;
+		}
 
 	}
 	
@@ -77,6 +77,11 @@
 			width: 4.25rem;
 			display: flex;
 	    align-items: center;
+
+      background-image: url('../assets/graphics/icon-back.svg');
+		  background-size: 1.20rem 1.20rem;
+		  background-repeat: no-repeat;
+	    
 	    &--1{
 	    	& > span{
 	    		margin-left: auto;
@@ -96,6 +101,10 @@
 					
 					background-image: url();
 				}	
+	    }
+	    &--2{
+	    	background-position-x: right;
+	    	background-image: url('../assets/graphics/icon-back--1.svg');
 	    }
 		}
 	}

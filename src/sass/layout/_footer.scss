@@ -16,10 +16,10 @@
 	transition-property: opacity;
     transition-duration: .5s;
 		
-		&.activate{
-			z-index: 1;
-			opacity: 1;
-		}
+    &.activate{
+        z-index: 1;
+        opacity: 1;
+    }
 
 	@include bp(1440){
 		width: 83.333%;
@@ -27,5 +27,5 @@
 	@include bp(767){
 		width: 100%;
 		padding: 0 .8rem;
-	}
+    }
 }

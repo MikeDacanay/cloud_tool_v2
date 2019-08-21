@@ -25,9 +25,12 @@
 				@include bph(515){
 					position: absolute;
 					margin: 0;
-					top: 1.2rem;
+					top: 4rem;
 					right: 2.9rem;
 					width: 45%;
+				}
+				@include bph(400){
+					top: 1.2rem;
 				}
 			}
 		}
@@ -35,7 +38,28 @@
 		@include bp(665){ width: 100%; }
 
 		&--1{
-	    height: 23.15rem;
+		height: 23.15rem;
+		
+		margin-top: 4.0rem;
+		@include bph(675){ margin-top: 3.0rem; }
+
+		
+		@include bp(1024){ 
+			margin-top: 2.6rem; 
+			@include bph_min(801){ margin-top: 3.0rem; }
+		}
+		@include bp(767){
+			margin-top: .5rem;
+			@include bp_min(666){
+				@include bph(515){
+					position: absolute;
+					margin: 0;
+				}
+			}
+		}
+
+
+
 		}
 		&--2{
 	    height: 30.15rem;
@@ -44,9 +68,12 @@
 	}
 	&__content{
 		width: 97%;
+		transition: height .5s;
+		overflow: hidden;
+
 		@include bph(1015){
 			height: .4rem;
-			transition: width $transition-1 linear, opacity $transition-1 linear;
+			transition: width $transition-1 linear, opacity $transition-1 linear, height $transition-1 linear;
 		}
 		height: 2.70rem;
 		border-radius: 0.20rem;
@@ -141,6 +168,7 @@
 		}
 		&:not(:last-of-type){
 			margin-bottom: 0.80rem;
+			overflow: hidden;			
 			@include bph(1015){
 				margin-bottom: .4rem;
 			}
@@ -186,7 +214,30 @@
     justify-content: space-between;		
 		height: 3.55rem;
 		padding-top: 1.15rem;
+		
+		.scroller__content > &{
+			display: flex;
+			opacity: 0;
+			height: 0;
+			transition: .2s all;
+			@include bph(1015){
+				// display: none;
+				// height: 3.55rem;
+				// opacity: 1;
+				transition: .5s all;	
+				opacity: 0;
+				height: 0;
+			}
+		}
 
+		.scroller__content--active > &{
+			height: 3.55rem;
+			opacity: 1;
+			@include bph(1015){
+				display: flex;
+			}
+		}
+	
 		@include bp_min(1025){
 			@include bph(650){
 				height: 2.5rem;;
@@ -249,9 +300,13 @@
 	&__down{
 	  width: 1.20rem;
 	  height: 1.20rem;
-    background-image: url(../assets/graphics/down-blue.svg);
+		background-image: url(../assets/graphics/down-blue.svg);	
 		// background-color: green;
 		.scroller__content--active &{
+			display: none;
+		}
+
+		@include bph(1015){
 			display: none;
 		}
 	}
@@ -295,7 +350,7 @@
 
 	  .scroller__content--active &{
 		  height: 2.20rem;
-		  border: solid 2px $color-blue-4;	  	
+		  border: solid 0.10rem $color-blue-4;	  	
 		  margin-top: 0.65rem;
 
 		  @include bph(1015){ transition: all $transition-1 linear $transition-4; }
@@ -332,8 +387,10 @@
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
 		.rangeslider--horizontal & {
-		  top: 0;
-		  height: 100%;			
+		  top: -.1rem;
+		  // height: 100%;		
+		  left: -.1rem;
+		  height: calc(#{100%} + #{.2rem});	
 		}
   }
 
