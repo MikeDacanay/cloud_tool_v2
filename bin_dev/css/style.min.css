@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 		0-767px:      Phone
 		768-910px:    Tablet portrait
@@ -1165,6 +1166,290 @@ b {
   background-image: url("../assets/graphics/arrow.svg");
   width: 1.20rem;
   height: 1.20rem; }
+
+.results__eloqua {
+  font-family: UniversB, Arial, Helvetica, sans-serif;
+  position: absolute;
+  width: 42.65rem;
+  height: 41rem;
+  margin: 0 auto;
+  left: 0;
+  z-index: 10;
+  right: 0;
+  display: none;
+  padding: 1rem;
+  overflow: hidden; }
+  @media only screen and (max-width: 767px) {
+    .results__eloqua {
+      width: 19.1rem;
+      height: 34.25rem; } }
+
+.results__eloqua {
+  /* Customize the label (the styledCheckbox) */
+  /* Create a custom radio button */ }
+  .results__eloqua.activate {
+    display: block; }
+  .results__eloqua .desktop-hide {
+    display: none; }
+    @media only screen and (max-width: 767px) {
+      .results__eloqua .desktop-hide {
+        display: block; } }
+  .results__eloqua .phone-hide {
+    display: block; }
+    @media only screen and (max-width: 767px) {
+      .results__eloqua .phone-hide {
+        display: none; } }
+  .results__eloqua .blur-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  @media only screen and (max-width: 767px) {
+    .results__eloqua .blur-image img {
+      height: initial;
+      width: initial;
+      margin-left: -30px; } }
+  @media only screen and (max-width: 767px) {
+    .results__eloqua .title-img {
+      display: none; } }
+  .results__eloqua .blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: blur(19px);
+    backdrop-filter: blur(19px);
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-transition: left 0.5s ease;
+    /* Safari */
+    transition: left 0.5s ease; }
+    @media only screen and (max-width: 767px) {
+      .results__eloqua .blur {
+        width: 39rem; } }
+  .results__eloqua .blur.second-pos {
+    left: -19.1rem; }
+  .results__eloqua .title-holder {
+    background-color: #324b5c;
+    width: 100%; }
+    @media only screen and (max-width: 767px) {
+      .results__eloqua .title-holder {
+        width: 19.1rem;
+        padding: 20px; } }
+  .results__eloqua .title-img img {
+    width: 5.2rem;
+    height: 5.2rem;
+    width: 5.2rem;
+    height: 5.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block; }
+  .results__eloqua h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 3rem;
+    width: 19.55rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1.15rem; }
+    @media only screen and (max-width: 767px) {
+      .results__eloqua h2 {
+        font-size: 0.95rem;
+        line-height: 1.5rem;
+        text-align: left; } }
+  .results__eloqua form {
+    padding: 0 1rem 0 1rem;
+    margin-left: 6.6rem; }
+    @media only screen and (max-width: 767px) {
+      .results__eloqua form {
+        margin-left: 0; } }
+  .results__eloqua input {
+    padding-left: .5rem;
+    width: 15rem;
+    height: 1.7rem;
+    border: 1px solid #00758f;
+    background-color: transparent;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem; }
+  .results__eloqua label {
+    color: #cad9de;
+    line-height: 1.05rem;
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: .3rem;
+    float: left;
+    width: 5.9rem;
+    margin-right: 1.9rem; }
+    @media only screen and (max-width: 767px) {
+      .results__eloqua label {
+        float: none; } }
+  .results__eloqua .elq-sumbit__btn, .results__eloqua .continue__btn {
+    width: 7rem;
+    height: 1.9rem;
+    border: solid 0.1rem #fff;
+    margin-top: 4.5rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0.3rem;
+    padding-right: 0.45rem;
+    margin-right: auto;
+    margin-left: auto; }
+  @media only screen and (max-width: 767px) {
+    .results__eloqua .continue__btn {
+      margin-top: 1.5rem; } }
+  .results__eloqua select {
+    padding-left: .5rem;
+    width: 15rem;
+    height: 1.7rem;
+    border: 1px solid #00758f;
+    background-color: transparent;
+    display: block;
+    margin-bottom: 1.25rem;
+    border-radius: 0;
+    font-size: .95rem;
+    color: #cad9de; }
+  .results__eloqua #select-field {
+    width: 15rem;
+    overflow-x: hidden;
+    position: relative;
+    height: inherit; }
+  .results__eloqua #field17 {
+    width: 16rem; }
+  .results__eloqua select option {
+    border-radius: 0;
+    font-size: .95rem; }
+  .results__eloqua .select-down {
+    width: 1.2rem;
+    height: 1.2rem;
+    position: absolute;
+    right: 10px;
+    top: 6px; }
+  .results__eloqua .close-holder {
+    width: 100%;
+    height: 1.2rem;
+    position: relative;
+    background-color: #324b5c; }
+    @media only screen and (max-width: 767px) {
+      .results__eloqua .close-holder {
+        width: 19.1rem; } }
+  @media only screen and (max-width: 767px) {
+    .results__eloqua .second-pos .close-holder {
+      width: 38.2rem; } }
+  .results__eloqua .styledCheckbox input {
+    position: relative;
+    z-index: -9999;
+    color: #ffffff; }
+  @media only screen and (max-width: 767px) {
+    .results__eloqua .section-1 {
+      width: 19.1rem;
+      min-height: 34.25rem;
+      display: inline-block;
+      float: left; } }
+  .results__eloqua .section-2 {
+    background-color: #324b5c;
+    padding: 1rem;
+    overflow: scroll;
+    height: 9.1rem; }
+    @media only screen and (max-width: 767px) {
+      .results__eloqua .section-2 {
+        min-height: 34.25rem;
+        margin-top: -9.05rem;
+        width: 19.1rem;
+        display: inline-block;
+        float: left; } }
+  .results__eloqua .terms {
+    color: #ffffff;
+    font-size: 0.8rem;
+    line-height: 1.05rem; }
+    .results__eloqua .terms .results__eloqua input {
+      width: 1.5rem; }
+    .results__eloqua .terms a {
+      font-size: 0.8rem;
+      color: #cad9de;
+      text-decoration: none; }
+      .results__eloqua .terms a:hover {
+        text-decoration: underline; }
+  .results__eloqua .styledCheckbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    float: none;
+    width: 100%; }
+    .results__eloqua .styledCheckbox input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0; }
+    .results__eloqua .styledCheckbox span {
+      font-size: 0.8rem;
+      display: block; }
+    .results__eloqua .styledCheckbox input:checked ~ .checkmark:after {
+      display: block; }
+  .results__eloqua .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #cad9de; }
+    .results__eloqua .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+      content: "•";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3.5rem; }
+    .results__eloqua .checkmark:hover {
+      background-color: rgba(0, 117, 143, 0.4); }
+
+.eloqua__btn {
+  width: 7.00rem;
+  height: 1.90rem;
+  border: solid 0.1rem #fff;
+  margin-top: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0.30rem;
+  padding-right: 0.45rem; }
+
+.eloqua-close {
+  position: absolute;
+  right: 0;
+  top: 0; }
+  .eloqua-close img {
+    width: 1.1rem;
+    height: 1.1rem; }
+
+.alert {
+  color: #e50000;
+  text-align: center;
+  font-size: .9rem; }
+
+#form1048 input.error, #form1048 select.error {
+  border: 2px solid #e50000; }
 
 .cloud__wrapper {
   width: 33.85rem;
@@ -2612,54 +2897,6 @@ b {
   width: 0.60rem;
   margin: 0 auto;
   position: relative; }
-
-.results__eloqua {
-  font-family: OracleSans;
-  position: absolute;
-  width: 25.00rem;
-  height: 40.00rem;
-  margin: 0 auto;
-  left: 0;
-  z-index: 10;
-  right: 0;
-  display: none;
-  -webkit-backdrop-filter: blur(19px);
-  backdrop-filter: blur(19px);
-  background-color: rgba(255, 255, 255, 0);
-
-}
-.form-field input{
-  width: 118px;
-  height: 27px;
-  font-family: OracleSans;
-  font-size: 16px;
-
-}
-  .results__eloqua.activate {
-    display: block; }
-
-  .results__eloqua h2{
-    font-size: 19px;
-    font-weight: bold;
-    line-height: 1.58;
-    font-family: OracleSans;
-  }
-
-  .terms{
-    
-  }
-
-.eloqua__btn {
-  width: 7.00rem;
-  height: 1.90rem;
-  border: solid 0.1rem #fff;
-  margin-top: 1.25rem;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 0.30rem;
-  padding-right: 0.45rem; }
 
 .scroller__wrapper {
   width: 40.90rem;
