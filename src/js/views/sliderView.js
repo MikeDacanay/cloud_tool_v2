@@ -68,7 +68,7 @@ export const setSlideActive = (slide) => {
 	const pageHeight = func.returnNumOnly(e.pageContent.css('height'),2);
 
 	if(pageHeight <= 1015){
-		console.log('asfasf');
+	
 		const previousSiblingToActive = $('scroller__content--active').prevAll();
 		const nextSiblingToActive = $('scroller__content--active').nextAll();
 		
