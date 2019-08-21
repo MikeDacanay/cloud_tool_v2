@@ -259,6 +259,8 @@ $(document).ready(function(){
 		page.reformWandH();
 
 		line.resizeLines();
+
+		console.log('resized');
 	});
 
 	$('.page--8').on('scroll', function () {

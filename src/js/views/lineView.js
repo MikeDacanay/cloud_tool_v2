@@ -33,6 +33,9 @@ export const resizeLines = () => {
 	// 	y1_start = 14.55*20 + circleSize;
 	// }; 
 	
+	// if(width <= 1440) {
+	// 	y1_start = 114.00
+	// };
 
 	if(height <= 400) {
 		y1_start = 2.6*20 + circleSize;
