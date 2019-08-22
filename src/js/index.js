@@ -278,6 +278,8 @@ $(document).ready(function(){
 
 	state.userAggregateValue = 0;
 
+	$('.btn__progress--1').click();
+
 	// PROGRESS
 	e.btnProgress.sp(path.movement, path.easing);
 

@@ -431,7 +431,10 @@ b {
 					margin-top: .2rem;
 				}
 			}
-	}
+		}
+		@include bp(666){
+			height: auto;
+		}
 		@include bp(500){
 			width: auto;
 		}
