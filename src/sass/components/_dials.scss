@@ -357,13 +357,13 @@
 			align-items: center;
 
 			&--1{
-				padding-left: 7.5%;
+				padding-left: 9%;
 				flex: 0 1 53%;
 
 				@include bph_min(900){ width: auto; }
 			}
 			&--2{
-				padding-right: 7.5%;
+				padding-right: 9%;
 			}						
 		}
 	}

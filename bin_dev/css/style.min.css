@@ -2228,13 +2228,13 @@ b {
     display: flex;
     align-items: center; }
     .dial__context--wrapper--1 {
-      padding-left: 7.5%;
+      padding-left: 9%;
       flex: 0 1 53%; }
       @media only screen and (min-height: 900px) {
         .dial__context--wrapper--1 {
           width: auto; } }
     .dial__context--wrapper--2 {
-      padding-right: 7.5%; }
+      padding-right: 9%; }
 
 .dial__line {
   background-color: #fff;
