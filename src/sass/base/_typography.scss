@@ -890,19 +890,20 @@ b {
 			}
 			@include bp(910) {
 				width: 11rem;
-				@include bph_min(811){
-					@include bph(1015){
-						width: 20rem;
-					}
-				}
+				// @include bph_min(811){
+				// 	@include bph(1015){
+				// 		width: 20rem;
+				// 	}
+				// }
 			}
 		}
 
 		&--5{
 			@include bp(910) {
-				@include bph_min(811){
-					width: 20rem;
-				}
+				// @include bph_min(811){
+				// 	width: 20rem;
+				// }
+				width: 15rem;
 			}
 		}
 

@@ -797,14 +797,9 @@ b {
   @media only screen and (max-width: 910px) {
     .cta__txt--5, .cta__txt--6 {
       width: 11rem; } }
-
-@media only screen and (max-width: 910px) and (min-height: 811px) and (max-height: 1015px) {
-  .cta__txt--5, .cta__txt--6 {
-    width: 20rem; } }
-
-@media only screen and (max-width: 910px) and (min-height: 811px) {
-  .cta__txt--5 {
-    width: 20rem; } }
+  @media only screen and (max-width: 910px) {
+    .cta__txt--5 {
+      width: 15rem; } }
 
 .cta-group__title {
   height: 1.70rem;
@@ -1657,24 +1652,18 @@ b {
       top: 21.3rem; } }
     @media only screen and (max-width: 1024px) {
       .cta__wrapper--5 {
-        top: 26.9rem; } }
+        left: 24vw;
+        top: 45.2rem; } }
+  @media only screen and (max-width: 1024px) and (max-height: 1000px) {
+    .cta__wrapper--5 {
+      top: 36.2rem; } }
   @media only screen and (max-width: 1024px) and (max-height: 800px) {
     .cta__wrapper--5 {
-      top: 26.5rem; } }
-  @media only screen and (max-width: 1024px) and (max-height: 650px) {
-    .cta__wrapper--5 {
-      top: 23.7rem; } }
+      top: 21.7rem;
+      left: auto; } }
   @media only screen and (max-width: 1024px) and (max-height: 600px) {
     .cta__wrapper--5 {
-      top: 19.7rem; } }
-  @media only screen and (max-width: 1024px) and (min-height: 815px) {
-    .cta__wrapper--5 {
-      top: 37.5rem;
-      right: -8.8rem; } }
-  @media only screen and (max-width: 1024px) and (min-height: 1016px) {
-    .cta__wrapper--5 {
-      top: 35rem;
-      right: -22rem; } }
+      top: 18.7rem; } }
     @media only screen and (max-width: 910px) {
       .cta__wrapper--5 {
         right: -25rem;
@@ -1693,26 +1682,22 @@ b {
       top: 19.7rem; } }
   @media only screen and (max-width: 910px) and (min-height: 811px) {
     .cta__wrapper--5 {
-      top: 37.5rem;
+      top: 43.5rem;
       right: -13.401rem; } }
-  @media only screen and (max-width: 910px) and (min-height: 1016px) {
-    .cta__wrapper--5 {
-      display: none; } }
     @media only screen and (max-width: 767px) {
       .cta__wrapper--5 {
-        display: none; } }
+        top: 40.9rem;
+        right: -10.35rem; } }
   @media only screen and (max-width: 767px) and (min-height: 730px) {
     .cta__wrapper--5 {
       display: block;
-      top: 34.9rem;
-      right: -10.35rem;
       padding: .6rem; } }
   @media only screen and (max-width: 767px) and (min-height: 1016px) {
     .cta__wrapper--5 {
       display: none; } }
     @media only screen and (max-width: 666px) {
       .cta__wrapper--5 {
-        display: none; } }
+        display: block; } }
   .cta__wrapper--6 {
     top: 46.2rem;
     right: -20.5rem;
@@ -2795,11 +2780,7 @@ b {
   @media only screen and (max-width: 665px) {
     .pagination--2, .pagination--3 {
       margin: 0;
-      position: absolute;
-      top: auto;
-      left: auto;
-      bottom: 2.2rem;
-      right: .85rem; } }
+      margin-top: 1rem; } }
   .pagination--active {
     color: #00758f; }
   .pagination__wrapper {
@@ -2952,17 +2933,16 @@ b {
       margin-top: 2rem; } }
   @media only screen and (max-width: 1024px) {
     .scroller__wrapper {
-      margin-top: 1.6rem; } }
+      margin-top: 1.6rem;
+      width: 100%; } }
   @media only screen and (max-width: 1024px) and (min-height: 801px) {
     .scroller__wrapper {
       margin-top: 2rem; } }
-
-@media only screen and (max-width: 910px) and (min-height: 811px) {
-  .scroller__wrapper {
-    width: 27.8rem; } }
+  @media only screen and (max-width: 1024px) and (max-height: 800px) {
+    .scroller__wrapper {
+      width: 60%; } }
   @media only screen and (max-width: 767px) {
     .scroller__wrapper {
-      width: 24.15rem;
       margin-top: 1rem; } }
 
 @media only screen and (max-width: 767px) and (min-width: 666px) and (max-height: 515px) {
@@ -3124,6 +3104,9 @@ b {
   .scroller__content--active > .scroller__mid {
     height: 3.55rem;
     opacity: 1; }
+    @media only screen and (max-width: 1441px) {
+      .scroller__content--active > .scroller__mid {
+        height: 2.55rem; } }
     @media only screen and (max-height: 1015px) {
       .scroller__content--active > .scroller__mid {
         display: flex; } }

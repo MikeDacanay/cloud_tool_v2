@@ -295,7 +295,7 @@ $(document).ready(function(){
 		e.headerWrapper.addClass('activate');
 	});
 
-	$('.btn__progress--3').click();
+	$('.btn__progress--5').click();
 
 	e.btnProgress7.on('click', function () {
 

@@ -190,19 +190,20 @@
 				@include bph(600){ top: 21.3rem; }
 			}
 			@include bp(1024){ 
-				top: 26.9rem;
-
-				@include bph(800){ top: 26.5rem; }
-				@include bph(650){ top: 23.7rem; }
-				@include bph(600){ top: 19.7rem; }
-				
-				@include bph_min(815){ 
-					top: 37.5rem; 
-					right: -8.8rem;
+		    left: 24vw;
+		    top: 45.2rem;
+				// @include bph(800){ top: 26.5rem; }
+				// @include bph(650){ top: 23.7rem; }
+				// @include bph(600){ top: 19.7rem; }
+				@include bph(1000){
+					top: 36.2rem;
 				}
-				@include bph_min(1016){ 
-					top: 35rem;
-					right: -22rem; 
+				@include bph(800){
+					top: 21.7rem;			    
+			    left: auto;
+				}
+				@include bph(600){
+					top: 18.7rem;
 				}
 			}
 			
@@ -217,25 +218,30 @@
 				@include bph(550){ top: 19.7rem; }
 
 				@include bph_min(811){ 
-					top: 37.5rem; 
+					top: 43.5rem; 
 					right: -13.401rem;
 				}
 				@include bph_min(1016){ 
-					display: none;
+					// display: none;
 				}
 			}
 
 			@include bp(767){ 
-				display: none; 
+				// display: none;
+				top: 40.9rem;
+				right: -10.35rem; 
 				@include bph_min(730){
 					display: block;
-					top: 34.9rem; 
-					right: -10.35rem;
+					// top: 34.9rem; 
+					// right: -10.35rem;
 					padding: .6rem
 				}
 				@include bph_min(1016){ display: none; }
 			}
-			@include bp(666){ display: none; }
+			@include bp(666){ 
+				// display: none; 
+				display: block;
+			}
 		}
 
 		&--6{
