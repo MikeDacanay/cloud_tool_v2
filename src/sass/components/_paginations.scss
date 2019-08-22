@@ -31,8 +31,8 @@
 		}
 		@include bp(1440){ 
 			@include bph(600){
-				top: 7.2rem;
-				right: 7.3rem;
+				// top: 7.2rem;
+				// right: 7.3rem;
 			}
 			@include bph(530){ top: 6.7rem; }
 		}

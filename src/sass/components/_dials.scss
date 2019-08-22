@@ -378,6 +378,10 @@
 			&--1{
 				padding-left: 8.5%;
 				flex: 0 1 53%;
+				
+				@include bp(1400){
+					padding-left: 8%;
+				}
 
 				@include bph_min(900){ width: auto; }
 				@include bp(950){
@@ -404,6 +408,9 @@
 			}
 			&--2{
 				padding-right: 8.5%;
+				@include bp(1400){
+					padding-right: 8%;
+				}
 				@include bp(950){
 					@include bph(900){
 						padding-right: 8%;

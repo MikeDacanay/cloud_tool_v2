@@ -276,9 +276,7 @@ $(document).ready(function(){
 
 	/****** CPRSCROLLPATH/MOVEMENT CONTROLLER ******/
 
-	state.userAggregateValue = 0;
-
-	$('.btn__progress--1').click();
+	state.userAggregateValue = 0;	
 
 	// PROGRESS
 	e.btnProgress.sp(path.movement, path.easing);
@@ -296,6 +294,8 @@ $(document).ready(function(){
 	e.btnProgress1.on('click', function () {
 		e.headerWrapper.addClass('activate');
 	});
+
+	$('.btn__progress--3').click();
 
 	e.btnProgress7.on('click', function () {
 

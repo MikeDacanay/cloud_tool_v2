@@ -1535,7 +1535,6 @@ b {
   .cta__wrapper--3 {
     transform: translateY(0%);
     top: 15.1rem;
-    left: auto;
     right: -20rem; }
 
 @media only screen and (min-width: 1441px) and (max-height: 750px) {
@@ -1549,7 +1548,6 @@ b {
 @media only screen and (min-width: 1441px) and (min-height: 1015px) {
   .cta__wrapper--3 {
     width: 100rem;
-    top: calc((100vh + 23rem) / 2);
     right: -53rem; } }
     @media only screen and (max-width: 1440px) {
       .cta__wrapper--3 {
@@ -1567,9 +1565,7 @@ b {
       top: 8.7rem; } }
   @media only screen and (max-width: 1440px) and (min-height: 850px) {
     .cta__wrapper--3 {
-      width: 38.5rem;
-      top: calc((100vh + 19rem) / 2);
-      right: -8rem; } }
+      width: 38.5rem; } }
     @media only screen and (max-width: 1150px) {
       .cta__wrapper--3 {
         right: -25rem; } }
@@ -2238,6 +2234,9 @@ b {
     .dial__context--wrapper--1 {
       padding-left: 8.5%;
       flex: 0 1 53%; }
+      @media only screen and (max-width: 1400px) {
+        .dial__context--wrapper--1 {
+          padding-left: 8%; } }
       @media only screen and (min-height: 900px) {
         .dial__context--wrapper--1 {
           width: auto; } }
@@ -2262,6 +2261,9 @@ b {
     padding-left: 9%; } }
     .dial__context--wrapper--2 {
       padding-right: 8.5%; }
+      @media only screen and (max-width: 1400px) {
+        .dial__context--wrapper--2 {
+          padding-right: 8%; } }
 
 @media only screen and (max-width: 950px) and (max-height: 900px) {
   .dial__context--wrapper--2 {
@@ -2672,11 +2674,6 @@ b {
 @media only screen and (min-width: 1441px) and (max-height: 650px) {
   .pagination--1 {
     top: 7rem; } }
-
-@media only screen and (max-width: 1440px) and (max-height: 600px) {
-  .pagination--1 {
-    top: 7.2rem;
-    right: 7.3rem; } }
 
 @media only screen and (max-width: 1440px) and (max-height: 530px) {
   .pagination--1 {
@@ -3305,25 +3302,20 @@ b {
   @media only screen and (min-width: 1441px) and (max-height: 720px) {
     .selection__wrapper {
       height: 13rem; } }
-  @media only screen and (min-width: 1441px) and (min-height: 1015px) {
-    .selection__wrapper {
-      transform: translateY(-50%);
-      margin-top: calc((100vh - 26rem) / 2); } }
   @media only screen and (max-width: 1440px) {
     .selection__wrapper {
       height: 15rem;
       width: 26rem; } }
+  @media only screen and (max-width: 1440px) and (min-height: 740px) {
+    .selection__wrapper {
+      width: 15rem;
+      height: 16rem; } }
+  @media only screen and (max-width: 1440px) and (min-height: 850px) {
+    .selection__wrapper {
+      height: 19rem; } }
   @media only screen and (max-width: 1440px) and (max-height: 650px) {
     .selection__wrapper {
       height: 15rem; } }
-  @media only screen and (max-width: 1440px) and (min-height: 740px) {
-    .selection__wrapper {
-      width: 17rem;
-      height: 18rem; } }
-  @media only screen and (max-width: 1440px) and (min-height: 850px) {
-    .selection__wrapper {
-      height: 19rem;
-      margin-top: calc((100vh - 14.5rem) / 2 - (3 * 10vh)); } }
 
 @media only screen and (max-width: 1024px) and (max-height: 530px) {
   .selection__wrapper {
@@ -3340,7 +3332,8 @@ b {
   @media only screen and (max-width: 910px) {
     .selection__wrapper {
       width: 17rem;
-      height: 17.5rem; } }
+      height: 17.5rem;
+      margin-top: 1.20rem; } }
   @media only screen and (max-width: 910px) and (max-height: 700px) {
     .selection__wrapper {
       margin-top: 1rem; } }
@@ -3353,7 +3346,7 @@ b {
   @media only screen and (max-width: 767px) {
     .selection__wrapper {
       height: 15rem;
-      margin-top: .6rem; } }
+      margin-top: 1.20rem; } }
 
 @media only screen and (max-width: 767px) and (min-width: 667px) and (max-height: 514px) {
   .selection__wrapper {
@@ -3370,22 +3363,16 @@ b {
     top: 1.3rem; } }
   @media only screen and (max-width: 767px) and (min-height: 726px) {
     .selection__wrapper {
-      height: 15rem;
-      margin-top: calc((100vh - 35.1rem) / 2); } }
+      height: 15rem; } }
   @media only screen and (max-width: 666px) {
     .selection__wrapper {
       width: 17.6rem;
-      margin: 0.9rem auto; } }
+      margin-top: 1.05rem; } }
   .selection__wrapper--x {
     width: 38.40rem;
     height: 22.00rem; }
-
-@media only screen and (min-width: 1441px) and (min-height: 1050px) {
-  .selection__wrapper--x {
-    transform: translateY(0%);
-    margin-top: 1.85rem; }
     .page.zoomed .page__content > .selection__wrapper--x {
-      margin-top: 31.85rem; } }
+      margin-top: 31.85rem; }
 
 .selection__container {
   width: 14.65rem;

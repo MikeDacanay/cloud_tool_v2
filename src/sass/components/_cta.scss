@@ -90,7 +90,7 @@
 		&--3{
 			transform: translateY(0%);
 			top: 15.1rem;	
-			left: auto;
+			// left: auto;
 			right: -20rem;
 
 			@include bp_min(1441){
@@ -102,7 +102,7 @@
 				}
 				@include bph_min(1015){
 					width: 100rem;
-					top: calc((100vh + 23rem) / 2);
+					// top: calc((100vh + 23rem) / 2);
 					right: -53rem;
 				}
 			}
@@ -115,8 +115,8 @@
 				@include bph(530){ top: 8.7rem; }
 				@include bph_min(850){
 					width: 38.5rem;
-					top: calc((100vh + 19rem) / 2);
-					right: -8rem;
+					// top: calc((100vh + 19rem) / 2);
+					// right: -8rem;
 				}
 			}
 			@include bp(1150){ right: -25rem; }
