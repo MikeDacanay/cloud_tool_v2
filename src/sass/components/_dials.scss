@@ -132,20 +132,35 @@
 					transform: translateY(0%);
 				}
 			}
+			// @include bph(700){
+			// 	width: calc(100vh - 1.6rem);
+			// 	height: calc((100vh - 1.6rem) / 2);
+			// 	max-width: none;
+			// 	max-height: none;
+			// }
+
+			@include bph(500){
+				transform: none;
+    		top: 4.00rem;
+			}
 		}
 
 		@include bp(666){
 			margin-top: calc((100vh - 15rem) / 2);
+			max-width: none;
+			max-height: none;
+			width: calc(100vw - 1.6rem);
+			height: calc((100vw - 1.6rem) / 2);
 			@include bph_min(630){
 				margin-top: 4.2rem;
 				transform: translateY(0%);
 			}
 		}
 
-		@include bp(450){
-			margin-left: auto;
-			margin-right: auto;
-		}
+		// @include bp(450){
+		// 	margin-left: auto;
+		// 	margin-right: auto;
+		// }
 		
 
 		&--2{
@@ -303,8 +318,12 @@
 				flex-direction: column;
 				align-items: center;
 				padding-top: 4.7%;
-				@include bp_min(768){
-					padding-top: 4.4%;
+				// @include bp_min(768){
+				// 	padding-top: 4.4%;
+				// }
+
+				@include bp(1440){
+					padding-top: 5.5%;
 				}
 
 			}
@@ -357,13 +376,62 @@
 			align-items: center;
 
 			&--1{
-				padding-left: 7.5%;
+				padding-left: 8.5%;
 				flex: 0 1 53%;
+				
+				@include bp(1400){
+					padding-left: 8%;
+				}
 
 				@include bph_min(900){ width: auto; }
+				@include bp(950){
+					@include bph(900){
+						padding-left: 8%;
+					}
+					@include bph(550){
+						padding-left: 7%;	
+					}
+				}
+				@include bp(900){
+					padding-left: 8%;
+				}
+				@include bp(800){
+					@include bph(750){
+						padding-left: 7%;	
+					}					
+				}
+				@include bp(600){
+					@include bph(600){
+						padding-left: 9%;
+					}
+				}
 			}
 			&--2{
-				padding-right: 7.5%;
+				padding-right: 8.5%;
+				@include bp(1400){
+					padding-right: 8%;
+				}
+				@include bp(950){
+					@include bph(900){
+						padding-right: 8%;
+					}
+					@include bph(550){
+						padding-right: 7%;	
+					}
+				}
+				@include bp(900){
+					padding-right: 8%;
+				}
+				@include bp(800){
+					@include bph(750){
+						padding-right: 7%;	
+					}					
+				}
+				@include bp(600){
+					@include bph(600){
+						padding-right: 9%;
+					}
+				}
 			}						
 		}
 	}

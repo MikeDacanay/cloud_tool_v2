@@ -48,7 +48,7 @@ export const animateFwd = (btnVal) => {
 		$('.btn__regress').attr('context', '2')
 
 		setTimeout(function(){
-			// $('.btn__regress').addClass('rotate');
+			$('.btn__regress').addClass('rotate');
 			$('.page--4').addClass('activate');
 			$('.line--5, .line--6, .line--7').addClass('activate');
 			$('.footer').addClass('activate');
@@ -95,7 +95,7 @@ export const animateFwd = (btnVal) => {
 		$('.btn__regress').attr('context', '5')
 
 		setTimeout(function(){
-			// $('.btn__regress').removeClass('rotate');
+			$('.btn__regress').removeClass('rotate');
 			$('.page--7').addClass('activate');
 			$('.line--10, .line--11').addClass('activate');
 			$('.footer').addClass('activate');
@@ -151,7 +151,7 @@ export const animateBack = (btnVal) => {
 		$('.footer').removeClass('activate');
 
 		setTimeout(function(){
-			// $('.btn__regress').removeClass('rotate');
+			$('.btn__regress').removeClass('rotate');
 			$('.page--3').addClass('activate');
 			$('.footer').addClass('activate');
 			$('.footer-text').text('2/6');
@@ -176,7 +176,7 @@ export const animateBack = (btnVal) => {
 		$('.page--7').removeClass('activate')
 		$('.footer').removeClass('activate');
 		setTimeout(function(){
-			// $('.btn__regress').removeClass('rotate');
+			$('.btn__regress').removeClass('rotate');
 			$('.page--6').addClass('activate');
 			$('.footer').addClass('activate');
 			$('.footer-text').text('5/6');

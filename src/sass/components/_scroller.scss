@@ -3,7 +3,7 @@
 		width: 40.90rem;
 		@include bp(1315){
 			width: 60%;	
-		}
+		}		
 		margin-top: 3.0rem;
 		
 		@include bph(675){ margin-top: 2rem; }
@@ -11,15 +11,23 @@
 		
 		@include bp(1024){ 
 			margin-top: 1.6rem; 
+			width: 100%;
 			@include bph_min(801){ margin-top: 2rem; }
-		}
-		@include bp(910){
-			@include bph_min(811){
-				width: 27.8rem;
+		
+			@include bph(800){
+				width: 60%;
 			}
 		}
+		// @include bp(950){
+		// 	width: 100%;
+		// }
+		@include bp(910){
+			// @include bph_min(811){
+			// 	width: 27.8rem;
+			// }
+		}
 		@include bp(767){
-			width: 24.15rem;
+			// width: 24.15rem;
 			margin-top: 1rem;
 			@include bp_min(666){
 				@include bph(515){
@@ -233,6 +241,9 @@
 		.scroller__content--active > &{
 			height: 3.55rem;
 			opacity: 1;
+			@include bp(1441){
+				height: 2.55rem;
+			}
 			@include bph(1015){
 				display: flex;
 			}

@@ -90,7 +90,7 @@
 		&--3{
 			transform: translateY(0%);
 			top: 15.1rem;	
-			left: auto;
+			// left: auto;
 			right: -20rem;
 
 			@include bp_min(1441){
@@ -102,7 +102,7 @@
 				}
 				@include bph_min(1015){
 					width: 100rem;
-					top: calc((100vh + 23rem) / 2);
+					// top: calc((100vh + 23rem) / 2);
 					right: -53rem;
 				}
 			}
@@ -115,20 +115,28 @@
 				@include bph(530){ top: 8.7rem; }
 				@include bph_min(850){
 					width: 38.5rem;
-					top: calc((100vh + 19rem) / 2);
-					right: -8rem;
+					// top: calc((100vh + 19rem) / 2);
+					// right: -8rem;
 				}
 			}
 			@include bp(1150){ right: -25rem; }
 
 			@include bp(1024){
 				top: 13.85rem;
-
+				@include bph(900){
+					top: 31.85rem;
+					right: -11rem;
+				}
+				@include bph(800){
+			    top: 13.85rem;
+			    right: -21rem;
+				}
 				@include bph(650){ top: 11rem; }
 				@include bph(600){ top: 9.15rem; }
 				@include bph(530){ display: none; }
-				@include bph_min(850){
-					top: calc((100vh + 22rem) / 2);
+				@include bph_min(950){
+					// top: calc((100vh + 22rem) / 2);
+					top: 35rem;
 					right: -8rem;
 				} 
 			}
@@ -190,19 +198,20 @@
 				@include bph(600){ top: 21.3rem; }
 			}
 			@include bp(1024){ 
-				top: 26.9rem;
-
-				@include bph(800){ top: 26.5rem; }
-				@include bph(650){ top: 23.7rem; }
-				@include bph(600){ top: 19.7rem; }
-				
-				@include bph_min(815){ 
-					top: 37.5rem; 
-					right: -8.8rem;
+		    left: 24vw;
+		    top: 45.2rem;
+				// @include bph(800){ top: 26.5rem; }
+				// @include bph(650){ top: 23.7rem; }
+				// @include bph(600){ top: 19.7rem; }
+				@include bph(1000){
+					top: 36.2rem;
 				}
-				@include bph_min(1016){ 
-					top: 35rem;
-					right: -22rem; 
+				@include bph(800){
+					top: 21.7rem;			    
+			    left: auto;
+				}
+				@include bph(600){
+					top: 18.7rem;
 				}
 			}
 			
@@ -217,25 +226,30 @@
 				@include bph(550){ top: 19.7rem; }
 
 				@include bph_min(811){ 
-					top: 37.5rem; 
+					top: 43.5rem; 
 					right: -13.401rem;
 				}
 				@include bph_min(1016){ 
-					display: none;
+					// display: none;
 				}
 			}
 
 			@include bp(767){ 
-				display: none; 
+				// display: none;
+				top: 40.9rem;
+				right: -10.35rem; 
 				@include bph_min(730){
 					display: block;
-					top: 34.9rem; 
-					right: -10.35rem;
+					// top: 34.9rem; 
+					// right: -10.35rem;
 					padding: .6rem
 				}
-				@include bph_min(1016){ display: none; }
+				// @include bph_min(1016){ display: none; }
 			}
-			@include bp(666){ display: none; }
+			@include bp(666){ 
+				// display: none; 
+				display: block;
+			}
 		}
 
 		&--6{
@@ -301,8 +315,8 @@
 					right: -10.35rem;
 					padding: .6rem
 				}
-				@include bph_min(750){ top: 34.5rem; }
-				@include bph_min(1016){ display: none; }
+				@include bph_min(750){ top: 48.5rem; }
+				// @include bph_min(1016){ display: none; }
 			}
 			@include bp(666){ display: none; }
 		}

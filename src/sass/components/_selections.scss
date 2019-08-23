@@ -21,26 +21,23 @@
 			@include bph(720){
 				height: 13rem;
 			}
-			@include bph_min(1015){
-				transform: translateY(-50%);
-				margin-top: calc((100vh - 26rem) / 2);
-			}
 		}
 
 		@include bp(1440){
 			height: 15rem;
 			width: 26rem;
-			@include bph(650){
-				height: 15rem;
-			}
+			
 			@include bph_min(740){
-				width: 17rem;
-				height: 18rem;
+				width: 15rem;
+				height: 16rem;
 			}
 			@include bph_min(850){
 				height: 19rem;
-				margin-top: calc((100vh - 14.5rem) / 2 - (3 * 10vh));
+				// margin-top: calc((100vh - 14.5rem) / 2 - (3 * 10vh));
 			}
+			@include bph(650){
+				height: 15rem;
+			}			
 		}
 		@include bp(1024){
 			@include bph(530){
@@ -57,6 +54,7 @@
 		@include bp(910){
 			width: 17rem;
 			height: 17.5rem;
+			margin-top: 1.20rem;
 			@include bph(700){ margin-top: 1rem; }
 			@include bph(600){
 				height: 15rem;
@@ -67,7 +65,7 @@
 		}
 		@include bp(767){
 			height: 15rem;
-			margin-top: .6rem;
+			margin-top: 1.20rem;
 			@include bp_min(667){
 				@include bph(514){
 					margin: 0;
@@ -84,29 +82,22 @@
 			}
 			@include bph_min(726){
 				height: 15rem;
-				margin-top: calc((100vh - 35.1rem) / 2);
 			}
 		}
 		@include bp(666){
 			width: 17.6rem;
-			margin: 0.9rem auto;
+			// margin: 0.9rem auto;
+			margin-top: 1.05rem;
 		}
 
 		&--x{
 			width: 38.40rem;
 			height: 22.00rem;
+			
 
-			@include bp_min(1441){
-				@include bph_min(1050){
-					transform: translateY(0%);
-					margin-top: 1.85rem;
-					
-					.page.zoomed .page__content > &{
-						margin-top: 31.85rem;
-					}
-				}
+			.page.zoomed .page__content > &{
+				margin-top: 31.85rem;
 			}
-
 		}
 	}
 	&__container{
