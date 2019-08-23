@@ -70,6 +70,10 @@
     &.deactivate--z{
       opacity: 0;
     }
+    &.zoomed{        
+      width: auto;
+      height: auto;
+    }
   }
 
   &__overlay{
