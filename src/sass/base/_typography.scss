@@ -638,6 +638,9 @@ b {
 	  text-align: center;
 	  margin: 0 auto;
 	  margin-top: 3.80rem;
+		@include bp(650){
+			width: 100%;
+		}
 	}
 }
 
@@ -920,6 +923,9 @@ b {
 		  line-height: 1.2;
 		  letter-spacing: normal;
 		  color: $color-blue-2;			
+			@include bp(1300){
+				height: auto;
+			}
 		}
 		&__copy{			  
 		  font-family: $font-reg;
@@ -1092,6 +1098,10 @@ b {
 	  letter-spacing: normal;
 	  text-align: center;
 	  color: $color-blue-2;	
+
+	  @include bp(500){
+	  	font-size: $font-size-9;
+	  }
 	
 		& > *{
 	    line-height: 1.25;
@@ -1102,6 +1112,9 @@ b {
 		display: block;
 		&--2{
 			font-size: $font-size-7;
+			@include bp(500){
+				font-size: $font-size-2;
+			}
 		}
 
 		& > b{
@@ -1221,6 +1234,10 @@ b {
 	    font-family: $font-reg;
 		
 			
+		}
+
+		.header__container--x &{
+			display: none;
 		}
 	}
 	&__rectangle{

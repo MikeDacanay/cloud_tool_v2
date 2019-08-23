@@ -18,6 +18,10 @@
 			opacity: 0;
 		}		
 
+		&--x{
+			background-color: #fff;
+		}
+
 		@include bp(1440){
 			width: 83.333%;
 		}

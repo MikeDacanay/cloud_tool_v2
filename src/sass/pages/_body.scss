@@ -89,6 +89,10 @@
 			transition-duration: .1s;
 		}
 
+		.page--8 &{
+			padding-bottom: 4rem;
+		}
+
 
 		.page.activate & > *{
 			opacity: 1;

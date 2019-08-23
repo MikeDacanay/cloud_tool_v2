@@ -10,17 +10,37 @@
 		&:hover > .detailed-score__container--2{
 	    filter: blur(0.10rem);
 	  }
+		@include bp(900){
+			position: relative;
+		}
 	}
 	&__container{
 		&--1{
 			flex: 0 0 17.95rem;
 			margin-right: auto;
 			padding-top: 2.98rem;
+			@include bp(900){
+				z-index: 1;
+			}
 		}
 		&--2{
 			flex: 0 0 25.90rem;
 	    background-image: url(../assets/images/desktop/pathmap.png);
       background-size: 100%;
+
+      @include bp(1440){
+   	    flex: 0 0 50%;
+		    background-size: 100%;
+		    background-repeat: no-repeat;
+		    transform: translateY(20%);
+      }
+      @include bp(900){
+      	position: absolute;
+		    width: 75%;
+		    height: 75%;
+		    filter: blur(.3rem);    
+		    transform: translateY(0) translateX(10%);
+      }
 		}
 	}
 	&__btn{
@@ -44,10 +64,26 @@
 		width: 45.00rem;
 		margin-top: 2.80rem;
 		justify-content: space-between;
+		@include bp(1440){
+			width: 100%;
+		}
+		@include bp(1350){
+			width: 75%;
+			height: auto;
+		}
+		@include bp(1150){
+			width: 100%;
+		}
+		@include bp(600){
+			flex-direction: column;
+		}
 	}
 	&__container{
 		flex: 0 0 21.65rem;
 		background-color: #fff;
+		@include bp(1440){
+			flex: 0 0 45%;
+		}
 	}
 	&__btn{
 		border:  solid .1rem $color-blue-2;
@@ -99,12 +135,28 @@
 	&__line{
 		margin-top: 0.30rem;
 	}
-	
+	&__wrapper{
+		@include bp(1350){
+			display: flex;
+			padding-bottom: 4.00rem;
+		}
+		@include bp(700){
+			flex-direction: column;
+		}
+	}
 	&__group{
 		height: 15.40rem;		
 		width: 100%;
 		margin-top: 1.20rem;
 	  box-shadow: 0 0.10rem 0.40rem 0 rgba(0, 0, 0, 0.15);
+	  @include bp(1350){
+	  	flex: 0 0 17.20rem;
+	  	margin-right: 5%;
+	  }
+	  @include bp(700){
+	  	flex: 0 0 15.4rem;
+	  	width: 17.2rem;
+	  }
 	}
 	&__video{
 		&--container{			
