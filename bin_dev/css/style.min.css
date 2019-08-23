@@ -1700,9 +1700,6 @@ b {
     .cta__wrapper--5 {
       display: block;
       padding: .6rem; } }
-  @media only screen and (max-width: 767px) and (min-height: 1016px) {
-    .cta__wrapper--5 {
-      display: none; } }
     @media only screen and (max-width: 666px) {
       .cta__wrapper--5 {
         display: block; } }
@@ -1787,10 +1784,7 @@ b {
       padding: .6rem; } }
   @media only screen and (max-width: 767px) and (min-height: 750px) {
     .cta__wrapper--6 {
-      top: 34.5rem; } }
-  @media only screen and (max-width: 767px) and (min-height: 1016px) {
-    .cta__wrapper--6 {
-      display: none; } }
+      top: 48.5rem; } }
     @media only screen and (max-width: 666px) {
       .cta__wrapper--6 {
         display: none; } }

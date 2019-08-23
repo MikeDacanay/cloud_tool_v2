@@ -34,7 +34,7 @@ export const resizeLines = () => {
 	// }; 
 
 
-	
+
 
 	if(height <= 400) {
 		y1_start = 2.6*20 + circleSize;
@@ -60,8 +60,8 @@ export const resizeLines = () => {
 	}; 
 
 	if($('body').width() <= 1440){
-		x3_constWidth = (width/2)+x2_q1;
-		alert(x3_constWidth);
+		x3_constWidth = (width/2)+x2_q1;		
+		x5_constWidth = (width*1.25)+(x2_q1*3);
 	}
 
 

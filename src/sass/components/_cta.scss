@@ -244,7 +244,7 @@
 					// right: -10.35rem;
 					padding: .6rem
 				}
-				@include bph_min(1016){ display: none; }
+				// @include bph_min(1016){ display: none; }
 			}
 			@include bp(666){ 
 				// display: none; 
@@ -315,8 +315,8 @@
 					right: -10.35rem;
 					padding: .6rem
 				}
-				@include bph_min(750){ top: 34.5rem; }
-				@include bph_min(1016){ display: none; }
+				@include bph_min(750){ top: 48.5rem; }
+				// @include bph_min(1016){ display: none; }
 			}
 			@include bp(666){ display: none; }
 		}
