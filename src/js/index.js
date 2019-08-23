@@ -295,7 +295,7 @@ $(document).ready(function(){
 		e.headerWrapper.addClass('activate');
 	});
 
-	$('.btn__progress--5').click();
+	// $('.btn__progress--5').click();
 
 	e.btnProgress7.on('click', function () {
 
@@ -357,6 +357,8 @@ $(document).ready(function(){
 		const contextVal = $(this).attr('context');
 		const hdrVal = e.hdrProgress.data('val');
 		bP.animateBack(contextVal);
+
+		$('.btn__navi__button').click();
 
 		e.hdrProgress.data('val', `${Number(hdrVal) - 1}`);
 

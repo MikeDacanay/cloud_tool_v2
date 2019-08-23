@@ -32,6 +32,8 @@ export const resizeLines = () => {
 	// } else if(height <= 650){
 	// 	y1_start = 14.55*20 + circleSize;
 	// }; 
+
+
 	
 
 	if(height <= 400) {
@@ -56,7 +58,13 @@ export const resizeLines = () => {
 	} else if(height >= 1080){
 		y1_start = 10.1*20 + circleSize;
 	}; 
-	console.log(screenWidth);
+
+	if($('body').width() <= 1440){
+		x3_constWidth = (width/2)+x2_q1;
+		alert(x3_constWidth);
+	}
+
+
 
 	// if(height <= 650){
 	// 	y1_start = 14.35*20 + .4083*height;

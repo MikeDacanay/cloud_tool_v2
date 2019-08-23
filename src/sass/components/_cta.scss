@@ -123,12 +123,20 @@
 
 			@include bp(1024){
 				top: 13.85rem;
-
+				@include bph(900){
+					top: 31.85rem;
+					right: -11rem;
+				}
+				@include bph(800){
+			    top: 13.85rem;
+			    right: -21rem;
+				}
 				@include bph(650){ top: 11rem; }
 				@include bph(600){ top: 9.15rem; }
 				@include bph(530){ display: none; }
-				@include bph_min(850){
-					top: calc((100vh + 22rem) / 2);
+				@include bph_min(950){
+					// top: calc((100vh + 22rem) / 2);
+					top: 35rem;
 					right: -8rem;
 				} 
 			}
