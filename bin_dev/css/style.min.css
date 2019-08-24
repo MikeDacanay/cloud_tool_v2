@@ -1547,6 +1547,8 @@ b {
     top: 100%;
     left: 48.4rem;
     width: 90rem; }
+  .zoomed .cta__wrapper--1 {
+    display: none; }
   .cta__wrapper--3 {
     transform: translateY(0%);
     top: 15.1rem;
@@ -1808,6 +1810,9 @@ b {
     @media only screen and (max-width: 666px) {
       .cta__wrapper--6 {
         display: none; } }
+
+.zoomed .cta {
+  display: none; }
 
 .cta__btn {
   width: 8.45rem;
@@ -3898,6 +3903,9 @@ b {
       opacity: 1; }
     .page--z.deactivate--z {
       opacity: 0; }
+    .page--z.zoomed {
+      width: auto;
+      height: auto; }
   .page__overlay {
     position: absolute;
     width: 100%;
