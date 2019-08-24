@@ -58,11 +58,7 @@ $(document).ready(function(){
 	
 	if(sessionStorage.dial2){	
 		const results = new CompareResults();
-		results.allocateValues(sessionStorage,PeersData.retrievePeerScore)
-		// let detailFirst='';
-		// let detailSecond='';
-		// let detailForth='';
-
+		results.allocateValues(sessionStorage,PeersData.retrievePeerScore);
 		drv.displayResults(results);
 
 		//SELECTORS
