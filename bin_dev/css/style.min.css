@@ -2659,6 +2659,10 @@ b {
   .line--x {
     stroke-width: 1;
     animation: none; }
+  .line--y {
+    stroke-width: 20;
+    stroke: #fff;
+    stroke-dasharray: 40; }
   .line.activate {
     animation: fadewhite .5s linear;
     stroke: #cad9de;
@@ -3906,6 +3910,8 @@ b {
     .page--z.zoomed {
       width: auto;
       height: auto; }
+  .page--a {
+    background-color: #324b5c; }
   .page__overlay {
     position: absolute;
     width: 100%;

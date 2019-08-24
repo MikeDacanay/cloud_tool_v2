@@ -56,6 +56,12 @@
     animation: none;
   }
 
+  &--y{
+    stroke-width: 20;
+    stroke: $color-white-1;
+    stroke-dasharray: 40;
+  }
+
   &.activate{
   	animation: fadewhite .5s linear;  	
   	stroke: $color-blue-4;

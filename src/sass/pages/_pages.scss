@@ -76,6 +76,10 @@
     }
   }
 
+  &--a{
+    background-color: $color-blue-2;
+  }
+
   &__overlay{
     position: absolute;
     width: 100%;
