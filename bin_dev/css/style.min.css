@@ -2662,7 +2662,10 @@ b {
   .line--y {
     stroke-width: 20;
     stroke: #fff;
-    stroke-dasharray: 40; }
+    stroke-dasharray: 40;
+    transition: all .1s; }
+    .line--y.deactivate {
+      opacity: 0; }
   .line.activate {
     animation: fadewhite .5s linear;
     stroke: #cad9de;

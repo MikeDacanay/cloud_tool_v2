@@ -105,7 +105,7 @@ $(document).ready(function(){
 	$('.page__overlay').on('click', function () {
 		const self = $(this);
 		const val = self.data('val');
-		
+		$('.line--y').toggleClass('deactivate');
 
 		$('.pathfinder--x').addClass(`zoom-in--${val}`);
 		// $('.page').toggleClass('zoomed');
@@ -133,6 +133,7 @@ $(document).ready(function(){
 		$('.page').toggleClass('zoomed');
 		$('.page').removeClass('deactivate--z activate--z');
 		$('.pathfinder--x').toggleClass('zoom-in');
+		$('.line--y').toggleClass('deactivate');
 		setTimeout(function(){
 			$('.page__overlay').toggle();			
 		}, 1500);

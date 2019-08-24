@@ -60,6 +60,10 @@
     stroke-width: 20;
     stroke: $color-white-1;
     stroke-dasharray: 40;
+    transition: all .1s;
+    &.deactivate{
+      opacity: 0;
+    }
   }
 
   &.activate{
