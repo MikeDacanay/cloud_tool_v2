@@ -62,6 +62,9 @@ $Breakpoint argument choices:
 *:focus {
   outline: none; }
 
+* {
+  outline: 1px solid hotpink; }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -3875,21 +3878,39 @@ b {
   .page--2 {
     top: 50rem;
     left: 92.70rem; }
+    @media only screen and (max-width: 1440px) {
+      .page--2.page--a {
+        left: calc(calc(100vw / 1441) * 1854 - 7.35vw); } }
   .page--3 {
     top: 100rem;
     left: 278.10rem; }
+    @media only screen and (max-width: 1440px) {
+      .page--3.page--a {
+        left: calc(calc(100vw / 1441) * 5562.00 - 64.35vw); } }
   .page--4 {
     top: -150rem;
     left: 278.10rem; }
+    @media only screen and (max-width: 1440px) {
+      .page--4.page--a {
+        left: calc(calc(100vw / 1441) * 5562.00 - 64.35vw); } }
   .page--5 {
     top: -150rem;
     left: 0px; }
+    @media only screen and (max-width: 1440px) {
+      .page--5.page--a {
+        left: calc(100vw / 1441); } }
   .page--6 {
     top: -150rem;
     left: -278.10rem; }
+    @media only screen and (max-width: 1440px) {
+      .page--6.page--a {
+        left: calc(calc(100vw / 1441) * -5562 + 64.35vw); } }
   .page--7 {
     top: 100rem;
     left: -185.40rem; }
+    @media only screen and (max-width: 1440px) {
+      .page--7.page--a {
+        left: calc(calc(100vw / 1441) * -3708 + 64.35vw); } }
   .page--8 {
     top: 189.19rem;
     overflow-y: overlay; }
