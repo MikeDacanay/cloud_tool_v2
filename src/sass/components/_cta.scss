@@ -93,7 +93,7 @@
 		}
 		&--3{
 			transform: translateY(0%);
-			top: 15.1rem;	
+			top: 50%;	
 			// left: auto;
 			right: -20rem;
 
@@ -111,7 +111,7 @@
 				}
 			}
 			@include bp(1440){
-				top: 14.2rem;
+				top: 150%;
 				left: auto;
 				right: -23rem;
 				@include bph(650){ top: 11.3rem; }

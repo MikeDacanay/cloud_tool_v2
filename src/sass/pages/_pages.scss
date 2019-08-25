@@ -15,6 +15,10 @@
         // left: calc(calc(#{100vw} / #{1441}) * 1854 - 7.35vw);
         left: 150vw;
       }        
+      @include bp(1150){
+        top: auto;
+        left: auto;
+      }
     }	
   }
   &--3{
@@ -25,6 +29,10 @@
         // left: calc(calc(#{100vw} / #{1441}) * 5562.00 - 64.35vw);
         left: 350vw;        
       }        
+      @include bp(1150){
+        top: auto;
+        left: auto;
+      }
     }    
   }
   &--4{
@@ -39,6 +47,10 @@
         left: calc(calc(#{100vw} / #{1441}) * 5562.00 - 64.35vw);
         left: 350vw;
       }        
+      @include bp(1150){
+        top: auto;
+        left: auto;
+      }
     }
   }
   &--5{
@@ -50,7 +62,12 @@
     //     left: calc(#{100vw} / #{1441});
     //   }        
     // }
-  }
+
+    @include bp(1150){
+        top: auto;
+        left: auto;
+      }    
+    }
   &--6{
     // top: -300vh;
     // left: -300vw;
@@ -62,6 +79,10 @@
         // left: calc(calc(#{100vw} / #{1441}) * #{-5562.00} + 64.35vw);
         left: -350vw;
       }        
+      @include bp(1150){
+        top: auto;
+        left: auto;
+      }
     }
   }
   &--7{
@@ -74,12 +95,20 @@
       @include bp(1440){
         left: calc(calc(#{100vw} / #{1441}) * #{-3708.00} + 64.35vw);
         left: -200vw;
-      }        
+      }       
+      @include bp(1150){
+        top: auto;
+        left: auto;
+      } 
     }
   }
   &--8{
     top: 189.19rem;
     overflow-y: overlay;
+    @include bp(1150){
+      top: auto;
+      left: auto;
+    }
   }
 
   .main-container--x &{
@@ -112,6 +141,9 @@
     &.zoomed{        
       width: auto;
       height: auto;
+      @include bp(1150){
+        position: relative;
+      }
     }
   }
 

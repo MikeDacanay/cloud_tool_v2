@@ -28,6 +28,10 @@
 
 		.page.zoomed &{
 			border: solid 1rem $color-blue-1;	
+
+			@include bp(1150){
+				border: solid 0.10rem $color-blue-1;
+			}
 		}
 
 		&--y{
@@ -48,6 +52,11 @@
 			.page--7.zoomed &,{
 				width: 85.50rem;
 				height: 82.50rem;
+				
+				@include bp(1150){
+					width: 83.3333%;
+					height: 1rem;
+				}				
 			}
 
 			.zoomed &{

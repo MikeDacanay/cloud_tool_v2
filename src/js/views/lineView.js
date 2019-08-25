@@ -27,6 +27,7 @@ export const resizeLines = () => {
 
 	// RESULTS PAGE
 
+	let y1x1 = '35rem';
 	let y3x1 = '127.7rem';
 	let y5x2 = '393.85rem';
 	let y10x1 = '-231.1rem';
@@ -73,13 +74,21 @@ export const resizeLines = () => {
 		x3_constWidth = (width/2)+x2_q1;		
 		x5_constWidth = (width*1.25)+(x2_q1*3);
 		
+		y1x1 = '50vw'
 		y3x1 = '200vw';
 		y5x2 = '500vw';
-
 		y10x1 = '-300vw';
 	}
 
 	//Lines for ResultsPage
+
+	$('.line--1y').attr({
+		x1: y1x1,
+		x2: y1x1,
+	});
+	$('.line--2y').attr({
+		x1: y1x1,
+	});	
 	$('.line--3y').attr({
 	    x1: y3x1,
 	    x2: y3x1,
@@ -107,6 +116,14 @@ export const resizeLines = () => {
 	$('.line--11y').attr({
 	    x1: y10x1,	    
 	});
+	$('.line--11y').attr({
+		x2: y1x1,
+	});
+	$('.line--13y').attr({
+		x1: y1x1,
+		x2: y1x1,
+	});
+
 
 	//Line for Page 1
 	$('.line--1').attr({
