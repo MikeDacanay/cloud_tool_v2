@@ -25,6 +25,15 @@ export const resizeLines = () => {
 
 	let y5_results = 3783.8; // Results Page
 
+	// RESULTS PAGE
+
+	let y3x1 = '127.7rem';
+	
+	if($('body').width() >= 1440){
+		// y3x1 = '200vw';
+		alert('test');
+	};
+
 	// if(height >= 1080){
 	// 	y1_start = 14.35*20 + circleSize;
 	// } else if(height <= 810 && height >= 651){
@@ -64,13 +73,11 @@ export const resizeLines = () => {
 		x5_constWidth = (width*1.25)+(x2_q1*3);
 	}
 
-
-
-	// if(height <= 650){
-	// 	y1_start = 14.35*20 + .4083*height;
-	// } else if(height >= 1080){
-	// 	y1_start = 14.35*20 + 646;
-	// } else if()
+	//Lines for ResultsPage
+	$('.line--3y').attr({
+	    x1: y3x1,
+	    x2: y3x1,
+	});
 
 	//Line for Page 1
 	$('.line--1').attr({

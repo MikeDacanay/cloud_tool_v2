@@ -12,7 +12,8 @@
 
     &.page--a{
       @include bp(1440){
-        left: calc(calc(#{100vw} / #{1441}) * 1854 - 7.35vw);
+        // left: calc(calc(#{100vw} / #{1441}) * 1854 - 7.35vw);
+        left: 150vw;
       }        
     }	
   }
