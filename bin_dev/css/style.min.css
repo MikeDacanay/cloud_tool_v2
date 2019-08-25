@@ -3899,31 +3899,30 @@ b {
     left: 278.10rem; }
     @media only screen and (max-width: 1440px) {
       .page--3.page--a {
-        left: calc(calc(100vw / 1441) * 5562.00 - 64.35vw); } }
+        left: 350vw; } }
   .page--4 {
     top: -150rem;
     left: 278.10rem; }
     @media only screen and (max-width: 1440px) {
       .page--4.page--a {
-        left: calc(calc(100vw / 1441) * 5562.00 - 64.35vw); } }
+        left: calc(calc(100vw / 1441) * 5562.00 - 64.35vw);
+        left: 350vw; } }
   .page--5 {
     top: -150rem;
     left: 0px; }
-    @media only screen and (max-width: 1440px) {
-      .page--5.page--a {
-        left: calc(100vw / 1441); } }
   .page--6 {
     top: -150rem;
     left: -278.10rem; }
     @media only screen and (max-width: 1440px) {
       .page--6.page--a {
-        left: calc(calc(100vw / 1441) * -5562 + 64.35vw); } }
+        left: -350vw; } }
   .page--7 {
     top: 100rem;
     left: -185.40rem; }
     @media only screen and (max-width: 1440px) {
       .page--7.page--a {
-        left: calc(calc(100vw / 1441) * -3708 + 64.35vw); } }
+        left: calc(calc(100vw / 1441) * -3708 + 64.35vw);
+        left: -200vw; } }
   .page--8 {
     top: 189.19rem;
     overflow-y: overlay; }

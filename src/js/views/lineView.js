@@ -28,11 +28,12 @@ export const resizeLines = () => {
 	// RESULTS PAGE
 
 	let y3x1 = '127.7rem';
-	
-	if($('body').width() >= 1440){
-		// y3x1 = '200vw';
-		alert('test');
-	};
+	let y5x2 = '393.85rem';
+	let y10x1 = '-231.1rem';
+
+	// if($('body').width() <= 1440){
+	// 	y3x1 = '200vw';
+	// };
 
 	// if(height >= 1080){
 	// 	y1_start = 14.35*20 + circleSize;
@@ -71,12 +72,40 @@ export const resizeLines = () => {
 	if($('body').width() <= 1440){
 		x3_constWidth = (width/2)+x2_q1;		
 		x5_constWidth = (width*1.25)+(x2_q1*3);
+		
+		y3x1 = '200vw';
+		y5x2 = '500vw';
+
+		y10x1 = '-300vw';
 	}
 
 	//Lines for ResultsPage
 	$('.line--3y').attr({
 	    x1: y3x1,
 	    x2: y3x1,
+	});
+	$('.line--4y').attr({
+	    x1: y3x1,
+	});
+	$('.line--5y').attr({
+	    x2: y5x2,	    
+	});
+	$('.line--6y').attr({
+	    x1: y5x2,
+	    x2: y5x2,	    
+	});
+	$('.line--7y').attr({
+	    x1: y5x2,	    
+	});
+	$('.line--9y').attr({
+	    x2: y10x1,	    
+	});
+	$('.line--10y').attr({
+	    x1: y10x1,	    
+	    x2: y10x1
+	});
+	$('.line--11y').attr({
+	    x1: y10x1,	    
 	});
 
 	//Line for Page 1

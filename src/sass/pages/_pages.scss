@@ -22,7 +22,8 @@
     left: 278.10rem;
     &.page--a{
       @include bp(1440){
-        left: calc(calc(#{100vw} / #{1441}) * 5562.00 - 64.35vw);
+        // left: calc(calc(#{100vw} / #{1441}) * 5562.00 - 64.35vw);
+        left: 350vw;        
       }        
     }    
   }
@@ -36,6 +37,7 @@
     &.page--a{
       @include bp(1440){
         left: calc(calc(#{100vw} / #{1441}) * 5562.00 - 64.35vw);
+        left: 350vw;
       }        
     }
   }
@@ -43,11 +45,11 @@
     top: -150rem;
     left: 0px;
 
-    &.page--a{
-      @include bp(1440){
-        left: calc(#{100vw} / #{1441});
-      }        
-    }
+    // &.page--a{
+    //   @include bp(1440){
+    //     left: calc(#{100vw} / #{1441});
+    //   }        
+    // }
   }
   &--6{
     // top: -300vh;
@@ -57,7 +59,8 @@
 
     &.page--a{
       @include bp(1440){
-        left: calc(calc(#{100vw} / #{1441}) * #{-5562.00} + 64.35vw);
+        // left: calc(calc(#{100vw} / #{1441}) * #{-5562.00} + 64.35vw);
+        left: -350vw;
       }        
     }
   }
@@ -70,6 +73,7 @@
     &.page--a{
       @include bp(1440){
         left: calc(calc(#{100vw} / #{1441}) * #{-3708.00} + 64.35vw);
+        left: -200vw;
       }        
     }
   }
