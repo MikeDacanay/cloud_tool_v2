@@ -62,12 +62,13 @@
     //     left: calc(#{100vw} / #{1441});
     //   }        
     // }
-
-    @include bp(1150){
+    &.page--a{
+      @include bp(1150){
         top: auto;
         left: auto;
       }    
     }
+  }
   &--6{
     // top: -300vh;
     // left: -300vw;
@@ -104,11 +105,13 @@
   }
   &--8{
     top: 189.19rem;
-    overflow-y: overlay;
-    @include bp(1150){
-      top: auto;
-      left: auto;
+    &.activate{
+      overflow-y: overlay;
     }
+    // @include bp(1150){
+    //   top: auto;
+    //   left: auto;
+    // }
   }
 
   .main-container--x &{

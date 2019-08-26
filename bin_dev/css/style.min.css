@@ -3941,7 +3941,7 @@ b {
     top: -150rem;
     left: 0px; }
     @media only screen and (max-width: 1150px) {
-      .page--5 {
+      .page--5.page--a {
         top: auto;
         left: auto; } }
   .page--6 {
@@ -3966,12 +3966,9 @@ b {
         top: auto;
         left: auto; } }
   .page--8 {
-    top: 189.19rem;
-    overflow-y: overlay; }
-    @media only screen and (max-width: 1150px) {
-      .page--8 {
-        top: auto;
-        left: auto; } }
+    top: 189.19rem; }
+    .page--8.activate {
+      overflow-y: overlay; }
   .main-container--x .page {
     padding-top: 7.80rem; }
   .page--x {
