@@ -386,14 +386,16 @@ b {
       }      
       .page.zoomed .page__content > & {
         opacity: 1;        
+        line-height: 1.58;
         @include bp(1150){
-        	margin-top: -3.5rem;
+        	margin-top: -4rem;
 			    font-size: 2.5rem;
 			    padding-left: 6rem;
         }
         @include bp(1100){
         	padding-left: 5rem;
 			    font-size: 2em;
+			    margin-top: -3.1rem;
         }
       }      
 		  margin-top: 17rem;

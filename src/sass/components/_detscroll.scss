@@ -6,7 +6,13 @@
 
 		.page.zoomed .page__content > &{
 	    margin-top: 36.6rem;
-	   }
+	  	
+	  	@include bp(1150){
+	    	height: 31.4rem;
+	      justify-content: stretch;    
+	    	align-items: center;
+	  	} 
+	  }
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
@@ -15,6 +21,14 @@
 		}
 		&-2{
 			height: 23.10rem;
+			.page.zoomed .page__content > &{
+	
+		  	@include bp(1150){
+		    	height: 49.4rem;
+		      justify-content: stretch;    
+		    	align-items: center;
+		  	} 
+		  }
 		}
 	}
 
