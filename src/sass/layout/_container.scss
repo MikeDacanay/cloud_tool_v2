@@ -13,7 +13,9 @@
 		// }
 		// min-height: 
 		min-height: 41.85rem; 
-
+		@include bp(1150){
+			display: none;
+		}
 	}
 	&--x{
 		z-index: 	4;
@@ -38,7 +40,7 @@
 	}
 }
 .pathfinder{
-  background-color: dodgerblue;
+  // background-color: dodgerblue;
   transition: all 1100ms;
 
   // transition-delay: 300ms;

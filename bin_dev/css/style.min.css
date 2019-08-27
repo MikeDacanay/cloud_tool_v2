@@ -2442,7 +2442,8 @@ b {
       .page.zoomed .page__content > .detscroll__wrapper {
         height: 31.4rem;
         justify-content: stretch;
-        align-items: center; } }
+        align-items: center;
+        width: 100%; } }
   .detscroll__wrapper-1 {
     height: 15.40rem; }
   .detscroll__wrapper-2 {
@@ -2715,11 +2716,38 @@ b {
         opacity: 0; }
     .line__wrapper--1.activate {
       opacity: 1; }
+    @media only screen and (max-width: 1150px) {
+      .line__wrapper--2 {
+        display: none; } }
+    .line__wrapper--3 {
+      z-index: 0;
+      transform: translate(-50%, -50%);
+      display: none; }
+      @media only screen and (max-width: 1150px) {
+        .line__wrapper--3 {
+          display: block; } }
   .line--13 {
     stroke: #939699;
     animation: stroke 1s linear infinite; }
     .line--13.deactivate {
       animation: none; }
+  .line__group--1 {
+    width: 83.333%;
+    margin: 0 auto;
+    display: none; }
+    @media only screen and (max-width: 1150px) {
+      .line__group--1 {
+        display: block; } }
+  .line__circle {
+    height: 5.00rem;
+    background: #324b5c;
+    position: absolute;
+    width: 5.00rem;
+    z-index: 10;
+    transform: translate(-50%, -52%);
+    left: 50%;
+    border: 0.10rem solid #00758f;
+    border-radius: 5.00rem; }
   .line--x {
     stroke-width: 1;
     animation: none; }
@@ -2730,6 +2758,11 @@ b {
     transition: all .1s; }
     .line--y.deactivate {
       opacity: 0; }
+  .line--a {
+    stroke: #00758f;
+    stroke-width: 2;
+    stroke-dasharray: 4;
+    animation: none; }
   .line.activate {
     animation: fadewhite .5s linear;
     stroke: #cad9de;
@@ -3695,6 +3728,9 @@ b {
   .main-container__buffer {
     height: calc(100vh - 8rem);
     min-height: 41.85rem; }
+    @media only screen and (max-width: 1150px) {
+      .main-container__buffer {
+        display: none; } }
   .main-container--x {
     z-index: 4;
     height: 54.00rem;
@@ -3711,7 +3747,6 @@ b {
     transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
 
 .pathfinder {
-  background-color: dodgerblue;
   transition: all 1100ms; }
   .pathfinder--x {
     transform: scale(0.1) translateY(150rem);
@@ -4069,7 +4104,8 @@ b {
     @media only screen and (max-width: 1150px) {
       .page--7.page--a {
         top: auto;
-        left: auto; } }
+        left: auto;
+        margin-bottom: 10rem; } }
   .page--8 {
     top: 189.19rem; }
     .page--8.activate {
