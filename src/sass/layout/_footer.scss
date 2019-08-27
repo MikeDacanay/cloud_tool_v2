@@ -28,4 +28,19 @@
 		width: 100%;
 		padding: 0 .8rem;
     }
+
+    &--x{
+        width: 70rem;
+        height: 5.05rem;
+        position: fixed;
+        background: blue;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 10;
+        @include bp(1440){
+            width: 83.333%;
+        }
+    }
 }

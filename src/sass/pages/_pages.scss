@@ -19,6 +19,11 @@
         top: auto;
         left: auto;
       }
+    }
+    &.zoomed{
+      @include bp(1150){
+        margin-top: 10rem;
+      }
     }	
   }
   &--3{
@@ -152,6 +157,14 @@
 
   &--a{
     background-color: $color-blue-2;
+
+    &.zoomed{
+      &:not(:first-of-type){
+        @include bp(1150){
+          margin-top: 2.60rem;
+        }
+      }      
+    }
   }
 
   &__overlay{
@@ -162,6 +175,10 @@
     margin-left: -12rem;
     margin-top: -3.5rem; 
     z-index: 10000;       
+    @include bp(1150){
+      margin-top: -1.10rem;
+      margin-left: -2.64rem;
+    }
   } 
 
   &__zoomed{
@@ -178,6 +195,11 @@
       }      
       .page.zoomed .page__content > & {
         opacity: 1;        
+        @include bp(1150){
+          width: 100%;
+          height: auto;
+          position: relative;
+        }
       }      
     }
   }

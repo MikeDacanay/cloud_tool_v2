@@ -1,7 +1,12 @@
 .wrapper{
 	&--x{
-		overflow-y: scroll;
+		// overflow-y: scroll;
 		height: 1080px;
+
+		@include bp(1150){
+			overflow-y: scroll;
+			height: 100vh;
+		}
 	}
 }
 
@@ -54,8 +59,12 @@
 				height: 82.50rem;
 				
 				@include bp(1150){
-					width: 83.3333%;
-					height: 1rem;
+			    width: 83.3333%;
+			    height: auto;
+			    padding: 0;
+			    padding: 0 2.64rem;
+			    padding-top: 1.10rem;
+			    padding-bottom: 1.1rem;
 				}				
 			}
 
@@ -123,6 +132,17 @@
 		.page.zoomed & > .selection__wrapper,
 		.page.zoomed & > .detscroll__wrapper,{
 			opacity: 1;
+			@include bp(1150){
+				margin-top: -8rem;
+			}
+		}
+		.page.zoomed & > .dial-group{
+    	width: 84vw;
+	    height: 42vw;
+	    @include bp(1150){
+		    width: 37vw;
+		    height: 18.5vw;
+	    }
 		}
 
 

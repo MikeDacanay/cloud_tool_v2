@@ -21,6 +21,8 @@
   &.activate{
     display: block;
   }
+
+  
 }
 
 .icon__detscroll{
@@ -67,6 +69,10 @@
       height: 12rem;
       background-size: 100%;
       flex: 0 0 12rem;
+      @include bp(1150){
+        height: 3.95rem;
+        flex: 0 0 3.95rem;
+      }
     }
   }
 }

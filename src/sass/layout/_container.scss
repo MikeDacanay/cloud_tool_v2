@@ -8,13 +8,18 @@
 	opacity: 1;
 
 	&__buffer{
-		height: 1000px;
+		// @include bp(1150){
+		height: calc(#{100vh} - #{8rem});
+		// }
+		// min-height: 
+		min-height: 41.85rem; 
+
 	}
 	&--x{
 		z-index: 	4;
-		padding-top: 10.11rem;
+		// padding-top: 10.11rem;
 		height: 54.00rem;
-
+		margin-top: 8rem;
 		position: relative;
 		& > *{
 			opacity: 	0;
@@ -48,7 +53,7 @@
     top: 0;
     left: 0;
     right: 0;
-    padding-top: 22.11rem;	
+    padding-top: 8rem;	
 		
 		@include bp(1150){
 			padding-top: 11.1rem;
@@ -61,39 +66,39 @@
 			transition: none;
 			&--2{
 				&-x{
-					transform: scale(1) translate(-92.70rem, -40rem);								
+					transform: scale(1) translate(-92.70rem, -50rem);								
 				}				
 				transform: scale(0.1) scale(1) translate(-92.70rem, -50rem);
 			}
 			&--3{
 				&-x{
-					transform: scale(1) translate(-278.1rem, -90rem);	
+					transform: scale(1) translate(-278.1rem, -100rem);	
 				}								
 				
 				transform: scale(0.1) translate(-278.1rem, -100rem);	
 			}
 			&--4{
 				&-x{
-					transform: scale(1) translate(-278.1rem, 160rem);									
+					transform: scale(1) translate(-278.1rem, 150rem);									
 				}				
 				transform: scale(0.1) translate(-278.1rem, 150rem);
 			}
 			&--5{
 				&-x{
-					transform: scale(1) translate(0rem, 160rem);	
+					transform: scale(1) translate(0rem, 150rem);	
 				}								
 				
 				transform: scale(0.1) translate(0rem, 150rem);	
 			}
 			&--6{
 				&-x{
-					transform: scale(1) translate(278.1rem, 160rem);						
+					transform: scale(1) translate(278.1rem, 150rem);						
 				}							
 				transform: scale(0.1) translate(278.1rem, 150rem);
 			}
 			&--7{
 				&-x{	
-					transform: scale(1) translate(185.4rem, -90rem);
+					transform: scale(1) translate(185.4rem, -100rem);
 				}								
 					transform: scale(0.1) translate(185.4rem, -100rem);				
 			}

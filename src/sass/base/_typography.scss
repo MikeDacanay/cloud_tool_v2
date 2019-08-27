@@ -386,6 +386,15 @@ b {
       }      
       .page.zoomed .page__content > & {
         opacity: 1;        
+        @include bp(1150){
+        	margin-top: -3.5rem;
+			    font-size: 2.5rem;
+			    padding-left: 6rem;
+        }
+        @include bp(1100){
+        	padding-left: 5rem;
+			    font-size: 2em;
+        }
       }      
 		  margin-top: 17rem;
 		}
@@ -592,7 +601,11 @@ b {
 		  font-stretch: normal;
 		  line-height: 1.32;
 		  letter-spacing: normal;
-		  color: $color-white-1;		
+		  color: $color-white-1;
+
+		  @include bp(1150){
+		  	opacity: 0;
+		  }		
 		}
 		&-percentage{
 		  width: 7.05rem;
@@ -606,6 +619,10 @@ b {
 		  letter-spacing: normal;
 		  color: $color-white-1;
 		  margin-top: 0.10rem;
+		
+			@include bp(1150){
+		  	opacity: 0;
+		  }		
 		}
 	}
 
@@ -720,6 +737,12 @@ b {
 	    left: 50%;
 	    top: 10.75rem;
 
+	    transition: opacity .2s;
+
+	    @include bp(1150){
+    		opacity: 0;
+    	}
+
 			& > *{
 				display: block;
 				
@@ -742,8 +765,11 @@ b {
 		  color: $color-white-1;
 			position: absolute;
 
+			transition: opacity .2s;
 
-    
+    	@include bp(1150){
+    		opacity: 0;
+    	}
     
 
 			&-less{
@@ -1354,6 +1380,9 @@ b {
 	  letter-spacing: normal;
 	  color: $color-blue-1;
 	  margin-top: 0.45rem;
+	  @include bp(1150){
+	  	opacity: 0;
+	  }
 	}
 }
 
@@ -1388,6 +1417,12 @@ b {
 		  line-height: 1.58;
 		  letter-spacing: normal;
 		  color: $color-white-1;
+			@include bp(1150){
+				font-size: 2.5rem;
+			}
+			@include bp(1100){
+				font-size: 2rem;
+			}
 		}
 	}
 }

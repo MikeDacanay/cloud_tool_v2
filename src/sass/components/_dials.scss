@@ -254,7 +254,15 @@
 		&--x{
 			margin-top: 2.00rem;
 			.page.zoomed .page__content > &{
-				margin-top: 34rem;
+				width: 84vw;
+		    height: 42vw;
+		    margin: 0 auto;
+		    margin-top: 34rem;
+				
+				@include bp(1150){
+			    margin: 0 auto;
+			    margin-top: -8rem;
+		    }
 			}
 			
 			transform: none;

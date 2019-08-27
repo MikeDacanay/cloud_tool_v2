@@ -27,6 +27,18 @@
 			}
 		}
 
+		&--2{			
+			margin-top: -8rem;
+			height: 8rem;
+			width: 100vw;
+	    position: absolute;
+	    z-index: 10;
+	    background-color: red;
+	    @include bp(1150){
+	    	margin-top: 0;
+	    }
+		}
+
 		.header__container--x &{
 			justify-content: flex-end;
 		}
