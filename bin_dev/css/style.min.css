@@ -3777,7 +3777,7 @@ b {
   opacity: 1; }
   .main-container__buffer {
     height: calc(100vh - 8rem);
-    min-height: 41.85rem; }
+    min-height: 65.00rem; }
     @media only screen and (max-width: 1150px) {
       .main-container__buffer {
         display: none; } }
@@ -3785,7 +3785,10 @@ b {
     z-index: 4;
     height: 54.00rem;
     margin-top: 8rem;
-    position: relative; }
+    position: relative;
+    overflow: scroll; }
+    .main-container--x.in {
+      overflow: visible; }
     .main-container--x > * {
       opacity: 0; }
     .main-container--x.activate > * {

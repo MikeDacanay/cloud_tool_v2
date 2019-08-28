@@ -12,7 +12,7 @@
 		height: calc(#{100vh} - #{8rem});
 		// }
 		// min-height: 
-		min-height: 41.85rem; 
+		min-height: 65.00rem; 
 		@include bp(1150){
 			display: none;
 		}
@@ -23,6 +23,11 @@
 		height: 54.00rem;
 		margin-top: 8rem;
 		position: relative;
+		overflow: scroll;
+
+		&.in{
+			overflow: visible;	
+		}
 		& > *{
 			opacity: 	0;
 		}

@@ -106,7 +106,7 @@ $(document).ready(function(){
 		const self = $(this);
 		const val = self.data('val');
 		$('.line--y').toggleClass('deactivate');
-
+		$('.main-container--x').toggleClass('in');
 		$('.pathfinder--x').addClass(`zoom-in--${val}`);
 		// $('.page').toggleClass('zoomed');
 		$('.page').toggleClass('zoomed deactivate--z');
