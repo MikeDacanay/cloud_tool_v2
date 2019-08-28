@@ -73,20 +73,29 @@
 			transition: none;
 			&--2{
 				&-x{
-					transform: scale(1) translate(-92.70rem, -50rem);								
+					transform: scale(1) translate(-92.70rem, -50rem);
+					@include bp(1440){								
+						transform: scale(1) translate(-150vw, -50rem);
+					}													
 				}				
 				transform: scale(0.1) scale(1) translate(-92.70rem, -50rem);
 			}
 			&--3{
 				&-x{
 					transform: scale(1) translate(-278.1rem, -100rem);	
+					@include bp(1440){							
+						transform: scale(1) translate(-350vw, -100rem);
+					}
 				}								
 				
 				transform: scale(0.1) translate(-278.1rem, -100rem);	
 			}
 			&--4{
 				&-x{
-					transform: scale(1) translate(-278.1rem, 150rem);									
+					transform: scale(1) translate(-278.1rem, 150rem);
+					@include bp(1440){							
+						transform: scale(1) translate(-350vw, 150rem);
+					}									
 				}				
 				transform: scale(0.1) translate(-278.1rem, 150rem);
 			}
@@ -99,13 +108,19 @@
 			}
 			&--6{
 				&-x{
-					transform: scale(1) translate(278.1rem, 150rem);						
+					transform: scale(1) translate(278.1rem, 150rem);
+					@include bp(1440){							
+						transform: scale(1) translate(350vw, 150rem);
+					}						
 				}							
 				transform: scale(0.1) translate(278.1rem, 150rem);
 			}
 			&--7{
 				&-x{	
 					transform: scale(1) translate(185.4rem, -100rem);
+					@include bp(1440){							
+						transform: scale(1) translate(200vw, -100rem);
+					}
 				}								
 					transform: scale(0.1) translate(185.4rem, -100rem);				
 			}

@@ -39,11 +39,16 @@
         right: 0;
         margin: 0 auto;
         z-index: 10;
+        transition: transform .2s;
+        transform: translateY(0%);
         @include bp(1440){
             width: 83.333%;
         }
         @include bp(767){
             width:  calc(#{100%} - #{1.6rem});
+        }
+        &.hide{
+            transform: translateY(100%);
         }
     }
 }

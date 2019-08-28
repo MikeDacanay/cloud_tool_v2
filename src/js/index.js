@@ -107,6 +107,7 @@ $(document).ready(function(){
 		const val = self.data('val');
 		$('.line--y').toggleClass('deactivate');
 		$('.main-container--x').toggleClass('in');
+		$('.footer--x').toggleClass('hide');
 		$('.pathfinder--x').addClass(`zoom-in--${val}`);
 		// $('.page').toggleClass('zoomed');
 		$('.page').toggleClass('zoomed deactivate--z');
@@ -129,6 +130,8 @@ $(document).ready(function(){
 	});
 
 	$('.icon__zoomout').on('click', function () {
+		$('.main-container--x').toggleClass('in');
+		$('.footer--x').toggleClass('hide');
 		$('.header__nav').toggleClass('activate');
 		$('.page').toggleClass('zoomed');
 		$('.page').removeClass('deactivate--z activate--z');
