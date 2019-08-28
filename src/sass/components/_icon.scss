@@ -73,6 +73,10 @@
         height: 3.15rem;
         flex: 0 0 3.15rem;
       }
+      @include bp(930){
+        height: 2.35rem;
+        flex: 0 0 2.35rem;
+      }
     }
   }
 }

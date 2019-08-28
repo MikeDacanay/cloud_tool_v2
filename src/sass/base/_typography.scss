@@ -397,6 +397,19 @@ b {
 			    font-size: 2em;
 			    margin-top: -3.1rem;
         }
+        @include bp(930){
+			    padding-left: 4rem;
+			    font-size: 1.5rem;        	
+	        margin-top: -2.4rem;		    
+        }
+        @include bp(700){
+        	width: 15.00rem;
+        }
+        @include bp(500){
+    			padding-left: 2.5rem;
+    			font-size: 1.4rem;
+    			margin-top: -2.3rem;        	
+        }
       }      
 		  margin-top: 17rem;
 		}
@@ -1369,6 +1382,12 @@ b {
 	  line-height: 1.2;
 	  letter-spacing: normal;
 	  color: $color-blue-2;
+	  @include bp(440){
+	  	font-size: 1.1rem;
+	  }
+	  @include bp(400){
+	  	font-size: 1rem;
+	  }
 	}
 	&__txt{
 		width: 85%;
@@ -1424,6 +1443,12 @@ b {
 			}
 			@include bp(1100){
 				font-size: 2rem;
+			}
+			@include bp(930){
+		    font-size: 1.5rem;
+			}
+			@include bp(500){
+		    font-size: 1.4rem;
 			}
 		}
 	}
