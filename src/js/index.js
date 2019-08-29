@@ -101,13 +101,33 @@ $(document).ready(function(){
 
 /****** DETAILED MAP CONTROLLER ******/
 
+	$('.main-container--x').scroll(function() {    
+    const height = $('.main-container--x').scrollTop();
+    const bodyWidth =  $('body').width();    
+
+    $('.footer--x').addClass('hide');
+
+    if(bodyWidth > 1150){
+		  if(height === 120){
+		  	$('.footer--x').removeClass('hide');
+		  }
+  	}else{
+  		// WE NEED TO FIGURE THIS OUT
+			if(height === 3700){
+	    	$('.footer--x').removeClass('hide');
+	    }  		
+  	};
+
+  	console.log(height);
+  });
+
 
 	$('.page__overlay').on('click', function () {
 		const self = $(this);
 		const val = self.data('val');
 		$('.line--y').toggleClass('deactivate');
 		$('.main-container--x').toggleClass('in');
-		$('.footer--x').toggleClass('hide');
+		$('.footer--x').addClass('hide');
 		$('.pathfinder--x').addClass(`zoom-in--${val}`);
 		// $('.page').toggleClass('zoomed');
 		$('.page').toggleClass('zoomed deactivate--z');
@@ -204,6 +224,7 @@ $(document).ready(function(){
 		// state.height = $(window).height();
 		page.reformWandH();
 
+		$('.footer--x').addClass('hide');
 		line.resizeLines();
 	});
 

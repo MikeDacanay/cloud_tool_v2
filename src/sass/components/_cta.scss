@@ -82,9 +82,14 @@
 
 		&--1{
 			.main-container--x &{
-		    top: 100%;
         left: 48.4rem;
 		    width: 90rem;
+				position: relative;
+    		top: 0;		    
+    		@include bp(1440){
+    			left: 31.4rem;
+			    top: 9.00rem;
+    		}
 			}
 
 			.zoomed &{

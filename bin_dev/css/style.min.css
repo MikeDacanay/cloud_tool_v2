@@ -1606,9 +1606,14 @@ b {
   .cta__wrapper--2 {
     top: 210%; } }
   .main-container--x .cta__wrapper--1 {
-    top: 100%;
     left: 48.4rem;
-    width: 90rem; }
+    width: 90rem;
+    position: relative;
+    top: 0; }
+    @media only screen and (max-width: 1440px) {
+      .main-container--x .cta__wrapper--1 {
+        left: 31.4rem;
+        top: 9.00rem; } }
   .zoomed .cta__wrapper--1 {
     display: none; }
   .cta__wrapper--3 {
@@ -2224,6 +2229,10 @@ b {
         .page.zoomed .page__content > .dial-group--x {
           margin: 0 auto;
           margin-top: -8rem; } }
+    @media only screen and (max-width: 1440px) {
+      .dial-group--x {
+        width: 41.90rem;
+        height: 20.95rem; } }
 
 .dial-tracker__wrapper {
   width: 100%;
@@ -3776,8 +3785,7 @@ b {
 .main-container {
   opacity: 1; }
   .main-container__buffer {
-    height: calc(100vh - 8rem);
-    min-height: 65.00rem; }
+    height: 60rem; }
     @media only screen and (max-width: 1150px) {
       .main-container__buffer {
         display: none; } }
@@ -3789,6 +3797,9 @@ b {
     overflow: scroll; }
     .main-container--x.in {
       overflow: visible; }
+      @media only screen and (max-width: 1440px) {
+        .main-container--x.in {
+          overflow: hidden; } }
     .main-container--x > * {
       opacity: 0; }
     .main-container--x.activate > * {
@@ -4036,6 +4047,9 @@ b {
     .main-container--x .page__content--y {
       padding-top: 2rem;
       overflow: hidden; }
+      @media only screen and (max-width: 1440px) {
+        .main-container--x .page__content--y {
+          height: 46rem; } }
     .page--2.zoomed .page__content--y,
     .page--3.zoomed .page__content--y,
     .page--4.zoomed .page__content--y,
@@ -4227,6 +4241,10 @@ b {
       padding-top: 0rem; }
     .page--z.activate--z {
       opacity: 1; }
+      @media only screen and (max-width: 1440px) {
+        .page--z.activate--z {
+          height: calc(100vh - 9rem);
+          overflow: scroll; } }
     .page--z.deactivate--z {
       opacity: 0; }
     .page--z.zoomed {

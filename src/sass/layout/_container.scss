@@ -9,10 +9,12 @@
 
 	&__buffer{
 		// @include bp(1150){
-		height: calc(#{100vh} - #{8rem});
-		// }
-		// min-height: 
-		min-height: 65.00rem; 
+		// height: calc(#{100vh} - #{8rem});
+		// // }
+		// // min-height: 
+		// min-height: 65.00rem; 
+
+		height: 60rem; 
 		@include bp(1150){
 			display: none;
 		}
@@ -26,7 +28,10 @@
 		overflow: scroll;
 
 		&.in{
-			overflow: visible;	
+			overflow: visible;
+			@include bp(1440){
+				overflow: hidden;
+			}	
 		}
 		& > *{
 			opacity: 	0;

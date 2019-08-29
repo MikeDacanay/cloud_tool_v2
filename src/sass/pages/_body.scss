@@ -47,6 +47,10 @@
 			.main-container--x &{
 				padding-top: 2rem;
 				overflow: hidden;
+
+				@include bp(1440){
+					height: 46rem;
+				}
 			}
 
 			.page--2.zoomed &,

@@ -264,6 +264,11 @@
 			    margin-top: -8rem;
 		    }
 			}
+
+			@include bp(1440){
+				width: 41.90rem;
+		    height: 20.95rem;
+			}
 			
 			transform: none;
 			height: 21.85rem;
