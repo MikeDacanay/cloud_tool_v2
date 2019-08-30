@@ -276,6 +276,10 @@
 				min-height: none;
 				min-width: none;
 			}
+			@include bp(1350){
+				width: 60vw;
+		    height: 30vw;
+			}
 			
 			transform: none;
 			height: 21.85rem;

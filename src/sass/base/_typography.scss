@@ -766,6 +766,12 @@ b {
 				font-family: $font-b;
 				line-height: 1.58;
 			}
+
+			&--x{
+				@include bp(1350){
+					top: 45%;
+				}
+			}
 		}
 
 		&--users{	

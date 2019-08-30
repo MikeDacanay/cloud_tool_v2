@@ -728,6 +728,9 @@ b {
     .dial__text--peers > b {
       font-family: UniversB, Arial, Helvetica, sans-serif;
       line-height: 1.58; }
+    @media only screen and (max-width: 1350px) {
+      .dial__text--peers--x {
+        top: 45%; } }
   .dial__text--users {
     width: 6.75rem;
     height: 4.65rem;
@@ -2244,6 +2247,10 @@ b {
         max-width: none;
         min-height: none;
         min-width: none; } }
+    @media only screen and (max-width: 1350px) {
+      .dial-group--x {
+        width: 60vw;
+        height: 30vw; } }
 
 .dial-tracker__wrapper {
   width: 100%;
