@@ -151,6 +151,9 @@
 
     &.deactivate--z{
       opacity: 0;
+      @include bp(1150){
+        display: none;
+      }
     }
     &.zoomed{        
       width: auto;

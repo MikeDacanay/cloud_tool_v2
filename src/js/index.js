@@ -124,6 +124,7 @@ $(document).ready(function(){
 
 	$('.page__overlay').on('click', function () {
 		const self = $(this);
+		$('.line__group--1').hide();
 		const val = self.data('val');
 		$('.line--y').toggleClass('deactivate');
 		$('.main-container--x').toggleClass('in');
@@ -150,6 +151,7 @@ $(document).ready(function(){
 	});
 
 	$('.icon__zoomout').on('click', function () {
+		$('.line__group--1').show();
 		$('.main-container--x').toggleClass('in');
 		$('.footer--x').toggleClass('hide');
 		$('.header__nav').toggleClass('activate');

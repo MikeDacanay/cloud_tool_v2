@@ -356,6 +356,7 @@ b {
 
 		&--7{
 			width: 41.40rem;
+			font-size: 1.50rem;
 		  &-a{
 		  	width: 45.4rem;
 		  }
@@ -474,6 +475,9 @@ b {
 				margin-top: 0;
 				line-height: auto;
 			}
+		}
+		&--2{
+			width: 25rem;
 		}
 		&--3{
 			width: 21.30rem;
@@ -768,6 +772,7 @@ b {
 			}
 
 			&--x{
+				top: 44%;
 				@include bp(1350){
 					top: 45%;
 				}
@@ -798,7 +803,7 @@ b {
 			}
 
 			&-more{
-				right: -4.8rem;
+				right: -3%;
 		    width: 6.70rem;
 			}
 			&-equal{
