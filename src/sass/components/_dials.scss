@@ -257,8 +257,11 @@
 				width: 84vw;
 		    height: 42vw;
 		    margin: 0 auto;
-		    margin-top: 34rem;
-				
+		    margin-top: 34rem;		    
+		    @include bp(1440){
+					width: 62vw;
+			    height: 31vw;
+				}		    				
 				@include bp(1150){
 			    margin: 0 auto;
 			    margin-top: -8rem;
@@ -268,6 +271,10 @@
 			@include bp(1440){
 				width: 41.90rem;
 		    height: 20.95rem;
+				max-height: none;
+				max-width: none;
+				min-height: none;
+				min-width: none;
 			}
 			
 			transform: none;

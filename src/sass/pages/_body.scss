@@ -150,14 +150,14 @@
 				margin-top: -8rem;
 			}
 		}
-		.page.zoomed & > .dial-group{
-    	width: 84vw;
-	    height: 42vw;
-	    @include bp(1150){
-		    width: 37vw;
-		    height: 18.5vw;
-	    }
-		}
+		// .page.zoomed & > .dial-group{
+  //   	width: 84vw;
+	 //    height: 42vw;
+	 //    @include bp(1150){
+		//     width: 37vw;
+		//     height: 18.5vw;
+	 //    }
+		// }
 
 		.page.zoomed & > .selection__wrapper--x{
 	    @include bp(970){

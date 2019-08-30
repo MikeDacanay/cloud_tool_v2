@@ -771,6 +771,9 @@ b {
   @media only screen and (max-width: 1024px) {
     .cta__txt--1 {
       width: 13rem; } }
+  @media only screen and (max-width: 1440px) {
+    .cta__txt--1.cta__txt--1x {
+      width: 20rem; } }
   .cta__txt--2 {
     width: 13rem; }
 
@@ -1612,7 +1615,7 @@ b {
     top: 0; }
     @media only screen and (max-width: 1440px) {
       .main-container--x .cta__wrapper--1 {
-        left: 31.4rem;
+        left: calc(100% - 22rem);
         top: 9.00rem; } }
   .zoomed .cta__wrapper--1 {
     display: none; }
@@ -2225,6 +2228,10 @@ b {
       height: 42vw;
       margin: 0 auto;
       margin-top: 34rem; }
+      @media only screen and (max-width: 1440px) {
+        .page.zoomed .page__content > .dial-group--x {
+          width: 62vw;
+          height: 31vw; } }
       @media only screen and (max-width: 1150px) {
         .page.zoomed .page__content > .dial-group--x {
           margin: 0 auto;
@@ -2232,7 +2239,11 @@ b {
     @media only screen and (max-width: 1440px) {
       .dial-group--x {
         width: 41.90rem;
-        height: 20.95rem; } }
+        height: 20.95rem;
+        max-height: none;
+        max-width: none;
+        min-height: none;
+        min-width: none; } }
 
 .dial-tracker__wrapper {
   width: 100%;
@@ -4133,13 +4144,6 @@ b {
       .page.zoomed .page__content > .selection__wrapper,
       .page.zoomed .page__content > .detscroll__wrapper {
         margin-top: -8rem; } }
-  .page.zoomed .page__content > .dial-group {
-    width: 84vw;
-    height: 42vw; }
-    @media only screen and (max-width: 1150px) {
-      .page.zoomed .page__content > .dial-group {
-        width: 37vw;
-        height: 18.5vw; } }
   @media only screen and (max-width: 970px) {
     .page.zoomed .page__content > .selection__wrapper--x {
       margin: 0 auto;

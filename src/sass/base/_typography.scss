@@ -827,11 +827,17 @@ b {
 		& > b{
 			font-family: $font-b;
 		}
-	  	&--1{
-		  	@include bp(1024){
-				width: 13rem;
+  	&--1{
+	  	@include bp(1024){
+			width: 13rem;
 			}
-	  	}
+
+			&.cta__txt--1x{
+				@include bp(1440){
+					width: 20rem;
+				}
+			}
+  	}
 		
 		&--2{
 			width: 13rem;
