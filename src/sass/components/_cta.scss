@@ -88,12 +88,23 @@
     		top: 0;		    
     		@include bp(1440){
     			left: calc(100% - 22rem);
-			    top: 9.00rem;
+			    top: 0;
+    		}
+    		@include bp(1024){
+    			width: 16.85rem;
+    			padding-right: 1.00rem;
+    			left: calc(#{100%} - #{16.80rem});
+    		}
+    		@include bp(767){
+			    left: calc(#{100%} - #{16rem});
     		}
 			}
 
 			.zoomed &{
 				display: none;
+			}
+			@include bp(910){
+				margin-top: 10.5rem;
 			}
 		}
 		&--3{

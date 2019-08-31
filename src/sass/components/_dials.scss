@@ -269,18 +269,22 @@
 			}
 
 			@include bp(1440){
-				width: 41.90rem;
-		    height: 20.95rem;
+				width: 40vw;
+		    height: 20vw;
+		   	margin-top: 1.65rem;
 				max-height: none;
 				max-width: none;
 				min-height: none;
 				min-width: none;
 			}
-			@include bp(1350){
-				width: 60vw;
-		    height: 30vw;
+			@include bp(1024){
+				width: 37vw;
+				height: 18.50vw;
+				margin-top: 3.3rem;
 			}
-			
+			@include bp(767){
+				margin-top: 0;
+			}
 			transform: none;
 			height: 21.85rem;
 		}

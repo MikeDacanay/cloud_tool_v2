@@ -49,8 +49,18 @@
 				padding-left: 	2.2rem;
 				overflow: hidden;
 				@include bp(1440){
-					height: 46rem;
-
+					height: 32.50rem;
+				}
+				@include bp(1024){
+					height: 26.75rem;
+					padding-top: 1.20rem;
+					padding-left: 1.20rem;
+				}
+				@include bp(910){
+					height: 28.75rem;
+				}
+				@include bp(768){
+					height: 32.75rem;
 				}
 			}
 

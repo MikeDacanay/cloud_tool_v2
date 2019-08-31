@@ -148,3 +148,45 @@
 		background-image: url('../assets/graphics/info.svg');
 	}
 }
+
+.det{
+	&_map{
+		&--container{
+			&--1{				
+			}
+			&--2{
+				.page.zoomed .page__content > &{
+					@include bp(910){
+						opacity: 1;
+						margin: 0 auto;						
+						margin-top: -5rem;
+						width: 62vw;
+						height: 31vw;
+						& > *{
+							width: 100%;
+							height: 100%;
+							margin-top: 0;
+						}
+					}						
+				}	
+				@include bp(910){
+					display: flex;
+			    justify-content: space-between;
+			    align-items: flex-end;
+				}	
+				@include bp(767){
+					flex-direction: column;
+			    align-items: flex-start;
+				}
+			}
+
+			.page.zoomed .page__content > &{
+				@include bp(910){
+					& > .main__direction{
+						display: none;			
+					}
+				}
+			}
+		}
+	}
+}

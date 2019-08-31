@@ -27,6 +27,7 @@ import * as css from './views/cssView';
 import * as dial from './views/dialView';
 import * as dp from './views/detailedProgress';
 import * as drv from './views/detResultsView';
+import * as dw from './views/detWrapper';
 import * as header from './views/headerView';
 import * as line from './views/lineView';
 import * as pagination from './views/paginationView';
@@ -53,6 +54,9 @@ import largeDetailLow from './large_low-score.json';
 
 $(document).ready(function(){
  	const state = {};
+
+/**************** DETAILED PAGE CONTENT CONTROLLER ********************/ 
+	dw.dialGrouper();	
 
 /**************** DETAILED PAGE CONTROLLER ********************/
 	
