@@ -542,6 +542,9 @@ b {
         order: -1;
         margin-bottom: 24px;
         width: 18rem; } }
+    @media only screen and (max-width: 666px) {
+      .main__direction--2 {
+        margin-bottom: 20%; } }
   .main__direction--3 {
     width: 21.30rem; }
     @media only screen and (max-height: 530px) {
@@ -2295,6 +2298,10 @@ b {
     @media only screen and (max-width: 767px) {
       .dial-group--x {
         margin-top: 0; } }
+    @media only screen and (max-width: 666px) {
+      .dial-group--x {
+        width: calc(100vw - 3.6rem);
+        height: calc(calc(100vw - 3.6rem) / 2); } }
 
 .dial-tracker__wrapper {
   width: 100%;

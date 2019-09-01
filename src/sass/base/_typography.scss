@@ -499,6 +499,9 @@ b {
 		    margin-bottom: 24px;
 		    width: 18rem;
 			}
+			@include bp(666){
+				margin-bottom: 20%;
+			}
 		}
 		&--3{
 			width: 21.30rem;
