@@ -128,6 +128,9 @@ $(document).ready(function(){
 
 	$('.page__overlay').on('click', function () {
 		const self = $(this);
+
+		$('.mobile-nav').toggleClass('activate');
+		$('.detailed__title--wrapper').toggleClass('hide');
 		$('.line__group--1').hide();
 		const val = self.data('val');
 		$('.line--y').toggleClass('deactivate');
@@ -155,6 +158,8 @@ $(document).ready(function(){
 	});
 
 	$('.icon__zoomout').on('click', function () {
+		$('.mobile-nav').toggleClass('activate');
+		$('.detailed__title--wrapper').toggleClass('hide');
 		$('.line__group--1').show();
 		$('.main-container--x').toggleClass('in');
 		$('.footer--x').toggleClass('hide');
@@ -176,7 +181,7 @@ $(document).ready(function(){
 	});
 
 	/****** HEADER NAV BTN CONTROLLER ******/
-	$('.header__nav--btn').on('click', function () {
+	$('.header__nav--btn, .mobile-nav').on('click', function () {
 		const self = $(this);
 		let val = Number(self.attr('context'));
 

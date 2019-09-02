@@ -1,0 +1,26 @@
+.mobile-nav{
+	display: none;
+	position: fixed;
+	height: 20rem;
+	width: 8.34vw;
+	background-color: #fff;
+	top: 8rem;
+	height: 32.50rem;
+	z-index: 100;
+	transition: all 1100ms;
+	@include bp(1440){
+		display: block;
+	}
+	&--left{		
+		left: 0;
+		transform: translateX(-8.34vw);
+	}
+	&--right{
+		right: 0;
+		transform: translateX(8.34vw);
+	}
+
+	&.activate{
+		transform: translateX(0); 
+	}
+}

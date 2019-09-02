@@ -70,6 +70,10 @@
 		justify-content: space-between;
 		align-items: center;
 		transition: all 1100ms;
+		@include bp(1440){
+			transform: scaleY(0);
+		}
+
 		&.activate{
 			z-index: 1;
 			opacity: 1;
@@ -85,7 +89,21 @@
       background-image: url('../assets/graphics/icon-back.svg');
 		  background-size: 1.20rem 1.20rem;
 		  background-repeat: no-repeat;
-	    
+		
+	// 			display: none;
+	// position: fixed;
+	// height: 20rem;
+	// width: 8.34vw;
+	// background-color: #fff;
+	// top: 8rem;
+	// height: 32.50rem;
+	// z-index: 100;
+	// transition: all 1100ms;
+	// @include bp(1440){
+	// 	display: block;
+	// }
+    
+
 	    &--1{
 	    	& > span{
 	    		margin-left: auto;

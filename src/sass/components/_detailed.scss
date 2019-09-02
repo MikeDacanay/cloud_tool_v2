@@ -139,6 +139,10 @@
 			height: 1.95rem;
 			position: absolute;
 			margin-top: 4.50rem;
+			opacity: 1;
+			&.hide{
+				opacity: 0;
+			}
 		}
 	}
 
