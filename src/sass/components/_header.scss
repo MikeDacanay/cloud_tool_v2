@@ -34,6 +34,11 @@
 	    position: absolute;
 	    z-index: 10;
 	    background-color: red;
+			@include bp(1440){
+				height: auto;
+				margin-top: -4.15rem;
+			}
+
 	    @include bp(1150){
 	    	margin-top: 0;
 	    }

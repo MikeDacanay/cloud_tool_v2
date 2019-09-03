@@ -2649,6 +2649,10 @@ b {
     position: absolute;
     z-index: 10;
     background-color: red; }
+    @media only screen and (max-width: 1440px) {
+      .header__wrapper--2 {
+        height: auto;
+        margin-top: -4.15rem; } }
     @media only screen and (max-width: 1150px) {
       .header__wrapper--2 {
         margin-top: 0; } }
@@ -3925,6 +3929,9 @@ b {
       opacity: 0; }
     .main-container--x.activate > * {
       opacity: 1; }
+    @media only screen and (max-width: 1440px) {
+      .main-container--x {
+        margin-top: 4.15rem; } }
   .main-container-resize {
     opacity: 1;
     transition: opacity 500ms;
@@ -4131,15 +4138,57 @@ b {
     background-image: url("../assets/graphics/icon-back.svg");
     background-size: 1.20rem 1.20rem;
     background-repeat: no-repeat; }
+    @media only screen and (max-width: 1440px) {
+      .header__nav--btn {
+        position: fixed;
+        height: 20rem;
+        width: 8.34vw;
+        background-color: #fff;
+        top: 4.15rem;
+        height: 32.50rem;
+        z-index: 100;
+        transition: all 1100ms;
+        opacity: 1; } }
+    @media only screen and (max-width: 1024px) {
+      .header__nav--btn {
+        top: auto;
+        width: 50vw;
+        height: 2.85rem;
+        bottom: 0.00rem; } }
     .header__nav--btn--1 > span {
       margin-left: auto; }
     .header__nav--btn--1:before {
       content: "";
       position: absolute;
       background-image: url(); }
+    @media only screen and (max-width: 1440px) {
+      .header__nav--btn--1 {
+        left: 0;
+        transform: translateX(-8.34vw); } }
+    @media only screen and (max-width: 1024px) {
+      .header__nav--btn--1 {
+        padding-left: 8.34vw;
+        transform: translateX(-15.34vw); } }
+    @media only screen and (max-width: 767px) {
+      .header__nav--btn--1 {
+        padding-left: .8rem; } }
     .header__nav--btn--2 {
       background-position-x: right;
       background-image: url("../assets/graphics/icon-back--1.svg"); }
+      @media only screen and (max-width: 1440px) {
+        .header__nav--btn--2 {
+          right: 0;
+          transform: translateX(8.34vw); } }
+      @media only screen and (max-width: 1024px) {
+        .header__nav--btn--2 {
+          padding-right: 8.34vw;
+          transform: translateX(15.34vw); } }
+      @media only screen and (max-width: 767px) {
+        .header__nav--btn--2 {
+          padding-right: .8rem; } }
+    @media only screen and (max-width: 1440px) {
+      .header__nav--btn.activate {
+        transform: translateX(0); } }
 
 .results__main {
   height: 51.80rem;

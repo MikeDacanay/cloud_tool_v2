@@ -40,7 +40,11 @@
 			& > *{
 				opacity: 	1;
 			}
-		}		
+		}	
+
+		@include bp(1440){
+			margin-top: 4.15rem;
+		}	
 	}
 	&-resize{
 		opacity: 1;

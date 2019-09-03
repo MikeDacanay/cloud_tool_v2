@@ -129,7 +129,7 @@ $(document).ready(function(){
 	$('.page__overlay').on('click', function () {
 		const self = $(this);
 
-		$('.mobile-nav').toggleClass('activate');
+		$('.header__nav--btn').toggleClass('activate');
 		$('.detailed__title--wrapper').toggleClass('hide');
 		$('.line__group--1').hide();
 		const val = self.data('val');
@@ -158,7 +158,7 @@ $(document).ready(function(){
 	});
 
 	$('.icon__zoomout').on('click', function () {
-		$('.mobile-nav').toggleClass('activate');
+		$('.header__nav--btn').toggleClass('activate');
 		$('.detailed__title--wrapper').toggleClass('hide');
 		$('.line__group--1').show();
 		$('.main-container--x').toggleClass('in');

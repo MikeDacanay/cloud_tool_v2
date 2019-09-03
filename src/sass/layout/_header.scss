@@ -102,6 +102,25 @@
 	// @include bp(1440){
 	// 	display: block;
 	// }
+		@include bp(1440){
+			position: fixed;
+			height: 20rem;
+			width: 8.34vw;
+			background-color: $color-white-1;
+			top: 4.15rem;
+			height: 32.50rem;
+			z-index: 100;
+			transition: all 1100ms;
+			opacity: 1;
+		}
+		@include bp(1024){
+			// height: 26.75rem;
+	    top: auto;
+	    width: 50vw;
+
+	    height: 2.85rem;
+	    bottom: 0.00rem;
+		}
     
 
 	    &--1{
@@ -123,10 +142,40 @@
 					
 					background-image: url();
 				}	
+
+				@include bp(1440){
+					left: 0;
+					transform: translateX(-8.34vw);
+	    	}
+	    	@include bp(1024){
+	    		padding-left: 8.34vw;
+	    		transform: translateX(-15.34vw);
+	    	}
+	    	@include bp(767){
+	    		padding-left: .8rem;
+	    	}
 	    }
 	    &--2{
 	    	background-position-x: right;
 	    	background-image: url('../assets/graphics/icon-back--1.svg');
+				@include bp(1440){
+					right: 0;
+					transform: translateX(8.34vw);
+					   	
+	    	}	    	
+	    	@include bp(1024){
+	    		padding-right: 8.34vw;
+	    		transform: translateX(15.34vw);	 
+	    	}
+	    	@include bp(767){
+	    		padding-right: .8rem;
+	    	}	    	
+	    }
+
+	    &.activate{
+	    	@include bp(1440){
+	    		transform: translateX(0);
+	    	}
 	    }
 		}
 	}
