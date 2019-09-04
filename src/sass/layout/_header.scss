@@ -148,14 +148,11 @@
 	    	}
 	    	@include bp(1024){
 	    		padding-left: 8.34vw;
-	    		transform: translateX(-15.34vw);
+	    		transform: translateX(-50vw);
 	    		justify-content: flex-start;
 	    	}
 	    	@include bp(767){
 	    		padding-left: .8rem;
-	    	}
-	    	@include bp(666){
-	    		transform: none;
 	    	}
 	    }
 	    &--2{
@@ -168,15 +165,12 @@
 	    	}	    	
 	    	@include bp(1024){
 	    		padding-right: 8.34vw;
-	    		transform: translateX(15.34vw);	 
+	    		transform: translateX(50vw);	 
 	    		justify-content: flex-end;
 	    	}
 	    	@include bp(767){
 	    		padding-right: .8rem;
 	    	}	    	
-	    	@include bp(666){
-	    		transform: none;
-	    	}
 	    }
 
 	    &.activate{

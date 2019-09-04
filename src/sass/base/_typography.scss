@@ -369,11 +369,14 @@ b {
 			}
 			@include bp(910){
 				height: auto;
-				width: 100%;
+				width: 90%;
 			}
 			// @include bp()
 		  &-a{
 		  	width: 45.4rem;
+		  	@include bp(910){
+		  		width: 90%;
+		  	}
 		  }
 		  height: 6.60rem;
 		  font-family: $font-reg;	
