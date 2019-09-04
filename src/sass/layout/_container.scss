@@ -14,7 +14,7 @@
 		// // min-height: 
 		// min-height: 65.00rem; 
 
-		height: 60rem; 
+		height: 45rem; 
 		@include bp(1150){
 			display: none;
 		}
@@ -22,10 +22,13 @@
 	&--x{
 		z-index: 	4;
 		// padding-top: 10.11rem;
-		height: 54.00rem;
+		// height: 54.00rem;
+		height: calc(100vh - 5.05rem);
 		margin-top: 8rem;
 		position: relative;
 		overflow: scroll;
+
+
 
 		&.in{
 			overflow: visible;

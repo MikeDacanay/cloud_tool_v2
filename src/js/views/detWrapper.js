@@ -1,4 +1,5 @@
 export const dialGrouper = () => {
+
   if($('body').width() < 910){  	
   	// Q1
 

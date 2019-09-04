@@ -18,7 +18,7 @@
 			flex: 0;
 	    width: 44rem;
 		}
-		@include bp(1024){
+		@include bp(1150){
 			width: 100%;
 	    padding-right: 1.20rem;
 		}
@@ -82,7 +82,7 @@
 		margin-bottom: 0.80rem;
 		margin-right: 0.80rem;
 
-		@include bp(1024){
+		@include bp(1150){
 			width: calc(50% - .45rem);
 			height: 7.75rem;
 

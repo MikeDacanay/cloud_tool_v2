@@ -193,8 +193,8 @@
 		}
 
 		.page.zoomed & > .detscroll__group{
-			margin-top: 39rem;
-			@include bp(1024){
+			margin-top: 47rem;
+			@include bp(1150){
 				margin-top: 2rem;
 			}
 			@include bp(910){
@@ -203,7 +203,7 @@
 		}
 
 		.page.zoomed & > .selection__wrapper--x{
-	    @include bp(1024){
+	    @include bp(1150){
 				margin: 0 auto;
 				margin-top: 2rem;
 	    }
@@ -213,7 +213,7 @@
 	    @include bp(767){
 	    	margin-top: 2rem;
 	    }
-	    @include bp(430){
+	    @include bp(666){
 	    	height: auto;
 	    }
 		}

@@ -226,7 +226,10 @@ b {
 	  letter-spacing: normal;
 	  color: $color-white-1;
 	  margin-top: 1.05rem;
-
+		
+		.page.zoomed .page__content > &{
+			display: none;
+		}		
 
 		@include bp_min(1441){
 			@include bph(650){
@@ -450,6 +453,10 @@ b {
 			margin-top: 1rem;	
 		
 		}
+
+		.page.zoomed .page__content > &{
+			display: none;
+		}		
 
 		@include bp(1440){
 		  width: 39.55rem;
