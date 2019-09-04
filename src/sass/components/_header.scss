@@ -7,6 +7,9 @@
 	  .header__container--x &{
 	  	background-image: url("../assets/images/desktop/logo-grey.svg");	
 	  }
+	  .header__container--y &{
+	  	background-image: url("../assets/images/desktop/logo-white.svg");	
+	  }
 	  margin-right: auto;
 	  z-index: 1000;
 
@@ -33,7 +36,6 @@
 			width: 100vw;
 	    position: absolute;
 	    z-index: 10;
-	    background-color: red;
 			@include bp(1440){
 				height: auto;
 				margin-top: -4.15rem;
@@ -160,7 +162,7 @@
 			}
 
 			.header__container--x &{
-				border: solid 0.1rem $color-grey;
+				border: solid 0.1rem $color-blue-1;
 			}
 			
 			.header__rectangle--1:hover &{
@@ -187,6 +189,19 @@
 
 		.header__container--x &{
 			color: $color-blue-1;
+		}
+	}
+	&__icon{
+		height: 1.20rem;
+		width: 1.2rem;
+		&--1{
+			margin-right: 0.15rem;
+		}
+		&--2{
+			margin-left: 0.15rem;
+			@include bp(1024){
+				order: 	2;
+			}
 		}
 	}
 }

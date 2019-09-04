@@ -127,8 +127,7 @@ $(document).ready(function(){
 
 
 	$('.page__overlay').on('click', function () {
-		const self = $(this);
-
+		const self = $(this);		
 		$('.header__nav--btn').toggleClass('activate');
 		$('.detailed__title--wrapper').toggleClass('hide');
 		$('.line__group--1').hide();
@@ -141,6 +140,12 @@ $(document).ready(function(){
 		$('.page').toggleClass('zoomed deactivate--z');
 		$(`.page--${val}`).addClass('activate--z');
 		$(`.page--${val}`).removeClass('deactivate--z');
+
+		if($('body').width() < 767){
+			const mainHeight = $('.activate--z').height() + 83;
+			$('.main-container--x').css('height',mainHeight);
+		}
+
 		setTimeout(function(){			
 			$('.pathfinder--x').addClass(`zoom-in--${val}-x`);
 			$('.header__nav').toggleClass('activate');
@@ -168,6 +173,10 @@ $(document).ready(function(){
 		$('.page').removeClass('deactivate--z activate--z');
 		$('.pathfinder--x').toggleClass('zoom-in');
 		$('.line--y').toggleClass('deactivate');
+
+		if($('body').width() < 767){
+			$('.main-container--x').css('height','100vh');
+		}
 		setTimeout(function(){
 			$('.page__overlay').toggle();			
 		}, 1500);
@@ -194,6 +203,12 @@ $(document).ready(function(){
 		$('.activate--z').toggleClass('deactivate--z activate--z');
 		
 		$(`.page--${val}`).toggleClass('deactivate--z activate--z');
+
+
+		if($('body').width() < 767){
+			const mainHeight = $('.activate--z').height() + 83;
+			$('.main-container--x').css('height',mainHeight);
+		}
 
 		dp.movePathfinderX(self);
 	});

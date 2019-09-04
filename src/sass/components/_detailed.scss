@@ -163,7 +163,7 @@
 					@include bp(910){
 						opacity: 1;
 						margin: 0 auto;						
-						margin-top: -5rem;
+						margin-top: 2rem;
 						width: 62vw;
 						height: 31vw;
 						& > *{
@@ -171,7 +171,11 @@
 							height: 100%;
 							margin-top: 0;
 						}
-					}						
+					}		
+
+					@include bp(767){
+						margin-top: 2rem;
+					}				
 				}	
 				@include bp(910){
 					display: flex;

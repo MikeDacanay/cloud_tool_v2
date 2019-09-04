@@ -144,7 +144,8 @@
     &.activate--z{
       opacity: 1;
       @include bp(1440){
-        height: calc(#{100vh} - #{9rem});
+        // height: calc(#{100vh} - #{9rem});
+        height: auto;
         overflow: scroll;
       }
     }

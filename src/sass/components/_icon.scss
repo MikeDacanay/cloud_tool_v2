@@ -77,6 +77,9 @@
         height: 2.35rem;
         flex: 0 0 2.35rem;
       }
+      @include bp(666){
+        display: none;
+      }
     }
   }
 }

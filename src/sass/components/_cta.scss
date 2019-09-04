@@ -7,14 +7,10 @@
 	padding: 0.80rem 0 0.80rem 0.80rem;
 	top: 100%;
 	transform: translate(0%, -100%);
-	
-		@include bp_min(1441){
-			left: 53.4rem;
-	
-			.main-container--x &{
-        left: 51.4rem;		
-			}
-		}
+	left: 53.4rem;			
+	.main-container--x &{
+    left: 51.4rem;		
+	}
 		@include bp(1250){
 			left: 59vw;
 		}
@@ -191,6 +187,11 @@
 						right: -53rem;
 					}
 				}
+				@include bp(1440){
+					top: auto;
+			    left: auto;
+			    position: relative;
+				}
 			}
 		}
 
@@ -274,9 +275,6 @@
 
 		&--6{
 			top: 46.2rem;
-			&-x{
-		    top: 24.5rem;
-			}
 			right: -20.5rem;
 			left: auto;
 
@@ -307,7 +305,8 @@
 					right: -8.8rem;
 				}
 				@include bph_min(1016){ 
-					top: 40.95rem;
+					// top: 40.95rem;
+					top: 52.95rem;
 					right: -22rem; 
 				}
 			}
@@ -339,6 +338,26 @@
 				// @include bph_min(1016){ display: none; }
 			}
 			@include bp(666){ display: none; }
+
+			&-x{
+		    position: relative;
+		    top: auto;
+		    left: auto;
+		    right: auto;
+		    transform: none;
+
+		    @include bp(1440){
+		    	margin-left: auto;
+		    }
+		    @include bp(910){
+		    	display: block;		    	    
+    			width: 70%;
+		    }
+		    .main-container--x &{
+		    	left: auto;
+		    }
+			}
+
 		}
 	}
 

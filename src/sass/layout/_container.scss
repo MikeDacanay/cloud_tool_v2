@@ -45,6 +45,9 @@
 		@include bp(1440){
 			margin-top: 4.15rem;
 		}	
+		@include bp(1024){
+			height: 100vh;
+		}
 	}
 	&-resize{
 		opacity: 1;

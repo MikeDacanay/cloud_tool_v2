@@ -19,7 +19,10 @@
 		}		
 
 		&--x{
-			background-color: #fff;
+			// background-color: #fff;
+		}
+		&--y{
+			
 		}
 
 		@include bp(1440){
@@ -90,38 +93,33 @@
 		  background-size: 1.20rem 1.20rem;
 		  background-repeat: no-repeat;
 		
-	// 			display: none;
-	// position: fixed;
-	// height: 20rem;
-	// width: 8.34vw;
-	// background-color: #fff;
-	// top: 8rem;
-	// height: 32.50rem;
-	// z-index: 100;
-	// transition: all 1100ms;
-	// @include bp(1440){
-	// 	display: block;
-	// }
-		@include bp(1440){
-			position: fixed;
-			height: 20rem;
-			width: 8.34vw;
-			background-color: $color-white-1;
-			top: 4.15rem;
-			height: 32.50rem;
-			z-index: 100;
-			transition: all 1100ms;
-			opacity: 1;
-		}
-		@include bp(1024){
-			// height: 26.75rem;
-	    top: auto;
-	    width: 50vw;
 
-	    height: 2.85rem;
-	    bottom: 0.00rem;
-		}
-    
+			@include bp(1440){
+				position: fixed;
+				height: 20rem;
+				width: 8.34vw;
+				background-color: transparent;
+				top: 4.15rem;
+				height: 32.50rem;
+				z-index: 100;
+				transition: all 1100ms;
+				opacity: 1;
+
+				display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+			}
+			@include bp(1024){
+				// height: 26.75rem;
+		    top: auto;
+		    width: 50vw;
+
+		    height: 2.85rem;
+		    bottom: 0.00rem;
+		    flex-direction: row;		    
+		    align-items: center;
+			}
+	    
 
 	    &--1{
 	    	& > span{
@@ -146,13 +144,18 @@
 				@include bp(1440){
 					left: 0;
 					transform: translateX(-8.34vw);
+					background-image: none;
 	    	}
 	    	@include bp(1024){
 	    		padding-left: 8.34vw;
 	    		transform: translateX(-15.34vw);
+	    		justify-content: flex-start;
 	    	}
 	    	@include bp(767){
 	    		padding-left: .8rem;
+	    	}
+	    	@include bp(666){
+	    		transform: none;
 	    	}
 	    }
 	    &--2{
@@ -161,15 +164,19 @@
 				@include bp(1440){
 					right: 0;
 					transform: translateX(8.34vw);
-					   	
+					background-image: none;
 	    	}	    	
 	    	@include bp(1024){
 	    		padding-right: 8.34vw;
 	    		transform: translateX(15.34vw);	 
+	    		justify-content: flex-end;
 	    	}
 	    	@include bp(767){
 	    		padding-right: .8rem;
 	    	}	    	
+	    	@include bp(666){
+	    		transform: none;
+	    	}
 	    }
 
 	    &.activate{

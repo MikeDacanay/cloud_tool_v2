@@ -49,18 +49,23 @@
 				padding-left: 	2.2rem;
 				overflow: hidden;
 				@include bp(1440){
-					height: 32.50rem;
+					// height: 32.50rem;
+					height: auto;
+					
 				}
 				@include bp(1024){
-					height: 26.75rem;
+					// height: 26.75rem;
+					height: auto;
 					padding-top: 1.20rem;
 					padding-left: 1.20rem;
 				}
 				@include bp(910){
-					height: 28.75rem;
+					// height: 28.75rem;
+					height: auto;
 				}
 				@include bp(768){
-					height: 32.75rem;
+					// height: 32.75rem;
+					height: auto;
 				}
 			}
 
@@ -155,13 +160,22 @@
 		// .page.zoomed & > .main__title--x,
 		.page.zoomed & > .dial-group,
 		.page.zoomed & > .selection__wrapper,
-		.page.zoomed & > .detscroll__wrapper,{
+		.page.zoomed & > .detscroll__wrapper,
+		.page.zoomed & > .detscroll__group,{
 			opacity: 1;
-			@include bp(1150){
-				margin-top: -8rem;
+			@include bp(1024){
+				margin-top: 2rem;
 			}
 		}
-		// .page.zoomed & > .dial-group{
+
+		.page.zoomed & .cta__wrapper{
+			opacity: 0;
+			@include bp(1024){
+				display: none;
+			}
+		}
+
+				// .page.zoomed & > .dial-group{
   //   	width: 84vw;
 	 //    height: 42vw;
 	 //    @include bp(1150){
@@ -169,11 +183,35 @@
 		//     height: 18.5vw;
 	 //    }
 		// }
+		.page.zoomed & > .dial-group{
+			@include bp(910){
+				margin-top: 2rem;
+			}
+			@include bp(767){
+				margin-top: 2rem;
+			}
+		}
+
+		.page.zoomed & > .detscroll__group{
+			margin-top: 39rem;
+			@include bp(1024){
+				margin-top: 2rem;
+			}
+			@include bp(910){
+				margin-top: 0;
+			}
+		}
 
 		.page.zoomed & > .selection__wrapper--x{
-	    @include bp(970){
+	    @include bp(1024){
 				margin: 0 auto;
-		    margin-top: -8rem;
+				margin-top: 2rem;
+	    }
+	    @include bp(910){
+	    	margin-top: 2rem;
+	    }
+	    @include bp(767){
+	    	margin-top: 2rem;
 	    }
 	    @include bp(430){
 	    	height: auto;

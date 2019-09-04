@@ -94,12 +94,33 @@
 			width: 38.40rem;
 			height: 22.00rem;
 			
+			@include bp(1440){
+				max-height: none;
+				margin-top: 4rem;
+			}
+			@include bp(1024){
+				width: 24.4rem;
+		    height: 30rem;
+		    margin: 0 auto;
+		    margin-top: 4rem;
+			}
+			@include bp(910){
+				margin-top: 2rem;
+			}
+			@include bp(666){
+				width: 12rem;
+				margin-top: 0;
+				height: 59rem;
+			}
 
 			.page.zoomed .page__content > &{
 				margin-top: 31.85rem;
 				@include bp(1150){
 			    height: 22rem;
 			    max-height: none;
+				}
+				@include bp(1024){
+					height: 30rem;
 				}
 				@include bp(970){
 					width: 25.4rem;
