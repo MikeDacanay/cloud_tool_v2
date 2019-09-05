@@ -197,17 +197,15 @@
 
 		&--5{
 			top: 40.2rem;
-			&-x{
-				top: 24.5rem;
-			}
+
 			right: -20.5rem;
 			left: auto;
 			
-
 			@include bph(1015){ top: 32.1rem; }
 			@include bph(750){ top: 29.1rem; }
 			@include bph(675){ top: 28.1rem; }
 			@include bph(650){ top: 21.5rem; }
+
 
 			@include bp(1440){ 
 				top: 36.2rem;
@@ -271,6 +269,30 @@
 				// display: none; 
 				display: block;
 			}
+
+			&-x{
+				top: auto;
+		    bottom: auto;
+		    transform: none;
+		    .main-container--x &{
+					@include bp(1440){
+						position: relative;
+				    top: auto;
+				    left: auto;
+					}
+					@include bp(1024){
+						right: auto;
+				    margin-left: auto;
+					}
+					@include bp(910){
+						width: 70%;
+					}
+					@include bp(666){
+						display: none;
+					}
+				}
+			}
+
 		}
 
 		&--6{

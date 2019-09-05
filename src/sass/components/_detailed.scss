@@ -156,6 +156,7 @@
 .det{
 	&_map{
 		&--container{
+		position: relative;
 		@include bp(910){
 			display: flex;
 	    align-items: flex-end;

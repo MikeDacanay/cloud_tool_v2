@@ -37,6 +37,9 @@
 		flex-wrap: wrap;
 		&-1{
 			height: 15.40rem;
+			@include bp(1024){
+				height: 22.4rem;
+			}
 			@include bp(767){
 				.zoomed &{
 					height: auto;

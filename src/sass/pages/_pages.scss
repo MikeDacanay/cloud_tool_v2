@@ -146,7 +146,7 @@
       @include bp(1440){
         // height: calc(#{100vh} - #{9rem});
         height: auto;
-        overflow: scroll;
+        overflow-y: auto;
       }
     }
 

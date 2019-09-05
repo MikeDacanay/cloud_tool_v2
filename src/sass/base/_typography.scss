@@ -374,7 +374,7 @@ b {
 			// @include bp()
 		  &-a{
 		  	width: 45.4rem;
-		  	@include bp(910){
+		  	@include bp(1024){
 		  		width: 90%;
 		  	}
 		  }
@@ -672,6 +672,10 @@ b {
 		  line-height: 1.36;
 		  letter-spacing: normal;
 		  color: $color-white-1;
+
+		  .zoomed &{
+		  	opacity: 0;
+		  }
 		}
 	}
 
@@ -687,10 +691,10 @@ b {
 		  line-height: 1.32;
 		  letter-spacing: normal;
 		  color: $color-white-1;
-
-		  @include bp(1150){
-		  	opacity: 0;
-		  }		
+		
+			.zoomed &{
+				opacity: 0;
+			}		
 		}
 		&-percentage{
 		  width: 7.05rem;
@@ -704,10 +708,10 @@ b {
 		  letter-spacing: normal;
 		  color: $color-white-1;
 		  margin-top: 0.10rem;
-		
-			@include bp(1150){
-		  	opacity: 0;
-		  }		
+	
+			.zoomed &{
+				opacity: 0;
+			}				  
 		}
 	}
 
@@ -1346,6 +1350,20 @@ b {
 	  display: block;
 	  transition: all 2s;
 	}
+	&--x{
+		&-text{
+		  height: 1.60rem;
+		  font-family: $font-reg;
+		  font-size: 0.95rem;
+		  font-weight: normal;
+		  font-style: normal;
+		  font-stretch: normal;
+		  line-height: 1.32;
+		  letter-spacing: normal;
+		  text-align: center;
+		  color: $color-white-1;
+		}
+	}
 }
 
 .header{
@@ -1476,18 +1494,14 @@ b {
 	  letter-spacing: normal;
 	  color: $color-blue-2;
 	
+		@include bp(910){
+			font-size: 1rem;
+		}
 	  .zoomed &{
 	  	@include bp(1024){
 				font-size: 1rem;
 			}
 		}
-
-	  @include bp(440){
-	  	font-size: 1.1rem;
-	  }
-	  @include bp(400){
-	  	font-size: 1rem;
-	  }
 	}
 	&__txt{
 		width: 85%;
