@@ -102,13 +102,17 @@ export const changeDialText = () => {
 
 export const progressBtn = (dial) => {  
   
-  const detectPlatform = func.isTouchDevice();  
+  // const detectPlatform = func.isTouchDevice();  
 
-  if(detectPlatform === true){
-    dial = dial[0].$;
-  };
+  // if(detectPlatform === true){
+  //   dial = dial[0].$;
+  // };
 
+  dial = dial[0].$;
+  
   const pageBtnProgress = dial.closest('.page__content').find( ".btn__progress");
+
+  console.log(pageBtnProgress);
 
   pageBtnProgress.click();
 }

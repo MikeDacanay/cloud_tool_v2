@@ -13,16 +13,26 @@
 }
 
 .icon__check{
-  width: 0.85rem;
-  height: 0.64rem;
-	background-color: red;
+  width: 1.00rem;
+  height: 0.95rem;
+	background-image: url(../assets/graphics/icon-check.svg);
   display: none;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   &.activate{
     display: block;
   }
-}
 
+  
+}
+.icon__down--footer{
+  width: 1.40rem;
+  height: 1.40rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../assets/graphics/icon-down.svg);
+}
 .icon__detscroll{
   width: 1.3rem;
   height: 1.3rem;
@@ -67,6 +77,17 @@
       height: 12rem;
       background-size: 100%;
       flex: 0 0 12rem;
+      @include bp(1150){
+        height: 3.15rem;
+        flex: 0 0 3.15rem;
+      }
+      @include bp(930){
+        height: 2.35rem;
+        flex: 0 0 2.35rem;
+      }
+      @include bp(666){
+        display: none;
+      }
     }
   }
 }

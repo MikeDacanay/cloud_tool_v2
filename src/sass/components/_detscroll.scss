@@ -1,20 +1,77 @@
 .detscroll{
-	&__wrapper{		
-		width: 44.00rem;
+	&__group{
+		display: flex;
+    align-items: flex-end;
+
+    @include bp(1440){
+    	flex-direction: column;
+	    align-items: flex-start;
+    }
+	}
+
+	&__wrapper{				
+    flex: 0 0 44rem;
 		// background-color: black;
 		margin-top: 2.60rem;
-
+		
+		@include bp(1440){
+			flex: 0;
+	    width: 44rem;
+		}
+		@include bp(1150){
+			width: 100%;
+	    padding-right: 1.20rem;
+		}
 		.page.zoomed .page__content > &{
 	    margin-top: 36.6rem;
-	   }
+	  	
+	  	@include bp(1150){
+	    	height: 31.4rem;
+	      justify-content: stretch;    
+	    	align-items: center;
+	      width: 100%;
+	  	} 
+	  }
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
 		&-1{
 			height: 15.40rem;
+			@include bp(1024){
+				height: 22.4rem;
+			}
+			@include bp(767){
+				.zoomed &{
+					height: auto;
+				}
+			}
 		}
 		&-2{
 			height: 23.10rem;
+			.page.zoomed .page__content > &{
+	
+		  	@include bp(1150){
+		    	height: 49.4rem;
+		      justify-content: stretch;    
+		    	align-items: center;
+		  	} 
+		  }
+
+		  @include bp(1024){
+		  	height: 34.1rem;
+		  	.zoomed &{
+		  		height: 23.10rem;
+		  	}
+		  }
+		  @include bp(767){
+			  .zoomed &{				
+			  	height: auto;
+		  	}
+		  }
+		}
+		@include bp(767){
+			height: auto;
+			padding-right: 0;
 		}
 	}
 
@@ -27,6 +84,21 @@
 	  background-color: $color-white-1;		
 		margin-bottom: 0.80rem;
 		margin-right: 0.80rem;
+
+		@include bp(1150){
+			width: calc(50% - .45rem);
+			height: 7.75rem;
+
+			.zoomed &{
+				height: 6.90rem;
+			}	
+		}
+		@include bp(767){
+			width: 100%;
+		}
+		@include bp(530){
+			width: 100%;
+		}
 	}
 	&__header{
 		display: flex;

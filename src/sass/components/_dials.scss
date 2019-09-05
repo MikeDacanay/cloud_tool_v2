@@ -45,6 +45,7 @@
 		}
 
 		@include bp(1440){
+
 			@include bph_min(1000){
 				max-width: $dial-width-max2;
 				max-height: calc(#{$dial-width-max2} / 2);		
@@ -81,6 +82,7 @@
 		}
 		
 		@include bp(1024){
+
 			width: $dial-mediumS;
 			height: calc(#{$dial-mediumS} / 2);		
 			margin-top: calc((100vh - 16rem) / 2);
@@ -99,6 +101,7 @@
 		}
 		
 		@include bp(910){
+
 			width: $dial-small;
 			height: calc(#{$dial-small} / 2);		
 
@@ -115,6 +118,7 @@
 			}
 		}
 		@include bp(767){
+
 			@include bp_min(666){
 				@include bph(500){
 					position: absolute;
@@ -146,6 +150,7 @@
 		}
 
 		@include bp(666){
+
 			margin-top: calc((100vh - 15rem) / 2);
 			max-width: none;
 			max-height: none;
@@ -164,6 +169,7 @@
 		
 
 		&--2{
+
 			margin-top: calc((100vh - 20.1rem) / 2);
 			
 			@include bp_min(1441){
@@ -254,9 +260,42 @@
 		&--x{
 			margin-top: 2.00rem;
 			.page.zoomed .page__content > &{
-				margin-top: 34rem;
+				width: 84vw;
+		    height: 42vw;
+		    margin: 0 auto;
+		    margin-top: 48rem;		    
+		    @include bp(1440){
+					width: 62vw;
+			    height: 31vw;
+			    // margin: 0 auto;
+			    // margin-top: 2rem;
+		    }
+		    @include bp(1150){
+		    	margin-top: 2rem;
+		    }
 			}
-			
+
+			@include bp(1440){
+				width: 40vw;
+		    height: 20vw;
+		   	margin-top: 1.65rem;
+				max-height: none;
+				max-width: none;
+				min-height: auto;
+				min-width: auto;
+			}
+			@include bp(1024){
+				width: 37vw;
+				height: 18.50vw;
+				margin-top: 3.3rem;
+			}
+			@include bp(767){
+				margin-top: 0;
+			}
+			@include bp(666){
+				width: calc(100vw - 3.6rem);
+				height: calc(calc(100vw - 3.6rem) / 2);
+			}
 			transform: none;
 			height: 21.85rem;
 		}

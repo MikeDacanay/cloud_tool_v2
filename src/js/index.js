@@ -27,6 +27,7 @@ import * as css from './views/cssView';
 import * as dial from './views/dialView';
 import * as dp from './views/detailedProgress';
 import * as drv from './views/detResultsView';
+import * as dw from './views/detWrapper';
 import * as header from './views/headerView';
 import * as line from './views/lineView';
 import * as pagination from './views/paginationView';
@@ -49,13 +50,25 @@ import largeDetailLow from './large_low-score.json';
 
 
 
+if(sessionStorage.gate === undefined){
+	sessionStorage.clear();
+}
 
 
-$(document).ready(function(){
+
+$(document).ready(function(){	
  	const state = {};
 
-/**************** DETAILED PAGE CONTROLLER ********************/
-	
+/**************** DETAILED PAGE CONTENT CONTROLLER ********************/ 
+	dw.dialGrouper();	
+
+	$(window).resize(function(){
+  	dw.dialGrouper();  
+	});
+
+
+/**************** DETAILED PAGE CONTROLLER ********************/				
+
 	if(sessionStorage.dial2){	
 		const results = new CompareResults();
 		results.allocateValues(sessionStorage,PeersData.retrievePeerScore);
@@ -100,18 +113,27 @@ $(document).ready(function(){
 	};
 
 /****** DETAILED MAP CONTROLLER ******/
-
-
 	$('.page__overlay').on('click', function () {
-		const self = $(this);
+		const self = $(this);		
+		$('.header__nav--btn').toggleClass('activate');
+		$('.detailed__title--wrapper').toggleClass('hide');
+		$('.line__group--1').hide();
 		const val = self.data('val');
-		
-
+		$('.line--y').toggleClass('deactivate');
+		$('.main-container--x').toggleClass('in');
+		$('.footer--x').addClass('hide');
 		$('.pathfinder--x').addClass(`zoom-in--${val}`);
 		// $('.page').toggleClass('zoomed');
 		$('.page').toggleClass('zoomed deactivate--z');
 		$(`.page--${val}`).addClass('activate--z');
 		$(`.page--${val}`).removeClass('deactivate--z');
+		$('.footer-x').toggleClass('hide');
+
+		if($('body').width() < 767){
+			const mainHeight = $('.activate--z').height() + 83;
+			$('.main-container--x').css('height',mainHeight);
+		}
+
 		setTimeout(function(){			
 			$('.pathfinder--x').addClass(`zoom-in--${val}-x`);
 			$('.header__nav').toggleClass('activate');
@@ -129,10 +151,21 @@ $(document).ready(function(){
 	});
 
 	$('.icon__zoomout').on('click', function () {
+		$('.footer-x').toggleClass('hide');
+		$('.header__nav--btn').toggleClass('activate');
+		$('.detailed__title--wrapper').toggleClass('hide');
+		$('.line__group--1').show();
+		$('.main-container--x').toggleClass('in');
+		$('.footer--x').toggleClass('hide');
 		$('.header__nav').toggleClass('activate');
 		$('.page').toggleClass('zoomed');
 		$('.page').removeClass('deactivate--z activate--z');
 		$('.pathfinder--x').toggleClass('zoom-in');
+		$('.line--y').toggleClass('deactivate');
+
+		if($('body').width() < 767){
+			$('.main-container--x').css('height','100vh');
+		}
 		setTimeout(function(){
 			$('.page__overlay').toggle();			
 		}, 1500);
@@ -146,7 +179,7 @@ $(document).ready(function(){
 	});
 
 	/****** HEADER NAV BTN CONTROLLER ******/
-	$('.header__nav--btn').on('click', function () {
+	$('.header__nav--btn, .mobile-nav').on('click', function () {
 		const self = $(this);
 		let val = Number(self.attr('context'));
 
@@ -159,6 +192,12 @@ $(document).ready(function(){
 		$('.activate--z').toggleClass('deactivate--z activate--z');
 		
 		$(`.page--${val}`).toggleClass('deactivate--z activate--z');
+
+
+		if($('body').width() < 767){
+			const mainHeight = $('.activate--z').height() + 83;
+			$('.main-container--x').css('height',mainHeight);
+		}
 
 		dp.movePathfinderX(self);
 	});
@@ -199,7 +238,7 @@ $(document).ready(function(){
 		state.height = $('body').height();
 		// state.height = $(window).height();
 		page.reformWandH();
-
+		$('.footer--x').addClass('hide');
 		line.resizeLines();
 	});
 
@@ -338,6 +377,8 @@ $(document).ready(function(){
 			this.dial = assignDial(this.selfID);
 			this.dial.changeValue(v);
 
+			this.context = false;
+
 			if (this.context === false) {
 				dial.progressBtn(self);
 			}
@@ -357,27 +398,27 @@ $(document).ready(function(){
 	// let currentState = 0;
 
 
-	dialWrapperMove();
+	// dialWrapperMove();
 
-	$('.dial-tracker__wrapper').mouseup(function(){
-	  const dy = 819 - event.pageY;
-		const dx = 633.5 - event.pageX;
-		let theta = Math.atan2(dy, dx); // range (-PI, PI]
-		theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
+	// $('.dial-tracker__wrapper').mouseup(function(){
+	//   const dy = 819 - event.pageY;
+	// 	const dx = 633.5 - event.pageX;
+	// 	let theta = Math.atan2(dy, dx); // range (-PI, PI]
+	// 	theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
 
-		const dtracker = $(this).find('.dial-tracker');
+	// 	const dtracker = $(this).find('.dial-tracker');
 
-		dtracker.data('context', false);
-		dtracker.val(theta).trigger('change');
+	// 	dtracker.data('context', false);
+	// 	dtracker.val(theta).trigger('change');
 
-		dial.progressBtn(dtracker);
+	// 	dial.progressBtn(dtracker);
 
-		$( ".dial-tracker__wrapper" ).unbind( "mousemove mouseleave");
+	// 	$( ".dial-tracker__wrapper" ).unbind( "mousemove mouseleave");
 
-		setTimeout(function(){
-			dialWrapperMove()
-		}, 2500);
-	});	
+	// 	setTimeout(function(){
+	// 		dialWrapperMove()
+	// 	}, 2500);
+	// });	
 
 	function dialWrapperMove(){		
 	  $( ".dial-tracker__wrapper" )
@@ -532,13 +573,18 @@ $(document).ready(function(){
 
 	/****************  ELOQUA CONTROLLER  ********************/
 	$('.detailed-score__btn').on('click', function () {
-		css.displayEloqua();
+		// css.displayEloqua();
+
+		sessionStorage.gate = true;
+
 		sessionStorage.dial1 = state.dial1.val;
 		sessionStorage.dial2 = state.dial2.val;
 		sessionStorage.dial3 = state.dial3.val;
 		sessionStorage.selector1 = state.selected.choices;
 		sessionStorage.slider1 = state.slider1.arrayVal;
 		sessionStorage.slider2 = state.slider2.arrayVal;
+	
+		window.location.href = "/results.html";
 	});
 	/****Eloqua Gate**/
 	/***popuplate countries dropdown**/

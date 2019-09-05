@@ -7,14 +7,10 @@
 	padding: 0.80rem 0 0.80rem 0.80rem;
 	top: 100%;
 	transform: translate(0%, -100%);
-	
-		@include bp_min(1441){
-			left: 53.4rem;
-	
-			.main-container--x &{
-        left: 51.4rem;		
-			}
-		}
+	left: 53.4rem;			
+	.main-container--x &{
+    left: 51.4rem;		
+	}
 		@include bp(1250){
 			left: 59vw;
 		}
@@ -82,18 +78,34 @@
 
 		&--1{
 			.main-container--x &{
-		    top: 100%;
         left: 48.4rem;
 		    width: 90rem;
+				position: relative;
+    		top: 0;		    
+    		@include bp(1440){
+    			left: calc(100% - 22rem);
+			    top: 0;
+    		}
+    		@include bp(1024){
+    			width: 16.85rem;
+    			padding-right: 1.00rem;
+    			left: calc(#{100%} - #{16.80rem});
+    		}
+    		@include bp(767){
+			    left: calc(#{100%} - #{16rem});
+    		}
 			}
 
 			.zoomed &{
 				display: none;
 			}
+			@include bp(910){
+				margin-top: 10.5rem;
+			}
 		}
 		&--3{
 			transform: translateY(0%);
-			top: 15.1rem;	
+			top: 50%;	
 			// left: auto;
 			right: -20rem;
 
@@ -111,7 +123,7 @@
 				}
 			}
 			@include bp(1440){
-				top: 14.2rem;
+				top: 150%;
 				left: auto;
 				right: -23rem;
 				@include bph(650){ top: 11.3rem; }
@@ -175,22 +187,25 @@
 						right: -53rem;
 					}
 				}
+				@include bp(1440){
+					top: auto;
+			    left: auto;
+			    position: relative;
+				}
 			}
 		}
 
 		&--5{
 			top: 40.2rem;
-			&-x{
-				top: 24.5rem;
-			}
+
 			right: -20.5rem;
 			left: auto;
 			
-
 			@include bph(1015){ top: 32.1rem; }
 			@include bph(750){ top: 29.1rem; }
 			@include bph(675){ top: 28.1rem; }
 			@include bph(650){ top: 21.5rem; }
+
 
 			@include bp(1440){ 
 				top: 36.2rem;
@@ -254,13 +269,34 @@
 				// display: none; 
 				display: block;
 			}
+
+			&-x{
+				top: auto;
+		    bottom: auto;
+		    transform: none;
+		    .main-container--x &{
+					@include bp(1440){
+						position: relative;
+				    top: auto;
+				    left: auto;
+					}
+					@include bp(1024){
+						right: auto;
+				    margin-left: auto;
+					}
+					@include bp(910){
+						width: 70%;
+					}
+					@include bp(666){
+						display: none;
+					}
+				}
+			}
+
 		}
 
 		&--6{
 			top: 46.2rem;
-			&-x{
-		    top: 24.5rem;
-			}
 			right: -20.5rem;
 			left: auto;
 
@@ -291,7 +327,8 @@
 					right: -8.8rem;
 				}
 				@include bph_min(1016){ 
-					top: 40.95rem;
+					// top: 40.95rem;
+					top: 52.95rem;
 					right: -22rem; 
 				}
 			}
@@ -323,6 +360,26 @@
 				// @include bph_min(1016){ display: none; }
 			}
 			@include bp(666){ display: none; }
+
+			&-x{
+		    position: relative;
+		    top: auto;
+		    left: auto;
+		    right: auto;
+		    transform: none;
+
+		    @include bp(1440){
+		    	margin-left: auto;
+		    }
+		    @include bp(910){
+		    	display: block;		    	    
+    			width: 70%;
+		    }
+		    .main-container--x &{
+		    	left: auto;
+		    }
+			}
+
 		}
 	}
 

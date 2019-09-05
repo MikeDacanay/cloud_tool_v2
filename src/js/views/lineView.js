@@ -25,6 +25,17 @@ export const resizeLines = () => {
 
 	let y5_results = 3783.8; // Results Page
 
+	// RESULTS PAGE
+
+	let y1x1 = '35rem';
+	let y3x1 = '127.7rem';
+	let y5x2 = '393.85rem';
+	let y10x1 = '-231.1rem';
+
+	// if($('body').width() <= 1440){
+	// 	y3x1 = '200vw';
+	// };
+
 	// if(height >= 1080){
 	// 	y1_start = 14.35*20 + circleSize;
 	// } else if(height <= 810 && height >= 651){
@@ -62,15 +73,57 @@ export const resizeLines = () => {
 	if($('body').width() <= 1440){
 		x3_constWidth = (width/2)+x2_q1;		
 		x5_constWidth = (width*1.25)+(x2_q1*3);
+		
+		y1x1 = '50vw'
+		y3x1 = '200vw';
+		y5x2 = '500vw';
+		y10x1 = '-300vw';
 	}
 
+	//Lines for ResultsPage
 
+	$('.line--1y').attr({
+		x1: y1x1,
+		x2: y1x1,
+	});
+	$('.line--2y').attr({
+		x1: y1x1,
+	});	
+	$('.line--3y').attr({
+	    x1: y3x1,
+	    x2: y3x1,
+	});
+	$('.line--4y').attr({
+	    x1: y3x1,
+	});
+	$('.line--5y').attr({
+	    x2: y5x2,	    
+	});
+	$('.line--6y').attr({
+	    x1: y5x2,
+	    x2: y5x2,	    
+	});
+	$('.line--7y').attr({
+	    x1: y5x2,	    
+	});
+	$('.line--9y').attr({
+	    x2: y10x1,	    
+	});
+	$('.line--10y').attr({
+	    x1: y10x1,	    
+	    x2: y10x1
+	});
+	$('.line--11y').attr({
+	    x1: y10x1,	    
+	});
+	$('.line--11y').attr({
+		x2: y1x1,
+	});
+	$('.line--13y').attr({
+		x1: y1x1,
+		x2: y1x1,
+	});
 
-	// if(height <= 650){
-	// 	y1_start = 14.35*20 + .4083*height;
-	// } else if(height >= 1080){
-	// 	y1_start = 14.35*20 + 646;
-	// } else if()
 
 	//Line for Page 1
 	$('.line--1').attr({
