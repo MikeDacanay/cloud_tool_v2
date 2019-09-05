@@ -50,9 +50,13 @@ import largeDetailLow from './large_low-score.json';
 
 
 
+if(sessionStorage.gate === undefined){
+	sessionStorage.clear();
+}
 
 
-$(document).ready(function(){
+
+$(document).ready(function(){	
  	const state = {};
 
 /**************** DETAILED PAGE CONTENT CONTROLLER ********************/ 
@@ -373,6 +377,8 @@ $(document).ready(function(){
 			this.dial = assignDial(this.selfID);
 			this.dial.changeValue(v);
 
+			this.context = false;
+
 			if (this.context === false) {
 				dial.progressBtn(self);
 			}
@@ -392,27 +398,27 @@ $(document).ready(function(){
 	// let currentState = 0;
 
 
-	dialWrapperMove();
+	// dialWrapperMove();
 
-	$('.dial-tracker__wrapper').mouseup(function(){
-	  const dy = 819 - event.pageY;
-		const dx = 633.5 - event.pageX;
-		let theta = Math.atan2(dy, dx); // range (-PI, PI]
-		theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
+	// $('.dial-tracker__wrapper').mouseup(function(){
+	//   const dy = 819 - event.pageY;
+	// 	const dx = 633.5 - event.pageX;
+	// 	let theta = Math.atan2(dy, dx); // range (-PI, PI]
+	// 	theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
 
-		const dtracker = $(this).find('.dial-tracker');
+	// 	const dtracker = $(this).find('.dial-tracker');
 
-		dtracker.data('context', false);
-		dtracker.val(theta).trigger('change');
+	// 	dtracker.data('context', false);
+	// 	dtracker.val(theta).trigger('change');
 
-		dial.progressBtn(dtracker);
+	// 	dial.progressBtn(dtracker);
 
-		$( ".dial-tracker__wrapper" ).unbind( "mousemove mouseleave");
+	// 	$( ".dial-tracker__wrapper" ).unbind( "mousemove mouseleave");
 
-		setTimeout(function(){
-			dialWrapperMove()
-		}, 2500);
-	});	
+	// 	setTimeout(function(){
+	// 		dialWrapperMove()
+	// 	}, 2500);
+	// });	
 
 	function dialWrapperMove(){		
 	  $( ".dial-tracker__wrapper" )
@@ -567,13 +573,18 @@ $(document).ready(function(){
 
 	/****************  ELOQUA CONTROLLER  ********************/
 	$('.detailed-score__btn').on('click', function () {
-		css.displayEloqua();
+		// css.displayEloqua();
+
+		sessionStorage.gate = true;
+
 		sessionStorage.dial1 = state.dial1.val;
 		sessionStorage.dial2 = state.dial2.val;
 		sessionStorage.dial3 = state.dial3.val;
 		sessionStorage.selector1 = state.selected.choices;
 		sessionStorage.slider1 = state.slider1.arrayVal;
 		sessionStorage.slider2 = state.slider2.arrayVal;
+	
+		window.location.href = "/results.html";
 	});
 	/****Eloqua Gate**/
 	/***popuplate countries dropdown**/

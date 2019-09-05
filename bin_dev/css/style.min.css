@@ -3031,6 +3031,12 @@ b {
     left: 50%;
     border: 0.10rem solid #00758f;
     border-radius: 5.00rem; }
+    .line__circle--1 {
+      height: 16rem;
+      border: 1rem solid white;
+      width: 16rem;
+      border-radius: 100%;
+      margin-top: 9rem; }
   .line--x {
     stroke-width: 1;
     animation: none; }

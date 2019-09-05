@@ -83,6 +83,13 @@
     left: 50%;
     border: 0.10rem solid #00758f;
     border-radius: 5.00rem;
+    &--1{
+      height: 16rem;
+      border: 1rem solid white;
+      width: 16rem;
+      border-radius: 100%;
+      margin-top: 9rem;
+    }
   }
   &--x{
     stroke-width: 1;
@@ -94,6 +101,7 @@
     stroke: $color-white-1;
     stroke-dasharray: 40;
     transition: all .1s;
+    animation: none;
     &.deactivate{
       opacity: 0;
     }
