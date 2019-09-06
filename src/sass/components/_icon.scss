@@ -20,11 +20,10 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  &.activate{
+  .selection__container--x.activate &{
     display: block;
   }
-
-  
+    
 }
 .icon__down--footer{
   width: 1.40rem;

@@ -77,7 +77,10 @@ $(document).ready(function(){
 		//SELECTORS
 		const selectorValues = results.val['3'].split(',');
 		selectorValues.forEach(function (element, index) {
-			$(`#select-${element}`).addClass('activate');
+			
+			const selectorContainer = $(`#select-${element}`).closest('.selection__container--x');
+			// $(`#select-${element}`).addClass('activate');
+			selectorContainer.addClass('activate');
 		});
 
 		//SLIDER
