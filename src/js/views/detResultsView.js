@@ -3,14 +3,13 @@ import largeDetailMid from '.././large_mid-score.json';
 import largeDetailLow from '.././large_low-score.json';
 
 export const displayResults = (res) => {
-
-	displayDetailedDial(res);
-	displayDialContext(res);
-
+	if(sessionStorage.gate === undefined){
+		displayDetailedDial(res);
+		displayDialContext(res);	
+	}
 };
 
-function displayDetailedDial(res){
-
+function displayDetailedDial(res){	
 	const detailFirst = retrieveLottieDialAnimation(res.val['1']);		
 	const detailSecond = retrieveLottieDialAnimation(res.val['2']);
 	const detailForth = retrieveLottieDialAnimation(res.val['4']);
