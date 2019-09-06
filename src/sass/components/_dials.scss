@@ -259,11 +259,17 @@
 
 		&--x{
 			margin-top: 2.00rem;
+			max-width: none;
+    	max-height: none;
+    	width: 40.45rem;
+    	height: 20.225rem;
 			.page.zoomed .page__content > &{
 				width: 84vw;
 		    height: 42vw;
 		    margin: 0 auto;
-		    margin-top: 48rem;		    
+		    margin-top: 48rem;		  
+		    max-width: 40.45rem;
+		    max-height: calc(40.45rem / 2);  
 		    @include bp(1440){
 					width: 62vw;
 			    height: 31vw;

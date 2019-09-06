@@ -93,13 +93,10 @@
 				@include bp(530){
 					padding: 1rem;
 				}	
-				// @include bp(450){
-				// 	padding: 0 0.64rem;
-				// }
 			}
 
 			.zoomed &{
-				padding: 3.5rem 8rem 12.5rem 12rem;
+				padding: 3.5rem 8rem 12.5rem 8rem;
 			}
 		}		
 

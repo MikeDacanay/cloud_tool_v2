@@ -846,6 +846,10 @@ b {
 				@include bp(1350){
 					top: 45%;
 				}
+
+				.dial__text--users-equal + &{
+					top: 50%;
+				}
 			}
 		}
 
@@ -869,11 +873,12 @@ b {
     
 
 			&-less{
-				left: 6.90rem;		
+				left: 2.7rem;
+		    padding-top: 0.15rem;		
 			}
 
 			&-more{
-				right: -3%;
+				right: -13%;
 		    width: 6.70rem;
 			}
 			&-equal{

@@ -785,6 +785,8 @@ b {
       @media only screen and (max-width: 1350px) {
         .dial__text--peers--x {
           top: 45%; } }
+      .dial__text--users-equal + .dial__text--peers--x {
+        top: 50%; }
   .dial__text--users {
     width: 6.75rem;
     height: 4.65rem;
@@ -801,9 +803,10 @@ b {
       .dial__text--users {
         opacity: 0; } }
     .dial__text--users-less {
-      left: 6.90rem; }
+      left: 2.7rem;
+      padding-top: 0.15rem; }
     .dial__text--users-more {
-      right: -3%;
+      right: -13%;
       width: 6.70rem; }
     .dial__text--users-equal {
       left: 51%; }
@@ -2344,13 +2347,19 @@ b {
         margin-right: auto; } }
   .dial-group--x {
     margin-top: 2.00rem;
+    max-width: none;
+    max-height: none;
+    width: 40.45rem;
+    height: 20.225rem;
     transform: none;
     height: 21.85rem; }
     .page.zoomed .page__content > .dial-group--x {
       width: 84vw;
       height: 42vw;
       margin: 0 auto;
-      margin-top: 48rem; }
+      margin-top: 48rem;
+      max-width: 40.45rem;
+      max-height: calc(40.45rem / 2); }
       @media only screen and (max-width: 1440px) {
         .page.zoomed .page__content > .dial-group--x {
           width: 62vw;
@@ -3044,7 +3053,8 @@ b {
     stroke-width: 20;
     stroke: #fff;
     stroke-dasharray: 40;
-    transition: all .1s; }
+    transition: all .1s;
+    animation: none; }
     .line--y.deactivate {
       opacity: 0; }
   .line--a {
@@ -3994,6 +4004,22 @@ b {
       height: 7.05rem; }
     .selection__container--x-2 {
       height: 6.10rem; }
+    .selection__container--x-a {
+      background-color: #00758f; }
+    .selection__container--x-b {
+      background-color: rgba(0, 117, 143, 0.75); }
+    .selection__container--x-c {
+      background-color: rgba(0, 117, 143, 0.6); }
+    .selection__container--x-d {
+      background-color: rgba(0, 117, 143, 0.5); }
+    .selection__container--x-e {
+      background-color: rgba(0, 117, 143, 0.4); }
+    .selection__container--x-f {
+      background-color: rgba(0, 117, 143, 0.31); }
+    .selection__container--x-e {
+      background-color: rgba(0, 117, 143, 0.25); }
+    .selection__container--x-g {
+      background-color: rgba(0, 117, 143, 0.15); }
     .selection__container--x:hover {
       pointer-events: none; }
     @media only screen and (max-width: 666px) {
@@ -4033,7 +4059,7 @@ b {
   display: none;
   background-size: cover;
   background-repeat: no-repeat; }
-  .icon__check.activate {
+  .selection__container--x.activate .icon__check {
     display: block; }
 
 .icon__down--footer {
@@ -4487,7 +4513,7 @@ b {
         .page--7.zoomed .page__content--y {
           padding: 1rem; } }
     .zoomed .page__content--y {
-      padding: 3.5rem 8rem 12.5rem 12rem; }
+      padding: 3.5rem 8rem 12.5rem 8rem; }
   @media only screen and (max-width: 1440px) {
     .page__content {
       width: 83.333%; } }

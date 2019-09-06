@@ -248,6 +248,31 @@
 			&-2{
 				height: 6.10rem;
 			}
+
+			&-a{
+				background-color: $color-blue-1;
+			}
+			&-b{
+				background-color: rgba(0, 117, 143, 0.75);
+			}
+			&-c{
+				background-color: rgba(0, 117, 143, 0.6);	
+			}
+			&-d{
+				background-color: rgba(0, 117, 143, 0.5);	
+			}
+			&-e{
+				background-color: rgba(0, 117, 143, 0.4);
+			}
+			&-f{
+				background-color: rgba(0, 117, 143, 0.31);
+			}
+			&-e{
+				background-color: rgba(0, 117, 143, 0.25);
+			}
+			&-g{
+				background-color: rgba(0, 117, 143, 0.15);
+			}
 			&:hover{
 				pointer-events: none;
 			}

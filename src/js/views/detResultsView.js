@@ -10,8 +10,9 @@ export const displayResults = (res) => {
 };
 
 function displayDetailedDial(res){
+
 	const detailFirst = retrieveLottieDialAnimation(res.val['1']);		
-	const detailSecond = retrieveLottieDialAnimation(res.val['3']);
+	const detailSecond = retrieveLottieDialAnimation(res.val['2']);
 	const detailForth = retrieveLottieDialAnimation(res.val['4']);
 
 	const detailedResults1 = lottie.loadAnimation({

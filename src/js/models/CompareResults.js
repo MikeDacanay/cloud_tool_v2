@@ -18,4 +18,5 @@ export default class CompareResults {
     	this.val['5'] = user.slider1;
     	this.val['6'] = user.slider2;
     }
+
 }
