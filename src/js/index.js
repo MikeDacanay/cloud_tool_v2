@@ -587,7 +587,7 @@ $(document).ready(function(){
 		sessionStorage.slider1 = state.slider1.arrayVal;
 		sessionStorage.slider2 = state.slider2.arrayVal;
 	
-		window.location.href = "/results.html";
+		// window.location.href = "/results.html";
 	});
 	/****Eloqua Gate**/
 	/***popuplate countries dropdown**/

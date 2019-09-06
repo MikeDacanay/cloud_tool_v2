@@ -3305,7 +3305,8 @@ b {
   justify-content: space-between;
   align-items: center;
   padding-left: 0.30rem;
-  padding-right: 0.45rem; }
+  padding-right: 0.45rem;
+  text-decoration: none; }
 
 .cta-group__wrapper {
   height: 25.65rem;
