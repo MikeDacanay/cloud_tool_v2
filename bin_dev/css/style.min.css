@@ -809,7 +809,8 @@ b {
       right: -13%;
       width: 6.70rem; }
     .dial__text--users-equal {
-      left: 51%; }
+      left: 51%;
+      margin-top: -0.20rem; }
     .dial__text--users > * {
       display: block; }
     .dial__text--users > b {
