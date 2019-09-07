@@ -54,9 +54,8 @@ if(sessionStorage.gate === undefined){
 	sessionStorage.clear();
 }
 
+$(document).ready(function(){
 
-
-$(document).ready(function(){	
  	const state = {};
 
 /**************** DETAILED PAGE CONTENT CONTROLLER ********************/ 
@@ -181,6 +180,13 @@ $(document).ready(function(){
 		$('.pathfinder--x').removeClass('zoom-in--8 zoom-in--8-x');
 	});
 
+
+	// DETAILED MAP FOOTER CONTROLLER
+ 	$('.footer--x').on('click', function(){
+		sessionStorage.gate = 'false';
+	});	
+
+ 
 	/****** HEADER NAV BTN CONTROLLER ******/
 	$('.header__nav--btn, .mobile-nav').on('click', function () {
 		const self = $(this);
@@ -279,7 +285,6 @@ $(document).ready(function(){
 		e.headerWrapper.addClass('activate');
 	});
 
-	// $('.btn__progress--6').click();
 
 	e.btnProgress7.on('click', function () {
 
@@ -332,6 +337,11 @@ $(document).ready(function(){
 		$(this).attr('context', `${Number(contextValue) - 1}`);
 		e.hdrProgress.attr('context', contextValue);
 	});
+
+	// DETAILED FOOTER CLICK
+		if(sessionStorage.gate === 'false'){
+			$('.btn__progress--7').click();
+		}
 
 	// REGRESS
 
