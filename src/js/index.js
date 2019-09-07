@@ -586,18 +586,19 @@ $(document).ready(function(){
 
 	/****************  ELOQUA CONTROLLER  ********************/
 	$('.detailed-score__btn').on('click', function () {
-			// css.displayEloqua();
-			sessionStorage.gate = true;
+		// css.displayEloqua();
 
-			sessionStorage.dial1 = state.dial1.val;
-			sessionStorage.dial2 = state.dial2.val;
-			sessionStorage.dial3 = state.dial3.val;
-			sessionStorage.selector1 = state.selected.choices;
-			sessionStorage.slider1 = state.slider1.arrayVal;
-			sessionStorage.slider2 = state.slider2.arrayVal;
-		
-			window.location.href = "/results.html";
-		});
+		sessionStorage.gate = true;
+
+		sessionStorage.dial1 = state.dial1.val;
+		sessionStorage.dial2 = state.dial2.val;
+		sessionStorage.dial3 = state.dial3.val;
+		sessionStorage.selector1 = state.selected.choices;
+		sessionStorage.slider1 = state.slider1.arrayVal;
+		sessionStorage.slider2 = state.slider2.arrayVal;
+	
+		// window.location.href = "/results.html";
+	});
 	/****Eloqua Gate**/
 	/***popuplate countries dropdown**/
 	func.populateCountries("field17");
