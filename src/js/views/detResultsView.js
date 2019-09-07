@@ -2,11 +2,11 @@ import largeDetailHigh from '.././large_high-score.json';
 import largeDetailMid from '.././large_mid-score.json';
 import largeDetailLow from '.././large_low-score.json';
 
-export const displayResults = (res) => {
-	if(sessionStorage.gate === undefined){
+export const displayResults = (res) => {	
+	if(sessionStorage.gate == 'true'){		
 		displayDetailedDial(res);
-		displayDialContext(res);	
-	}
+		displayDialContext(res);
+	}	
 };
 
 function displayDetailedDial(res){	
