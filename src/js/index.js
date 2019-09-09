@@ -84,9 +84,22 @@ $(document).ready(function(){
 		});
 
 		//SLIDER
-		const detscroll1Values = results.val[5].split(',');
-		const detscroll2Values = results.val[6].split(',');
+		let detscroll1Values = results.val[5].split(','); //4
+		let detscroll2Values = results.val[6].split(','); //6
 
+		function removeArrDups(arr){
+			let arrtemp = [];			
+			for(const [i,v] of arr.entries()){
+				if(i % 2 === 0){
+					arrtemp.push(v);
+				}
+			}
+			return arrtemp;	
+		}
+
+		detscroll1Values = removeArrDups(detscroll1Values);
+		detscroll2Values = removeArrDups(detscroll2Values);
+		
 		const peersDetScroll1 = [71, 73, 71, 69];
 		const peersDetScroll2 = [74, 74, 70, 71, 71, 71];
 

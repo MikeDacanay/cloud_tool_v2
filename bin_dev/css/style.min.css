@@ -4484,7 +4484,8 @@ b {
     .page--6.zoomed .page__content--y,
     .page--7.zoomed .page__content--y {
       width: 85.50rem;
-      height: 82.50rem; }
+      height: 82.50rem;
+      cursor: pointer; }
       @media only screen and (max-width: 1150px) {
         .page--2.zoomed .page__content--y,
         .page--3.zoomed .page__content--y,
