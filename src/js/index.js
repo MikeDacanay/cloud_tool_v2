@@ -97,9 +97,13 @@ $(document).ready(function(){
 			return arrtemp;	
 		}
 
-		detscroll1Values = removeArrDups(detscroll1Values);
-		detscroll2Values = removeArrDups(detscroll2Values);
-		
+		detscroll1Values = (detscroll1Values.length > 5) ? removeArrDups(detscroll1Values) : detscroll1Values;
+		detscroll2Values = (detscroll2Values.length > 7) ? removeArrDups(detscroll2Values) : detscroll2Values;
+
+		console.log(detscroll1Values);
+		console.log(detscroll2Values);
+
+
 		const peersDetScroll1 = [71, 73, 71, 69];
 		const peersDetScroll2 = [74, 74, 70, 71, 71, 71];
 
@@ -523,6 +527,8 @@ $(document).ready(function(){
 		}
 
 		stateChoicesLength = state.selected.choices.length;
+
+
 
 		pagination.highlightPagination(pageContentElement, stateChoicesLength);
 

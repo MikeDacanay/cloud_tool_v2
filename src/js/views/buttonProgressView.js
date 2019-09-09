@@ -123,8 +123,10 @@ export const animateFwd = (btnVal) => {
 
 };
 
-export const animateBack = (btnVal) => {
+export const animateBack = (btnVal) => {			
 	btnVal=Number(btnVal)+1;
+
+	console.log(btnVal);
 
 	if(btnVal === 1){ //to Landing
 		$('.page--2').removeClass('activate');
@@ -176,7 +178,7 @@ export const animateBack = (btnVal) => {
 		$('.page--7').removeClass('activate')
 		$('.footer').removeClass('activate');
 		setTimeout(function(){
-			$('.btn__regress').removeClass('rotate');
+			$('.btn__regress').addClass('rotate');
 			$('.page--6').addClass('activate');
 			$('.footer').addClass('activate');
 			$('.footer-text').text('5/6');

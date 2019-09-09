@@ -7,7 +7,7 @@ export const highlightPagination = (element, stateKey) => {
 		for(let i = 0; i < paginationNodeList.length; i++){
 			paginationArray.push(paginationNodeList[i]);
 		}
-		console.log(stateKey);
+		// console.log(stateKey);
 		// console.log(paginationArray);
 		// console.log(paginationNodeList);
 		paginationNodeList.removeClass('pagination--active');
