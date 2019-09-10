@@ -89,6 +89,18 @@
       width: 16rem;
       border-radius: 100%;
       margin-top: 9rem;
+      @include bp(1440){
+        left: 59%;
+      }
+      @include bp(1150){
+        display: none;
+      }
+    }
+    &--2{
+      display: none;
+      @include bp(1150){
+        display: block;
+      }
     }
   }
   &--x{

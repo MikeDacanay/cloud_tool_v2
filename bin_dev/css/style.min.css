@@ -3047,6 +3047,17 @@ b {
       width: 16rem;
       border-radius: 100%;
       margin-top: 9rem; }
+      @media only screen and (max-width: 1440px) {
+        .line__circle--1 {
+          left: 59%; } }
+      @media only screen and (max-width: 1150px) {
+        .line__circle--1 {
+          display: none; } }
+    .line__circle--2 {
+      display: none; }
+      @media only screen and (max-width: 1150px) {
+        .line__circle--2 {
+          display: block; } }
   .line--x {
     stroke-width: 1;
     animation: none; }

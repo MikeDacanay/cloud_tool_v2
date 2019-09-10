@@ -205,6 +205,10 @@ $(document).ready(function(){
 		const self = $(this);
 		let val = Number(self.attr('context'));
 
+		if(val === 1){
+			$('.icon__zoomout').click();
+			// return;
+		}
 		if(self.attr('direction') === 'up'){
 			val = val + 1;
 		}
