@@ -140,6 +140,15 @@
 			position: absolute;
 			margin-top: 4.50rem;
 			opacity: 1;
+			transition: opacity .2s;
+
+			
+			&.scrolled{
+				@include bp(1150){
+					opacity: 0;
+				}				
+			}
+
 			&.hide{
 				opacity: 0;
 			}

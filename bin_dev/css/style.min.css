@@ -772,9 +772,12 @@ b {
     left: 50%;
     top: 10.75rem;
     transition: opacity .2s; }
+    .zoomed .dial__text--peers {
+      opacity: 0; }
     @media only screen and (max-width: 1150px) {
       .dial__text--peers {
-        opacity: 0; } }
+        font-size: 0.80rem;
+        width: 6.8rem; } }
     .dial__text--peers > * {
       display: block; }
     .dial__text--peers > b {
@@ -799,15 +802,25 @@ b {
     color: #fff;
     position: absolute;
     transition: opacity .2s; }
+    .zoomed .dial__text--users {
+      opacity: 0; }
     @media only screen and (max-width: 1150px) {
       .dial__text--users {
-        opacity: 0; } }
+        font-size: 0.70rem; } }
     .dial__text--users-less {
       left: 2.7rem;
       padding-top: 0.15rem; }
     .dial__text--users-more {
       right: -13%;
       width: 6.70rem; }
+      @media only screen and (max-width: 1440px) {
+        .dial__text--users-more {
+          right: -22%; } }
+      @media only screen and (max-width: 1150px) {
+        .dial__text--users-more {
+          right: -17%;
+          width: 5rem;
+          top: -0.15rem; } }
     .dial__text--users-equal {
       left: 51%;
       margin-top: -0.20rem; }
@@ -1730,7 +1743,7 @@ b {
     right: -53rem; } }
     @media only screen and (max-width: 1440px) {
       .cta__wrapper--3 {
-        top: 150%;
+        top: 30%;
         left: auto;
         right: -23rem; } }
   @media only screen and (max-width: 1440px) and (max-height: 650px) {
@@ -2350,8 +2363,8 @@ b {
     margin-top: 2.00rem;
     max-width: none;
     max-height: none;
-    width: 40.45rem;
-    height: 20.225rem;
+    width: 34.50rem;
+    height: 17.25rem;
     transform: none;
     height: 21.85rem; }
     .page.zoomed .page__content > .dial-group--x {
@@ -2614,7 +2627,11 @@ b {
   height: 1.95rem;
   position: absolute;
   margin-top: 4.50rem;
-  opacity: 1; }
+  opacity: 1;
+  transition: opacity .2s; }
+  @media only screen and (max-width: 1150px) {
+    .detailed__title--wrapper.scrolled {
+      opacity: 0; } }
   .detailed__title--wrapper.hide {
     opacity: 0; }
 
@@ -2857,7 +2874,7 @@ b {
     height: 2.00rem;
     border-radius: 50.00rem;
     border: solid 0.1rem #00758f;
-    transition: width .2s;
+    transition: all .2s;
     right: -.1rem;
     z-index: 5;
     background-color: #324b5c;
@@ -2871,14 +2888,15 @@ b {
       top: -.1rem; }
       .header__rectangle--2:hover .header__rectangle--grow-2 {
         padding: 0 1.25rem;
-        padding-top: 0.50rem; }
+        padding-top: 0.50rem;
+        padding-bottom: .5rem; }
     .header__container--x .header__rectangle--grow {
       border: solid 0.1rem #00758f; }
     .header__rectangle--1:hover .header__rectangle--grow {
       width: 5.7rem; }
     .header__rectangle--2:hover .header__rectangle--grow {
-      width: 11rem;
-      height: 8.40rem; }
+      width: 14rem;
+      height: 12rem; }
     .header__rectangle--3:hover .header__rectangle--grow {
       width: 5.2rem; }
     @media only screen and (max-width: 767px) {
@@ -4258,6 +4276,9 @@ b {
   @media only screen and (max-width: 1440px) {
     .footer {
       width: 83.333%; } }
+  @media only screen and (max-width: 1300px) {
+    .footer {
+      top: calc(100vh - 4.5rem); } }
   @media only screen and (max-width: 767px) {
     .footer {
       width: 100%;
@@ -4474,6 +4495,7 @@ b {
     .main-container--x .page__content--y {
       padding-top: 2.00rem;
       padding-left: 2.2rem;
+      height: 34.45rem;
       overflow: hidden; }
       @media only screen and (max-width: 1440px) {
         .main-container--x .page__content--y {
@@ -4550,6 +4572,17 @@ b {
     transition-property: opacity;
     transition-delay: .5s;
     transition-duration: .5s; }
+  .page--2 .page__content > .main__title--x,
+  .page--3 .page__content > .main__title--x,
+  .page--4 .page__content > .main__title--x,
+  .page--5 .page__content > .main__title--x,
+  .page--6 .page__content > .main__title--x,
+  .page--7 .page__content > .main__title--x,
+  .page--8 .page__content > .main__title--x {
+    opacity: 0;
+    transition-property: opacity;
+    transition-delay: 0s;
+    transition-duration: 0s; }
   .page .page__content > .cta__wrapper {
     transition-delay: .5s; }
   .page--7 .page__content > * {

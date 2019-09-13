@@ -37,6 +37,9 @@
       @include bp(1150){
         display: none;
       }
+      // @include bp(1024){
+      //   display: none;
+      // }
     }
     &--3{
       z-index: 0;

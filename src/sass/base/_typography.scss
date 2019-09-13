@@ -827,9 +827,13 @@ b {
 	    top: 10.75rem;
 
 	    transition: opacity .2s;
-
+			
+			.zoomed &{
+				opacity: 0;
+			}
 	    @include bp(1150){
-    		opacity: 0;
+    		font-size: 0.80rem;
+		    width: 6.8rem;
     	}
 
 			& > *{
@@ -867,10 +871,17 @@ b {
 
 			transition: opacity .2s;
 
+    	// @include bp(1150){
+    	// 	opacity: 0;
+    	// }
+
+    	.zoomed &{
+				opacity: 0;
+			}
+
     	@include bp(1150){
-    		opacity: 0;
+    		font-size: 0.70rem;
     	}
-    
 
 			&-less{
 				left: 2.7rem;
@@ -880,6 +891,14 @@ b {
 			&-more{
 				right: -13%;
 		    width: 6.70rem;
+		    @include bp(1440){
+		    	right: -22%;
+		    }
+		    @include bp(1150){	
+		     	right: -17%;	    	
+			    width: 5rem;
+			    top: -0.15rem;
+		    }
 			}
 			&-equal{
 				left: 51%;

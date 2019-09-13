@@ -138,7 +138,7 @@
 			height: 2.00rem;
 			border-radius: 50.00rem;
 			border: solid 0.1rem $color-blue-1;
-			transition: width .2s;
+			transition: all .2s;
 			right: -.1rem;
 			z-index: 5;
 			background-color: $color-blue-2;
@@ -155,9 +155,11 @@
 		    // padding: 0 1.25rem;
 		    // padding-top: 0.50rem;
 		    top: -.1rem;
+		    // height: 16rem;
 		    .header__rectangle--2:hover &{
 		    	padding: 0 1.25rem;
 			    padding-top: 0.50rem;
+		    	padding-bottom: .5rem;
 		    }
 			}
 
@@ -170,8 +172,8 @@
 				
 			}
 			.header__rectangle--2:hover &{
-				width: 11rem;
-				height: 8.40rem;
+				width: 14rem;
+				height: 12rem;
 			}
 			.header__rectangle--3:hover &{
 				width: 5.2rem;		   		    

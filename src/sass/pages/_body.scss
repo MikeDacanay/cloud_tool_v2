@@ -43,10 +43,11 @@
 			padding-top: 2.00rem;
 			padding-left: 5.85rem;
 			transition: all 1100ms;
-
+			
 			.main-container--x &{
-				padding-top: 	2.00rem;
-				padding-left: 	2.2rem;
+				padding-top: 2.00rem;
+				padding-left: 2.2rem;
+				height: 34.45rem;
 				overflow: hidden;
 				@include bp(1440){
 					// height: 32.50rem;
@@ -125,6 +126,20 @@
 	    transition-delay: .5s;
 
 	    transition-duration: .5s;
+		}
+
+		.page--2 & > .main__title--x,
+		.page--3 & > .main__title--x,
+		.page--4 & > .main__title--x,
+		.page--5 & > .main__title--x,
+		.page--6 & > .main__title--x,
+		.page--7 & > .main__title--x,
+		.page--8 & > .main__title--x,{
+			opacity: 0;
+			transition-property: opacity;
+	    transition-delay: 0s;
+
+	    transition-duration: 0s;
 		}
 
 

@@ -24,6 +24,10 @@
 	@include bp(1440){
 		width: 83.333%;
 	}
+    @include bp(1300){
+        top: calc(100vh - 4.5rem);
+    }
+
 	@include bp(767){
 		width: 100%;
 		padding: 0 .8rem;

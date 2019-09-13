@@ -80,6 +80,15 @@ export const resizeLines = () => {
 		y10x1 = '-300vw';
 	}
 
+	if($('body').width() <= 1300){
+		var vh100 = $('.page').height();
+
+		y2_constHeight = vh100+910.00;
+		y3_constHeight = vh100+1910.00;
+		y4_constHeight = vh100-3090.00;
+
+	}
+
 	//Lines for ResultsPage
 
 	$('.line--1y').attr({

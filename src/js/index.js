@@ -28,6 +28,7 @@ import * as dial from './views/dialView';
 import * as dp from './views/detailedProgress';
 import * as drv from './views/detResultsView';
 import * as dw from './views/detWrapper';
+import * as grwtxt from './views/growTxt';
 import * as header from './views/headerView';
 import * as line from './views/lineView';
 import * as pagination from './views/paginationView';
@@ -51,6 +52,7 @@ import largeDetailLow from './large_low-score.json';
 
 
 if(sessionStorage.gate === undefined){
+	console.log('sessionStorage');
 	sessionStorage.clear();
 }
 
@@ -130,10 +132,16 @@ $(document).ready(function(){
 /****** DETAILED MAP CONTROLLER ******/
 	$('.page__overlay').on('click', function () {
 		const self = $(this);		
+		
 		$('.header__nav--btn').toggleClass('activate');
 		$('.detailed__title--wrapper').toggleClass('hide');
 		$('.line__group--1').hide();
 		const val = self.data('val');
+
+		if(val === 2){
+			$('.header__nav--btn--1').toggle();
+		}
+
 		$('.line--y').toggleClass('deactivate');
 		$('.main-container--x').toggleClass('in');
 		$('.footer--x').addClass('hide');
@@ -193,6 +201,16 @@ $(document).ready(function(){
 		$('.pathfinder--x').removeClass('zoom-in--8 zoom-in--8-x');
 	});
 
+	$('.main-container--x').on('scroll', function () {
+		const pos = $(this).scrollTop();
+		
+		if(pos > 0){
+			$('.detailed__title--wrapper').addClass('scrolled');
+		}else if(pos === 0){
+			$('.detailed__title--wrapper').removeClass('scrolled');
+		}
+	})
+
 
 	// DETAILED MAP FOOTER CONTROLLER
  	$('.footer--x').on('click', function(){
@@ -205,12 +223,20 @@ $(document).ready(function(){
 		const self = $(this);
 		let val = Number(self.attr('context'));
 
-		if(val === 1){
-			$('.icon__zoomout').click();
-			// return;
+		if(val !== 1){
+			$('.header__nav--btn--1').show();
 		}
+
+		if(val === 2){
+			$('.header__nav--btn--1').hide();
+		}
+
 		if(self.attr('direction') === 'up'){
+			if(val === 2){
+				$('.header__nav--btn--1').show();
+			}
 			val = val + 1;
+
 		}
 		
 		pagination.changePagination(self);		
@@ -292,6 +318,8 @@ $(document).ready(function(){
 
 	e.btnProgress.on('click', function () {
 		const value = $(this).data('val');
+
+		grwtxt.changeGrowTxt(value);
 		state.pageNum.incrementPageNum();
 		bP.animateFwd(value);
 		header.toggleRestartBtn(state.pageNum.pageNumber);
@@ -366,6 +394,7 @@ $(document).ready(function(){
 
 	e.btnBack.on('click', function () {
 		const contextVal = $(this).attr('context');
+		grwtxt.changeGrowTxt(contextVal);
 		const hdrVal = e.hdrProgress.data('val');
 		bP.animateBack(contextVal);
 
