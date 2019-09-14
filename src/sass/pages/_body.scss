@@ -25,17 +25,17 @@
 		.main-container--x &{
 			padding-top: 0;
 			border-radius: 0.20rem;
-		  border: solid 0.10rem $color-blue-1;						
+		  border: solid 0.10rem $color-beige-1;						
 			height: 42.00rem;
 			// background-color: green;
 			transition: all 1100ms;
 		}
 
 		.page.zoomed &{
-			border: solid 1rem $color-blue-1;	
+			border: solid 1rem $color-beige-1;	
 
 			@include bp(1150){
-				border: solid 0.10rem $color-blue-1;
+				border: solid 0.10rem $color-beige-1;
 			}
 		}
 
@@ -43,7 +43,7 @@
 			padding-top: 2.00rem;
 			padding-left: 5.85rem;
 			transition: all 1100ms;
-			
+			background-color: $color-blue-2;
 			.main-container--x &{
 				padding-top: 2.00rem;
 				padding-left: 2.2rem;
@@ -104,6 +104,8 @@
 
 		@include bp(1440){
 			width: 83.333%;
+			
+
 			@include bp(600){
 				padding-top: 3.00rem;
 			}
@@ -112,7 +114,6 @@
 			width: 100%;
 			padding: 4rem .8rem 0 .8rem;
 		}
-
 
 		.page--2 & > *,
 		.page--3 & > *,

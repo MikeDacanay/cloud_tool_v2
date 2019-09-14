@@ -39,7 +39,33 @@ html {
   -ms-text-size-adjust: 100%;
   overflow:hidden;
   font-size: 125%; //20px    
-  box-sizing: border-box;
+  box-sizing: border-box; 
+
+
+  // background-image: url(../assets/images/1x/dark-pattern@2x.jpg);
+
+  // &.bg-white{
+  //   background-image: url(../assets/images/1x/light-pattern.png);
+  // }  
+}
+
+.html{
+  &--bg{
+    z-index: -1000;
+    background-image: url(../assets/images/1x/dark-pattern@2x.jpg);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    transition: opacity 2s;
+
+    &--remove{
+      opacity: 0;
+    }
+
+    &--white{
+      background-image: url(../assets/images/1x/light-pattern.png);
+    }
+  }
 }
 
 article, aside, details, figcaption, figure, 
@@ -67,11 +93,12 @@ table {
 }
 body{
   margin: 0;
-  background-color: $color-blue-2;
+  // background-color: $color-blue-2;
+  // background-image: url('assets/images/1x/dark-pattern@2x.jpg');
   line-height: 1;
 
-  &.bg-white{    
-    background-color: $color-white-1;
-    animation: bgWhite 2s linear;
-  }
+  // &.bg-white{    
+  //   background-color: $color-white-1;
+  //   animation: bgWhite 2s linear;
+  // }
 }

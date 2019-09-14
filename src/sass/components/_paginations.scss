@@ -170,20 +170,19 @@
 		}
 	}
 
-	&--active{ color: $color-blue-1; }
-
-
 	&__wrapper{
 		width: 2.20rem;
 		height: 0.20rem;	
     display: flex;
     justify-content: space-between;
 	}		
+	
+	&--activate{color: $color-yellow-1;}
 
 	&__circles{
 		width: .2rem;
 		height: .2rem;
-		background-color: $color-blue-1;
+		background-color: $color-grey-1;
 		border-radius: 1000px;
 
 		&.activate{

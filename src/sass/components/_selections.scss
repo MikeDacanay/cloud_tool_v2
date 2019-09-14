@@ -139,7 +139,7 @@
 	&__container{
 		width: 14.65rem;
 		background-color: transparent;
-		border: solid 2px $color-blue-1;
+		border: solid 2px $color-sgrey-1;
 		cursor: pointer;
 		padding: .50rem;
 		margin-bottom: 1.25rem;
@@ -224,14 +224,14 @@
 		}
 		
 		&:hover{
-			background-color: rgba(0, 117, 143, 0.15);
+			background-color: $color-sgrey-2;
 		}
 
 		&--active{
-			background-color: $color-blue-1;
+			background-color: $color-sgrey-1;
 
 			&:hover{
-				background-color: $color-blue-1;
+				background-color: $color-sgrey-1;
 			}
 		}
 

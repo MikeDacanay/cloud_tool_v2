@@ -1,7 +1,7 @@
 .detailed-score{
 	&__wrapper{
 		height: 23.35rem;
-		background-color: $color-blue-2;
+		background-color: $color-sblack-1;
 		width: 100%;
 		padding: 4.37rem 2.40rem 4.38rem 2.60rem;
 		display: flex;
@@ -81,7 +81,7 @@
 	}
 	&__container{
 		flex: 0 0 21.65rem;
-		background-color: #fff;
+		// background-color: #fff;
 		@include bp(1440){
 			flex: 0 0 45%;
 		}
@@ -149,6 +149,7 @@
 		height: 15.40rem;		
 		width: 100%;
 		margin-top: 1.20rem;
+		background: $color-white-1;
 	  box-shadow: 0 0.10rem 0.40rem 0 rgba(0, 0, 0, 0.15);
 	  @include bp(1350){
 	  	flex: 0 0 17.20rem;

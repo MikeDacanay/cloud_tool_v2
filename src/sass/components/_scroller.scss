@@ -78,17 +78,16 @@
 		width: 97%;
 		transition: height .5s;
 		overflow: hidden;
-
-		@include bph(1015){
-			height: .4rem;
-			transition: width $transition-1 linear, opacity $transition-1 linear, height $transition-1 linear;
-		}
 		height: 2.70rem;
 		border-radius: 0.20rem;
-		background-color: $color-white-1;
+		background-color: $color-sgrey-1;
 		margin: 0 auto;
 		padding-left: 0.8rem;
 		padding-right: 0.8rem;
+		@include bph(1015){
+			height: .4rem;
+			transition: width $transition-1 linear, opacity $transition-1 linear, height $transition-1 linear;
+		}		
 		
 
 		@include bp(1350){
@@ -104,14 +103,14 @@
 
 		&--active{
 			height: 12.65rem;
-			@include bph(1015){
-				transition: height $transition-1 linear $transition-3;
-			}
 			opacity: 1;
 			width: 40.90rem;
 			padding-left: 0.86rem;
 			padding-right: 0.86rem;
-
+			background-color: $color-orange-1;
+			@include bph(1015){
+				transition: height $transition-1 linear $transition-3;
+			}
 			@include bp(1440){
 				width: 100%;
 			}
@@ -185,12 +184,14 @@
 	&__icon{
 		height: 2.00rem;
 		width: 2.00rem;
+		margin-right: 0.75rem;
+		display: none;
 		@include bph(1015){
 			margin-right: 1.05rem;
 			height: 2.20rem;
 			width: 2.2rem;
 		}
-		margin-right: 0.75rem;
+		
 		// transform: translateY(-3%);
 
 		.scroller__content--active &{
@@ -361,7 +362,7 @@
 
 	  .scroller__content--active &{
 		  height: 2.20rem;
-		  border: solid 0.10rem $color-blue-4;	  	
+		  border: solid 0.10rem $color-tan-1;	  	
 		  margin-top: 0.65rem;
 
 		  @include bph(1015){ transition: all $transition-1 linear $transition-4; }
@@ -393,7 +394,7 @@
 	}
 
   &__fill{
-	  background: $color-blue-1;
+	  background: $color-beige-1;
 	  position: absolute;  	
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
@@ -419,7 +420,7 @@
 		display: block;
 	    width: 0.80rem;
 	    height: 1.05rem;
-	    background-color: $color-blue-1;
+	    background-color: $color-beige-1;
 	    position: absolute;
 	    transform: translateX(-50%);
 	    margin-top: 2.45rem;

@@ -105,7 +105,7 @@ $(document).ready(function(){
 		const peersDetScroll2 = [74, 74, 70, 71, 71, 71];
 
 		detscroll1Values.forEach(function (element, index) {
-			$(`#detscroll1-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
+			$(`#detscroll1-${index}`).css('background', `linear-gradient(to right, #fcfbfa ${element}%, transparent ${element}%`);
 
 			if (Number(element) < peersDetScroll1[index]) {
 				$(`#detscroll1__txt-${index}`).text('Your peers are slightly more confident with data sources.');
@@ -116,7 +116,7 @@ $(document).ready(function(){
 			}
 		});
 		detscroll2Values.forEach(function (element, index) {
-			$(`#detscroll2-${index}`).css('background', `linear-gradient(to right, #00758f ${element}%, transparent ${element}%`);
+			$(`#detscroll2-${index}`).css('background', `linear-gradient(to right, #fcfbfa ${element}%, transparent ${element}%`);
 
 			if (Number(element) < peersDetScroll2[index]) {
 				$(`#detscroll2__txt-${index}`).text('Your peers are slightly more confident with data sources.');
@@ -139,7 +139,9 @@ $(document).ready(function(){
 		const val = self.data('val');
 
 		if(val === 2){
-			$('.header__nav--btn--1').toggle();
+			$('.header__nav--btn--1').addClass('disable');
+		}else{
+			$('.header__nav--btn--1').removeClass('disable');
 		}
 
 		$('.line--y').toggleClass('deactivate');
@@ -224,16 +226,16 @@ $(document).ready(function(){
 		let val = Number(self.attr('context'));
 
 		if(val !== 1){
-			$('.header__nav--btn--1').show();
+			$('.header__nav--btn--1').removeClass('disable');
 		}
 
 		if(val === 2){
-			$('.header__nav--btn--1').hide();
+			$('.header__nav--btn--1').addClass('disable');
 		}
 
 		if(self.attr('direction') === 'up'){
 			if(val === 2){
-				$('.header__nav--btn--1').show();
+				$('.header__nav--btn--1').removeClass('disable');
 			}
 			val = val + 1;
 
@@ -383,6 +385,8 @@ $(document).ready(function(){
 		e.hdrProgress.attr('context', contextValue);
 	});
 
+	// $('.btn__progress--6').click();
+
 	// DETAILED FOOTER CLICK
 		if(sessionStorage.gate === 'false'){
 			$('.btn__progress--7').click();
@@ -418,8 +422,8 @@ $(document).ready(function(){
 		'thickness': .12,
 		'height': '200%',
 		'displayInput': false,
-		'bgColor': '#fff',
-		'fgColor': '#00758f',
+		'bgColor': '#56504b',
+		'fgColor': '#fff',
 		// "readOnly": true,
 
 		'change': function (v, context) {

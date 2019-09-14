@@ -6,13 +6,14 @@
 		width: 68.33vh;
 		max-width: 36.90rem;
 		max-height: 36.90rem;
-		border: solid 2px $color-blue-3;
+		border: solid 2px $color-sblack-1;
 		border-radius: 50%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		cursor: pointer;
 		transition: all .5s; 
+		background-color: $color-sblack-1;
 	
 
 		&--fadeout{
@@ -96,4 +97,57 @@
 			}
 		}
 	}
+	&__texture{
+		background-image: url('../assets/images/desktop/group.png');
+		position: absolute;    
+    left: 0;
+    margin: 0 auto;
+    margin-top: 5.7rem;
+    right: 0;
+    z-index: -1;
+    transform: translateX(-4%);
+    // margin-left: 9%;
+    // max-width: calc(#{36.90rem} * #{1.43});
+    // max-height: calc(#{36.90rem} * #{1.21});
+    // width: calc(#{68.33vh} * #{1.43});
+    // height: calc(#{68.33vh} * #{1.21});
+
+		max-width: 52.77rem;
+    max-height: 44.65rem;
+    width: 97.71vh;
+    height: 82.68vh;
+		background-size: 100%;
+		background-repeat: no-repeat;
+    top: 0;
+
+    @include bp(1000){
+    	width: 100%;
+    }
+    @include bp(950){
+    	margin-top: 7.7rem;
+    }
+
+		// @include bp(910){
+		// 	max-width: 83.33vw;
+		// 	max-height: 83.33vw;
+		// }    
+		// @include bp(600){
+		// 	height: 40.83vh;
+		// 	width: 40.83vh;
+		// }
+		// @include bph(650){
+		// 	height: 40.83vh;
+		// 	width: 40.83vh;	
+		// }
+		// @include bph(400){
+		// 	height: 67.1vh;
+		// 	width: 67.1vh;
+		// }
+
+
+
+	}
 }
+
+
+

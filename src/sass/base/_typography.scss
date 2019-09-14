@@ -599,12 +599,12 @@ b {
 	  line-height: 1.29;
 	  letter-spacing: normal;
 	  text-align: right;
-	  color: $color-white-1;
-
-	  &--active{
-	  	font-family: $font-b;
-	  }
+	  color: $color-white-1;	  
 	}
+	&--active{
+  	font-family: $font-b;
+  	color: $color-yellow-1;
+  }
 }
 
 .selection{
@@ -739,7 +739,7 @@ b {
 	  font-style: normal;
 	  font-stretch: normal;
 	  line-height: 1.32;
-	  color: $color-blue-2;
+	  color: $color-sblack-1;
 	  letter-spacing: normal;
 	  text-align: center;
 	  margin: 0 auto;
@@ -779,7 +779,7 @@ b {
 		  text-align: center;
 			width: 6.60rem;
 			margin-top: 2.5%;
-
+			transform: translateY(-30%);
   		}
   		&--2{
 		  margin-left: 1.00rem;
@@ -889,8 +889,9 @@ b {
 			}
 
 			&-more{
-				right: -13%;
+				right: -17%;
 		    width: 6.70rem;
+		    top: 1.55rem;
 		    @include bp(1440){
 		    	right: -22%;
 		    }
@@ -1078,7 +1079,7 @@ b {
 		  font-stretch: normal;
 		  line-height: 1.2;
 		  letter-spacing: normal;
-		  color: $color-blue-2;			
+		  color: $color-sblack-1;			
 			@include bp(1300){
 				height: auto;
 			}
@@ -1106,7 +1107,7 @@ b {
 	  font-stretch: normal;
 	  line-height: 1.58;
 	  letter-spacing: normal;
-	  color: $color-blue-2;	  
+	  color: $color-beige-1;	  
 	  align-items: center;
 	  margin-right: auto;	  
 	  transform: translateY(5%);
@@ -1174,7 +1175,7 @@ b {
 	  line-height: 1.29;
 	  letter-spacing: normal;
 	  text-align: right;
-	  color: $color-blue-2;
+	  color: $color-beige-1;
 	  padding-right: .3rem;
 	  padding-top: .7rem;
 
@@ -1200,7 +1201,7 @@ b {
 	  font-stretch: normal;
 	  line-height: 1.32;
 	  letter-spacing: normal;
-	  color: $color-blue-2;
+	  color: $color-beige-1;	
 	  align-self: flex-end;
 
 		@include bp(1050){
@@ -1394,7 +1395,7 @@ b {
 .header{
 	&__copyright{
 		font-size: $font-size-5;
-		color: $color-blue-1;
+		color: $color-white-1;
 		& > a{
 			color: $color-blue-4;
 			text-decoration: none;
@@ -1517,7 +1518,7 @@ b {
 	  font-stretch: normal;
 	  line-height: 1.2;
 	  letter-spacing: normal;
-	  color: $color-blue-2;
+	  color: $color-beige-1;
 	
 		@include bp(910){
 			font-size: 1rem;
@@ -1538,7 +1539,7 @@ b {
 	  font-stretch: normal;
 	  line-height: 1.25;
 	  letter-spacing: normal;
-	  color: $color-blue-1;
+	  color: $color-beige-1;
 	  margin-top: 0.45rem;
 	  @include bp(1150){
 	  	opacity: 0;

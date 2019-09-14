@@ -35,7 +35,7 @@
 	}
 
 	&__background{
-		background-color: $color-blue-2;
+		// background-color: $color-blue-2;
 		position: fixed;
 		z-index: -10;
 		width: 70.00rem;
@@ -51,10 +51,10 @@
 			width: 100%;
 			padding: 0.95rem .8rem 0 .8rem;
 		}
-		&.bg-white{    
-			background-color: $color-white-1;
-			animation: bgWhite 2s linear;
-		}
+		// &.bg-white{    
+		// 	background-color: $color-white-1;
+		// 	animation: bgWhite 2s linear;
+		// }
 
 	}
 	
@@ -122,6 +122,11 @@
 	    
 
 	    &--1{
+
+	    	&.disable{
+	    		opacity: 0;
+	    		pointer-events: none;
+	    	}
 	    	& > span{
 	    		margin-left: auto;
 	    	}

@@ -64,7 +64,7 @@
 	&__rectangle {
 		flex: 0 0 2rem;
 		position: relative;
-		border: solid 0.10rem $color-blue-1;
+		border: solid 0.10rem $color-orange-1;
 		border-radius: 50.00rem;
 		transition-delay: 1s;
 		z-index: 1000;
@@ -137,11 +137,11 @@
 			width: 2.00rem;
 			height: 2.00rem;
 			border-radius: 50.00rem;
-			border: solid 0.1rem $color-blue-1;
+			border: solid 0.1rem $color-orange-1;
 			transition: all .2s;
 			right: -.1rem;
 			z-index: 5;
-			background-color: $color-blue-2;
+			background-color: $color-sblack-1;
 			overflow: hidden;
 			padding-left: .75rem;
 			&-1,
@@ -164,7 +164,7 @@
 			}
 
 			.header__container--x &{
-				border: solid 0.1rem $color-blue-1;
+				border: solid 0.1rem $color-orange-1;
 			}
 			
 			.header__rectangle--1:hover &{
