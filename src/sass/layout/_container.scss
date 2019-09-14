@@ -5,7 +5,11 @@
  //  border: solid 0.25rem black;
  //  left: 50%;
  //  transform: translateX(-50%); 
-	opacity: 1;
+	opacity: 0;
+  transition: opacity 1s;
+  &.fade-in{
+    opacity: 1;
+  }
 
 	&__buffer{
 		// @include bp(1150){

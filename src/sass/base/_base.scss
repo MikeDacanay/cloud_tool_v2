@@ -65,6 +65,12 @@ html {
     &--white{
       background-image: url(../assets/images/1x/light-pattern.jpg);
     }
+
+    // &--2{
+    //   height: auto;
+    //   width: auto;
+    //   position: fixed;
+    // }
   }
 }
 
@@ -101,4 +107,5 @@ body{
   //   background-color: $color-white-1;
   //   animation: bgWhite 2s linear;
   // }
+
 }

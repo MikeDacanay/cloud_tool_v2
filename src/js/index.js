@@ -47,6 +47,7 @@ import scrollJson from './scrollDown.json';
 import largeDetailHigh from './large_high-score.json';
 import largeDetailMid from './large_mid-score.json';
 import largeDetailLow from './large_low-score.json';
+import loadLoop from './loading-loop.json';
 
 
 
@@ -59,6 +60,19 @@ if(sessionStorage.gate === undefined){
 $(document).ready(function(){
 
  	const state = {};
+
+/**************** PRELOADER ********************/ 
+	setTimeout(function(){
+		$('.preload').addClass('fade');	
+	}, 2000);
+		setTimeout(function(){
+		$('.preload').addClass('hide');	
+	}, 3000);
+	setTimeout(function(){
+		$('.main-container').addClass('fade-in');	
+	}, 3000);
+
+
 
 /**************** DETAILED PAGE CONTENT CONTROLLER ********************/ 
 	dw.dialGrouper();	
@@ -268,6 +282,14 @@ $(document).ready(function(){
 		});
 	}
 	;
+
+	lottie.loadAnimation({
+	  container: document.getElementById('preload__container'),
+	  renderer: 'svg',
+	  autoplay: true,
+	  animationData: loadLoop,
+	  loop: true,
+	});
 
 	/****** CTA POPUPS ******/
 	$('.cta__btn').on('click', function () {
