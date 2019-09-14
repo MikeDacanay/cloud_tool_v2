@@ -52,7 +52,7 @@ html {
 .html{
   &--bg{
     z-index: -1000;
-    background-image: url(../assets/images/1x/dark-pattern@2x.jpg);
+    background-image: url(../assets/images/1x/dark-pattern.jpg);
     height: 100vh;
     width: 100vw;
     position: fixed;
@@ -63,7 +63,7 @@ html {
     }
 
     &--white{
-      background-image: url(../assets/images/1x/light-pattern.png);
+      background-image: url(../assets/images/1x/light-pattern.jpg);
     }
   }
 }
