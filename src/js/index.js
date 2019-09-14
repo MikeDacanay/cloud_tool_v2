@@ -54,6 +54,7 @@ import loadLoop from './loading-loop.json';
 
 if(sessionStorage.gate === undefined){
 	console.log('sessionStorage');
+	window.localStorage.clear();
 	sessionStorage.clear();
 }
 
