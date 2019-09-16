@@ -59,7 +59,7 @@ if(sessionStorage.gate === undefined){
 }
 
 $(document).ready(function(){
-
+	
  	const state = {};
 
 /**************** PRELOADER ********************/ 
