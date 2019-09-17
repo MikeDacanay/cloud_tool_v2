@@ -71,6 +71,8 @@ $(document).ready(function(){
 	}, 3000);
 	setTimeout(function(){
 		$('.main-container').addClass('fade-in');	
+		$('.footer--x').addClass('fade-in');
+		$('.header__wrapper--2').addClass('fade-in');
 	}, 3000);
 
 

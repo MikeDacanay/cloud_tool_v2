@@ -36,6 +36,8 @@
 			width: 100vw;
 	    position: absolute;
 	    z-index: 10;
+			transition: opacity 1s;
+	    opacity: 0;
 			@include bp(1440){
 				height: auto;
 				margin-top: -4.15rem;
@@ -43,6 +45,9 @@
 
 	    @include bp(1150){
 	    	margin-top: 0;
+	    }
+	    &.fade-in{
+				opacity: 1;
 	    }
 		}
 
