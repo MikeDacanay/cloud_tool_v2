@@ -77,6 +77,9 @@
 
 
 		&--1{
+			@include bp(910){
+				margin-top: 10.5rem;
+			}
 			.main-container--x &{
         left: 48.4rem;
 		    width: 90rem;
@@ -94,14 +97,16 @@
     		@include bp(767){
 			    left: calc(#{100%} - #{16rem});
     		}
+
+				&-x{
+					top: -1.80rem;
+				}    		
 			}
 
 			.zoomed &{
 				display: none;
 			}
-			@include bp(910){
-				margin-top: 10.5rem;
-			}
+
 		}
 		&--3{
 			transform: translateY(0%);
