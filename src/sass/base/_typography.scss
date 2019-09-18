@@ -973,8 +973,11 @@ b {
 					width: 18rem;
 				}
 			}
-	  		&-a{
-		    	letter-spacing: -.01em;
+	  	&-a{
+		    letter-spacing: -.01em;
+			}
+			&-x{
+				width: 16rem;
 			}
 		}	 
 		&__focus{

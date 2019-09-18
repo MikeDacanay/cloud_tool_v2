@@ -101,6 +101,9 @@
 				&-x{
 					top: -1.80rem;
 				}    		
+				&-y{
+					top: -0.50rem;
+				}
 			}
 
 			.zoomed &{
@@ -368,11 +371,11 @@
 
 			&-x{
 		    position: relative;
-		    top: auto;
+		    top: -0.75rem;
 		    left: auto;
 		    right: auto;
 		    transform: none;
-
+				
 		    @include bp(1440){
 		    	margin-left: auto;
 		    }
