@@ -91,7 +91,6 @@ $(document).ready(function(){
 		const results = new CompareResults();
 		results.allocateValues(sessionStorage,PeersData.retrievePeerScore);						
 
-
 		drv.displayResults(results);
 
 		//SELECTORS
@@ -240,6 +239,7 @@ $(document).ready(function(){
 	// DETAILED MAP FOOTER CONTROLLER
  	$('.footer--x').on('click', function(){
 		sessionStorage.gate = 'false';
+		sessionStorage.page= '1';
 	});	
 
  
@@ -324,7 +324,12 @@ $(document).ready(function(){
 
 
 	line.resizeLines();
-	footer.hidePageNumber();
+
+	console.log(sessionStorage.gate);
+
+	if(!sessionStorage.gate){
+		footer.hidePageNumber();
+	}
 
 	$(window).on('resize', function () {
 		state.width = $('body').width();
@@ -426,8 +431,23 @@ $(document).ready(function(){
 
 
 	// DETAILED FOOTER CLICK
-		if(sessionStorage.gate === 'false'){
-			$('.btn__progress--7').click();
+		if(sessionStorage.page === '1'){
+			$('.pathfinder').css('transform',`translateY(-189.19rem)`);
+			$('.html--bg').addClass('html--bg--white');
+			$('.header__rectangle--1').addClass('toggle');
+
+
+			const cloudPeer = peersJson;
+			const cloudUser = userJson;
+
+			cloudPeer.layers[0].shapes[1].e.k[1].s[0] = PeersData.peerScore;
+			cloudUser.layers[0].shapes[1].e.k[1].s[0] = sessionStorage.userAgg;			
+			
+			result.displayValues(Number(sessionStorage.userAgg), PeersData.peerScore);
+			
+			result.displayResultsCopy(Number(sessionStorage.userAgg), PeersData.peerScore);
+
+			loadCloudAnimation(cloudUser, cloudPeer);
 		}
 
 	// REGRESS
@@ -496,30 +516,6 @@ $(document).ready(function(){
 		dial.lineResize();
 	});
 
-	// let currentState = 0;
-
-
-	// dialWrapperMove();
-
-	// $('.dial-tracker__wrapper').mouseup(function(){
-	//   const dy = 819 - event.pageY;
-	// 	const dx = 633.5 - event.pageX;
-	// 	let theta = Math.atan2(dy, dx); // range (-PI, PI]
-	// 	theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
-
-	// 	const dtracker = $(this).find('.dial-tracker');
-
-	// 	dtracker.data('context', false);
-	// 	dtracker.val(theta).trigger('change');
-
-	// 	dial.progressBtn(dtracker);
-
-	// 	$( ".dial-tracker__wrapper" ).unbind( "mousemove mouseleave");
-
-	// 	setTimeout(function(){
-	// 		dialWrapperMove()
-	// 	}, 2500);
-	// });	
 
 	function dialWrapperMove(){		
 	  $( ".dial-tracker__wrapper" )
@@ -691,19 +687,25 @@ $(document).ready(function(){
 
 		sessionStorage.gate = true;
 
+		sessionStorage.page = '2';
+
 		sessionStorage.dial1 = state.dial1.val;
 		sessionStorage.dial2 = state.dial2.val;
 		sessionStorage.dial3 = state.dial3.val;
 		sessionStorage.selector1 = state.selected.choices;
 		sessionStorage.slider1 = state.slider1.arrayVal;
 		sessionStorage.slider2 = state.slider2.arrayVal;
+
+		sessionStorage.userAgg = state.userAggregateValue;
+		sessionStorage.peerAgg = PeersData.peerScore;
 	
 		// window.location.href = "/results.html";
 	});
 	/****Eloqua Gate**/
 	/***popuplate countries dropdown**/
-	func.populateCountries("field17");
-
+	if(!sessionStorage.gate){
+		func.populateCountries("field17");
+	}
 	$('.elq-sumbit__btn').on('click', function () {
 		func.validateFields();
 	});
@@ -715,16 +717,18 @@ $(document).ready(function(){
 		target:'#output1'
 	}
 
-	$('#form1048').ajaxForm(options);
-
+	if(!sessionStorage.gate){
+		$('#form1048').ajaxForm(options);
+	}
 	/**************** SESSION STORAGE CONTROLLER ********************/
 
 	$('.header__rectangle--1').on('click', function () {
 		sessionStorage.clear();
 	})
 	/***popuplate countries dropdown**/
-	func.populateCountries("field17");
-
+	if(!sessionStorage.gate){
+		func.populateCountries("field17");
+	}
 
 	/****************  CLOUD LOTTIE  ********************/
 

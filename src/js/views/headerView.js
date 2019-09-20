@@ -1,6 +1,8 @@
 import {e} from './base';
 
 export const toggleRestartBtn = (pageNum) => {
+	console.log(pageNum);
+
 	if(pageNum !== 0){
 		e.restartBtn.addClass('toggle');
 		e.headerCopyright.css('margin-right', '1.25rem')
