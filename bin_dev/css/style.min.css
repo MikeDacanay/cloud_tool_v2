@@ -820,7 +820,11 @@ b {
         font-size: 0.70rem; } }
     .dial__text--users-less {
       left: 2.7rem;
-      padding-top: 0.15rem; }
+      padding-top: 1.75rem; }
+      @media only screen and (max-width: 1440px) {
+        .dial__text--users-less {
+          padding-top: 0;
+          margin-top: -1.00rem; } }
     .dial__text--users-more {
       right: -17%;
       width: 6.70rem;
@@ -1741,6 +1745,9 @@ b {
         left: calc(100% - 16rem); } }
     .main-container--x .cta__wrapper--1-x {
       top: -1.80rem; }
+      @media only screen and (max-width: 1440px) {
+        .main-container--x .cta__wrapper--1-x-1 {
+          top: 0.2rem; } }
     .main-container--x .cta__wrapper--1-y {
       top: -0.50rem; }
   .zoomed .cta__wrapper--1 {
