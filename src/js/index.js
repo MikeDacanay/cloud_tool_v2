@@ -435,8 +435,8 @@ $(document).ready(function(){
 			$('.pathfinder').css('transform',`translateY(-189.19rem)`);
 			$('.html--bg').addClass('html--bg--white');
 			$('.header__rectangle--1').addClass('toggle');
-
-
+			e.headerCopyright.css('margin-right', '1.25rem')
+			
 			const cloudPeer = peersJson;
 			const cloudUser = userJson;
 
