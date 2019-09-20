@@ -30,7 +30,7 @@
 			// background-color: green;
 			transition: all 1100ms;
 		}
-
+xd
 		.page.zoomed &{
 			border: solid 1rem $color-beige-1;	
 
@@ -52,8 +52,8 @@
 				@include bp(1440){
 					// height: 32.50rem;
 					height: auto;
-					
-				}
+					// @include bph(1300){}	
+				}				
 				@include bp(1024){
 					// height: 26.75rem;
 					height: auto;

@@ -122,11 +122,6 @@
 	    
 
 	    &--1{
-
-	    	&.disable{
-	    		opacity: 0;
-	    		pointer-events: none;
-	    	}
 	    	& > span{
 	    		margin-left: auto;
 	    	}
@@ -177,6 +172,11 @@
 	    		padding-right: .8rem;
 	    	}	    	
 	    }
+
+    	&.disable{
+    		opacity: 0;
+    		pointer-events: none;
+    	}
 
 	    &.activate{
 	    	@include bp(1440){

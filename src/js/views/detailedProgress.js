@@ -5,8 +5,6 @@ export const movePathfinderX = (btn) => {
 
 	const direction = btn.attr('direction');
  	let val = Number(btn.attr('context'));
-
-  console.log(val, 'before');
   if(direction === 'up'){
     $('.header__nav--btn--2').attr('context',Number($('.header__nav--btn--2').attr('context'))+1);
     $('.header__nav--btn--1').attr('context',Number($('.header__nav--btn--1').attr('context'))+1);

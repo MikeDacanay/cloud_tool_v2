@@ -201,6 +201,12 @@
 			    position: relative;
 				}
 			}
+			&-a{
+				@include bp(1440){
+					top: auto;
+			    margin-top: 10rem;
+				}
+			}
 		}
 
 		&--5{

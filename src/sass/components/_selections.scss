@@ -24,20 +24,9 @@
 		}
 
 		@include bp(1440){
-			height: 15rem;
+			height: 24rem;
 			width: 26rem;
-			
-			@include bph_min(740){
-				width: 15rem;
-				height: 16rem;
-			}
-			@include bph_min(850){
-				height: 19rem;
-				// margin-top: calc((100vh - 14.5rem) / 2 - (3 * 10vh));
-			}
-			@include bph(650){
-				height: 15rem;
-			}			
+				
 		}
 		@include bp(1024){
 			@include bph(530){
