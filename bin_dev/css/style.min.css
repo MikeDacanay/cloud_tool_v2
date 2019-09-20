@@ -2410,7 +2410,7 @@ b {
       .dial-group--x {
         width: 40vw;
         height: 20vw;
-        margin-top: 1.65rem;
+        margin-top: 4.65rem;
         max-height: none;
         max-width: none;
         min-height: auto;
@@ -3111,7 +3111,7 @@ b {
     z-index: 10;
     transform: translate(-50%, -52%);
     left: 50%;
-    border: 0.10rem solid #00758f;
+    border: 0.1rem solid #fcfbfa;
     border-radius: 5.00rem; }
     .line__circle--1 {
       height: 16rem;
@@ -3142,7 +3142,7 @@ b {
     .line--y.deactivate {
       opacity: 0; }
   .line--a {
-    stroke: #00758f;
+    stroke: #fcfbfa;
     stroke-width: 2;
     stroke-dasharray: 4;
     animation: none; }

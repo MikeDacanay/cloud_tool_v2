@@ -87,9 +87,11 @@ $(document).ready(function(){
 
 /**************** DETAILED PAGE CONTROLLER ********************/				
 
-	if(sessionStorage.dial2){	
+	if(Number(sessionStorage.dial2)){	
 		const results = new CompareResults();
-		results.allocateValues(sessionStorage,PeersData.retrievePeerScore);
+		results.allocateValues(sessionStorage,PeersData.retrievePeerScore);						
+
+
 		drv.displayResults(results);
 
 		//SELECTORS
@@ -422,7 +424,6 @@ $(document).ready(function(){
 		e.hdrProgress.attr('context', contextValue);
 	});
 
-	$('.btn__progress--5').click();
 
 	// DETAILED FOOTER CLICK
 		if(sessionStorage.gate === 'false'){

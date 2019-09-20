@@ -84,7 +84,7 @@
     z-index: 10;
     transform: translate(-50%,-52%);
     left: 50%;
-    border: 0.10rem solid #00758f;
+    border: 0.10rem solid $color-beige-1;
     border-radius: 5.00rem;
     &--1{
       height: 16rem;
@@ -123,7 +123,7 @@
   }
 
   &--a{
-    stroke: $color-blue-1;
+    stroke: $color-beige-1;
     stroke-width: 2;
     stroke-dasharray: 4;
     animation: none;
