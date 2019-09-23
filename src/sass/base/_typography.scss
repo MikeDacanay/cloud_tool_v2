@@ -947,6 +947,9 @@ b {
 				@include bp(1440){
 					width: 20rem;
 				}
+				@include bp(1200){
+					width: 10rem;
+				}
 				@include bp(1024){
 					width: 100%;
 				}

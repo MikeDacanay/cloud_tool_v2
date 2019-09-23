@@ -864,6 +864,9 @@ b {
   @media only screen and (max-width: 1440px) {
     .cta__txt--1.cta__txt--1x {
       width: 20rem; } }
+  @media only screen and (max-width: 1200px) {
+    .cta__txt--1.cta__txt--1x {
+      width: 10rem; } }
   @media only screen and (max-width: 1024px) {
     .cta__txt--1.cta__txt--1x {
       width: 100%; } }
@@ -1746,8 +1749,11 @@ b {
     .main-container--x .cta__wrapper--1-x {
       top: -1.80rem; }
       @media only screen and (max-width: 1440px) {
-        .main-container--x .cta__wrapper--1-x-1 {
+        .main-container--x .cta__wrapper--1-x-1, .main-container--x .cta__wrapper--1-x-2 {
           top: 0.2rem; } }
+      @media only screen and (max-width: 1200px) {
+        .main-container--x .cta__wrapper--1-x-1, .main-container--x .cta__wrapper--1-x-2 {
+          left: calc(100% - 14rem); } }
     .main-container--x .cta__wrapper--1-y {
       top: -0.50rem; }
   .zoomed .cta__wrapper--1 {
@@ -4144,7 +4150,8 @@ b {
   background-color: white;
   opacity: .8;
   border: none;
-  margin-top: 0.48rem; }
+  margin-top: 0.48rem;
+  margin-bottom: .48rem; }
 
 .icon__scroller {
   height: 100%;

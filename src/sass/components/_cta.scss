@@ -100,9 +100,13 @@
 
 				&-x{
 					top: -1.80rem;
-					&-1{
+					&-1,
+					&-2,{
 						@include bp(1440){
 							top: 0.2rem;
+						}
+						@include bp(1200){
+							left: calc(100% - 14rem);
 						}
 					}
 				}    		
