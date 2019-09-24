@@ -1923,6 +1923,9 @@ b {
       .cta__wrapper--3-a {
         top: auto;
         margin-top: 10rem; } }
+    @media only screen and (max-width: 1024px) {
+      .cta__wrapper--3-a {
+        margin-top: 30rem; } }
   .cta__wrapper--5 {
     top: 40.2rem;
     right: -20.5rem;
@@ -2053,7 +2056,8 @@ b {
       top: 22.0rem; } }
     @media only screen and (max-width: 1024px) {
       .cta__wrapper--6 {
-        top: 27.5rem; } }
+        top: 52.95rem;
+        right: -10rem; } }
   @media only screen and (max-width: 1024px) and (max-height: 800px) {
     .cta__wrapper--6 {
       top: 27.1rem; } }
@@ -2063,14 +2067,6 @@ b {
   @media only screen and (max-width: 1024px) and (max-height: 600px) {
     .cta__wrapper--6 {
       top: 20.3rem; } }
-  @media only screen and (max-width: 1024px) and (min-height: 815px) {
-    .cta__wrapper--6 {
-      top: 36.5rem;
-      right: -8.8rem; } }
-  @media only screen and (max-width: 1024px) and (min-height: 1016px) {
-    .cta__wrapper--6 {
-      top: 52.95rem;
-      right: -22rem; } }
     @media only screen and (max-width: 910px) {
       .cta__wrapper--6 {
         right: -25rem; } }
