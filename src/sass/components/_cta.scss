@@ -24,6 +24,12 @@
     		@include bp(950){
     			left: 25%;
     		}
+    		@include bp(850){
+    			left: 22%;
+    		}
+    		@include bp(820){
+    			left: 12%;
+    		}
     	}
     }	
 	}
@@ -284,16 +290,14 @@
 			@include bp(910){ 
 				right: -25rem; 
 				top: 26.9rem;
+
+
 			
 				@include bph(800){ top: 26.5rem; }
 				@include bph(650){ top: 23.7rem; }
 				@include bph(600){ top: 20.9rem; }
 				@include bph(550){ top: 19.7rem; }
 
-				@include bph_min(811){ 
-					top: 43.5rem; 
-					right: -13.401rem;
-				}
 				@include bph_min(1016){ 
 					// display: none;
 				}
@@ -336,6 +340,13 @@
 					@include bp(666){
 						display: none;
 					}
+				}
+			}
+
+			&-y{
+				@include bp(910){
+					top: 45.5rem;
+    			right: -13.401rem;
 				}
 			}
 
@@ -410,8 +421,7 @@
 		    	top: auto;
 		    }
 		    @include bp(910){
-		    	display: block;		    	    
-    			width: 70%;
+		    	display: none;		    	    
 		    }
 		    .main-container--x &{
 		    	left: auto;

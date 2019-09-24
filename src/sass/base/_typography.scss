@@ -525,7 +525,7 @@ b {
 			@include bp(910){
 				height: auto;
 				padding-right: 0.55rem;
-		    width: 11.95rem;
+		    width: 12.95rem;
 			}
 			@include bp(767){
 				order: -1;
@@ -853,11 +853,17 @@ b {
 				@include bp(1350){
 					top: 45%;
 				}
+				@include bp(910){
+					top: 65%;
+				}
 
 				.dial__text--users-equal + &{
 					top: 50%;
 					@include bp(1325){
 						top: 55%;
+					}
+					@include bp(910){
+						top: 74%;
 					}
 				}
 			}
@@ -905,6 +911,10 @@ b {
 		    @include bp(1075){
 		    	left: 2rem;
 		    }
+		    @include bp(910){
+		    	left: 11%;
+			    margin-top: -1.80rem;
+		    }
 			}
 
 			&-more{
@@ -938,6 +948,16 @@ b {
 		    @include bp(950){
 		    	right: -22%;
 		    }
+		    @include bp(910){
+		    	right: -25%;
+		    }
+		    @include bp(868){
+		    	right: -28%;
+		    }
+		    @include bp(800){
+		    	right: -30%;
+			    top: -1.15rem;
+		    }
 			}
 			&-equal{
 				left: 51%;
@@ -948,6 +968,9 @@ b {
 				}
 				@include bp(1150){
 					margin-top: -1.2rem;
+				}
+				@include bp(910){
+					margin-top: -2.2rem;
 				}
 			}
 			& > *{
