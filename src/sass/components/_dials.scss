@@ -280,6 +280,9 @@
 		    @include bp(1150){
 		    	margin-top: 2rem;
 		    }
+		    @include bp(1024){
+		    	margin-top: 7.3rem;
+		    }
 			}
 
 			@include bp(1440){

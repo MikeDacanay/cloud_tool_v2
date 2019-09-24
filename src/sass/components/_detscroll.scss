@@ -37,6 +37,16 @@
 		flex-wrap: wrap;
 		&-1{
 			height: 15.40rem;
+			@include bp(1200){
+				height: 19.4rem;
+				width: 39rem;
+			}
+			// @include bp(1100){
+			// 	width: 39rem;
+			// }
+			@include bp(1100){
+				width: 100%;
+			}
 			@include bp(1024){
 				height: 22.4rem;
 			}
@@ -49,15 +59,12 @@
 		&-2{
 			margin-right: 6.15rem;
 			height: 23.10rem;
-			.page.zoomed .page__content > &{
-	
-		  	@include bp(1150){
-		    	height: 49.4rem;
-		      justify-content: stretch;    
-		    	align-items: center;
-		  	} 
-		  }
-
+			@include bp(1200){
+				height: 28.1rem;
+				.zoomed &{
+					height: 28.1rem;
+				}
+			}
 		  @include bp(1024){
 		  	height: 34.1rem;
 		  	.zoomed &{
@@ -68,6 +75,16 @@
 			  .zoomed &{				
 			  	height: auto;
 		  	}
+		  }
+		 	.page.zoomed .page__content > &{
+				@include bp(1200){
+					height: 28.1rem;
+				}
+		  	@include bp(1150){
+		    	height: 49.4rem;
+		      justify-content: stretch;    
+		    	align-items: center;
+		  	} 
 		  }
 		}
 		@include bp(767){

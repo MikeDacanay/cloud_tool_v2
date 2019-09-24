@@ -363,6 +363,9 @@ b {
 		&--7{
 			width: 41.40rem;
 			font-size: 1.50rem;
+			@include bp(1200){
+				width: 95%;
+			}
 			@include bp(1024){
 				width: 80%;
 				margin-top: 0;
@@ -374,7 +377,7 @@ b {
 			// @include bp()
 		  &-a{
 		  	width: 45.4rem;
-		  	@include bp(1024){
+		  	@include bp(1440){
 		  		width: 90%;
 		  	}
 		  }
@@ -853,6 +856,9 @@ b {
 
 				.dial__text--users-equal + &{
 					top: 50%;
+					@include bp(1325){
+						top: 55%;
+					}
 				}
 			}
 		}
@@ -890,6 +896,15 @@ b {
 		    	padding-top: 0;
 		   		margin-top: -1.00rem;
 		    }    
+		    @include bp(1200){
+		    	margin-top: -2rem;
+		    }
+		    @include bp(1150){
+		    	margin-top: -1rem;
+		    }
+		    @include bp(1075){
+		    	left: 2rem;
+		    }
 			}
 
 			&-more{
@@ -897,17 +912,43 @@ b {
 		    width: 6.70rem;
 		    top: 1.55rem;
 		    @include bp(1440){
+		    	right: -18%;
+		    	top: 0;
+		    }
+		    @include bp(1375){
+		    	right: -20%;
+		    }
+		    @include bp(1275){
 		    	right: -22%;
+		    }
+		    @include bp(1200){
+		    	right: -24%;
 		    }
 		    @include bp(1150){	
 		     	right: -17%;	    	
 			    width: 5rem;
 			    top: -0.15rem;
 		    }
+		    @include bp(1100){
+		    	right: -19%;
+		    }
+		    @include bp(1024){
+		    	right: -22%;
+		    }
+		    @include bp(950){
+		    	right: -22%;
+		    }
 			}
 			&-equal{
 				left: 51%;
 				margin-top: -0.20rem;
+				@include bp(1440){
+					left: 53%;
+			    margin-top: -2.2rem;
+				}
+				@include bp(1150){
+					margin-top: -1.2rem;
+				}
 			}
 			& > *{
 				display: block;
@@ -1028,6 +1069,14 @@ b {
 				width: 10rem;
 				@include bph_min(715){
 					width: 20rem;
+				}
+			}
+		}
+
+		&--4{
+			&-x{
+				@include bp(1440){
+					width: 25rem;
 				}
 			}
 		}

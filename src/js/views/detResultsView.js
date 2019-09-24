@@ -46,15 +46,15 @@ function displayDialContext(res){
 
 	dialUserResults.forEach( function(element, index) {
 		if(element > 10){
-			dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>' );
+			dialsUserElements[index].prepend( '<b>You are:</b><span>Using cloud services</span>' );
 			dialsUserElements[index].addClass('dial__text--users-more');
 			$(`#main__direction--user-${index}`).text('You are ahead of your peers and the global average on your cloud journey.');
 		}else if(element <= 10 &&  element >= -10){
-			dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>');
+			dialsUserElements[index].prepend( '<b>You are:</b><span>Planning for the cloud</span>');
 			dialsUserElements[index].addClass('dial__text--users-equal');
 			$(`#main__direction--user-${index}`).text('You and your peers are equal in cloud journey.');
 		}else{						
-			dialsUserElements[index].prepend( '<b>You are:</b><span>Starting to use the cloud</span>');
+			dialsUserElements[index].prepend( '<b>You are:</b><span>Not using the cloud</span>');
 			dialsUserElements[index].addClass('dial__text--users-less');
 			$(`#main__direction--user-${index}`).text('You are behind of your peers and the global average on your cloud journey.');
 		}

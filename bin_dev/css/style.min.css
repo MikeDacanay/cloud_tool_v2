@@ -430,6 +430,9 @@ b {
     font-size: 1.50rem;
     height: 6.60rem;
     font-family: Univers, Arial, Helvetica, sans-serif; }
+    @media only screen and (max-width: 1200px) {
+      .main__title--7 {
+        width: 95%; } }
     @media only screen and (max-width: 1024px) {
       .main__title--7 {
         width: 80%;
@@ -440,7 +443,7 @@ b {
         width: 90%; } }
     .main__title--7-a {
       width: 45.4rem; }
-      @media only screen and (max-width: 1024px) {
+      @media only screen and (max-width: 1440px) {
         .main__title--7-a {
           width: 90%; } }
     .main__title--7--x {
@@ -801,6 +804,9 @@ b {
           top: 45%; } }
       .dial__text--users-equal + .dial__text--peers--x {
         top: 50%; }
+        @media only screen and (max-width: 1325px) {
+          .dial__text--users-equal + .dial__text--peers--x {
+            top: 55%; } }
   .dial__text--users {
     width: 6.75rem;
     height: 4.65rem;
@@ -825,21 +831,56 @@ b {
         .dial__text--users-less {
           padding-top: 0;
           margin-top: -1.00rem; } }
+      @media only screen and (max-width: 1200px) {
+        .dial__text--users-less {
+          margin-top: -2rem; } }
+      @media only screen and (max-width: 1150px) {
+        .dial__text--users-less {
+          margin-top: -1rem; } }
+      @media only screen and (max-width: 1075px) {
+        .dial__text--users-less {
+          left: 2rem; } }
     .dial__text--users-more {
       right: -17%;
       width: 6.70rem;
       top: 1.55rem; }
       @media only screen and (max-width: 1440px) {
         .dial__text--users-more {
+          right: -18%;
+          top: 0; } }
+      @media only screen and (max-width: 1375px) {
+        .dial__text--users-more {
+          right: -20%; } }
+      @media only screen and (max-width: 1275px) {
+        .dial__text--users-more {
           right: -22%; } }
+      @media only screen and (max-width: 1200px) {
+        .dial__text--users-more {
+          right: -24%; } }
       @media only screen and (max-width: 1150px) {
         .dial__text--users-more {
           right: -17%;
           width: 5rem;
           top: -0.15rem; } }
+      @media only screen and (max-width: 1100px) {
+        .dial__text--users-more {
+          right: -19%; } }
+      @media only screen and (max-width: 1024px) {
+        .dial__text--users-more {
+          right: -22%; } }
+      @media only screen and (max-width: 950px) {
+        .dial__text--users-more {
+          right: -22%; } }
     .dial__text--users-equal {
       left: 51%;
       margin-top: -0.20rem; }
+      @media only screen and (max-width: 1440px) {
+        .dial__text--users-equal {
+          left: 53%;
+          margin-top: -2.2rem; } }
+      @media only screen and (max-width: 1150px) {
+        .dial__text--users-equal {
+          margin-top: -1.2rem; } }
     .dial__text--users > * {
       display: block; }
     .dial__text--users > b {
@@ -921,6 +962,9 @@ b {
   @media only screen and (max-width: 767px) and (min-height: 715px) {
     .cta__txt--1, .cta__txt--2, .cta__txt--3, .cta__txt--4 {
       width: 20rem; } }
+  @media only screen and (max-width: 1440px) {
+    .cta__txt--4-x {
+      width: 25rem; } }
   @media only screen and (max-width: 1150px) {
     .cta__txt--3 {
       width: 13rem; } }
@@ -1672,6 +1716,18 @@ b {
   left: 53.4rem; }
   .main-container--x .cta__wrapper {
     left: 51.4rem; }
+    @media only screen and (max-width: 1440px) {
+      .main-container--x .cta__wrapper--3-x {
+        left: 29.4rem; } }
+    @media only screen and (max-width: 1300px) {
+      .main-container--x .cta__wrapper--3-x {
+        left: 39%; } }
+    @media only screen and (max-width: 1024px) {
+      .main-container--x .cta__wrapper--3-x {
+        left: 32%; } }
+    @media only screen and (max-width: 950px) {
+      .main-container--x .cta__wrapper--3-x {
+        left: 25%; } }
   @media only screen and (max-width: 1250px) {
     .cta__wrapper {
       left: 59vw; } }
@@ -1749,11 +1805,14 @@ b {
     .main-container--x .cta__wrapper--1-x {
       top: -1.80rem; }
       @media only screen and (max-width: 1440px) {
-        .main-container--x .cta__wrapper--1-x-1, .main-container--x .cta__wrapper--1-x-2 {
+        .main-container--x .cta__wrapper--1-x-1, .main-container--x .cta__wrapper--1-x-2, .main-container--x .cta__wrapper--1-x-3 {
           top: 0.2rem; } }
       @media only screen and (max-width: 1200px) {
-        .main-container--x .cta__wrapper--1-x-1, .main-container--x .cta__wrapper--1-x-2 {
+        .main-container--x .cta__wrapper--1-x-1, .main-container--x .cta__wrapper--1-x-2, .main-container--x .cta__wrapper--1-x-3 {
           left: calc(100% - 14rem); } }
+      @media only screen and (max-width: 1024px) {
+        .main-container--x .cta__wrapper--1-x-1, .main-container--x .cta__wrapper--1-x-2, .main-container--x .cta__wrapper--1-x-3 {
+          left: calc(100% - 16.5rem); } }
     .main-container--x .cta__wrapper--1-y {
       top: -0.50rem; }
   .zoomed .cta__wrapper--1 {
@@ -2051,7 +2110,8 @@ b {
       transform: none; }
       @media only screen and (max-width: 1440px) {
         .cta__wrapper--6-x {
-          margin-left: auto; } }
+          margin-left: auto;
+          top: auto; } }
       @media only screen and (max-width: 910px) {
         .cta__wrapper--6-x {
           display: block;
@@ -2419,6 +2479,9 @@ b {
       @media only screen and (max-width: 1150px) {
         .page.zoomed .page__content > .dial-group--x {
           margin-top: 2rem; } }
+      @media only screen and (max-width: 1024px) {
+        .page.zoomed .page__content > .dial-group--x {
+          margin-top: 7.3rem; } }
     @media only screen and (max-width: 1440px) {
       .dial-group--x {
         width: 40vw;
@@ -2748,6 +2811,13 @@ b {
         width: 100%; } }
   .detscroll__wrapper-1 {
     height: 15.40rem; }
+    @media only screen and (max-width: 1200px) {
+      .detscroll__wrapper-1 {
+        height: 19.4rem;
+        width: 39rem; } }
+    @media only screen and (max-width: 1100px) {
+      .detscroll__wrapper-1 {
+        width: 100%; } }
     @media only screen and (max-width: 1024px) {
       .detscroll__wrapper-1 {
         height: 22.4rem; } }
@@ -2757,11 +2827,11 @@ b {
   .detscroll__wrapper-2 {
     margin-right: 6.15rem;
     height: 23.10rem; }
-    @media only screen and (max-width: 1150px) {
-      .page.zoomed .page__content > .detscroll__wrapper-2 {
-        height: 49.4rem;
-        justify-content: stretch;
-        align-items: center; } }
+    @media only screen and (max-width: 1200px) {
+      .detscroll__wrapper-2 {
+        height: 28.1rem; }
+        .zoomed .detscroll__wrapper-2 {
+          height: 28.1rem; } }
     @media only screen and (max-width: 1024px) {
       .detscroll__wrapper-2 {
         height: 34.1rem; }
@@ -2770,6 +2840,14 @@ b {
     @media only screen and (max-width: 767px) {
       .zoomed .detscroll__wrapper-2 {
         height: auto; } }
+    @media only screen and (max-width: 1200px) {
+      .page.zoomed .page__content > .detscroll__wrapper-2 {
+        height: 28.1rem; } }
+    @media only screen and (max-width: 1150px) {
+      .page.zoomed .page__content > .detscroll__wrapper-2 {
+        height: 49.4rem;
+        justify-content: stretch;
+        align-items: center; } }
   @media only screen and (max-width: 767px) {
     .detscroll__wrapper {
       height: auto;
@@ -4570,12 +4648,10 @@ b {
     border: solid 0.1rem #fcfbfa;
     height: 42.00rem;
     transition: all 1100ms; }
-  xd
-.page.zoomed .page__content {
+  .page.zoomed .page__content {
     border: solid 1rem #fcfbfa; }
     @media only screen and (max-width: 1150px) {
-      xd
-.page.zoomed .page__content {
+      .page.zoomed .page__content {
         border: solid 0.1rem #fcfbfa; } }
   .page__content--y {
     padding-top: 2.00rem;
@@ -4603,6 +4679,18 @@ b {
           height: auto; } }
       .main-container--x .page__content--y-1, .main-container--x .page__content--y-2 {
         height: 38.45rem; }
+      @media only screen and (max-width: 1440px) {
+        .main-container--x .page__content--y-1 {
+          height: 44.55rem; } }
+      @media only screen and (max-width: 1024px) {
+        .main-container--x .page__content--y-1 {
+          height: 51.55rem; } }
+      @media only screen and (max-width: 1440px) {
+        .main-container--x .page__content--y-2 {
+          height: 45.45rem; } }
+      @media only screen and (max-width: 1100px) {
+        .main-container--x .page__content--y-2 {
+          height: 47.45rem; } }
     .page--2.zoomed .page__content--y,
     .page--3.zoomed .page__content--y,
     .page--4.zoomed .page__content--y,

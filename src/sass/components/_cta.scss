@@ -9,7 +9,23 @@
 	transform: translate(0%, -100%);
 	left: 53.4rem;			
 	.main-container--x &{
-    left: 51.4rem;		
+    left: 51.4rem;	
+    &--3{
+    	&-x{
+    		@include bp(1440){
+    			left: 29.4rem;
+    		}
+    		@include bp(1300){
+    			left: 39%;
+    		}
+    		@include bp(1024){
+    			left: 32%;
+    		}
+    		@include bp(950){
+    			left: 25%;
+    		}
+    	}
+    }	
 	}
 		@include bp(1250){
 			left: 59vw;
@@ -101,12 +117,16 @@
 				&-x{
 					top: -1.80rem;
 					&-1,
-					&-2,{
+					&-2,
+					&-3,{
 						@include bp(1440){
 							top: 0.2rem;
 						}
 						@include bp(1200){
 							left: calc(100% - 14rem);
+						}
+						@include bp(1024){
+							left: calc(100% - 16.5rem);
 						}
 					}
 				}    		
@@ -393,6 +413,7 @@
 				
 		    @include bp(1440){
 		    	margin-left: auto;
+		    	top: auto;
 		    }
 		    @include bp(910){
 		    	display: block;		    	    
