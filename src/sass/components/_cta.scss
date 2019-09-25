@@ -132,12 +132,18 @@
 							left: calc(100% - 14rem);
 						}
 						@include bp(1024){
-							left: calc(100% - 16.5rem);
+							left: calc(100% - 15.5rem);
 						}
 					}
 				}    		
 				&-y{
 					top: -0.50rem;
+				}
+			}
+
+			&-y{
+				@include bp(767){
+					margin-top: 0;
 				}
 			}
 
@@ -347,6 +353,9 @@
 				@include bp(910){
 					top: 45.5rem;
     			right: -13.401rem;
+				}
+				@include bp(666){
+					display: none;
 				}
 			}
 

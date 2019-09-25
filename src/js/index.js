@@ -90,7 +90,7 @@ $(document).ready(function(){
 	if(Number(sessionStorage.dial2)){	
 		const results = new CompareResults();
 		results.allocateValues(sessionStorage,PeersData.retrievePeerScore);						
-
+		
 		drv.displayResults(results);
 
 		//SELECTORS

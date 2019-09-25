@@ -43,7 +43,7 @@ b {
 		// Width BreakPoints
 		@include bp(767){
 				width: 90%;
-				margin-top: 31.5%;
+				margin-top: 40%;
 				font-size: $font-size-4;
 		}
 
@@ -958,6 +958,16 @@ b {
 		    	right: -30%;
 			    top: -1.15rem;
 		    }
+		    @include bp(767){
+		    	right: -38%;
+		    }
+		    @include bp(666){
+		    	right: 5%;
+		    	top: -.15rem;
+		    }
+		    @include bp(545){
+			    top: -1.9rem;
+		    }
 			}
 			&-equal{
 				left: 51%;
@@ -1355,11 +1365,20 @@ b {
 
 	&__span{
 		display: block;
+		@include bp(450){
+			font-size: 1.35rem;
+		}
+
+
 		&--2{
 			font-size: $font-size-7;
 			@include bp(500){
 				font-size: $font-size-2;
 			}
+			@include bp(450){
+				font-size: 1.35rem;
+			}
+	
 		}
 
 		& > b{

@@ -166,7 +166,7 @@ b {
   @media only screen and (max-width: 767px) {
     .landing__title {
       width: 90%;
-      margin-top: 31.5%;
+      margin-top: 40%;
       font-size: 1.25rem; } }
   @media only screen and (max-height: 920px) {
     .landing__title {
@@ -891,6 +891,16 @@ b {
         .dial__text--users-more {
           right: -30%;
           top: -1.15rem; } }
+      @media only screen and (max-width: 767px) {
+        .dial__text--users-more {
+          right: -38%; } }
+      @media only screen and (max-width: 666px) {
+        .dial__text--users-more {
+          right: 5%;
+          top: -.15rem; } }
+      @media only screen and (max-width: 545px) {
+        .dial__text--users-more {
+          top: -1.9rem; } }
     .dial__text--users-equal {
       left: 51%;
       margin-top: -0.20rem; }
@@ -1175,11 +1185,17 @@ b {
 
 .cloud__span {
   display: block; }
+  @media only screen and (max-width: 450px) {
+    .cloud__span {
+      font-size: 1.35rem; } }
   .cloud__span--2 {
     font-size: 1.75rem; }
     @media only screen and (max-width: 500px) {
       .cloud__span--2 {
         font-size: 0.95em; } }
+    @media only screen and (max-width: 450px) {
+      .cloud__span--2 {
+        font-size: 1.35rem; } }
   .cloud__span > b {
     font-family: UniversB, Arial, Helvetica, sans-serif; }
 
@@ -1841,9 +1857,12 @@ b {
           left: calc(100% - 14rem); } }
       @media only screen and (max-width: 1024px) {
         .main-container--x .cta__wrapper--1-x-1, .main-container--x .cta__wrapper--1-x-2, .main-container--x .cta__wrapper--1-x-3 {
-          left: calc(100% - 16.5rem); } }
+          left: calc(100% - 15.5rem); } }
     .main-container--x .cta__wrapper--1-y {
       top: -0.50rem; }
+  @media only screen and (max-width: 767px) {
+    .cta__wrapper--1-y {
+      margin-top: 0; } }
   .zoomed .cta__wrapper--1 {
     display: none; }
   .cta__wrapper--3 {
@@ -2051,6 +2070,9 @@ b {
       .cta__wrapper--5-y {
         top: 45.5rem;
         right: -13.401rem; } }
+    @media only screen and (max-width: 666px) {
+      .cta__wrapper--5-y {
+        display: none; } }
   .cta__wrapper--6 {
     top: 46.2rem;
     right: -20.5rem;
@@ -2522,7 +2544,7 @@ b {
         margin-top: 3.3rem; } }
     @media only screen and (max-width: 767px) {
       .dial-group--x {
-        margin-top: 0; } }
+        margin-top: 1.60rem; } }
     @media only screen and (max-width: 666px) {
       .dial-group--x {
         width: calc(100vw - 3.6rem);
@@ -3165,6 +3187,14 @@ b {
   @media only screen and (max-width: 950px) {
     .landing__texture {
       margin-top: 7.7rem; } }
+  @media only screen and (max-width: 600px) {
+    .landing__texture {
+      margin-top: 11.7rem;
+      width: 75%; } }
+  @media only screen and (max-width: 380px) {
+    .landing__texture {
+      margin-top: 11.7rem;
+      width: 96%; } }
 
 .line {
   stroke: #ae562c;
@@ -4075,6 +4105,12 @@ b {
     .selection__wrapper {
       width: 17.6rem;
       margin-top: 1.05rem; } }
+  @media only screen and (max-width: 400px) {
+    .selection__wrapper {
+      width: 100%;
+      height: 26rem;
+      min-height: none;
+      max-height: none; } }
   .selection__wrapper--x {
     width: 38.40rem;
     height: 22.00rem; }
@@ -4095,7 +4131,7 @@ b {
       .selection__wrapper--x {
         width: 12rem;
         margin-top: 0;
-        height: 56rem; } }
+        height: 60rem; } }
     .page.zoomed .page__content > .selection__wrapper--x {
       margin-top: 42.85rem; }
       @media only screen and (max-width: 1150px) {
@@ -4202,6 +4238,9 @@ b {
   @media only screen and (max-width: 767px) and (max-height: 514px) {
     .selection__container--4 {
       order: 5; } }
+  @media only screen and (max-width: 400px) {
+    .selection__container {
+      width: 100%; } }
   .selection__container:hover {
     background-color: rgba(86, 80, 75, 0.15); }
   .selection__container--active {
@@ -4700,7 +4739,8 @@ b {
           height: auto; } }
       @media only screen and (max-width: 768px) {
         .main-container--x .page__content--y {
-          height: auto; } }
+          height: auto;
+          overflow-y: scroll; } }
       .main-container--x .page__content--y-1, .main-container--x .page__content--y-2 {
         height: 38.45rem; }
       @media only screen and (max-width: 1440px) {

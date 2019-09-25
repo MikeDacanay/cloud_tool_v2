@@ -2,8 +2,11 @@ import largeDetailHigh from '.././large_high-score.json';
 import largeDetailMid from '.././large_mid-score.json';
 import largeDetailLow from '.././large_low-score.json';
 
-export const displayResults = (res) => {	
-	if(sessionStorage.gate == 'true'){		
+export const displayResults = (res) => {
+
+ const testEle = document.getElementById("detail-1");
+
+	if(testEle){		
 		displayDetailedDial(res);
 		displayDialContext(res);
 	}	

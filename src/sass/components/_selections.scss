@@ -78,6 +78,13 @@
 			// margin: 0.9rem auto;
 			margin-top: 1.05rem;
 		}
+		
+		@include bp(400){
+			width: 100%;
+	    height: 26rem;
+	    min-height: none;
+	    max-height: none;
+		}
 
 		&--x{
 			width: 38.40rem;
@@ -99,7 +106,7 @@
 			@include bp(666){
 				width: 12rem;
 				margin-top: 0;
-				height: 56rem;
+				height: 60rem;
 			}
 
 			.page.zoomed .page__content > &{
@@ -210,6 +217,10 @@
 
 			}
 
+		}
+
+		@include bp(400){
+			width: 100%;
 		}
 		
 		&:hover{

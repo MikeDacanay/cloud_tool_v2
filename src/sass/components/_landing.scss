@@ -126,6 +126,14 @@
     @include bp(950){
     	margin-top: 7.7rem;
     }
+    @include bp(600){
+    	margin-top: 11.7rem;
+    	width: 75%;
+    }
+    @include bp(380){
+    	margin-top: 11.7rem;
+	    width: 96%;
+    }
 
 		// @include bp(910){
 		// 	max-width: 83.33vw;

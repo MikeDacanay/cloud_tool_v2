@@ -66,6 +66,7 @@
 				@include bp(768){
 					// height: 32.75rem;
 					height: auto;
+					overflow-y: scroll;
 				}
 				&-1,
 				&-2{
