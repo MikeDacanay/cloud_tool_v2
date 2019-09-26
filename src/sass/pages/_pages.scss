@@ -112,7 +112,7 @@
   &--8{
     top: 189.19rem;
     &.activate{
-      overflow-y: overlay;
+      overflow-y: scroll;
     }
     // @include bp(1150){
     //   top: auto;

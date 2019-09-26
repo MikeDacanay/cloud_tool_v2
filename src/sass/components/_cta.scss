@@ -8,6 +8,14 @@
 	top: 100%;
 	transform: translate(0%, -100%);
 	left: 53.4rem;			
+  transition-property: opacity;
+  transition-delay: .5s;
+  transition-duration: .5s;
+
+	&.fade{
+		opacity: 0;
+	}
+
 	.main-container--x &{
     left: 51.4rem;	
     &--3{

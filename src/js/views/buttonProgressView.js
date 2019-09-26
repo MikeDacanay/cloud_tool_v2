@@ -1,5 +1,5 @@
 export const animateFwd = (btnVal) => {
-
+	
 	if(btnVal === 1){
 		$('.landing__container').toggleClass('landing__container--fadeout');
 		$('.landing__title').toggleClass('landing__title--fadeout');
@@ -24,7 +24,12 @@ export const animateFwd = (btnVal) => {
 		},3000);
 	}
 		else if(btnVal === 2){
-		$('.page--2').removeClass('activate');
+
+
+		// $('.page--2').removeClass('activate');
+
+		$('#cta-1').addClass('fade');
+		$('.page--2 > .cta__wrapper').addClass('fade');
 		$('.footer').removeClass('activate');
 
 		$('.btn__regress').attr('context', '1')
@@ -35,6 +40,8 @@ export const animateFwd = (btnVal) => {
 		// 	$('.footer-text').text('2/6');
 		// },8600);
 		setTimeout(function(){
+			$('#cta-1').removeClass('fade');
+			$('.page--2 > .cta__wrapper').removeClass('.fade');
 			$('.page--3').addClass('activate');
 			$('.line--2-a, .line--3, .line--4').addClass('activate');
 			$('.footer').addClass('activate');
@@ -42,12 +49,14 @@ export const animateFwd = (btnVal) => {
 		},3000);
 	}
 	else if(btnVal === 3){
-		$('.page--3').removeClass('activate');
+		// $('.page--3').removeClass('activate');
+		$('#cta-2').addClass('fade');
 		$('.footer').removeClass('activate');
 
 		$('.btn__regress').attr('context', '2')
 
 		setTimeout(function(){
+			$('#cta-2').removeClass('fade');
 			$('.btn__regress').addClass('rotate');
 			$('.page--4').addClass('activate');
 			$('.line--5, .line--6, .line--7').addClass('activate');
@@ -55,7 +64,8 @@ export const animateFwd = (btnVal) => {
 			$('.footer-text').text('3/6');
 		},3800);
 	}else if(btnVal === 4){
-		$('.page--4').removeClass('activate');
+		// $('.page--4').removeClass('activate');
+		$('#cta-3').addClass('fade');
 		$('.footer').removeClass('activate');
 
 		$('.btn__regress').attr('context', '3')
@@ -66,13 +76,15 @@ export const animateFwd = (btnVal) => {
 		// 	$('.footer-text').text('4/6');
 		// },6100);
 		setTimeout(function(){
+			$('#cta-3').removeClass('fade');
 			$('.page--5').addClass('activate');
 			$('.line--8').addClass('activate');
 			$('.footer').addClass('activate');
 			$('.footer-text').text('4/6');
 		},2500);
 	}else if(btnVal === 5){
-		$('.page--5').removeClass('activate');
+		// $('.page--5').removeClass('activate');
+		$('#cta-4').addClass('fade');
 		$('.footer').removeClass('activate');
 
 		$('.btn__regress').attr('context', '4')
@@ -83,18 +95,21 @@ export const animateFwd = (btnVal) => {
 		// 	$('.footer-text').text('5/6');
 		// },6100);
 		setTimeout(function(){
+			$('#cta-4').removeClass('fade');
 			$('.page--6').addClass('activate');
 			$('.line--9').addClass('activate');
 			$('.footer').addClass('activate');
 			$('.footer-text').text('5/6');
 		},2500);
 	}else if(btnVal === 6){
-		$('.page--6').removeClass('activate');
+		// $('.page--6').removeClass('activate');
+		$('#cta-5').addClass('fade');
 		$('.footer').removeClass('activate');
 
 		$('.btn__regress').attr('context', '5')
 
 		setTimeout(function(){
+			$('#cta-5').removeClass('fade');
 			$('.btn__regress').removeClass('rotate');
 			$('.page--7').addClass('activate');
 			$('.line--10, .line--11').addClass('activate');
@@ -102,7 +117,8 @@ export const animateFwd = (btnVal) => {
 			$('.footer-text').text('6/6');
 		},3000);
 	}else if(btnVal === 7){
-		$('.page--7').removeClass('activate');
+		// $('.page--7').removeClass('activate');
+		$('#cta-6').addClass('fade');
 		$('.footer').removeClass('activate');
 		$('.header__container').addClass('deactivate');
 
@@ -112,6 +128,7 @@ export const animateFwd = (btnVal) => {
 
 		$('.btn__regress').attr('context', '6')
 		setTimeout(function(){
+			$('#cta-6').removeClass('fade');
 			$('.line__wrapper--1').css('opacity',1)
 		}, 3000);
 
@@ -126,10 +143,10 @@ export const animateFwd = (btnVal) => {
 export const animateBack = (btnVal) => {			
 	btnVal=Number(btnVal)+1;
 
-	console.log(btnVal);
+	console.log('back', btnVal);
 
 	if(btnVal === 1){ //to Landing
-		$('.page--2').removeClass('activate');
+		// $('.page--2').removeClass('activate');
 		$('.footer').removeClass('activate');
 		setTimeout(function(){
 			// $('.landing__container').removeClass('landing__container--fadeout');
@@ -139,7 +156,7 @@ export const animateBack = (btnVal) => {
 			$('.landing__container').toggleClass('landing__container--fadeaway');
 		},3200);
 	}else if(btnVal === 2){ //to Q2
-		$('.page--3').removeClass('activate');
+		// $('.page--3').removeClass('activate');
 		$('.footer').removeClass('activate');
 		setTimeout(function(){
 			$('.page--2').addClass('activate');
@@ -149,7 +166,7 @@ export const animateBack = (btnVal) => {
 		},3000);
 	}else if(btnVal === 3){ //to Q3
 
-		$('.page--4').removeClass('activate');
+		// $('.page--4').removeClass('activate');
 		$('.footer').removeClass('activate');
 
 		setTimeout(function(){
@@ -159,7 +176,7 @@ export const animateBack = (btnVal) => {
 			$('.footer-text').text('2/6');
 		},3800);
 	}else if(btnVal === 4){ //to Q4
-		$('.page--5').removeClass('activate')
+		// $('.page--5').removeClass('activate');
 		$('.footer').removeClass('activate');
 		setTimeout(function(){
 			$('.page--4').addClass('activate');
@@ -167,7 +184,7 @@ export const animateBack = (btnVal) => {
 			$('.footer-text').text('3/6');
 		},2500);
 	}else if(btnVal === 5){ //to Q5
-		$('.page--6').removeClass('activate')
+		// $('.page--6').removeClass('activate');
 		$('.footer').removeClass('activate');
 		setTimeout(function(){
 			$('.page--5').addClass('activate');
@@ -175,7 +192,7 @@ export const animateBack = (btnVal) => {
 			$('.footer-text').text('4/6');
 		},2500);
 	}else if(btnVal === 6){ //to Q6
-		$('.page--7').removeClass('activate')
+		// $('.page--7').removeClass('activate');
 		$('.footer').removeClass('activate');
 		setTimeout(function(){
 			$('.btn__regress').addClass('rotate');
@@ -185,5 +202,5 @@ export const animateBack = (btnVal) => {
 		},3000);
 	}
 
-	console.log(btnVal);
+	// console.log(btnVal);
 };
