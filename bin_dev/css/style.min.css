@@ -1781,6 +1781,9 @@ b {
   @media only screen and (max-width: 1250px) {
     .cta__wrapper {
       left: 59vw; } }
+  @media only screen and (max-height: 650px) {
+    .cta__wrapper {
+      left: 44.4rem; } }
 
 @media only screen and (min-width: 1441px) and (min-height: 1200px) {
   .cta__wrapper--1, .cta__wrapper--2, .cta__wrapper--4 {
@@ -3200,6 +3203,11 @@ b {
     .landing__texture {
       margin-top: 11.7rem;
       width: 96%; } }
+  @media only screen and (max-height: 650px) {
+    .landing__texture {
+      width: 65.71vh;
+      height: 66.68vh;
+      margin-top: 11.7rem; } }
 
 .line {
   stroke: #ae562c;
@@ -4116,6 +4124,10 @@ b {
       height: 26rem;
       min-height: none;
       max-height: none; } }
+  @media only screen and (max-height: 850px) {
+    .selection__wrapper {
+      height: 13rem;
+      width: 15rem; } }
   .selection__wrapper--x {
     width: 38.40rem;
     height: 22.00rem; }
@@ -5042,6 +5054,12 @@ b {
 .b-modal {
   height: 100vh;
   transition: opacity 100ms; }
+
+.bc-player-SyGHte2Ul_default:hover .vjs-big-play-button {
+  background-color: #e50000 !important; }
+
+.bc-player-SyGHte2Ul_default .vjs-play-progress {
+  background-color: #e50000 !important; }
 
 .block {
   display: block; }

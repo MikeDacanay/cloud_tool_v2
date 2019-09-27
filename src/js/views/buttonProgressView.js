@@ -142,8 +142,12 @@ export const animateFwd = (btnVal) => {
 
 export const animateBack = (btnVal) => {			
 	btnVal=Number(btnVal)+1;
+	
+	$(`#cta-${btnVal}`).addClass('fade');
 
-	console.log('back', btnVal);
+	setTimeout(function(){
+		$(`#cta-${btnVal}`).removeClass('fade');
+	},2000);
 
 	if(btnVal === 1){ //to Landing
 		// $('.page--2').removeClass('activate');

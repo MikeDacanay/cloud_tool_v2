@@ -106,12 +106,6 @@
     right: 0;
     z-index: -1;
     transform: translateX(-4%);
-    // margin-left: 9%;
-    // max-width: calc(#{36.90rem} * #{1.43});
-    // max-height: calc(#{36.90rem} * #{1.21});
-    // width: calc(#{68.33vh} * #{1.43});
-    // height: calc(#{68.33vh} * #{1.21});
-
 		max-width: 52.77rem;
     max-height: 44.65rem;
     width: 97.71vh;
@@ -151,6 +145,13 @@
 		// 	height: 67.1vh;
 		// 	width: 67.1vh;
 		// }
+
+		@include bph(650){
+			width: 65.71vh;
+  		height: 66.68vh;
+			margin-top: 11.7rem;
+		}
+
 
 
 

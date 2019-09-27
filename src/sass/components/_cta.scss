@@ -41,9 +41,12 @@
     	}
     }	
 	}
-		@include bp(1250){
-			left: 59vw;
-		}
+	@include bp(1250){
+		left: 59vw;
+	}
+	@include bph(650){
+		left: 44.4rem;
+	}
 
 		&--1,
 		&--2,
