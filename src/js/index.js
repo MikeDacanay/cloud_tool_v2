@@ -495,6 +495,7 @@ $(document).ready(function(){
 			;
 			const self = $(this);
 			this.selfID = self[0].$div.prevObject.data('id');
+
 			this.dial = assignDial(this.selfID);
 			this.dial.changeValue(v);
 
