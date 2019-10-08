@@ -1,7 +1,7 @@
 import {e} from './base';
 
 export const toggleRestartBtn = (pageNum) => {
-	console.log(pageNum);
+	// console.log(pageNum);
 
 	if(pageNum !== 0){
 		e.restartBtn.addClass('toggle');

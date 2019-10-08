@@ -327,9 +327,9 @@ $(document).ready(function(){
 
 	console.log(sessionStorage.gate);
 
-	if(!sessionStorage.gate){
-		footer.hidePageNumber();
-	}
+	// if(!sessionStorage.gate){
+	// 	footer.hidePageNumber();
+	// }
 
 	$(window).on('resize', function () {
 		state.width = $('body').width();
@@ -628,6 +628,7 @@ $(document).ready(function(){
 	/****** SLIDER CONTROLLER ******/
 	state.slider1 = new SliderGroup($('.scroller__wrapper--1'));
 	state.slider2 = new SliderGroup($('.scroller__wrapper--2'));
+	state.slider3 = new SliderGroup($('.scroller__wrapper--3'));
 
 	sl.setSliderGroupSize();
 
@@ -652,7 +653,10 @@ $(document).ready(function(){
 				sliderGroup = state.slider1;
 			} else if (pageContentElement.find('.scroller__wrapper').hasClass('scroller__wrapper--2')) {
 				sliderGroup = state.slider2;
+			} else if (pageContentElement.find('.scroller__wrapper').hasClass('scroller__wrapper--3')) {
+				sliderGroup = state.slider3;
 			}
+
 			sliderGroup.progression++;
 			pagination.highlightPagination(pageContentElement, sliderGroup.progression);
 

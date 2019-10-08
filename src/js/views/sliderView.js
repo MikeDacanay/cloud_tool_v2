@@ -36,9 +36,11 @@ export const setSliderGroupSize = () =>{
 	if(pageHeight <= 1015){
 		const nextSiblingToActive1 = $('.scroller__wrapper--1 > .scroller__content--active').nextAll();
 		const nextSiblingToActive2 = $('.scroller__wrapper--2 > .scroller__content--active').nextAll();
+		const nextSiblingToActive3 = $('.scroller__wrapper--3 > .scroller__content--active').nextAll();
 	
 		applySliderGroupShrink(nextSiblingToActive1);
 		applySliderGroupShrink(nextSiblingToActive2);
+		applySliderGroupShrink(nextSiblingToActive3);
 	} 
 }
 
@@ -59,8 +61,6 @@ export const setSlideActive = (slide) => {
 	children.removeClass('scroller__content--deactive scroller__content--active');
 	
 		// get this active
-
-	console.log(self);
 
 	self.addClass('scroller__content--active');
 	self.prevAll().addClass('scroller__content--deactive');

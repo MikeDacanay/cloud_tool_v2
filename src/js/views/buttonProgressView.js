@@ -1,5 +1,5 @@
 export const animateFwd = (btnVal) => {
-	
+	console.log(btnVal);
 	if(btnVal === 1){
 		$('.landing__container').toggleClass('landing__container--fadeout');
 		$('.landing__title').toggleClass('landing__title--fadeout');
