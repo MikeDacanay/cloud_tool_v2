@@ -19,7 +19,7 @@ export default class SliderGroup {
             sum+=element;
         });
 
-        avg = Math.round(20*((sum/this.arrayVal.length)/100));
+        avg = Math.round(16.67*((sum/this.arrayVal.length)/100));
 
         this.val = avg;
     }

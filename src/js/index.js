@@ -387,6 +387,7 @@ $(document).ready(function(){
 			state.dial1.val +
 			state.dial2.val +
 			state.dial3.val +
+			state.slider3.val +
 			state.slider1.val +
 			state.slider2.val;
 
@@ -412,6 +413,8 @@ $(document).ready(function(){
 		$('.grow--text').css('color', '#00758f'); 
 		$('.header__rectangle--grow').css('background-color', 'white'); 
 
+
+		window.statess = state;
 	});	 
 
 
