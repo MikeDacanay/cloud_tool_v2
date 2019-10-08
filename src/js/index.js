@@ -126,23 +126,23 @@ $(document).ready(function(){
 			$(`#detscroll1-${index}`).css('background', `linear-gradient(to right, #fcfbfa ${element}%, transparent ${element}%`);
 
 			if (Number(element) < peersDetScroll1[index]) {
-				$(`#detscroll1__txt-${index}`).text('Your peers are slightly more confident with data sources.');
+				$(`#detscroll1__txt-${index}`).text('Your peers are slightly more confident with security and management.');
 			} else if (Number(element) > peersDetScroll1[index]) {
-				$(`#detscroll1__txt-${index}`).text('You are slightly more confident with data sources than your peers. Congratulations!');
+				$(`#detscroll1__txt-${index}`).text('You are slightly more confident with security and management than your peers. Congratulations!');
 			} else {
-				$(`#detscroll1__txt-${index}`).text('You and your peers are equally as confident in data sources. Congratulations!');
+				$(`#detscroll1__txt-${index}`).text('You and your peers are equally as confident in security and management. Congratulations!');
 			}
 		});
 		detscroll2Values.forEach(function (element, index) {
 			$(`#detscroll2-${index}`).css('background', `linear-gradient(to right, #fcfbfa ${element}%, transparent ${element}%`);
 
 			if (Number(element) < peersDetScroll2[index]) {
-				$(`#detscroll2__txt-${index}`).text('Your peers are slightly more confident with data sources.');
+				$(`#detscroll2__txt-${index}`).text('Your peers are slightly more confident with data and analytics.');
 
 			} else if (Number(element) > peersDetScroll2[index]) {
-				$(`#detscroll2__txt-${index}`).text('You are slightly more confident with data sources than your peers. Congratulations!');
+				$(`#detscroll2__txt-${index}`).text('You are slightly more confident with data and analytics than your peers. Congratulations!');
 			} else {
-				$(`#detscroll2__txt-${index}`).text('You and your peers are equally as confident in data sources. Congratulations!');
+				$(`#detscroll2__txt-${index}`).text('You and your peers are equally as confident in data and analytics. Congratulations!');
 			}
 		});
 	};
