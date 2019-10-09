@@ -33,7 +33,7 @@ b {
 		transition-delay: .5s;
 		transition-property: opacity;
     	transition-duration: 0.5s;
-		margin-top: 42%;
+		margin-top: 33%;
 		padding: 0 2%;
 
 		&--x{
@@ -183,7 +183,7 @@ b {
 		  line-height: 1.2;
 		  letter-spacing: normal;
 		  text-align: center;     
-	    margin-top: 27.25%;
+	    margin-top: 22.25%;
 	    
 		@include bp(767){
 			margin-top: 20%;
@@ -1218,7 +1218,7 @@ b {
 		.scroller__content--active &{
 			display: flex;
 		  height: 3.55rem;
-		  font-size: $font-size-7;
+		  font-size: 1.55rem;
 		  line-height: 1.67;
 			
 			
@@ -1344,15 +1344,18 @@ b {
 		width: 100%;
 		height: 100%;
 		position: absolute;
-		padding: 9.10rem 4.05rem 3.83rem 4.05rem;	
+		padding: 9.10rem 6.35rem 3.83rem 6.35rem;
 	  font-family: $font-reg;
-	  font-size: $font-size-1;
+	  font-size: 1.4rem;
 	  font-weight: normal;
 	  font-style: normal;
 	  font-stretch: normal;
 	  letter-spacing: normal;
 	  text-align: center;
 	  color: $color-blue-2;	
+		display: flex;
+    align-items: center;
+    justify-content: center;
 
 	  @include bp(500){
 	  	font-size: $font-size-9;

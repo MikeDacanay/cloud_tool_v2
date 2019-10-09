@@ -12,18 +12,18 @@ export const displayValues = (user, peers) =>{
 	},2200);
 }
 
-export const displayResultsCopy = (user, peers) => {	
+export const displayResultsCopy = (user) => {	
 
-	if(user === peers){
+	if(user < 40){
 		e.results__copy.append(
-			"<span class='block'>Your score indicates that you are <b>on par with your peers</b> with cloud confidence and cloud adoption.</span><span class='block'>&nbsp;</span><span class='block'>To remain competitive, your company should actively pursue the promise of lower costs, greater topline growth, and easier access to innovation that comes with cloud adoption.</span>" 			
+			"<span class='block'><b>Catch up!</b> Your score indicates that you are behind the curve with Marketing Maturity. But don’t worry, we have curated plenty of resources below to help you get up to speed. We are here to help you succeed with more accurate segmentation, automation and ultimately more leads.</span>" 			
 		)
-	}else if(user > peers){
+	}else if(user >= 40 && user <= 60){
 		e.results__copy.append(
-			"<span class='block'><b>Congratulations!</b> Your score indicates that you are ahead of your peers with cloud confidence and cloud adoption.</span><span class='block'>&nbsp;</span><span class='block'>Your company understands the promise of lower costs, greater topline growth, and easier access to innovation and is well positioned to benefit and evolve with emerging technologies well into the future.</span>"
+			"<span class='block'><b>On par!</b> Your score indicates that you are on par with Marketing Maturity. Your company has an opportunity to lower costs, greater topline growth, and easier access to innovation and is well positioned to benefit and evolve with emerging technologies well into the future.</span>"
 		)		
-	}else if(user < peers){
+	}else if(user > 60){
 		e.results__copy.append( 						
-			"<span class='block'>&nbsp;</span><span class='block'>Your score indicates that you are <b>behind your peers</b> with cloud-confidence and cloud adoption.</span><span class='block'>&nbsp;</span><span class='block'>To remain competitive, your company should actively pursue the promise of lower costs, greater topline growth, and easier access to innovation that comes with cloud adoption.</span>" 			
+			"<span class='block'><b>Congratulations!</b> Your score indicates that you are ahead of the curve with Marketing Maturity. Your company understands the promise of lower costs, greater topline growth, and easier access to innovation and is well positioned to benefit and evolve with emerging technologies well into the future.</span>" 			
 	)};
 };

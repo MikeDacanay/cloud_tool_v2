@@ -391,7 +391,7 @@ $(document).ready(function(){
 			state.slider1.val +
 			state.slider2.val;
 
-		result.displayValues(state.userAggregateValue, PeersData.peerScore);
+		result.displayValues(state.userAggregateValue);
 
 		// Animate cloud after click
 		const cloudPeer = peersJson;
@@ -432,6 +432,7 @@ $(document).ready(function(){
 		e.hdrProgress.attr('context', contextValue);
 	});
 
+	$('.btn__progress--3').click();
 
 	// DETAILED FOOTER CLICK
 		if(sessionStorage.page === '1'){
@@ -511,11 +512,11 @@ $(document).ready(function(){
 	});
 
 	dial.handResize();
-	dial.changeDialText();
+	// dial.changeDialText();
 	dial.lineResize();
 
 	$(window).on('resize', function () {
-		dial.changeDialText();
+		// dial.changeDialText();
 		dial.handResize();
 		dial.lineResize();
 	});

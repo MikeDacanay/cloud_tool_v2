@@ -15,30 +15,20 @@ const retrieveGroupText = (dialGroup) => {
       textGroup.second = 'Planning';
       textGroup.third = 'Using';
     }
-  }
-  // else if(dialGroup.hasClass('dial-group--3')){
-  // 	textGroup.first = 'Impede current process';
-  // 	textGroup.second = 'No Impact';
-  // 	textGroup.third = 'Improve Data use';
+  }else if(dialGroup.hasClass('dial-group--3')){
+  	textGroup.first = 'Impede current process';
+  	textGroup.second = 'No Impact';
+  	textGroup.third = 'Improve Data use';
 
-  //   if($('body').width() <= 1440){
-  //     textGroup.first = 'Impede';
-  //     textGroup.second = 'No Impact';
-  //     textGroup.third = 'Improve';
-  //   }
-  // }
-  else if(dialGroup.hasClass('dial-group--2x')){
-    textGroup.first = 'Single channel';
-    textGroup.second = 'Multi-channel';
-  }else if(dialGroup.hasClass('dial-group--2y')){
-    textGroup.first = 'Broadcast';
-    textGroup.second = 'Batch & Blast';
+    if($('body').width() <= 1440){
+      textGroup.first = 'Impede';
+      textGroup.second = 'No Impact';
+      textGroup.third = 'Improve';
+    }
+  }else{
+  	textGroup.first = 'Less impact';
+  	textGroup.second = 'More Impact';
   }
-
-  // else{
-  // 	textGroup.first = 'Less impact';
-  // 	textGroup.second = 'More Impact';
-  // }
 
   return textGroup;
 }

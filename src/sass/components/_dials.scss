@@ -425,7 +425,7 @@
 			align-items: center;
 
 			&--1{
-				padding-left: 8.5%;
+				padding-left: 9.5%;
 				flex: 0 1 53%;
 				
 				@include bp(1400){
@@ -456,7 +456,7 @@
 				}
 			}
 			&--2{
-				padding-right: 8.5%;
+				padding-right: 9.5%;
 				@include bp(1400){
 					padding-right: 8%;
 				}
