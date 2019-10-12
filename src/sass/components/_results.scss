@@ -2,11 +2,12 @@
 	&__wrapper{
 		height: 23.35rem;
 		background-color: $color-sblack-1;
-		width: 100%;
+		width: 49.25rem;
 		padding: 4.37rem 2.40rem 4.38rem 2.60rem;
 		display: flex;
 		cursor: pointer;
 		transition: filter 500ms;
+		margin: 0 auto;
 		&:hover > .detailed-score__container--2{
 	    filter: blur(0.10rem);
 	  }
@@ -27,6 +28,8 @@
 			flex: 0 0 25.90rem;
 	    background-image: url(../assets/images/desktop/pathmap.png);
       background-size: 100%;
+
+
 
       @include bp(1440){
    	    flex: 0 0 50%;
@@ -60,11 +63,15 @@
 
 .cta-group{
 	&__wrapper{
-		height: 25.65rem;
+		// height: 25.65rem;
 		display: flex;
-		width: 45.00rem;
+		// width: 45.00rem;
 		margin-top: 2.80rem;
 		justify-content: space-between;
+		width: 100%;
+		&--2{
+			margin-bottom: 2.80rem;
+		}
 		@include bp(1440){
 			width: 100%;
 		}
@@ -123,8 +130,7 @@
 		&--1{
 			width: 7.15rem;
 		}
-		&--2{
-			width: 8.45rem;
+		&--2{			width: 8.45rem;
 		}
 	}
 	&__group{
@@ -223,4 +229,123 @@
   position: relative;
 }
 
+.card{
+	&__group{
+			flex: 1;
+			background-color: #fff;		
+			margin: 0 0.90rem;
+			flex-flow: column;
+			display: flex;
+			height: auto;
+			box-shadow: 0px 1px 16px 0 rgba(0,0,0,0.18);
+			border-radius: 0.40rem;
+		&--large{			
+			margin: 0 0.90rem;
+		}
+		&--mid{						
+			display: block;
+			position: relative;
+		}
+	}
 
+	&__facade{
+		&--1{
+			padding: 1.2em 1.2em 0.2em;
+	    width: 100%;
+	    height: 100%;
+	    border-radius: 0.40rem;
+	    display: flex;
+	    flex-flow: column;
+			height: auto;
+		}
+		// &--2{
+
+		// }
+	}
+
+	&__item{
+		&--1{
+			flex: 0 0 auto;
+		}
+		&--2{
+			flex: 1 0 17.40rem;
+	    padding: 1.7em 1.05rem 2.5em;
+		}
+		&--3{
+			flex: 0 0 auto;
+			padding-bottom: 1rem;
+	    display: flex;
+	    justify-content: center;			
+		}
+		&--4{
+			flex: 0 0 auto; 
+			margin-bottom: 2em;
+		}
+		&--5{
+			flex: 0 0 7.10rem;
+		}
+		&--6{
+			flex: 0 0 3.50rem;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+		}
+	}
+
+	&__img{
+		&--img{
+			margin: 0 auto;
+			display: block; 
+			&-1{
+				border-top-left-radius: 0.20rem;
+		    border-top-right-radius: 0.20rem;
+			}
+		}
+	}
+	&__button{
+		display: flex;
+		&--1{
+    	padding: 0.62rem 1.00rem;    
+	    border-radius: 0.20rem;
+	    background-color: #9e4e4e;    
+	    font-size: 0.70rem;
+	    font-family: $font-reg;	
+	    color: #fff;
+	    text-decoration: none;
+		}
+		&--2{
+			flex: 0 0 3.50rem;
+			height: 1.75rem;
+			background-color: #A43C2E;   
+			color: #fff;
+			display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    border-radius: 1.80rem;
+		}
+	}
+	&__title{
+		font-size: 1.00rem;
+		color: #1A1816;
+		font-family: $font-b;
+		line-height: 1.2;
+		margin-bottom: 0.40rem;
+	}
+	&__text{
+		font-size: 1.20rem;
+    line-height: 1.4;
+    font-family: $font-reg;
+	}
+	&__para{
+		font-size: 0.80rem;
+		font-family: $font-lite;
+		color: #3F3A36;
+		margin-bottom: .4rem;
+		line-height: 1.56;
+	}
+	&__share{
+		font-family: $font-reg;
+		color: #bc6c37;
+		font-size: 0.80rem;
+	}
+}

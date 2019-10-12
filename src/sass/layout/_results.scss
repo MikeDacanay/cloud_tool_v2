@@ -3,7 +3,7 @@
 		height: 51.80rem;
 		// background-color: hotpink;
 		width: 100%;
-		margin-top: 7.70rem;
+		margin-top: 4.70rem;
 		display: flex;
 
 		@include bp(1350){
@@ -11,7 +11,8 @@
 		}
 	}
 	&__body{
-		flex: 0 0 49.25rem;
+		// flex: 0 0 49.25rem;
+		flex: 0 0 100%;
 		margin-right: auto;
 		// height: 300px;
 		@include bp(1440){
