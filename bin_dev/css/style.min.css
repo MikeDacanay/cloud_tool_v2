@@ -3777,7 +3777,8 @@ b {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 1.80rem; }
+    border-radius: 1.80rem;
+    cursor: pointer; }
 
 .card__title {
   font-size: 1.00rem;
