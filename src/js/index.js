@@ -469,7 +469,7 @@ $(document).ready(function(){
 		$(this).attr('context', `${Number(contextVal) - 1}`)
 	});
 
-	// $('.btn__progress--7').click();
+	$('.btn__progress--7').click();
 
 	/****** DIAL CONTROLLER ******/
 	state.dial1 = new Dial(); // do state.dial1.val to retrieve user's answer

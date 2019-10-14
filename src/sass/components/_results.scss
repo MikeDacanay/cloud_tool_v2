@@ -249,18 +249,20 @@
 	}
 
 	&__facade{
+		padding: 1.2em 1.2em 0.2em;
+    width: 100%;
+    border-radius: 0.40rem;
+    display: flex;
+    flex-flow: column;		
+		position: absolute;
 		&--1{
-			padding: 1.2em 1.2em 0.2em;
-	    width: 100%;
-	    height: 100%;
-	    border-radius: 0.40rem;
-	    display: flex;
-	    flex-flow: column;
 			height: auto;
+			background-color: #fff;
 		}
-		// &--2{
-
-		// }
+		&--2{
+			height: 100%;
+			background-color: green;
+		}
 	}
 
 	&__item{
@@ -322,7 +324,7 @@
 	    justify-content: center;
 	    align-items: center;
 	    border-radius: 1.80rem;
-	    cursor: pointer;
+	    // cursor: pointer;
 		}
 	}
 	&__title{
