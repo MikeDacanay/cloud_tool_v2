@@ -299,8 +299,8 @@ b {
 				width: auto;
 			}
 		}
-		&--2{
-			width: 39.55rem;
+		&--2{			
+	    width: 45.95rem;
 
 
 			@include bp(1440){
@@ -438,6 +438,15 @@ b {
 		  margin-top: 17rem;
 		}
 
+		&--subheader{
+			&-1{
+				color: #fff;
+		    font-size: 1.50rem;
+		    font-family: $font-b;
+		    margin-top: 0.75rem;
+		    display: block;
+			}
+		}
 		.page.zoomed .page__content > &{
 			@include bp(767){
 				display: none;	
@@ -1218,7 +1227,7 @@ b {
 		.scroller__content--active &{
 			display: flex;
 		  height: 3.55rem;
-		  font-size: 1.55rem;
+		  font-size: 1.4rem;
 		  line-height: 1.67;
 			
 			
