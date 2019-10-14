@@ -3715,7 +3715,11 @@ b {
     margin: 0 0.90rem; }
   .card__group--mid {
     display: block;
-    position: relative; }
+    position: relative;
+    height: 18.4rem; }
+    .card__group--mid:hover .card__facade--2 {
+      opacity: 1;
+      transform: translate(0); }
 
 .card__facade {
   padding: 1.2em 1.2em 0.2em;
@@ -3728,8 +3732,13 @@ b {
     height: auto;
     background-color: #fff; }
   .card__facade--2 {
-    height: 100%;
-    background-color: green; }
+    padding-bottom: 2.42rem;
+    opacity: 0;
+    z-index: 20;
+    height: 18.40rem;
+    background-color: #A43C2E;
+    transform: translateY(15%);
+    transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1), opacity 200ms; }
 
 .card__item--1 {
   flex: 0 0 auto; }
@@ -3757,6 +3766,13 @@ b {
   align-items: center;
   justify-content: flex-end; }
 
+.card__item--8 {
+  margin-bottom: auto; }
+
+.card__item--9 {
+  display: flex;
+  justify-content: center; }
+
 .card__img--img {
   margin: 0 auto;
   display: block; }
@@ -3783,6 +3799,21 @@ b {
     justify-content: center;
     align-items: center;
     border-radius: 1.80rem; }
+  .card__button--3 {
+    padding: 0.62rem 1.00rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #100f0e;
+    font-family: Univers, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 0.70rem;
+    background: #fff;
+    border-radius: 0.20rem; }
+    .card__button--3 > * {
+      transform: translateY(0.1rem); }
+    .card__button--3:hover {
+      background: #f3f2f1; }
 
 .card__title {
   font-size: 1.00rem;
@@ -3790,6 +3821,12 @@ b {
   font-family: UniversB, Arial, Helvetica, sans-serif;
   line-height: 1.2;
   margin-bottom: 0.40rem; }
+  .card__title--1 {
+    font-size: 0.90rem;
+    line-height: 1.3;
+    font-family: UniversB, Arial, Helvetica, sans-serif;
+    margin-bottom: 0.4em;
+    color: #fff; }
 
 .card__text {
   font-size: 1.20rem;
@@ -3802,6 +3839,12 @@ b {
   color: #3F3A36;
   margin-bottom: .4rem;
   line-height: 1.56; }
+  .card__para--1 {
+    margin: 0 0 1.1em;
+    line-height: 1.55;
+    font-size: 0.90rem;
+    color: #fff;
+    font-family: Univers, Arial, Helvetica, sans-serif; }
 
 .card__share {
   font-family: Univers, Arial, Helvetica, sans-serif;
