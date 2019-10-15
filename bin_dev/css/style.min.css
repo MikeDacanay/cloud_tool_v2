@@ -1057,6 +1057,12 @@ b {
   margin-top: 0.20rem;
   width: 95%; }
 
+.cta-group__subheader {
+  font-family: UniversB, Arial, Helvetica, sans-serif;
+  font-size: 2.00rem;
+  margin-top: 2.00rem;
+  text-align: center; }
+
 .scroller__title {
   font-size: 0.95em;
   font-family: UniversB, Arial, Helvetica, sans-serif;
@@ -3583,7 +3589,7 @@ b {
 
 .cta-group__wrapper {
   display: flex;
-  margin-top: 2.80rem;
+  margin-top: 1rem;
   justify-content: space-between;
   width: 100%; }
   .cta-group__wrapper--2 {
@@ -3917,6 +3923,8 @@ b {
     margin: 0; } }
   .scroller__wrapper--2 {
     height: 30.15rem; }
+    .scroller__wrapper--2-1 {
+      width: 50.9rem; }
 
 .scroller__content {
   width: 97%;

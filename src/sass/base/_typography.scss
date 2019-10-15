@@ -1203,6 +1203,12 @@ b {
 		  margin-top: 0.20rem;
 		  width: 95%;
 		}
+		&__subheader{
+			font-family: $font-b;
+	    font-size: 2.00rem;
+	    margin-top: 2.00rem;
+	    text-align: center;
+		}
 	}
 }
 
