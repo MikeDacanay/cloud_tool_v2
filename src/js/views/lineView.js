@@ -27,25 +27,16 @@ export const resizeLines = () => {
 
 	// RESULTS PAGE
 
-	let y1x1 = '35rem';
-	let y3x1 = '127.7rem';
-	let y5x2 = '393.85rem';
-	let y10x1 = '-231.1rem';
+	// let y1x1 = '35rem';
+	// let y3x1 = '128.7rem';
+	// let y5x2 = '393.85rem';
+	// let y10x1 = '-231.1rem';
 
-	// if($('body').width() <= 1440){
-	// 	y3x1 = '200vw';
-	// };
-
-	// if(height >= 1080){
-	// 	y1_start = 14.35*20 + circleSize;
-	// } else if(height <= 810 && height >= 651){
-	// 	y1_start = 154+circleSize;
-	// } else if(height <= 650){
-	// 	y1_start = 14.55*20 + circleSize;
-	// }; 
-
-
-
+	let y1x1 = 700;
+	let y1x2 = 1700;
+	let y3x1 = 2574.00;
+	let y5x2 = 7877.00;
+	let y10x1 = -4622.00;
 
 	if(height <= 400) {
 		y1_start = 2.6*20 + circleSize;
@@ -97,6 +88,7 @@ export const resizeLines = () => {
 	});
 	$('.line--2y').attr({
 		x1: y1x1,
+		x2: y1x2,
 	});	
 	$('.line--3y').attr({
 	    x1: y3x1,

@@ -34,8 +34,8 @@
     }
 
     &--x{
-        width: 70rem;
-        height: 5.05rem;
+        width: 14rem;
+        height: 2.15rem;
         position: fixed;
         background: $color-blue-2;
         bottom: 0;
@@ -48,7 +48,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;   
-        border: solid 1px $color-blue-1;
+        border: solid 1px $color-white-1;
+        border-bottom: solid 1px $color-blue-2;
         text-decoration: none;
         opacity: 0;
         @include bp(1440){

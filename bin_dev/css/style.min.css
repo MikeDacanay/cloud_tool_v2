@@ -4527,8 +4527,8 @@ b {
       width: 100%;
       padding: 0 .8rem; } }
   .footer--x {
-    width: 70rem;
-    height: 5.05rem;
+    width: 14rem;
+    height: 2.15rem;
     position: fixed;
     background: #282623;
     bottom: 0;
@@ -4541,7 +4541,8 @@ b {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: solid 1px #00758f;
+    border: solid 1px #fcfbfa;
+    border-bottom: solid 1px #282623;
     text-decoration: none;
     opacity: 0; }
     @media only screen and (max-width: 1440px) {
