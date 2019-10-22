@@ -9,11 +9,7 @@ import 'cpr_bopup';
 import 'lottie-web';
 import './form.js';
 
-
-
 import {e} from './views/base';
-
-
 
 import Dial from './models/Dial';
 import Selector from './models/Selector';
