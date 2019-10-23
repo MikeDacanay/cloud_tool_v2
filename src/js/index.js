@@ -12,6 +12,7 @@ import './form.js';
 import {e} from './views/base';
 
 import Dial from './models/Dial';
+import Likert from './models/Likert';
 import Selector from './models/Selector';
 import Page from './models/Page';
 import * as PeersData from './models/PeersData';
@@ -321,8 +322,6 @@ $(document).ready(function(){
 
 	line.resizeLines();
 
-	console.log(sessionStorage.gate);
-
 	if(!sessionStorage.gate){
 		footer.hidePageNumber();
 	}
@@ -384,9 +383,10 @@ $(document).ready(function(){
 		state.userAggregateValue =
 			state.dial1.val +
 			state.dial2.val +
-			state.dial3.val +
-			state.slider1.val +
-			state.slider2.val;
+			state.likert1.val;
+			// state.dial3.val +
+			// state.slider1.val +
+			// state.slider2.val;
 
 		result.displayValues(state.userAggregateValue, PeersData.peerScore);
 
@@ -468,11 +468,21 @@ $(document).ready(function(){
 
 	/****** LIKERT CONTROLLER ******/
 
+	state.likert1 = new Likert();
+		
 
 	$('.likert').change(function(){
-		const likertName = $(this).find('.likert__input').attr('name');
+		const likertName = $(this).find('.likert__input').attr('name');		
 		const likertVal = $(`input[name=${likertName}]:checked`).val();
-		console.log(likertVal);
+	
+		if(likertName === 'likert--1'){		
+			state.likert1.changeValue(likertVal);
+		}	
+
+		const btn = $(this).closest('.page__content').find('.btn__progress');;
+
+		$(btn).click();
+		// console.log($(this).parent('page__content'));
   });
 
 
@@ -700,10 +710,11 @@ $(document).ready(function(){
 
 		sessionStorage.dial1 = state.dial1.val;
 		sessionStorage.dial2 = state.dial2.val;
-		sessionStorage.dial3 = state.dial3.val;
-		sessionStorage.selector1 = state.selected.choices;
+		sessionStorage.likert1 = state.likert1.val;
+		// sessionStorage.dial3 = state.dial3.val;
+		// sessionStorage.selector1 = state.selected.choices;
 		sessionStorage.slider1 = state.slider1.arrayVal;
-		sessionStorage.slider2 = state.slider2.arrayVal;
+		// sessionStorage.slider2 = state.slider2.arrayVal;
 
 		sessionStorage.userAgg = state.userAggregateValue;
 		sessionStorage.peerAgg = PeersData.peerScore;

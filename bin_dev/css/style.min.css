@@ -1828,6 +1828,8 @@ b {
   @media only screen and (max-width: 666px) {
     .cta__wrapper--1, .cta__wrapper--2, .cta__wrapper--4 {
       display: none; } }
+  .cta__wrapper--2 {
+    top: 51%; }
 
 @media only screen and (max-width: 910px) and (min-height: 750px) {
   .cta__wrapper--2 {
@@ -3255,7 +3257,7 @@ b {
     color: #ffffff;
     padding-top: 31px; }
   .likert__checkmark {
-    background-image: url(../assets/images/desktop/icon/icon-check.svg);
+    background-image: url(../assets/images/desktop/icon/icon-check-likert.svg);
     width: 31px;
     background-repeat: no-repeat;
     background-size: 100%;

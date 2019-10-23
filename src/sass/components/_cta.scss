@@ -104,6 +104,7 @@
 		}	
 
 		&--2{
+			top: 51%;
 			@include bp(910){ @include bph_min(750){ top: 194%; } }
 			@include bp(715){ @include bph_min(715){ top: 210%; } }
 		}
