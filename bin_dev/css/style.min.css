@@ -495,6 +495,7 @@ b {
       display: none; } }
 
 .main__direction {
+  height: 65px;
   font-family: Univers, Arial, Helvetica, sans-serif;
   font-size: 0.95em;
   font-weight: normal;
@@ -3208,6 +3209,60 @@ b {
       width: 65.71vh;
       height: 66.68vh;
       margin-top: 11.7rem; } }
+
+.likert {
+  display: flex; }
+  .likert__container {
+    margin-top: 47px;
+    position: relative; }
+  .likert__group {
+    margin-right: 131px; }
+  .likert__line {
+    stroke: #fff;
+    stroke-width: 2; }
+    .likert__line--group {
+      height: 1px;
+      width: 1px;
+      z-index: -100;
+      overflow: visible; }
+  .likert__button {
+    border: 2px solid #fff;
+    height: 53px;
+    width: 53px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .likert__input:checked ~ .likert__label .likert__button {
+      background-color: #a25a36;
+      border: 2px solid #a25a36; }
+  .likert__input {
+    display: none; }
+  .likert__label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 53px; }
+  .likert__text {
+    font-family: Univers, Arial, Helvetica, sans-serif;
+    font-size: 23px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.3;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 31px; }
+  .likert__checkmark {
+    background-image: url(../assets/images/desktop/icon/icon-check.svg);
+    width: 31px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 23px;
+    display: none; }
+    .likert__input:checked ~ .likert__label .likert__checkmark {
+      display: block; }
 
 .line {
   stroke: #ae562c;
