@@ -11,8 +11,8 @@
     "build:css": "npm-run-all compile:sass prefix:css compress:css",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "begin": "webpack-dev-server --mode development --open",
-    "start": "npm-run-all watch:sass begin"
+    "begin": "webpack-dev-server --mode development --open",    
+    "start": "npm-run-all --parallel begin watch:sass"
   },
   "author": "",
   "license": "ISC",

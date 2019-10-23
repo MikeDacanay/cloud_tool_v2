@@ -349,6 +349,8 @@ $(document).ready(function(){
 		}
 	});
 
+
+
 	/****** CPRSCROLLPATH/MOVEMENT CONTROLLER ******/
 
 	state.userAggregateValue = 0;	
@@ -425,6 +427,7 @@ $(document).ready(function(){
 		e.hdrProgress.attr('context', contextValue);
 	});
 
+	$('.btn__progress--2').click();
 
 	// DETAILED FOOTER CLICK
 		if(sessionStorage.page === '1'){
@@ -462,6 +465,16 @@ $(document).ready(function(){
 
 		$(this).attr('context', `${Number(contextVal) - 1}`)
 	});
+
+	/****** LIKERT CONTROLLER ******/
+
+
+	$('.likert').change(function(){
+		const likertName = $(this).find('.likert__input').attr('name');
+		const likertVal = $(`input[name=${likertName}]:checked`).val();
+		console.log(likertVal);
+  });
+
 
 	/****** DIAL CONTROLLER ******/
 	state.dial1 = new Dial(); // do state.dial1.val to retrieve user's answer
