@@ -3243,6 +3243,7 @@ b {
   .likert__label {
     display: flex;
     flex-direction: column;
+    cursor: pointer;
     align-items: center;
     width: 53px; }
   .likert__text {

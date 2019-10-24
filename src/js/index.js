@@ -427,7 +427,7 @@ $(document).ready(function(){
 		e.hdrProgress.attr('context', contextValue);
 	});
 
-	$('.btn__progress--2').click();
+	$('.btn__progress--3').click();
 
 	// DETAILED FOOTER CLICK
 		if(sessionStorage.page === '1'){
