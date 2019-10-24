@@ -15,8 +15,10 @@ const retrieveGroupText = (dialGroup) => {
       textGroup.second = 'Planning';
       textGroup.third = 'Using';
     }
-  // }else if(dialGroup.hasClass('dial-group--2')){
-
+  }else if(dialGroup.hasClass('dial-group--2')){
+    textGroup.first = 'No ABM';
+    textGroup.second = 'Getting started';
+    textGroup.third = "Yes and it's great";
   }else if(dialGroup.hasClass('dial-group--3')){
   	textGroup.first = 'Impede current process';
   	textGroup.second = 'No Impact';
@@ -92,6 +94,10 @@ export const changeDialText = () => {
   $('.dial__text--3c').text('Almost all automated');
   $('.dial__text--2b').text('Impede current process');
   $('.dial__text--3b').text('Improve data use');
+
+  $('.dial__text--1d').text('Some automation');
+  $('.dial__text--2d').text('None, all manual');
+  $('.dial__text--3d').text('Almost all automated');  
 
   if($('body').width() <= 1440 || $(window).height() <= 750){
     $('.dial__text--1c').text('Planning');
