@@ -324,6 +324,10 @@ b {
 			@include bp(500){
 				width: auto;
 			}
+
+			&-x{
+				width: 60.55rem;
+			}
 		}
 		&--3,
 		&--5,
@@ -347,6 +351,8 @@ b {
 		}
 
 		&--3{
+			width: 75%;
+
 			@include bp(767){
 				display: block;
 				margin-top: 0;

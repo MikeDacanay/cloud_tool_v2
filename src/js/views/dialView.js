@@ -6,15 +6,17 @@ const retrieveGroupText = (dialGroup) => {
 
 
   if(dialGroup.hasClass('dial-group--1')){
-  	textGroup.first = 'Not using the cloud';
-  	textGroup.second = 'Planning for the cloud';
-  	textGroup.third = 'Using cloud services';
+  	textGroup.first = 'None, all manual';
+  	textGroup.second = 'Some automation';
+  	textGroup.third = 'Almost all automated';
 
     if($('body').width() <= 1440) {
       textGroup.first = 'Not using';
       textGroup.second = 'Planning';
       textGroup.third = 'Using';
     }
+  // }else if(dialGroup.hasClass('dial-group--2')){
+
   }else if(dialGroup.hasClass('dial-group--3')){
   	textGroup.first = 'Impede current process';
   	textGroup.second = 'No Impact';
@@ -85,9 +87,9 @@ export const dialContextualize = (dial, angle) => {
 };
 
 export const changeDialText = () => {
-  $('.dial__text--1c').text('Planning for the cloud');
-  $('.dial__text--2c').text('Not using the cloud');
-  $('.dial__text--3c').text('Using cloud services');
+  $('.dial__text--1c').text('Some automation');
+  $('.dial__text--2c').text('None, all manual');
+  $('.dial__text--3c').text('Almost all automated');
   $('.dial__text--2b').text('Impede current process');
   $('.dial__text--3b').text('Improve data use');
 
