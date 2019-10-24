@@ -470,6 +470,8 @@ $(document).ready(function(){
 		$(this).attr('context', `${Number(contextVal) - 1}`)
 	});
 
+	// $('.btn__progress--6').click();
+
 	/****** LIKERT CONTROLLER ******/
 
 	state.likert1 = new Likert();

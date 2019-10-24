@@ -43,7 +43,7 @@ const retrieveText = (dialGroup, angle) => {
 
 // Dial 1 + 3
 
-	if(dialGroup.hasClass('dial-group--1') || dialGroup.hasClass('dial-group--3')){
+	if(dialGroup.hasClass('dial-group--1') || dialGroup.hasClass('dial-group--2')){
 		if(angle < 60){
 	  	textGroup.result = textGroup.first;
 	  }else if (angle > 60 && angle < 120){
@@ -95,9 +95,9 @@ export const changeDialText = () => {
   $('.dial__text--2b').text('Impede current process');
   $('.dial__text--3b').text('Improve data use');
 
-  $('.dial__text--1d').text('Some automation');
-  $('.dial__text--2d').text('None, all manual');
-  $('.dial__text--3d').text('Almost all automated');  
+  $('.dial__text--1d').text('No ABM');
+  $('.dial__text--2d').text('Getting started');
+  $('.dial__text--3d').text("Yes and it's great");  
 
   if($('body').width() <= 1440 || $(window).height() <= 750){
     $('.dial__text--1c').text('Planning');
