@@ -12,6 +12,6 @@ export default class Checkbox {
 			const checkboxChxd = $(group).find('.checkbox__input:checked').length;
 			const val =  Math.ceil(16.6666 * (checkboxChxd/checkboxLen));    	
 
-			console.log(val);
+			this.val = val;
     }
 }

@@ -382,9 +382,10 @@ $(document).ready(function(){
 
 		// Shows score in results after click
 		state.userAggregateValue =
-			state.dial1.val +
-			state.dial2.val +
-			state.likert1.val;
+			state.dial1.val +		
+			state.likert1.val +
+			state.checkbox1.val + 
+			state.dial2.val;
 			// state.dial3.val +
 			// state.slider1.val +
 			// state.slider2.val;
