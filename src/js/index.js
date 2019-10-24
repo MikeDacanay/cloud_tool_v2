@@ -11,6 +11,7 @@ import './form.js';
 
 import {e} from './views/base';
 
+import Checkbox from './models/Checkbox';
 import Dial from './models/Dial';
 import Likert from './models/Likert';
 import Selector from './models/Selector';
@@ -485,6 +486,17 @@ $(document).ready(function(){
 		// console.log($(this).parent('page__content'));
   });
 
+	/****** CHECKBOX CONTROLLER ******/	
+
+	state.checkbox1 = new Checkbox;
+
+	$('.checkbox').change(function(){
+		const checkboxName = $(this).find('.checkbox__input').attr('name');			
+		
+		if(checkboxName === 'checkbox--1'){						
+			state.checkbox1.changeValue(this);
+		}
+	});
 
 	/****** DIAL CONTROLLER ******/
 	state.dial1 = new Dial(); // do state.dial1.val to retrieve user's answer

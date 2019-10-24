@@ -4,7 +4,7 @@ export default class Likert {
     }
 
     changeValue(v){            
-    	this.val = Number(v)/6;    
+    	this.val = v;    	
     }
 }
 
