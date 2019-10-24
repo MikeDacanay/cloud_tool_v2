@@ -4,6 +4,6 @@ export default class Dial {
     }
 
     changeValue(v){        
-    	this.val = Math.round(20*(v/180));
+    	this.val = Math.round(16*(v/180));
     }
 }

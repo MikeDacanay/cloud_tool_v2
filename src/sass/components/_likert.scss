@@ -1,11 +1,22 @@
 .likert{
 	display: flex;
+	
+	&--2{
+		flex-direction: column;
+	}
+
 	&__container{
 		margin-top: 47px;
 		position: relative;
 	}
 	&__group{
 		margin-right: 131px;
+		
+		&--2{
+			&:not(:first-of-type){
+				margin-top: 44px;
+			}
+		}
 	}
 	&__line{
 		stroke: #fff;
@@ -42,6 +53,11 @@
     cursor: pointer;
     align-items: center;
     width: 53px;
+
+    &--2{
+    	width: auto;
+			flex-direction: row;
+		}
 	}
 	&__text{
 	  font-family: $font-reg;
@@ -54,6 +70,11 @@
 	  text-align: center;
 	  color: #ffffff;
 	  padding-top: 31px;
+	
+		&--2{
+			padding-left: 22px;
+			padding-top: 0;
+		}
 	}
 	&__checkmark{
 		background-image: url(../assets/images/desktop/icon/icon-check-likert.svg);

@@ -82,6 +82,8 @@
 	&--2{
 		width: 3.50rem;
 
+		margin-top: 0;
+
 		@include bp_min(1441){
 			@include bph(750){ 
 				margin: 0;

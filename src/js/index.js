@@ -381,10 +381,14 @@ $(document).ready(function(){
 		css.changeBodyColor('white');
 
 		// Shows score in results after click
+		// console.log(state.slider1.val);
+
 		state.userAggregateValue =
 			state.dial1.val +		
-			state.likert1.val +
-			state.checkbox1.val + 
+			state.likert1.val +			
+			state.checkbox1.val + 			
+			state.slider1.val +
+			state.likert2.val +
 			state.dial2.val;
 			// state.dial3.val +
 			// state.slider1.val +
@@ -428,9 +432,7 @@ $(document).ready(function(){
 		$(this).attr('context', `${Number(contextValue) - 1}`);
 		e.hdrProgress.attr('context', contextValue);
 	});
-
-	$('.btn__progress--3').click();
-
+	
 	// DETAILED FOOTER CLICK
 		if(sessionStorage.page === '1'){
 			$('.pathfinder').css('transform',`translateY(-189.19rem)`);
@@ -471,7 +473,7 @@ $(document).ready(function(){
 	/****** LIKERT CONTROLLER ******/
 
 	state.likert1 = new Likert();
-		
+	state.likert2 = new Likert();
 
 	$('.likert').change(function(){
 		const likertName = $(this).find('.likert__input').attr('name');		
@@ -479,12 +481,14 @@ $(document).ready(function(){
 	
 		if(likertName === 'likert--1'){		
 			state.likert1.changeValue(likertVal);
+		}
+		if(likertName === 'likert--2'){		
+			state.likert2.changeValue(likertVal);
 		}	
 
 		const btn = $(this).closest('.page__content').find('.btn__progress');;
 
-		$(btn).click();
-		// console.log($(this).parent('page__content'));
+		$(btn).click();		
   });
 
 	/****** CHECKBOX CONTROLLER ******/	
@@ -659,7 +663,7 @@ $(document).ready(function(){
 
 	/****** SLIDER CONTROLLER ******/
 	state.slider1 = new SliderGroup($('.scroller__wrapper--1'));
-	state.slider2 = new SliderGroup($('.scroller__wrapper--2'));
+	// state.slider2 = new SliderGroup($('.scroller__wrapper--2'));
 
 	sl.setSliderGroupSize();
 
