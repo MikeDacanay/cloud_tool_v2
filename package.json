@@ -42,7 +42,7 @@
     "cpr_scrollpath": "^1.0.12",
     "formjax": "^2.2.1",
     "i": "^0.3.6",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-knob": "^1.2.11",
     "lottie-web": "^5.5.5",
     "path": "^0.12.7",
